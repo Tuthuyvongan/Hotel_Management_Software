@@ -1,4 +1,4 @@
-# HOTEL-MANAGEMENT-SOFTWERE
+# HOTEL-MANAGEMENT-SOFTWARE
 # OVERVIEW
 This is a project of VTV group is developed to manage a hotel.
 Group include : 
