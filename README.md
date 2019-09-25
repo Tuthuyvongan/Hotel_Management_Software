@@ -5,7 +5,7 @@ Group include :
 - Le Anh Vu 
 - Nguyen Tri Truong
 - Nguyen Hoai Vi
-We are Software Engineering students from University of Information Technology - Vietnam National University. 
+  We are Software Engineering students from University of Information Technology - Vietnam National University. 
 
 # PROJECT INTRODUCTION : 
 What is this Hotel management software do ? 
