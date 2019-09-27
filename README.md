@@ -10,9 +10,17 @@ We are Software Engineering students from University of Information Technology -
 
 # PROJECT INTRODUCTION : 
 What is this Hotel management software do ? 
-* This software provide plugins to help you in managing a hotel. Make the hotel management works become easier and faster.
+* This software provide plugins to help you in managing a hotel. Make hotel management works become easier and faster.
 
-We using Winform and SQL sever.
+Any thing special with this software ?
+- We use Winform and SQL sever to develope this software so that this software will be more easy to use and friendly for users.
+- A totally free application that contain primary needs to manage a hotel.
+- Has a friendly interface and not too complicated for new users.
+
+# REQUIREMENTS :
+- Window Universal
+- Visual Studio Runtime
+- SQL Server Management Studio (SSMS)
 
 # CONTACT US AT : 
 - Le Anh Vu - 17521269@gm.uit.edu.vn
