@@ -17,6 +17,18 @@ Any thing special with this software ?
 - A totally free application that contain primary needs to manage a hotel.
 - Has a friendly interface and not too complicated for new users.
 
+# PROCESSES :
+- Step 1 : Through the communication channels such as phone, email, website, facebook ... Sales will receive a notification when customers request to use the reservation service, booking services at the hotel. Here, the sales staff will conduct a check of room availability, service use status to acknowledge / reject requests from customers. If the request is acknowledged the process will skip to step 2
+- Step 2 : The Sales department, after receiving the request from the customer, will transfer the reservation, service to the front desk. Here the reception will perform the booking, assigning rooms, checking in, updating guest records.
+- Step 3 : During the stay, there will be additional needs for other services at the restaurant, spa, minibar, room, etc. The receptionist will be responsible for updating the expenses incurred continuously and clearly. and exactly to facilitate the customers' payment directly at the outlet or even when moving the bill to the room.
+- Step 4 : At the end of the night audit, this task is under the Finance - Accounting department at night with the main task is to review all transactions and revenue of the hotel during the day.
+- Step 5 : After performing the audit at the end of the day, if there is a cost error, the Finance - Accounting department will notify the cashier for adjustment.
+- Step 6 : After performing the accurate and complete update of the Customer's services during their stay at the hotel, the Cashier makes a quick payment.
+- Step 7 : When the payment is finished with the customer, the cashier transfers all invoices and documents to the accounting department.
+- Step 8 : Other departments such as Spa, restaurant, room, and event are responsible for providing documents related to the Accounting department.
+- Step 9 : The "Materials management" and "Office" departments collect all costs and related documents and send them to the accounting department. Here the accounting department is responsible for summarizing, recording, monitoring and archiving all relevant documents from the departments sent and successfully completing the professional activities related to its departments.
+- Step 10 : After completing the use of the service, the Customer Care department will store, monitor and make a care plan, visit and evaluate the customer's attitude after using the hotel service.
+
 # REQUIREMENTS :
 - Window Universal
 - Visual Studio Runtime
