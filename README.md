@@ -29,6 +29,20 @@ Any thing special with this software ?
 - Step 9 : The "Materials management" and "Office" departments collect all costs and related documents and send them to the accounting department. Here the accounting department is responsible for summarizing, recording, monitoring and archiving all relevant documents from the departments sent and successfully completing the professional activities related to its departments.
 - Step 10 : After completing the use of the service, the Customer Care department will store, monitor and make a care plan, visit and evaluate the customer's attitude after using the hotel service.
 
+# ROADMAP :
+
+1.	Khảo sát nghiệp vụ của yêu cầu để hiểu về cơ cấu tổ chức : ( 3/9 – 8/9/2019 )
+2.	Xác định các đối tượng và mối liên hệ của chúng : ( 9/9 – 16/9/2019 )
+3.	Vẽ các sơ đồ về mối liên hệ giữa các đối tượng đã được xác định ( 17/9 – 24/9/2019 )
+4.	Tạo Giao diện ( Mockup, … ) ( 25/9 – 1/10/2019 )
+5.	Tạo cơ sở dữ liệu ( 2/10 – 9/10/2019 )
+6.	Lựa chọn môi trường kiến trúc thích hợp để phát triển phần mềm ( 10/10 – 17/10/2019 )
+7.	Tiến hành các bước lập trình ( 18/10 – 1/11/2019 )
+8.	Test thử chương trình ( 2 / 11 – 9/11/2019)
+9.	Debug ( 10/11 – 17 / 11/2019)
+10.	Xuất bản . ( 20/11/2019 )
+
+
 # REQUIREMENTS :
 - Window Universal
 - Visual Studio Runtime
