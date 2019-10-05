@@ -17,7 +17,7 @@ Any thing special with this software ?
 - A totally free application that contain primary needs to manage a hotel.
 - Has a friendly interface and not too complicated for new users.
 
-# PROCESSES :
+# ORGANIZATIONAL STRUCTURE :
 - Step 1 : Through the communication channels such as phone, email, website, facebook ... Sales will receive a notification when customers request to use the reservation service, booking services at the hotel. Here, the sales staff will conduct a check of room availability, service use status to acknowledge / reject requests from customers. If the request is acknowledged the process will skip to step 2
 - Step 2 : The Sales department, after receiving the request from the customer, will transfer the reservation, service to the front desk. Here the reception will perform the booking, assigning rooms, checking in, updating guest records.
 - Step 3 : During the stay, there will be additional needs for other services at the restaurant, spa, minibar, room, etc. The receptionist will be responsible for updating the expenses incurred continuously and clearly. and exactly to facilitate the customers' payment directly at the outlet or even when moving the bill to the room.
@@ -29,7 +29,7 @@ Any thing special with this software ?
 - Step 9 : The "Materials management" and "Office" departments collect all costs and related documents and send them to the accounting department. Here the accounting department is responsible for summarizing, recording, monitoring and archiving all relevant documents from the departments sent and successfully completing the professional activities related to its departments.
 - Step 10 : After completing the use of the service, the Customer Care department will store, monitor and make a care plan, visit and evaluate the customer's attitude after using the hotel service.
 
-# ROADMAP :
+# STEPS :
 ![Optional Text](https://github.com/VixNH/Hotel_Management_Software/blob/master/Untitled.png)
 1. Business survey of requirements to understand organizational structure: (September 3 - September 8, 2019)
 2. Identify the objects and their relationships: (September 9 - September 16, 2019)
@@ -42,6 +42,23 @@ Any thing special with this software ?
 9. Debug (November 10 - November 17, 2019)
 10. Publish. (November 20, 2019)
 
+# ROADMAP :
+* Version 0.1 (September 25 - October 1, 2019): 
+  - Incomplete version of SQL server database.
+  - Main UI of the software and some UI of other functions.
+  - Main feartures : book rooms, delete booked rooms, room services management, add room details, fix room details, delete room details.
+* Version 0.2 (October 2 - October 9, 2019):
+  - Complete 50% of SQL server database.
+  - Completed all the UI.
+* Version 0.3 (October 10 - October 17, 2019):
+  - Complete built of SQL server database.
+  - Add users login function.
+* Version 1.0a ( alpha-test version )(October 18 - November 1, 2019):
+  - Update some UI.
+* Version 1.0b (November 2 - November 9, 2019):
+  - Fix some minor bugs record from version 1.0a.
+* Version 1.1 (November 20, 2019):
+  - Completed version of the software.
 
 # REQUIREMENTS :
 - Window Universal
