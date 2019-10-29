@@ -63,7 +63,8 @@ Any thing special with this software ?
 # REQUIREMENTS :
 - Window Universal
 - Visual Studio Runtime
-- SQL Server Management Studio (SSMS)
+- SQL Server Management Studio (SSMS) and some nesscessary components
+- At least 500 MB of sapce on the hard disk.
 
 # CONTACT US AT : 
 - Le Anh Vu - 17521269@gm.uit.edu.vn
