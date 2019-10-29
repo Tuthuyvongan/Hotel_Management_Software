@@ -30,7 +30,7 @@ Any thing special with this software ?
 - Step 10 : After completing the use of the service, the Customer Care department will store, monitor and make a care plan, visit and evaluate the customer's attitude after using the hotel service.
 
 # STEPS :
-![Optional Text](https://github.com/VixNH/Hotel_Management_Software/blob/master/Untitled.png)
+![Optional Text](https://github.com/VixNH/Hotel_Management_Software/blob/master/DVSTEPS.jpg)
 1. Business survey of requirements to understand organizational structure: (September 3 - September 8, 2019)
 2. Identify the objects and their relationships: (September 9 - September 16, 2019)
 3. Draw diagrams of relationships between identified objects (September 17 - September 24, 2019)
@@ -63,7 +63,8 @@ Any thing special with this software ?
 # REQUIREMENTS :
 - Window Universal
 - Visual Studio Runtime
-- SQL Server Management Studio (SSMS)
+- SQL Server Management Studio (SSMS) and some nesscessary components
+- At least 500 MB of sapce on the hard disk.
 
 # CONTACT US AT : 
 - Le Anh Vu - 17521269@gm.uit.edu.vn
