@@ -15,21 +15,21 @@ namespace roomBUS
         {
             rDao = new RoomDAO();
         }
-        public bool them(RoomDTO pt)
+        public bool add(RoomDTO pt)
         {
-            bool re = rDao.them(pt);
+            bool re = rDao.add(pt);
             return re;
         }
 
-        public bool xoa(RoomDTO pt)
+        public bool delete(RoomDTO pt)
         {
-            bool re = rDao.xoa(pt);
+            bool re = rDao.delete(pt);
             return re;
         }
 
-        public bool sua(RoomDTO pt)
+        public bool edit(RoomDTO pt)
         {
-            bool re = rDao.sua(pt);
+            bool re = rDao.edit(pt);
             return re;
         }
 
@@ -37,17 +37,17 @@ namespace roomBUS
         {
             return rDao.select();
         }
-        public List<RoomDTO> selectTenPhuTung()
+        public List<RoomDTO> selectNameRoom()
         {
-            return rDao.selectTenPhuTung();
+            return rDao.selectNameRoom();
         }
-        public List<RoomDTO> TimKiem(string Keyword)
+        public List<RoomDTO> search(string Keyword)
         {
-            return rDao.TimKiem(Keyword);
+            return rDao.search(Keyword);
         }
-        public List<RoomDTO> selectgia(string sKeyword)
+        public List<RoomDTO> selectCost(string sKeyword)
         {
-            return rDao.selectgia(sKeyword);
+            return rDao.selectCost(sKeyword);
         }
     }
 }

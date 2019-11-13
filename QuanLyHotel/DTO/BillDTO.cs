@@ -9,11 +9,17 @@ namespace billDTO
     public class BillDTO
     {
         private int iDB;
+        //private int iDR;
+        //private int iDC;
+        //private int iDM;
         private string checkIn;
         private string checkOut;
         private Decimal cOST;
 
         public int IDB { get => iDB; set => iDB = value; }
+        //public int IDR { get => iDB; set => iDB = value; }
+        //public int IDC { get => iDB; set => iDB = value; }
+        //public int IDM { get => iDB; set => iDB = value; }
         public string CheckIn { get => checkIn; set => checkIn = value; }
         public string CheckOut { get => checkOut; set => checkOut = value; }
         public Decimal COST { get => cOST; set => cOST = value; }

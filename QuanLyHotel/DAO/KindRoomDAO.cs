@@ -22,7 +22,7 @@ namespace kindRoomDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-        public bool them(KindRoomDTO pt)
+        public bool add(KindRoomDTO kr)
         {
             string query = string.Empty;
             query += "INSERT INTO [KindRoom] (iDKR,nAME,numberOFBED,nOTE) ";
@@ -35,10 +35,10 @@ namespace kindRoomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDKR", pt.IDKR);
-                    cmd.Parameters.AddWithValue("@nAME", pt.NAME);
-                    cmd.Parameters.AddWithValue("@numberOFBED", pt.NumberOFBED);
-                    cmd.Parameters.AddWithValue("@nOTE", pt.NOTE);
+                    cmd.Parameters.AddWithValue("@iDKR", kr.IDKR);
+                    cmd.Parameters.AddWithValue("@nAME", kr.NAME);
+                    cmd.Parameters.AddWithValue("@numberOFBED", kr.NumberOFBED);
+                    cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
                     
 
                     try
@@ -58,10 +58,10 @@ namespace kindRoomDAO
             }
             return true;
         }
-        public bool xoa(KindRoomDTO pt)
+        public bool delete(KindRoomDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM PhuTung WHERE [iDKR] = @iDKR"; ;
+            query += "DELETE FROM KindRoom WHERE [iDKR] = @iDKR"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -88,7 +88,7 @@ namespace kindRoomDAO
             }
             return true;
         }
-        public bool sua(KindRoomDTO pt)
+        public bool edit(KindRoomDTO kr)
         {
             string query = string.Empty;
             query += "UPDATE KindRoom SET [nAME] = @nAME, [numberOFBED] = @numberOFBED, [nOTE] = @nOTE  WHERE [iDKR] = @iDKR";
@@ -100,10 +100,10 @@ namespace kindRoomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDKR", pt.IDKR);
-                    cmd.Parameters.AddWithValue("@nAME", pt.NAME);
-                    cmd.Parameters.AddWithValue("@numberOFBED", pt.NumberOFBED);
-                    cmd.Parameters.AddWithValue("@nOTE", pt.NOTE);
+                    cmd.Parameters.AddWithValue("@iDKR", kr.IDKR);
+                    cmd.Parameters.AddWithValue("@nAME", kr.NAME);
+                    cmd.Parameters.AddWithValue("@numberOFBED", kr.NumberOFBED);
+                    cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
                     try
                     {
                         con.Open();
@@ -127,7 +127,7 @@ namespace kindRoomDAO
             query += "SELECT [iDKR], [nAME], [numberOFBED], [nOTE]";
             query += "FROM [KindRoom]";
 
-            List<KindRoomDTO> lsTenPhuTung = new List<KindRoomDTO>();
+            List<KindRoomDTO> IsNameKindRoom = new List<KindRoomDTO>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -147,11 +147,12 @@ namespace kindRoomDAO
                         {
                             while (reader.Read())
                             {
-                                KindRoomDTO pt = new KindRoomDTO();
-                                pt.NAME = reader["nAME"].ToString();
-                                pt.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
-                                pt.NOTE = reader["nOTE"].ToString();
-                                lsTenPhuTung.Add(pt);
+                                KindRoomDTO kr = new KindRoomDTO();
+                                kr.IDKR = int.Parse(reader["iDKR"].ToString());
+                                kr.NAME = reader["nAME"].ToString();
+                                kr.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
+                                kr.NOTE = reader["nOTE"].ToString();
+                                IsNameKindRoom.Add(kr);
                             }
                         }
 
@@ -166,15 +167,15 @@ namespace kindRoomDAO
                     }
                 }
             }
-            return lsTenPhuTung;
+            return IsNameKindRoom;
         }
-        public List<KindRoomDTO> selectTenPhuTung()
+        public List<KindRoomDTO> selectNameKindRoom()
         {
             string query = string.Empty;
             query += "SELECT [nAME]";
             query += "FROM [KindRoom]";
 
-            List<KindRoomDTO> lsTenPhuTung = new List<KindRoomDTO>();
+            List<KindRoomDTO> lsNameKindRoom = new List<KindRoomDTO>();
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -194,9 +195,9 @@ namespace kindRoomDAO
                         {
                             while (reader.Read())
                             {
-                                KindRoomDTO pt = new KindRoomDTO();
-                                pt.NAME = reader["nAME"].ToString();
-                                lsTenPhuTung.Add(pt);
+                                KindRoomDTO kr = new KindRoomDTO();
+                                kr.NAME = reader["nAME"].ToString();
+                                lsNameKindRoom.Add(kr);
                             }
                         }
 
@@ -211,9 +212,9 @@ namespace kindRoomDAO
                     }
                 }
             }
-            return lsTenPhuTung;
+            return lsNameKindRoom;
         }
-        public List<KindRoomDTO> TimKiem(string Keyword)
+        public List<KindRoomDTO> search(string Keyword)
         {
             string query = string.Empty;
             query += "SELECT [iDKR], [nAME], [numberOFBED], [nOTE]";
@@ -243,12 +244,12 @@ namespace kindRoomDAO
                         {
                             while (reader.Read())
                             {
-                                KindRoomDTO pt = new KindRoomDTO();
-                                pt.NAME = reader["iDKR"].ToString();
-                                pt.NAME = reader["nAME"].ToString();
-                                pt.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
-                                pt.NOTE = reader["nOTE"].ToString();
-                                lsTimKiem.Add(pt);
+                                KindRoomDTO kr = new KindRoomDTO();
+                                kr.IDKR = int.Parse(reader["iDKR"].ToString());
+                                kr.NAME = reader["nAME"].ToString();
+                                kr.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
+                                kr.NOTE = reader["nOTE"].ToString();
+                                lsTimKiem.Add(kr);
                             }
                         }
 

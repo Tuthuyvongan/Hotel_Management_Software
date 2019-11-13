@@ -61,6 +61,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdKindRoom = new System.Windows.Forms.TextBox();
             this.btLoadKindRoom = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.txtKindRoomContent = new System.Windows.Forms.Label();
@@ -148,11 +150,11 @@
             // txtRoomContent
             // 
             this.txtRoomContent.AutoSize = true;
-            this.txtRoomContent.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.txtRoomContent.Font = new System.Drawing.Font("Times New Roman", 15.25F, System.Drawing.FontStyle.Bold);
             this.txtRoomContent.ForeColor = System.Drawing.Color.Black;
             this.txtRoomContent.Location = new System.Drawing.Point(8, 12);
             this.txtRoomContent.Name = "txtRoomContent";
-            this.txtRoomContent.Size = new System.Drawing.Size(167, 31);
+            this.txtRoomContent.Size = new System.Drawing.Size(126, 24);
             this.txtRoomContent.TabIndex = 55;
             this.txtRoomContent.Text = "ADD ROOM";
             // 
@@ -206,7 +208,7 @@
             this.btRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRoom.ForeColor = System.Drawing.Color.White;
-            this.btRoom.Location = new System.Drawing.Point(178, 157);
+            this.btRoom.Location = new System.Drawing.Point(173, 175);
             this.btRoom.Name = "btRoom";
             this.btRoom.Size = new System.Drawing.Size(74, 31);
             this.btRoom.TabIndex = 56;
@@ -449,6 +451,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtIdKindRoom);
             this.panel1.Controls.Add(this.btLoadKindRoom);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.txtKindRoomContent);
@@ -471,6 +475,24 @@
             this.panel1.Size = new System.Drawing.Size(467, 505);
             this.panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 19);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "ID";
+            // 
+            // txtIdKindRoom
+            // 
+            this.txtIdKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdKindRoom.Location = new System.Drawing.Point(142, 46);
+            this.txtIdKindRoom.Name = "txtIdKindRoom";
+            this.txtIdKindRoom.Size = new System.Drawing.Size(307, 26);
+            this.txtIdKindRoom.TabIndex = 65;
+            // 
             // btLoadKindRoom
             // 
             this.btLoadKindRoom.BackColor = System.Drawing.Color.Firebrick;
@@ -488,7 +510,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(20, 62);
+            this.label19.Location = new System.Drawing.Point(20, 81);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 19);
             this.label19.TabIndex = 54;
@@ -497,18 +519,18 @@
             // txtKindRoomContent
             // 
             this.txtKindRoomContent.AutoSize = true;
-            this.txtKindRoomContent.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.txtKindRoomContent.Font = new System.Drawing.Font("Times New Roman", 15.25F, System.Drawing.FontStyle.Bold);
             this.txtKindRoomContent.ForeColor = System.Drawing.Color.Black;
             this.txtKindRoomContent.Location = new System.Drawing.Point(19, 12);
             this.txtKindRoomContent.Name = "txtKindRoomContent";
-            this.txtKindRoomContent.Size = new System.Drawing.Size(245, 31);
+            this.txtKindRoomContent.Size = new System.Drawing.Size(185, 24);
             this.txtKindRoomContent.TabIndex = 10;
             this.txtKindRoomContent.Text = "ADD KIND ROOM";
             // 
             // txtNameKindRoom
             // 
             this.txtNameKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameKindRoom.Location = new System.Drawing.Point(142, 59);
+            this.txtNameKindRoom.Location = new System.Drawing.Point(142, 78);
             this.txtNameKindRoom.Name = "txtNameKindRoom";
             this.txtNameKindRoom.Size = new System.Drawing.Size(307, 26);
             this.txtNameKindRoom.TabIndex = 53;
@@ -517,7 +539,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(21, 94);
+            this.label18.Location = new System.Drawing.Point(21, 113);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(115, 19);
             this.label18.TabIndex = 52;
@@ -534,7 +556,7 @@
             // txtNBOBedKindRoom
             // 
             this.txtNBOBedKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNBOBedKindRoom.Location = new System.Drawing.Point(142, 91);
+            this.txtNBOBedKindRoom.Location = new System.Drawing.Point(142, 110);
             this.txtNBOBedKindRoom.Name = "txtNBOBedKindRoom";
             this.txtNBOBedKindRoom.Size = new System.Drawing.Size(307, 26);
             this.txtNBOBedKindRoom.TabIndex = 51;
@@ -551,7 +573,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(21, 128);
+            this.label13.Location = new System.Drawing.Point(20, 147);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(42, 19);
             this.label13.TabIndex = 50;
@@ -574,7 +596,7 @@
             // txtNoteKindRoom
             // 
             this.txtNoteKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoteKindRoom.Location = new System.Drawing.Point(142, 125);
+            this.txtNoteKindRoom.Location = new System.Drawing.Point(142, 144);
             this.txtNoteKindRoom.Name = "txtNoteKindRoom";
             this.txtNoteKindRoom.Size = new System.Drawing.Size(307, 26);
             this.txtNoteKindRoom.TabIndex = 49;
@@ -595,7 +617,7 @@
             this.btKindRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKindRoom.ForeColor = System.Drawing.Color.White;
-            this.btKindRoom.Location = new System.Drawing.Point(257, 157);
+            this.btKindRoom.Location = new System.Drawing.Point(257, 175);
             this.btKindRoom.Name = "btKindRoom";
             this.btKindRoom.Size = new System.Drawing.Size(74, 31);
             this.btKindRoom.TabIndex = 48;
@@ -746,5 +768,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIdKindRoom;
     }
 }

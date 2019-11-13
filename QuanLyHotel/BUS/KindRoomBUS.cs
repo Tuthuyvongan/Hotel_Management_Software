@@ -15,21 +15,21 @@ namespace kindRoomBUS
         {
             krDao = new KindRoomDAO();
         }
-        public bool them(KindRoomDTO pt)
+        public bool add(KindRoomDTO pt)
         {
-            bool re = krDao.them(pt);
+            bool re = krDao.add(pt);
             return re;
         }
 
-        public bool xoa(KindRoomDTO pt)
+        public bool delete(KindRoomDTO pt)
         {
-            bool re = krDao.xoa(pt);
+            bool re = krDao.delete(pt);
             return re;
         }
 
-        public bool sua(KindRoomDTO pt)
+        public bool edit(KindRoomDTO pt)
         {
-            bool re = krDao.sua(pt);
+            bool re = krDao.edit(pt);
             return re;
         }
 
@@ -37,13 +37,13 @@ namespace kindRoomBUS
         {
             return krDao.select();
         }
-        public List<KindRoomDTO> selectTenPhuTung()
+        public List<KindRoomDTO> selectNameKindRoom()
         {
-            return krDao.selectTenPhuTung();
+            return krDao.selectNameKindRoom();
         }
-        public List<KindRoomDTO> TimKiem(string Keyword)
+        public List<KindRoomDTO> search(string Keyword)
         {
-            return krDao.TimKiem(Keyword);
+            return krDao.search(Keyword);
         }
 
     }

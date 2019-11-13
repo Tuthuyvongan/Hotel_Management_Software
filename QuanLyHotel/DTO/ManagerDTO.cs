@@ -9,6 +9,7 @@ namespace managerDTO
     public class ManagerDTO
     {
         private int iDM;
+        //private int iDU;
         private string nAME;
         private string gENDER;
         private string bIRTHDAY;
@@ -18,6 +19,7 @@ namespace managerDTO
         private string identifyCARD;
 
         public int IDM { get => iDM; set => iDM = value; }
+        //public int IDU { get => iDM; set => iDM = value; }
         public string NAME { get => nAME; set => nAME = value; }
         public string GENDER { get => gENDER; set => gENDER = value; }
         public string BIRTHDAY { get => bIRTHDAY; set => bIRTHDAY = value; }
