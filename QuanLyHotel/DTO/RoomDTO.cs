@@ -9,15 +9,21 @@ namespace roomDTO
     public class RoomDTO
     {
         private int iDR;
-        //private int iDKR;
+        private int nBED;
+        
         private string nAME;
         private string sTATUS;
+        private string nOTE;
+
         private Decimal cOST;
 
+
         public int IDR { get => iDR; set => iDR = value; }
-        //public int IDKR { get => iDKR; set => iDKR = value; }
+        
         public string NAME { get => nAME; set => nAME = value; }
         public string STATUS { get => sTATUS; set => sTATUS = value; }
         public Decimal COST { get => cOST; set => cOST = value; }
+        public int NBED { get => nBED; set => nBED = value; }
+        public string NOTE { get => nOTE; set => nOTE = value; }
     }
 }

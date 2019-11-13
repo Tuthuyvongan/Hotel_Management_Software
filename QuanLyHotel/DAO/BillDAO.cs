@@ -59,6 +59,12 @@ namespace billDAO
             }
             return true;
         }
+
+        public List<BillDTO> selectNameBill()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool delete(BillDTO bll)
         {
             string query = string.Empty;

@@ -1,4 +1,6 @@
 ﻿using System;
+using userBUS;
+using userDTO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,12 +54,33 @@ namespace QuanLyHotel
         {
             Application.Exit();
         }
+        private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo!", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainWindow A = new MainWindow();
-            A.Show();
+            UserBUS ndBUS = new UserBUS();
+
+            UserDTO tn = new UserDTO();
+            string IDU = txtUsername.Text;
+            string PASSWORD = txtPassword.Text;
+            if (ndBUS.kiemtra(tn, IDU, PASSWORD))
+            {
+                MainWindow f = new MainWindow();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+            
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)

@@ -215,6 +215,7 @@
             this.Name = "LoginWindow";
             this.Text = "LoginWindow";
             this.MoveBar.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginWindow_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
