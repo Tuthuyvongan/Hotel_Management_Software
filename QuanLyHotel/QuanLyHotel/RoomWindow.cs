@@ -22,62 +22,11 @@ namespace QuanLyHotel
            
         }
 
-        
-        public RoomBUS rBus;
-        //private void loadData_Vao_GridView()
-        //{
-        //    List<KindRoomDTO> listPhuTung = krBus.select();
-
-        //    if (listPhuTung == null)
-        //    {
-        //        MessageBox.Show("Có lỗi khi lấy thông tin từ DB");
-        //        return;
-        //    }
-        //    dtKindRoom.Columns.Clear();
-        //    dtKindRoom.DataSource = null;
-
-        //    dtKindRoom.AutoGenerateColumns = false;
-        //    dtKindRoom.AllowUserToAddRows = false;
-        //    dtKindRoom.DataSource = listPhuTung;
-
-        //    DataGridViewTextBoxColumn clid = new DataGridViewTextBoxColumn();
-        //    clid.Name = "iDKR";
-        //    clid.HeaderText = "ID";
-        //    clid.DataPropertyName = "iDKR";
-        //    clid.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dtKindRoom.Columns.Add(clid);
-
-        //    DataGridViewTextBoxColumn clPhuTung = new DataGridViewTextBoxColumn();
-        //    clPhuTung.Name = "nAME";
-        //    clPhuTung.HeaderText = "Kind";
-        //    clPhuTung.DataPropertyName = "nAME";
-        //    clPhuTung.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dtKindRoom.Columns.Add(clPhuTung);
-
-        //    DataGridViewTextBoxColumn clDongia = new DataGridViewTextBoxColumn();
-        //    clDongia.Name = "numberOFBED";
-        //    clDongia.HeaderText = "Number Of Bed";
-        //    clDongia.DataPropertyName = "numberOFBED";
-        //    clDongia.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dtKindRoom.Columns.Add(clDongia);
-
-        //    DataGridViewTextBoxColumn clTondau = new DataGridViewTextBoxColumn();
-        //    clTondau.Name = "nOTE";
-        //    clTondau.HeaderText = "Note";
-        //    clTondau.DataPropertyName = "nOTE";
-        //    clTondau.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dtKindRoom.Columns.Add(clTondau);
-
-        //    CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtKindRoom.DataSource];
-        //    myCurrencyManager.Refresh();
-
-
-        //}
 
         private void loadData()
         {
-            rBus = new RoomBUS();
-            List<RoomDTO> list = rBus.select();
+            RoomBUS rmBus = new RoomBUS();
+            List<RoomDTO> list = rmBus.select();
 
             if (list == null)
             {
@@ -91,41 +40,41 @@ namespace QuanLyHotel
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.DataSource = list;
 
-            DataGridViewTextBoxColumn clid = new DataGridViewTextBoxColumn();
-            clid.Name = "iDR";
-            clid.HeaderText = "ID";
-            clid.DataPropertyName = "iDR";
-            clid.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(clid);
+            DataGridViewTextBoxColumn iD = new DataGridViewTextBoxColumn();
+            iD.Name = "iDR";
+            iD.HeaderText = "ID";
+            iD.DataPropertyName = "iDR";
+            iD.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(iD);
 
-            DataGridViewTextBoxColumn clht = new DataGridViewTextBoxColumn();
-            clht.Name = "nAME";
-            clht.HeaderText = "Name:";
-            clht.DataPropertyName = "nAME";
-            clht.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(clht);
+            DataGridViewTextBoxColumn nAME = new DataGridViewTextBoxColumn();
+            nAME.Name = "nAME";
+            nAME.HeaderText = "Name:";
+            nAME.DataPropertyName = "nAME";
+            nAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(nAME);
 
-            DataGridViewTextBoxColumn clbienso = new DataGridViewTextBoxColumn();
-            clbienso.Name = "sTATUS";
-            clbienso.HeaderText = "Status";
-            clbienso.DataPropertyName = "sTATUS";
-            clbienso.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(clbienso);
+            DataGridViewTextBoxColumn sTATUS = new DataGridViewTextBoxColumn();
+            sTATUS.Name = "sTATUS";
+            sTATUS.HeaderText = "Status";
+            sTATUS.DataPropertyName = "sTATUS";
+            sTATUS.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(sTATUS);
 
-            DataGridViewTextBoxColumn cldiachi = new DataGridViewTextBoxColumn();
-            cldiachi.Name = "nBED";
-            cldiachi.HeaderText = "Number of Bed";
-            cldiachi.DataPropertyName = "nBED";
-            cldiachi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(cldiachi);
+            DataGridViewTextBoxColumn nBED = new DataGridViewTextBoxColumn();
+            nBED.Name = "nBED";
+            nBED.HeaderText = "Number of Bed";
+            nBED.DataPropertyName = "nBED";
+            nBED.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(nBED);
           
 
-            DataGridViewTextBoxColumn clhieuxe = new DataGridViewTextBoxColumn();
-            clhieuxe.Name = "nOTE";
-            clhieuxe.HeaderText = "Note";
-            clhieuxe.DataPropertyName = "nOTE";
-            clhieuxe.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(clhieuxe);
+            DataGridViewTextBoxColumn nOTE = new DataGridViewTextBoxColumn();
+            nOTE.Name = "nOTE";
+            nOTE.HeaderText = "Note";
+            nOTE.DataPropertyName = "nOTE";
+            nOTE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(nOTE);
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dataGridView1.DataSource];
             myCurrencyManager.Refresh();
@@ -139,15 +88,12 @@ namespace QuanLyHotel
 
         private void BtAddRoom_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
+            
             errorProvider2.Clear();
             errorProvider3.Clear();          
             errorProvider5.Clear();
-           if(txtIDRoom.Text=="")
-            {
-                errorProvider1.SetError(txtIDRoom, "not null!");
-            }
-           else if(txtStatusRoom.Text=="")
+           
+           if(txtStatusRoom.Text=="")
             {
                 errorProvider2.SetError(txtStatusRoom, "not null!");
             }
@@ -162,14 +108,15 @@ namespace QuanLyHotel
             }
            else
             {
-                RoomDTO room = new RoomDTO();
-                room.IDR = int.Parse(txtCostRoom.Text);
-                room.COST = decimal.Parse(txtCostRoom.Text);
-                room.NAME = txtNameRoom.Text;
-                room.NBED = int.Parse(txtNbedRoom.Text);
-                room.NOTE = txtNoteKindRoom.Text;
-                room.STATUS = txtStatusRoom.Text;
-                bool kq = rBus.add(room);
+                RoomBUS rmBus = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.IDR = int.Parse(txtIDRoom.Text);
+                rm.COST = decimal.Parse(txtCostRoom.Text);
+                rm.NAME = txtNameRoom.Text;
+                rm.NBED = int.Parse(txtNbedRoom.Text);
+                rm.NOTE = txtNoteKindRoom.Text;
+                rm.STATUS = txtStatusRoom.Text;
+                bool kq = rmBus.add(rm);
                 if(kq==false)
                     MessageBox.Show("Fail!");
                 else
@@ -187,14 +134,15 @@ namespace QuanLyHotel
 
         private void BtEditRoom_Click(object sender, EventArgs e)
         {
-            RoomDTO room = new RoomDTO();
-            room.IDR = int.Parse(txtIDRoom.Text);
-            room.COST = decimal.Parse(txtCostRoom.Text);
-            room.NAME = txtNameRoom.Text;
-            room.NBED = int.Parse(txtNbedRoom.Text);
-            room.NOTE = txtNoteKindRoom.Text;
-            room.STATUS = txtStatusRoom.Text;
-            bool kq = rBus.edit(room);
+            RoomBUS rmBus = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.IDR = int.Parse(txtIDRoom.Text);
+            rm.COST = decimal.Parse(txtCostRoom.Text);
+            rm.NAME = txtNameRoom.Text;
+            rm.NBED = int.Parse(txtNbedRoom.Text);
+            rm.NOTE = txtNoteKindRoom.Text;
+            rm.STATUS = txtStatusRoom.Text;
+            bool kq = rmBus.edit(rm);
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
@@ -219,40 +167,21 @@ namespace QuanLyHotel
 
         private void BtKindRoom_Click(object sender, EventArgs e)
         {
-            //errorProvider4.Clear();
-            //errorProvider5.Clear();
-            //if (txtNameKindRoom.Text == "") errorProvider4.SetError(txtNameKindRoom, "Tên loại phòng không được để trống!");
-            //else if (txtNBOBedKindRoom.Text == "") errorProvider5.SetError(txtNBOBedKindRoom, "Số giường không được để trống!");
-            //else
-            //{
-            //    KindRoomDTO pt = new KindRoomDTO();
-            //    pt.NAME = txtNameKindRoom.Text;
-            //    pt.NumberOFBED = int.Parse(txtNBOBedKindRoom.Text);
-            //    pt.NOTE = txtNoteKindRoom.Text;
-            //    bool kq = krBus.them(pt);
-            //    if (kq == false)
-            //        MessageBox.Show("Thêm thông tin thất bại. Vui lòng kiểm tra lại dữ liệu");
-            //    else
-            //        MessageBox.Show("Thêm thông tin thành công");
-            //    this.loadData_Vao_GridView();
-            //    txtNameKindRoom.Text = "";
-            //    txtNBOBedKindRoom.Text = "";
-            //    txtNoteKindRoom.Text = "";
-            //}
+            
         }
 
        
         private void btDeleteRoom_Click(object sender, EventArgs e)
         {
-            
-                RoomDTO room = new RoomDTO();
-                room.IDR = int.Parse(txtIDRoom.Text);
-                room.COST = decimal.Parse(txtCostRoom.Text);
-                room.NAME = txtNameRoom.Text;
-                room.NBED = int.Parse(txtNbedRoom.Text);
-                room.NOTE = txtNoteKindRoom.Text;
-                room.STATUS = txtStatusRoom.Text;
-                bool kq = rBus.delete(room);
+                RoomBUS rmBus = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.IDR = int.Parse(txtIDRoom.Text);
+                rm.COST = decimal.Parse(txtCostRoom.Text);
+                rm.NAME = txtNameRoom.Text;
+                rm.NBED = int.Parse(txtNbedRoom.Text);
+                rm.NOTE = txtNoteKindRoom.Text;
+                rm.STATUS = txtStatusRoom.Text;
+                bool kq = rmBus.delete(rm);
                 if (kq == false)
                     MessageBox.Show("Fail!");
                 else

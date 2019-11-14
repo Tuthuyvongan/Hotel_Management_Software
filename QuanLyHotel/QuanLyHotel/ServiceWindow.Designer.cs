@@ -28,7 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtDateService = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
@@ -61,27 +74,29 @@
             this.txtSearchService1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btService = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtNoteService = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtIDService = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +109,138 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(940, 115);
             this.panel1.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Firebrick;
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.ForeColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(651, 7);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(270, 100);
+            this.panel7.TabIndex = 38;
+            // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel8.ForeColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(19, 15);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(71, 66);
+            this.panel8.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(115, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 35);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "SỐ LIỆU";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(115, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 31);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "TIÊU ĐỀ";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Firebrick;
+            this.panel4.Controls.Add(this.panel11);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(333, 7);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(270, 100);
+            this.panel4.TabIndex = 37;
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel11.ForeColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(19, 15);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(71, 66);
+            this.panel11.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(115, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 35);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "SỐ LIỆU";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(114, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 31);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "TIÊU ĐỀ";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Firebrick;
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(19, 7);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 100);
+            this.panel5.TabIndex = 36;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.ForeColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(19, 15);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(71, 66);
+            this.panel6.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(115, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 35);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "SỐ LIỆU";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(114, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 31);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "TIÊU ĐỀ";
             // 
             // panel2
             // 
@@ -256,6 +403,10 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.txtIDService);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.txtNoteService);
             this.panel3.Controls.Add(this.btLoadService);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.btAddService);
@@ -290,6 +441,7 @@
             this.btLoadService.TabIndex = 64;
             this.btLoadService.Text = "Load";
             this.btLoadService.UseVisualStyleBackColor = false;
+            this.btLoadService.Click += new System.EventHandler(this.BtLoadService_Click);
             // 
             // label16
             // 
@@ -328,6 +480,7 @@
             this.btDeleteService.TabIndex = 50;
             this.btDeleteService.Text = "Delete";
             this.btDeleteService.UseVisualStyleBackColor = false;
+            this.btDeleteService.Click += new System.EventHandler(this.BtDeleteService_Click);
             // 
             // btEditService
             // 
@@ -358,7 +511,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(13, 76);
+            this.label19.Location = new System.Drawing.Point(13, 79);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 19);
             this.label19.TabIndex = 47;
@@ -367,7 +520,7 @@
             // txtNameService
             // 
             this.txtNameService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameService.Location = new System.Drawing.Point(82, 73);
+            this.txtNameService.Location = new System.Drawing.Point(82, 76);
             this.txtNameService.Name = "txtNameService";
             this.txtNameService.Size = new System.Drawing.Size(324, 26);
             this.txtNameService.TabIndex = 46;
@@ -376,7 +529,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(208, 110);
+            this.label18.Location = new System.Drawing.Point(208, 113);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(40, 19);
             this.label18.TabIndex = 43;
@@ -385,7 +538,7 @@
             // txtCostService
             // 
             this.txtCostService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostService.Location = new System.Drawing.Point(254, 107);
+            this.txtCostService.Location = new System.Drawing.Point(254, 110);
             this.txtCostService.Name = "txtCostService";
             this.txtCostService.Size = new System.Drawing.Size(152, 26);
             this.txtCostService.TabIndex = 42;
@@ -394,7 +547,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 110);
+            this.label13.Location = new System.Drawing.Point(13, 113);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 19);
             this.label13.TabIndex = 37;
@@ -411,7 +564,7 @@
             // txtKindService
             // 
             this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKindService.Location = new System.Drawing.Point(82, 107);
+            this.txtKindService.Location = new System.Drawing.Point(82, 110);
             this.txtKindService.Name = "txtKindService";
             this.txtKindService.Size = new System.Drawing.Size(119, 26);
             this.txtKindService.TabIndex = 36;
@@ -440,144 +593,68 @@
             this.btService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btService.ForeColor = System.Drawing.Color.White;
-            this.btService.Location = new System.Drawing.Point(191, 144);
+            this.btService.Location = new System.Drawing.Point(189, 176);
             this.btService.Name = "btService";
             this.btService.Size = new System.Drawing.Size(74, 31);
             this.btService.TabIndex = 35;
             this.btService.Text = "Add";
             this.btService.UseVisualStyleBackColor = false;
             // 
-            // panel7
+            // label17
             // 
-            this.panel7.BackColor = System.Drawing.Color.Firebrick;
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(651, 7);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(270, 100);
-            this.panel7.TabIndex = 38;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(18, 146);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 19);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "Note";
             // 
-            // panel8
+            // txtNoteService
             // 
-            this.panel8.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.ForeColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(19, 15);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(71, 66);
-            this.panel8.TabIndex = 9;
+            this.txtNoteService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoteService.Location = new System.Drawing.Point(82, 142);
+            this.txtNoteService.Name = "txtNoteService";
+            this.txtNoteService.Size = new System.Drawing.Size(324, 26);
+            this.txtNoteService.TabIndex = 65;
             // 
-            // label6
+            // label20
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(115, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 35);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "SỐ LIỆU";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(13, 47);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(27, 19);
+            this.label20.TabIndex = 68;
+            this.label20.Text = "ID";
             // 
-            // label1
+            // txtIDService
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(115, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 31);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "TIÊU ĐỀ";
+            this.txtIDService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDService.Location = new System.Drawing.Point(82, 44);
+            this.txtIDService.Name = "txtIDService";
+            this.txtIDService.Size = new System.Drawing.Size(324, 26);
+            this.txtIDService.TabIndex = 67;
             // 
-            // panel4
+            // errorProvider1
             // 
-            this.panel4.BackColor = System.Drawing.Color.Firebrick;
-            this.panel4.Controls.Add(this.panel11);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(333, 7);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 100);
-            this.panel4.TabIndex = 37;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // panel11
+            // errorProvider2
             // 
-            this.panel11.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.ForeColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(19, 15);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(71, 66);
-            this.panel11.TabIndex = 9;
+            this.errorProvider2.ContainerControl = this;
             // 
-            // label2
+            // errorProvider3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(115, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 35);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "SỐ LIỆU";
+            this.errorProvider3.ContainerControl = this;
             // 
-            // label3
+            // errorProvider4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(114, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 31);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "TIÊU ĐỀ";
+            this.errorProvider4.ContainerControl = this;
             // 
-            // panel5
+            // errorProvider5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Firebrick;
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(19, 7);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(270, 100);
-            this.panel5.TabIndex = 36;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(19, 15);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(71, 66);
-            this.panel6.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(115, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 35);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "SỐ LIỆU";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(114, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 31);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "TIÊU ĐỀ";
+            this.errorProvider5.ContainerControl = this;
             // 
             // ServiceWindow
             // 
@@ -589,6 +666,12 @@
             this.Name = "ServiceWindow";
             this.Size = new System.Drawing.Size(940, 620);
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -596,12 +679,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,5 +735,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtIDService;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtNoteService;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
     }
 }

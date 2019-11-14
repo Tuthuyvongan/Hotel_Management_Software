@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using userBUS;
 using userDTO;
+using managerBUS;
+using managerDTO;
 
 namespace QuanLyHotel
 {
@@ -20,6 +22,7 @@ namespace QuanLyHotel
         public SighUpWindow()
         {
             InitializeComponent();
+
         }
 
         private void MoveBar_MouseDown(object sender, MouseEventArgs e)
@@ -54,27 +57,30 @@ namespace QuanLyHotel
             C.ShowDialog();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void SignInButton_Click(object sender, EventArgs e)
         {
-            UserBUS tcBus = new UserBUS();
-            UserDTO tc = new UserDTO();
-            tc.IDU = UsernameTB.Text;
-            tc.NAME = textBox1.Text;
-            tc.PASSWORD = textBox6.Text;
-            bool kq = tcBus.add(tc);
+            UserBUS UsBus = new UserBUS();
+            UserDTO Us = new UserDTO();
+            //ManagerBUS mngBus = new ManagerBUS();
+            //ManagerDTO mng = new ManagerDTO();
+            Us.IDU = txtUsername.Text;
+            Us.NAME = txtName.Text;
+            Us.PASSWORD = txtPassword.Text;
+            Us.LEVEL = 0;
+            bool kq = UsBus.add(Us);
             if (kq == false)
                 MessageBox.Show("Tài khoản đã tồn tại. Vui lòng kiểm tra lại dữ liệu");
             else
             {
                 MessageBox.Show("Thêm tài khoản thành công");              
-                LoginWindow C = new LoginWindow();
+                LoginWindow C = new LoginWindow(txtUsername.Text,txtPassword.Text);   
                 this.Hide();
                 C.ShowDialog();
             }
                 
-            UsernameTB.Text = "";
-            textBox1.Text = "";
-            textBox6.Text = "";
+            txtUsername.Text = "";
+            txtName.Text = "";
+            txtPassword.Text = "";
            
         }
     }

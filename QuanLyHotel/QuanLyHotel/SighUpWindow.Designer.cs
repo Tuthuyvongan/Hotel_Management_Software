@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.UsernameTB = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -43,13 +43,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtRePassword = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.CloseButton1 = new System.Windows.Forms.Button();
-            this.LoginButton = new System.Windows.Forms.Button();
+            this.SignUpButton = new System.Windows.Forms.Button();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.MoveBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,13 +80,14 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Name";
             // 
-            // UsernameTB
+            // txtUsername
             // 
-            this.UsernameTB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTB.Location = new System.Drawing.Point(234, 90);
-            this.UsernameTB.Name = "UsernameTB";
-            this.UsernameTB.Size = new System.Drawing.Size(248, 26);
-            this.UsernameTB.TabIndex = 14;
+            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(234, 90);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtUsername.Size = new System.Drawing.Size(248, 26);
+            this.txtUsername.TabIndex = 14;
             // 
             // label3
             // 
@@ -118,13 +119,13 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Address";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(234, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 26);
-            this.textBox1.TabIndex = 19;
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(234, 203);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(248, 26);
+            this.txtName.TabIndex = 19;
             // 
             // textBox2
             // 
@@ -198,21 +199,21 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Already a member?";
             // 
-            // textBox6
+            // txtPassword
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(234, 122);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(248, 26);
-            this.textBox6.TabIndex = 28;
+            this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(234, 122);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(248, 26);
+            this.txtPassword.TabIndex = 28;
             // 
-            // textBox7
+            // txtRePassword
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(234, 154);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(248, 26);
-            this.textBox7.TabIndex = 29;
+            this.txtRePassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePassword.Location = new System.Drawing.Point(234, 154);
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(248, 26);
+            this.txtRePassword.TabIndex = 29;
             // 
             // label11
             // 
@@ -256,19 +257,19 @@
             this.CloseButton1.UseVisualStyleBackColor = true;
             this.CloseButton1.Click += new System.EventHandler(this.CloseButton1_Click);
             // 
-            // LoginButton
+            // SignUpButton
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.Firebrick;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(148, 429);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(365, 31);
-            this.LoginButton.TabIndex = 34;
-            this.LoginButton.Text = "Sign Up";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.SignUpButton.BackColor = System.Drawing.Color.Firebrick;
+            this.SignUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignUpButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpButton.ForeColor = System.Drawing.Color.White;
+            this.SignUpButton.Location = new System.Drawing.Point(148, 429);
+            this.SignUpButton.Name = "SignUpButton";
+            this.SignUpButton.Size = new System.Drawing.Size(365, 31);
+            this.SignUpButton.TabIndex = 34;
+            this.SignUpButton.Text = "Sign Up";
+            this.SignUpButton.UseVisualStyleBackColor = false;
+            this.SignUpButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
             // LoginLabel
             // 
@@ -351,13 +352,13 @@
             this.ClientSize = new System.Drawing.Size(530, 470);
             this.Controls.Add(this.MoveBar);
             this.Controls.Add(this.LoginLabel);
-            this.Controls.Add(this.LoginButton);
+            this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.CloseButton1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtRePassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -366,11 +367,11 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.UsernameTB);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,11 +386,11 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox UsernameTB;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -398,13 +399,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtRePassword;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button CloseButton1;
-        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button SignUpButton;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Panel MoveBar;
         private System.Windows.Forms.Panel panel1;

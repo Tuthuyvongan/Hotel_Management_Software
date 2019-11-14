@@ -22,9 +22,13 @@ namespace QuanLyHotel
         public LoginWindow()
         {
             InitializeComponent();
-
         }
-
+        public LoginWindow(string a, string b)
+        {
+            InitializeComponent();
+            txtUsername.Text = a;
+            txtPassword.Text = b;
+        }
         private void MoveBar_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -71,6 +75,8 @@ namespace QuanLyHotel
             string PASSWORD = txtPassword.Text;
             if (ndBUS.kiemtra(tn, IDU, PASSWORD))
             {
+                txtUsername.Text = "";
+                txtPassword.Text = "";
                 MainWindow f = new MainWindow();
                 this.Hide();
                 f.ShowDialog();
@@ -85,6 +91,8 @@ namespace QuanLyHotel
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
             this.Hide();
             SighUpWindow B = new SighUpWindow();
             B.Show();

@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btLoadCheckIn = new System.Windows.Forms.Button();
@@ -47,22 +43,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,50 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(940, 115);
             this.panel1.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Firebrick;
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(21, 7);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(270, 100);
-            this.panel5.TabIndex = 11;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(19, 15);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(71, 66);
-            this.panel6.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(115, 46);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 35);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "SỐ LIỆU";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(114, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 31);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "TIÊU ĐỀ";
             // 
             // panel2
             // 
@@ -273,50 +229,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(241, 159);
             this.dataGridView1.TabIndex = 22;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Firebrick;
-            this.panel4.Controls.Add(this.panel11);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(335, 7);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 100);
-            this.panel4.TabIndex = 12;
-            // 
-            // panel11
-            // 
-            this.panel11.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel11.ForeColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(19, 15);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(71, 66);
-            this.panel11.TabIndex = 9;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(115, 46);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 35);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "SỐ LIỆU";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(114, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 31);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "TIÊU ĐỀ";
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Firebrick;
@@ -324,10 +236,10 @@
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label7);
             this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(653, 7);
+            this.panel7.Location = new System.Drawing.Point(651, 7);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(270, 100);
-            this.panel7.TabIndex = 35;
+            this.panel7.TabIndex = 41;
             // 
             // panel8
             // 
@@ -361,6 +273,94 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "TIÊU ĐỀ";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Firebrick;
+            this.panel4.Controls.Add(this.panel11);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(333, 7);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(270, 100);
+            this.panel4.TabIndex = 40;
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel11.ForeColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(19, 15);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(71, 66);
+            this.panel11.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(115, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 35);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "SỐ LIỆU";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(114, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 31);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "TIÊU ĐỀ";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Firebrick;
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(19, 7);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 100);
+            this.panel5.TabIndex = 39;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.ForeColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(19, 15);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(71, 66);
+            this.panel6.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 22.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(115, 46);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 35);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "SỐ LIỆU";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(114, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 31);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "TIÊU ĐỀ";
+            // 
             // CheckInWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,17 +370,17 @@
             this.Name = "CheckInWindow";
             this.Size = new System.Drawing.Size(940, 620);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -401,10 +401,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btCheckIn;
         private System.Windows.Forms.Button btEditCheckIn;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btLoadCheckIn;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -414,5 +410,9 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

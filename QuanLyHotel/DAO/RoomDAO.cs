@@ -22,11 +22,11 @@ namespace roomDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-        public bool add(RoomDTO kr)
+        public bool add(RoomDTO rm)
         {
             string query = string.Empty;
-            query += "INSERT INTO [Room] (iDR,nBED,nAME,sTATUS,cOST,nOTE) ";
-            query += "VALUES (@iDR,@iBED,@nAME,@sTATUS,@cOST,@nOTE)";
+            query += "INSERT INTO [Room] (iDR,nBED,nAME,sTATUS,nOTE,cOST) ";
+            query += "VALUES (@iDR,@nBED,@nAME,@sTATUS,@nOTE,@cOST)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -35,12 +35,12 @@ namespace roomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDR", kr.IDR);
-                    cmd.Parameters.AddWithValue("@nBED", kr.NBED);
-                    cmd.Parameters.AddWithValue("@nAME", kr.NAME);
-                    cmd.Parameters.AddWithValue("@sTATUS", kr.STATUS);
-                    cmd.Parameters.AddWithValue("@cOST", kr.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
+                    cmd.Parameters.AddWithValue("@iDR", rm.IDR);
+                    cmd.Parameters.AddWithValue("@nBED", rm.NBED);
+                    cmd.Parameters.AddWithValue("@nAME", rm.NAME);
+                    cmd.Parameters.AddWithValue("@sTATUS", rm.STATUS);
+                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
+                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
 
                     try
                     {
@@ -62,7 +62,7 @@ namespace roomDAO
         public bool delete(RoomDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM Room WHERE [IDR] = @iDR"; ;
+            query += "DELETE FROM Room WHERE [iDR] = @iDR"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -89,10 +89,10 @@ namespace roomDAO
             }
             return true;
         }
-        public bool edit(RoomDTO kr)
+        public bool edit(RoomDTO rm)
         {
             string query = string.Empty;
-            query += "UPDATE Room SET [nBED] = @iBED, [nAME] = @nAME, [sTATUS] = @sTATUS, [cOST] = @cOST,[nOTE]=@nOTE  WHERE [IDR] = @iDR";
+            query += "UPDATE Room SET [nBED] = @nBED, [nAME] = @nAME, [sTATUS] = @sTATUS, [cOST] = @cOST,[nOTE]=@nOTE  WHERE [iDR] = @iDR";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -101,12 +101,12 @@ namespace roomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDR", kr.IDR);
-                    cmd.Parameters.AddWithValue("@nBED", kr.NBED);
-                    cmd.Parameters.AddWithValue("@nAME", kr.NAME);
-                    cmd.Parameters.AddWithValue("@sTATUS", kr.STATUS);
-                    cmd.Parameters.AddWithValue("@cOST", kr.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
+                    cmd.Parameters.AddWithValue("@iDR", rm.IDR);
+                    cmd.Parameters.AddWithValue("@nBED", rm.NBED);
+                    cmd.Parameters.AddWithValue("@nAME", rm.NAME);
+                    cmd.Parameters.AddWithValue("@sTATUS", rm.STATUS);
+                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
+                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
                     try
                     {
                         con.Open();
