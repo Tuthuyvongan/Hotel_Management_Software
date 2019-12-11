@@ -47,10 +47,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtNumberService = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.txtSearchService = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btUsedService = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSearchRoom = new System.Windows.Forms.TextBox();
@@ -67,28 +63,31 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtNameService = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtCostService = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.txtKindService = new System.Windows.Forms.TextBox();
             this.txtSearchService1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.btService = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtNoteService = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtIDService = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtNoteService = new System.Windows.Forms.TextBox();
+            this.txtCostService = new System.Windows.Forms.TextBox();
+            this.txtKindService = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSearchService = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.txtIDS = new System.Windows.Forms.TextBox();
+            this.txtIDR = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -97,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -244,6 +245,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Panel);
             this.panel2.Controls.Add(this.dtDateService);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.txtNumberService);
@@ -263,6 +265,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(508, 505);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // dtDateService
             // 
@@ -303,43 +306,6 @@
             this.label12.TabIndex = 33;
             this.label12.Text = "Date";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(21, 349);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(461, 85);
-            this.dataGridView2.TabIndex = 20;
-            // 
-            // txtSearchService
-            // 
-            this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchService.Location = new System.Drawing.Point(90, 314);
-            this.txtSearchService.Name = "txtSearchService";
-            this.txtSearchService.Size = new System.Drawing.Size(392, 29);
-            this.txtSearchService.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 317);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 22);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Search";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(15, 283);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 31);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "SERVICE";
-            // 
             // btUsedService
             // 
             this.btUsedService.BackColor = System.Drawing.Color.Firebrick;
@@ -352,6 +318,7 @@
             this.btUsedService.TabIndex = 16;
             this.btUsedService.Text = "OK";
             this.btUsedService.UseVisualStyleBackColor = false;
+            this.btUsedService.Click += new System.EventHandler(this.BtUsedService_Click);
             // 
             // dataGridView1
             // 
@@ -360,6 +327,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(461, 85);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
             // txtSearchRoom
             // 
@@ -397,16 +365,16 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(14, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 40);
+            this.label7.Size = new System.Drawing.Size(246, 40);
             this.label7.TabIndex = 7;
             this.label7.Text = "USE SERVICE";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.txtIDService);
-            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.txtKindService);
+            this.panel3.Controls.Add(this.txtCostService);
             this.panel3.Controls.Add(this.txtNoteService);
+            this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.btLoadService);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.btAddService);
@@ -416,13 +384,10 @@
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.txtNameService);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.txtCostService);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.dataGridView3);
-            this.panel3.Controls.Add(this.txtKindService);
             this.panel3.Controls.Add(this.txtSearchService1);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.btService);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(514, 115);
             this.panel3.Name = "panel3";
@@ -435,7 +400,7 @@
             this.btLoadService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoadService.ForeColor = System.Drawing.Color.White;
-            this.btLoadService.Location = new System.Drawing.Point(254, 243);
+            this.btLoadService.Location = new System.Drawing.Point(257, 198);
             this.btLoadService.Name = "btLoadService";
             this.btLoadService.Size = new System.Drawing.Size(74, 31);
             this.btLoadService.TabIndex = 64;
@@ -448,9 +413,9 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(11, 209);
+            this.label16.Location = new System.Drawing.Point(11, 164);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(134, 31);
+            this.label16.Size = new System.Drawing.Size(133, 31);
             this.label16.TabIndex = 36;
             this.label16.Text = "SERVICE";
             // 
@@ -460,7 +425,7 @@
             this.btAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddService.ForeColor = System.Drawing.Color.White;
-            this.btAddService.Location = new System.Drawing.Point(14, 243);
+            this.btAddService.Location = new System.Drawing.Point(17, 198);
             this.btAddService.Name = "btAddService";
             this.btAddService.Size = new System.Drawing.Size(74, 31);
             this.btAddService.TabIndex = 48;
@@ -474,7 +439,7 @@
             this.btDeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteService.ForeColor = System.Drawing.Color.White;
-            this.btDeleteService.Location = new System.Drawing.Point(174, 243);
+            this.btDeleteService.Location = new System.Drawing.Point(177, 198);
             this.btDeleteService.Name = "btDeleteService";
             this.btDeleteService.Size = new System.Drawing.Size(74, 31);
             this.btDeleteService.TabIndex = 50;
@@ -488,7 +453,7 @@
             this.btEditService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditService.ForeColor = System.Drawing.Color.White;
-            this.btEditService.Location = new System.Drawing.Point(94, 243);
+            this.btEditService.Location = new System.Drawing.Point(97, 198);
             this.btEditService.Name = "btEditService";
             this.btEditService.Size = new System.Drawing.Size(74, 31);
             this.btEditService.TabIndex = 49;
@@ -503,7 +468,7 @@
             this.txtServiceContent.ForeColor = System.Drawing.Color.Black;
             this.txtServiceContent.Location = new System.Drawing.Point(87, 3);
             this.txtServiceContent.Name = "txtServiceContent";
-            this.txtServiceContent.Size = new System.Drawing.Size(255, 40);
+            this.txtServiceContent.Size = new System.Drawing.Size(254, 40);
             this.txtServiceContent.TabIndex = 36;
             this.txtServiceContent.Text = "ADD SERVICE";
             // 
@@ -511,7 +476,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(13, 79);
+            this.label19.Location = new System.Drawing.Point(13, 49);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 19);
             this.label19.TabIndex = 47;
@@ -520,7 +485,7 @@
             // txtNameService
             // 
             this.txtNameService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameService.Location = new System.Drawing.Point(82, 76);
+            this.txtNameService.Location = new System.Drawing.Point(82, 46);
             this.txtNameService.Name = "txtNameService";
             this.txtNameService.Size = new System.Drawing.Size(324, 26);
             this.txtNameService.TabIndex = 46;
@@ -529,25 +494,17 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(208, 113);
+            this.label18.Location = new System.Drawing.Point(208, 79);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(40, 19);
             this.label18.TabIndex = 43;
             this.label18.Text = "Cost";
             // 
-            // txtCostService
-            // 
-            this.txtCostService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostService.Location = new System.Drawing.Point(254, 110);
-            this.txtCostService.Name = "txtCostService";
-            this.txtCostService.Size = new System.Drawing.Size(152, 26);
-            this.txtCostService.TabIndex = 42;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 113);
+            this.label13.Location = new System.Drawing.Point(13, 81);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 19);
             this.label13.TabIndex = 37;
@@ -556,85 +513,28 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(17, 314);
+            this.dataGridView3.Location = new System.Drawing.Point(17, 271);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(389, 161);
+            this.dataGridView3.Size = new System.Drawing.Size(389, 204);
             this.dataGridView3.TabIndex = 36;
-            // 
-            // txtKindService
-            // 
-            this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKindService.Location = new System.Drawing.Point(82, 110);
-            this.txtKindService.Name = "txtKindService";
-            this.txtKindService.Size = new System.Drawing.Size(119, 26);
-            this.txtKindService.TabIndex = 36;
             // 
             // txtSearchService1
             // 
             this.txtSearchService1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchService1.Location = new System.Drawing.Point(86, 280);
+            this.txtSearchService1.Location = new System.Drawing.Point(86, 235);
             this.txtSearchService1.Name = "txtSearchService1";
-            this.txtSearchService1.Size = new System.Drawing.Size(320, 29);
+            this.txtSearchService1.Size = new System.Drawing.Size(319, 29);
             this.txtSearchService1.TabIndex = 39;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 283);
+            this.label15.Location = new System.Drawing.Point(13, 238);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 22);
             this.label15.TabIndex = 38;
             this.label15.Text = "Search";
-            // 
-            // btService
-            // 
-            this.btService.BackColor = System.Drawing.Color.Firebrick;
-            this.btService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btService.ForeColor = System.Drawing.Color.White;
-            this.btService.Location = new System.Drawing.Point(189, 176);
-            this.btService.Name = "btService";
-            this.btService.Size = new System.Drawing.Size(74, 31);
-            this.btService.TabIndex = 35;
-            this.btService.Text = "Add";
-            this.btService.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(18, 146);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 19);
-            this.label17.TabIndex = 66;
-            this.label17.Text = "Note";
-            // 
-            // txtNoteService
-            // 
-            this.txtNoteService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoteService.Location = new System.Drawing.Point(82, 142);
-            this.txtNoteService.Name = "txtNoteService";
-            this.txtNoteService.Size = new System.Drawing.Size(324, 26);
-            this.txtNoteService.TabIndex = 65;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(13, 47);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 19);
-            this.label20.TabIndex = 68;
-            this.label20.Text = "ID";
-            // 
-            // txtIDService
-            // 
-            this.txtIDService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDService.Location = new System.Drawing.Point(82, 44);
-            this.txtIDService.Name = "txtIDService";
-            this.txtIDService.Size = new System.Drawing.Size(324, 26);
-            this.txtIDService.TabIndex = 67;
             // 
             // errorProvider1
             // 
@@ -656,6 +556,101 @@
             // 
             this.errorProvider5.ContainerControl = this;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(13, 113);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 19);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "Note";
+            // 
+            // txtNoteService
+            // 
+            this.txtNoteService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoteService.Location = new System.Drawing.Point(81, 110);
+            this.txtNoteService.Name = "txtNoteService";
+            this.txtNoteService.Size = new System.Drawing.Size(324, 26);
+            this.txtNoteService.TabIndex = 67;
+            // 
+            // txtCostService
+            // 
+            this.txtCostService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCostService.Location = new System.Drawing.Point(254, 78);
+            this.txtCostService.Name = "txtCostService";
+            this.txtCostService.Size = new System.Drawing.Size(151, 26);
+            this.txtCostService.TabIndex = 68;
+            // 
+            // txtKindService
+            // 
+            this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKindService.Location = new System.Drawing.Point(82, 78);
+            this.txtKindService.Name = "txtKindService";
+            this.txtKindService.Size = new System.Drawing.Size(105, 26);
+            this.txtKindService.TabIndex = 69;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(15, 283);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(133, 31);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "SERVICE";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 317);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 22);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Search";
+            // 
+            // txtSearchService
+            // 
+            this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchService.Location = new System.Drawing.Point(90, 314);
+            this.txtSearchService.Name = "txtSearchService";
+            this.txtSearchService.Size = new System.Drawing.Size(392, 29);
+            this.txtSearchService.TabIndex = 19;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(21, 349);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(461, 85);
+            this.dataGridView2.TabIndex = 20;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellClick);
+            // 
+            // Panel
+            // 
+            this.Panel.Controls.Add(this.txtIDS);
+            this.Panel.Controls.Add(this.txtIDR);
+            this.Panel.Location = new System.Drawing.Point(257, 20);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(14, 23);
+            this.Panel.TabIndex = 51;
+            // 
+            // txtIDS
+            // 
+            this.txtIDS.Location = new System.Drawing.Point(3, 3);
+            this.txtIDS.Name = "txtIDS";
+            this.txtIDS.Size = new System.Drawing.Size(10, 20);
+            this.txtIDS.TabIndex = 52;
+            // 
+            // txtIDR
+            // 
+            this.txtIDR.Location = new System.Drawing.Point(3, 3);
+            this.txtIDR.Name = "txtIDR";
+            this.txtIDR.Size = new System.Drawing.Size(8, 20);
+            this.txtIDR.TabIndex = 53;
+            // 
             // ServiceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,7 +669,6 @@
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -684,6 +678,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -698,10 +695,6 @@
         private System.Windows.Forms.TextBox txtSearchRoom;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox txtSearchService;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btUsedService;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNumberService;
@@ -709,14 +702,11 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox txtSearchService1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btService;
         private System.Windows.Forms.Label txtServiceContent;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtNameService;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtCostService;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtKindService;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btAddService;
         private System.Windows.Forms.Button btDeleteService;
@@ -735,14 +725,21 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtIDService;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtNoteService;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtSearchService;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtKindService;
+        private System.Windows.Forms.TextBox txtCostService;
+        private System.Windows.Forms.TextBox txtNoteService;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.TextBox txtIDS;
+        private System.Windows.Forms.TextBox txtIDR;
     }
 }

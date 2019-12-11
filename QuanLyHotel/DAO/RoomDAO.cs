@@ -25,8 +25,8 @@ namespace roomDAO
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
-            query += "INSERT INTO [Room] (iDR,nBED,nAME,sTATUS,nOTE,cOST) ";
-            query += "VALUES (@iDR,@nBED,@nAME,@sTATUS,@nOTE,@cOST)";
+            query += "INSERT INTO [Room] (iDR,iDKR,nAME,sTATUS,cOST) ";
+            query += "VALUES (@iDR,@iDRK,@nAME,@sTATUS,@cOST)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -36,11 +36,10 @@ namespace roomDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDR", rm.IDR);
-                    cmd.Parameters.AddWithValue("@nBED", rm.NBED);
+                    cmd.Parameters.AddWithValue("@iDRK", rm.IDRK);
                     cmd.Parameters.AddWithValue("@nAME", rm.NAME);
                     cmd.Parameters.AddWithValue("@sTATUS", rm.STATUS);
                     cmd.Parameters.AddWithValue("@cOST", rm.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
 
                     try
                     {
@@ -92,7 +91,7 @@ namespace roomDAO
         public bool edit(RoomDTO rm)
         {
             string query = string.Empty;
-            query += "UPDATE Room SET [nBED] = @nBED, [nAME] = @nAME, [sTATUS] = @sTATUS, [cOST] = @cOST,[nOTE]=@nOTE  WHERE [iDR] = @iDR";
+            query += "UPDATE Room SET [iDRK] = @iDRK, [nAME] = @nAME, [sTATUS] = @sTATUS, [cOST] = @cOST  WHERE [iDR] = @iDR";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -102,11 +101,10 @@ namespace roomDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDR", rm.IDR);
-                    cmd.Parameters.AddWithValue("@nBED", rm.NBED);
+                    cmd.Parameters.AddWithValue("@iDRK", rm.IDRK);
                     cmd.Parameters.AddWithValue("@nAME", rm.NAME);
                     cmd.Parameters.AddWithValue("@sTATUS", rm.STATUS);
                     cmd.Parameters.AddWithValue("@cOST", rm.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
                     try
                     {
                         con.Open();
@@ -151,12 +149,11 @@ namespace roomDAO
                             while (reader.Read())
                             {
                                 RoomDTO rm = new RoomDTO();
-                                rm.IDR = int.Parse(reader["iDR"].ToString());
-                                rm.NBED = int.Parse(reader["nBED"].ToString());
+                                rm.IDR = reader["iDR"].ToString();
+                                rm.IDRK = reader["iDRK"].ToString();
                                 rm.NAME = reader["nAME"].ToString();
                                 rm.STATUS = reader["sTATUS"].ToString();
                                 rm.COST = Decimal.Parse(reader["cOST"].ToString());
-                                rm.NOTE = reader["nOTE"].ToString();
                                 IsNameRoom.Add(rm);
                             }
                         }
@@ -222,10 +219,10 @@ namespace roomDAO
         public List<RoomDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [nAME], [nBED], [sTATUS], [cOST], [iDR]";
+            query += "SELECT [nAME], [iDRK], [sTATUS], [cOST], [iDR]";
             query += "FROM [Room]";
             query += " WHERE ([nAME] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([nBED] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([iDRK] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([sTATUS] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([cOST] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([iDR] LIKE CONCAT('%',@Keyword,'%'))";
@@ -251,8 +248,8 @@ namespace roomDAO
                             while (reader.Read())
                             {
                                 RoomDTO rm = new RoomDTO();
-                                rm.IDR = int.Parse(reader["iDR"].ToString());
-                                rm.NBED = int.Parse(reader["nBED"].ToString());
+                                rm.IDR = reader["iDR"].ToString();
+                                rm.IDRK = reader["iDRK"].ToString();
                                 rm.NAME = reader["nAME"].ToString();
                                 rm.STATUS = reader["sTATUS"].ToString();
                                 rm.COST = Decimal.Parse(reader["cOST"].ToString());

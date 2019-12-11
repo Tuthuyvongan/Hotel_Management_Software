@@ -8,14 +8,14 @@ namespace kindRoomDTO
 {
     public class KindRoomDTO
     {
-        private int iDKR;
+        private string iDKR;
         private string nAME;
-        private int numberOFBED;
+        private int bedsAMOUNT;
         private string nOTE;
 
-        public int IDKR { get => iDKR; set => iDKR = value; }
+        public string IDKR { get => iDKR; set => iDKR = value; }
         public string NAME { get => nAME; set => nAME = value; }
-        public int NumberOFBED { get => numberOFBED; set => numberOFBED = value; }
+        public int BedsAMOUNT { get => bedsAMOUNT; set => bedsAMOUNT = value; }
         public string NOTE { get => nOTE; set => nOTE = value; }
     }
 }

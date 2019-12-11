@@ -8,13 +8,17 @@ namespace roomserviceDTO
 {
     public class RoomServiceDTO
     {
-        private int iDRS;
-        private string tIME;
+        private string iDR_S;
+        private string iDR;
+        private string iDS;
+        private DateTime tIME;
         private int nUMBER;
         private Decimal cOST;
 
-        public int IDRS { get => iDRS; set => iDRS = value; }
-        public string TIME { get => tIME; set => tIME = value; }
+        public string IDR_S { get => iDR_S; set => iDR_S = value; }
+        public string IDR { get => iDR; set => iDR = value; }
+        public string IDS { get => iDS; set => iDR_S = value; }
+        public DateTime TIME { get => tIME; set => tIME = value; }
         public int NUMBER { get => nUMBER; set => nUMBER = value; }
         public Decimal COST { get => cOST; set => cOST = value; }
 

@@ -8,7 +8,7 @@ namespace customerDTO
 {
     public class CustomerDTO
     {
-        private int iDC;
+        private string iDC;
         private string nAME;
         private string gENDER;
         private DateTime bIRTHDAY;
@@ -17,7 +17,7 @@ namespace customerDTO
         private string eMAIL;
         private string identifyCARD;
 
-        public int IDC { get => iDC; set => iDC = value; }
+        public string IDC { get => iDC; set => iDC = value; }
         public string NAME { get => nAME; set => nAME = value; }
         public string GENDER { get => gENDER; set => gENDER = value; }
         public DateTime BIRTHDAY { get => bIRTHDAY; set => bIRTHDAY = value; }

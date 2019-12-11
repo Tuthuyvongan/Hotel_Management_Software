@@ -96,11 +96,11 @@ namespace QuanLyHotel
             errorProvider6.Clear();
             errorProvider7.Clear();
             errorProvider8.Clear();
-            if (txtIDCustomer.Text == "")
-            {
-                errorProvider1.SetError(txtIDCustomer, "not null!");
-            }
-            else if (txtNameCustomer.Text == "")
+            //if (txtIDCustomer.Text == "")
+            //{
+            //    errorProvider1.SetError(txtIDCustomer, "not null!");
+            //}
+            /*else*/ if (txtNameCustomer.Text == "")
             {
                 errorProvider2.SetError(txtNameCustomer, "not null!");
             }
@@ -132,7 +132,7 @@ namespace QuanLyHotel
             {
                 CustomerBUS ctmBUS = new CustomerBUS();
                 CustomerDTO ctm = new CustomerDTO();
-                ctm.IDC = int.Parse(txtIDCustomer.Text);
+                ctm.IDC = txtIdentifyCardCustomer+"@"+ txtEmailCustomer+"$"+ txtPhoneCustomer;
                 ctm.NAME = txtNameCustomer.Text;
                 ctm.GENDER = txtNameCustomer.Text;
                 ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);
@@ -153,7 +153,7 @@ namespace QuanLyHotel
         {
             CustomerBUS ctmBUS = new CustomerBUS();
             CustomerDTO ctm = new CustomerDTO();
-            ctm.IDC = int.Parse(txtIDCustomer.Text);
+            ctm.IDC = txtIdentifyCardCustomer + "@" + txtEmailCustomer + "$" + txtPhoneCustomer;
             ctm.NAME = txtNameCustomer.Text;
             ctm.GENDER = txtNameCustomer.Text;
             ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);
@@ -179,7 +179,7 @@ namespace QuanLyHotel
         {
             CustomerBUS ctmBUS = new CustomerBUS();
             CustomerDTO ctm = new CustomerDTO();
-            ctm.IDC = int.Parse(txtIDCustomer.Text);
+            ctm.IDC = txtIdentifyCardCustomer + "@" + txtEmailCustomer + "$" + txtPhoneCustomer;
             ctm.NAME = txtNameCustomer.Text;
             ctm.GENDER = txtNameCustomer.Text;
             ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);

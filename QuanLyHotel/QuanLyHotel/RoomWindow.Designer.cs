@@ -30,24 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.SearchPanel = new System.Windows.Forms.Panel();
+            this.txtCostRoom = new System.Windows.Forms.TextBox();
+            this.txtKindRoom = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btLoadRoom = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.btSearchKindRoom = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtNameRoom = new System.Windows.Forms.TextBox();
-            this.txtNbedRoom = new System.Windows.Forms.TextBox();
             this.btEditRoom = new System.Windows.Forms.Button();
             this.btDeleteRoom = new System.Windows.Forms.Button();
             this.btAddRoom = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtIDRoom = new System.Windows.Forms.TextBox();
-            this.txtNoteKindRoom = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtCostRoom = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtStatusRoom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btLoadRoom = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Room = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -63,12 +59,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btSearchKindRoom = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btLoadKindRoom = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.txtBedAmount = new System.Windows.Forms.TextBox();
+            this.btEditKindRoom = new System.Windows.Forms.Button();
+            this.btDeleteKindRoom = new System.Windows.Forms.Button();
+            this.btAddKindRoom = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtNameKindRoom = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             this.SearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,29 +86,30 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
             // 
+            this.SearchPanel.Controls.Add(this.txtCostRoom);
+            this.SearchPanel.Controls.Add(this.txtKindRoom);
+            this.SearchPanel.Controls.Add(this.dataGridView1);
+            this.SearchPanel.Controls.Add(this.btLoadRoom);
             this.SearchPanel.Controls.Add(this.label12);
+            this.SearchPanel.Controls.Add(this.btSearchKindRoom);
+            this.SearchPanel.Controls.Add(this.label5);
             this.SearchPanel.Controls.Add(this.txtNameRoom);
-            this.SearchPanel.Controls.Add(this.txtNbedRoom);
             this.SearchPanel.Controls.Add(this.btEditRoom);
             this.SearchPanel.Controls.Add(this.btDeleteRoom);
             this.SearchPanel.Controls.Add(this.btAddRoom);
-            this.SearchPanel.Controls.Add(this.label9);
-            this.SearchPanel.Controls.Add(this.txtIDRoom);
-            this.SearchPanel.Controls.Add(this.txtNoteKindRoom);
             this.SearchPanel.Controls.Add(this.label18);
             this.SearchPanel.Controls.Add(this.label15);
-            this.SearchPanel.Controls.Add(this.txtCostRoom);
-            this.SearchPanel.Controls.Add(this.label13);
-            this.SearchPanel.Controls.Add(this.label16);
-            this.SearchPanel.Controls.Add(this.txtStatusRoom);
             this.SearchPanel.Controls.Add(this.label3);
             this.SearchPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SearchPanel.Location = new System.Drawing.Point(0, 115);
@@ -107,31 +118,80 @@
             this.SearchPanel.Size = new System.Drawing.Size(470, 505);
             this.SearchPanel.TabIndex = 5;
             // 
+            // txtCostRoom
+            // 
+            this.txtCostRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCostRoom.Location = new System.Drawing.Point(83, 116);
+            this.txtCostRoom.Name = "txtCostRoom";
+            this.txtCostRoom.Size = new System.Drawing.Size(369, 26);
+            this.txtCostRoom.TabIndex = 67;
+            // 
+            // txtKindRoom
+            // 
+            this.txtKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKindRoom.Location = new System.Drawing.Point(83, 84);
+            this.txtKindRoom.Name = "txtKindRoom";
+            this.txtKindRoom.Size = new System.Drawing.Size(369, 26);
+            this.txtKindRoom.TabIndex = 66;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 250);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(437, 239);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // btLoadRoom
+            // 
+            this.btLoadRoom.BackColor = System.Drawing.Color.Firebrick;
+            this.btLoadRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLoadRoom.ForeColor = System.Drawing.Color.White;
+            this.btLoadRoom.Location = new System.Drawing.Point(382, 215);
+            this.btLoadRoom.Name = "btLoadRoom";
+            this.btLoadRoom.Size = new System.Drawing.Size(74, 31);
+            this.btLoadRoom.TabIndex = 63;
+            this.btLoadRoom.Text = "Load";
+            this.btLoadRoom.UseVisualStyleBackColor = false;
+            this.btLoadRoom.Click += new System.EventHandler(this.btLoadRoom_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(74, 167);
+            this.label12.Location = new System.Drawing.Point(15, 55);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 19);
             this.label12.TabIndex = 62;
             this.label12.Text = "Name";
             // 
+            // btSearchKindRoom
+            // 
+            this.btSearchKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearchKindRoom.Location = new System.Drawing.Point(83, 215);
+            this.btSearchKindRoom.Name = "btSearchKindRoom";
+            this.btSearchKindRoom.Size = new System.Drawing.Size(267, 29);
+            this.btSearchKindRoom.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 217);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 22);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Search";
+            // 
             // txtNameRoom
             // 
             this.txtNameRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameRoom.Location = new System.Drawing.Point(131, 165);
+            this.txtNameRoom.Location = new System.Drawing.Point(83, 52);
             this.txtNameRoom.Name = "txtNameRoom";
-            this.txtNameRoom.Size = new System.Drawing.Size(307, 26);
+            this.txtNameRoom.Size = new System.Drawing.Size(369, 26);
             this.txtNameRoom.TabIndex = 65;
-            // 
-            // txtNbedRoom
-            // 
-            this.txtNbedRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNbedRoom.Location = new System.Drawing.Point(131, 197);
-            this.txtNbedRoom.Name = "txtNbedRoom";
-            this.txtNbedRoom.Size = new System.Drawing.Size(307, 26);
-            this.txtNbedRoom.TabIndex = 53;
             // 
             // btEditRoom
             // 
@@ -139,7 +199,7 @@
             this.btEditRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditRoom.ForeColor = System.Drawing.Color.White;
-            this.btEditRoom.Location = new System.Drawing.Point(244, 329);
+            this.btEditRoom.Location = new System.Drawing.Point(231, 155);
             this.btEditRoom.Name = "btEditRoom";
             this.btEditRoom.Size = new System.Drawing.Size(74, 31);
             this.btEditRoom.TabIndex = 1;
@@ -153,7 +213,7 @@
             this.btDeleteRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteRoom.ForeColor = System.Drawing.Color.White;
-            this.btDeleteRoom.Location = new System.Drawing.Point(333, 329);
+            this.btDeleteRoom.Location = new System.Drawing.Point(320, 155);
             this.btDeleteRoom.Name = "btDeleteRoom";
             this.btDeleteRoom.Size = new System.Drawing.Size(74, 31);
             this.btDeleteRoom.TabIndex = 2;
@@ -167,7 +227,7 @@
             this.btAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddRoom.ForeColor = System.Drawing.Color.White;
-            this.btAddRoom.Location = new System.Drawing.Point(152, 329);
+            this.btAddRoom.Location = new System.Drawing.Point(139, 155);
             this.btAddRoom.Name = "btAddRoom";
             this.btAddRoom.Size = new System.Drawing.Size(74, 31);
             this.btAddRoom.TabIndex = 0;
@@ -175,87 +235,25 @@
             this.btAddRoom.UseVisualStyleBackColor = false;
             this.btAddRoom.Click += new System.EventHandler(this.BtAddRoom_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(86, 62);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 19);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "ID";
-            // 
-            // txtIDRoom
-            // 
-            this.txtIDRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDRoom.Location = new System.Drawing.Point(131, 59);
-            this.txtIDRoom.Name = "txtIDRoom";
-            this.txtIDRoom.Size = new System.Drawing.Size(307, 26);
-            this.txtIDRoom.TabIndex = 61;
-            // 
-            // txtNoteKindRoom
-            // 
-            this.txtNoteKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoteKindRoom.Location = new System.Drawing.Point(131, 228);
-            this.txtNoteKindRoom.Name = "txtNoteKindRoom";
-            this.txtNoteKindRoom.Size = new System.Drawing.Size(307, 26);
-            this.txtNoteKindRoom.TabIndex = 51;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(10, 204);
+            this.label18.Location = new System.Drawing.Point(15, 87);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 19);
+            this.label18.Size = new System.Drawing.Size(41, 19);
             this.label18.TabIndex = 52;
-            this.label18.Text = "Number Of Bed";
+            this.label18.Text = "Kind";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(80, 93);
+            this.label15.Location = new System.Drawing.Point(15, 119);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(40, 19);
             this.label15.TabIndex = 60;
             this.label15.Text = "Cost";
-            // 
-            // txtCostRoom
-            // 
-            this.txtCostRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostRoom.Location = new System.Drawing.Point(131, 91);
-            this.txtCostRoom.Name = "txtCostRoom";
-            this.txtCostRoom.Size = new System.Drawing.Size(307, 26);
-            this.txtCostRoom.TabIndex = 59;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(80, 242);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 19);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "Note";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(70, 131);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 19);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "Status";
-            // 
-            // txtStatusRoom
-            // 
-            this.txtStatusRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatusRoom.Location = new System.Drawing.Point(131, 125);
-            this.txtStatusRoom.Name = "txtStatusRoom";
-            this.txtStatusRoom.Size = new System.Drawing.Size(307, 26);
-            this.txtStatusRoom.TabIndex = 57;
             // 
             // label3
             // 
@@ -267,29 +265,6 @@
             this.label3.Size = new System.Drawing.Size(233, 31);
             this.label3.TabIndex = 6;
             this.label3.Text = "Room Information";
-            // 
-            // btLoadRoom
-            // 
-            this.btLoadRoom.BackColor = System.Drawing.Color.Firebrick;
-            this.btLoadRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLoadRoom.ForeColor = System.Drawing.Color.White;
-            this.btLoadRoom.Location = new System.Drawing.Point(362, 29);
-            this.btLoadRoom.Name = "btLoadRoom";
-            this.btLoadRoom.Size = new System.Drawing.Size(74, 31);
-            this.btLoadRoom.TabIndex = 63;
-            this.btLoadRoom.Text = "Load";
-            this.btLoadRoom.UseVisualStyleBackColor = false;
-            this.btLoadRoom.Click += new System.EventHandler(this.btLoadRoom_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(437, 325);
-            this.dataGridView1.TabIndex = 5;
             // 
             // Room
             // 
@@ -448,33 +423,177 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btLoadRoom);
-            this.panel1.Controls.Add(this.btSearchKindRoom);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.btLoadKindRoom);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtNote);
+            this.panel1.Controls.Add(this.txtBedAmount);
+            this.panel1.Controls.Add(this.btEditKindRoom);
+            this.panel1.Controls.Add(this.btDeleteKindRoom);
+            this.panel1.Controls.Add(this.btAddKindRoom);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.txtNameKindRoom);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(473, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(467, 505);
             this.panel1.TabIndex = 0;
             // 
-            // btSearchKindRoom
+            // dataGridView2
             // 
-            this.btSearchKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchKindRoom.Location = new System.Drawing.Point(76, 32);
-            this.btSearchKindRoom.Name = "btSearchKindRoom";
-            this.btSearchKindRoom.Size = new System.Drawing.Size(267, 29);
-            this.btSearchKindRoom.TabIndex = 8;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(15, 250);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(437, 237);
+            this.dataGridView2.TabIndex = 80;
             // 
-            // label5
+            // btLoadKindRoom
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 22);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Search";
+            this.btLoadKindRoom.BackColor = System.Drawing.Color.Firebrick;
+            this.btLoadKindRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLoadKindRoom.ForeColor = System.Drawing.Color.White;
+            this.btLoadKindRoom.Location = new System.Drawing.Point(378, 213);
+            this.btLoadKindRoom.Name = "btLoadKindRoom";
+            this.btLoadKindRoom.Size = new System.Drawing.Size(74, 31);
+            this.btLoadKindRoom.TabIndex = 83;
+            this.btLoadKindRoom.Text = "Load";
+            this.btLoadKindRoom.UseVisualStyleBackColor = false;
+            this.btLoadKindRoom.Click += new System.EventHandler(this.BtLoadKindRoom_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(79, 217);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(267, 29);
+            this.textBox6.TabIndex = 82;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(11, 219);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(67, 22);
+            this.label20.TabIndex = 81;
+            this.label20.Text = "Search";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 19);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "Name";
+            // 
+            // txtNote
+            // 
+            this.txtNote.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(123, 116);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(329, 26);
+            this.txtNote.TabIndex = 78;
+            // 
+            // txtBedAmount
+            // 
+            this.txtBedAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBedAmount.Location = new System.Drawing.Point(123, 84);
+            this.txtBedAmount.Name = "txtBedAmount";
+            this.txtBedAmount.Size = new System.Drawing.Size(329, 26);
+            this.txtBedAmount.TabIndex = 71;
+            // 
+            // btEditKindRoom
+            // 
+            this.btEditKindRoom.BackColor = System.Drawing.Color.Firebrick;
+            this.btEditKindRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEditKindRoom.ForeColor = System.Drawing.Color.White;
+            this.btEditKindRoom.Location = new System.Drawing.Point(219, 155);
+            this.btEditKindRoom.Name = "btEditKindRoom";
+            this.btEditKindRoom.Size = new System.Drawing.Size(74, 31);
+            this.btEditKindRoom.TabIndex = 68;
+            this.btEditKindRoom.Text = "Edit";
+            this.btEditKindRoom.UseVisualStyleBackColor = false;
+            this.btEditKindRoom.Click += new System.EventHandler(this.BtEditKindRoom_Click);
+            // 
+            // btDeleteKindRoom
+            // 
+            this.btDeleteKindRoom.BackColor = System.Drawing.Color.Firebrick;
+            this.btDeleteKindRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDeleteKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeleteKindRoom.ForeColor = System.Drawing.Color.White;
+            this.btDeleteKindRoom.Location = new System.Drawing.Point(308, 155);
+            this.btDeleteKindRoom.Name = "btDeleteKindRoom";
+            this.btDeleteKindRoom.Size = new System.Drawing.Size(74, 31);
+            this.btDeleteKindRoom.TabIndex = 69;
+            this.btDeleteKindRoom.Text = "Delete";
+            this.btDeleteKindRoom.UseVisualStyleBackColor = false;
+            this.btDeleteKindRoom.Click += new System.EventHandler(this.BtDeleteKindRoom_Click);
+            // 
+            // btAddKindRoom
+            // 
+            this.btAddKindRoom.BackColor = System.Drawing.Color.Firebrick;
+            this.btAddKindRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAddKindRoom.ForeColor = System.Drawing.Color.White;
+            this.btAddKindRoom.Location = new System.Drawing.Point(127, 155);
+            this.btAddKindRoom.Name = "btAddKindRoom";
+            this.btAddKindRoom.Size = new System.Drawing.Size(74, 31);
+            this.btAddKindRoom.TabIndex = 67;
+            this.btAddKindRoom.Text = "Add";
+            this.btAddKindRoom.UseVisualStyleBackColor = false;
+            this.btAddKindRoom.Click += new System.EventHandler(this.BtAddKindRoom_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(11, 119);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 19);
+            this.label17.TabIndex = 75;
+            this.label17.Text = "Note";
+            // 
+            // txtNameKindRoom
+            // 
+            this.txtNameKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameKindRoom.Location = new System.Drawing.Point(123, 52);
+            this.txtNameKindRoom.Name = "txtNameKindRoom";
+            this.txtNameKindRoom.Size = new System.Drawing.Size(329, 26);
+            this.txtNameKindRoom.TabIndex = 74;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(11, 87);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(98, 19);
+            this.label19.TabIndex = 73;
+            this.label19.Text = "Beds Amount";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(299, 31);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Kind Room Information";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // errorProvider2
             // 
@@ -491,6 +610,10 @@
             // errorProvider5
             // 
             this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
             // 
             // RoomWindow
             // 
@@ -513,10 +636,13 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,16 +659,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox btSearchKindRoom;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNbedRoom;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtNoteKindRoom;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtIDRoom;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtCostRoom;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtStatusRoom;
         private System.Windows.Forms.Button btLoadRoom;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -556,11 +675,28 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNameRoom;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btLoadKindRoom;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.TextBox txtBedAmount;
+        private System.Windows.Forms.Button btEditKindRoom;
+        private System.Windows.Forms.Button btDeleteKindRoom;
+        private System.Windows.Forms.Button btAddKindRoom;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtNameKindRoom;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCostRoom;
+        private System.Windows.Forms.TextBox txtKindRoom;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNameRoom;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
     }
 }

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.MoveBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.MinimizeButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btLogin = new System.Windows.Forms.Button();
             this.btSignUp = new System.Windows.Forms.Button();
             this.CloseButton1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.MinimizeButton = new System.Windows.Forms.Button();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.MoveBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,41 @@
             this.MoveBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBar_MouseMove);
             this.MoveBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBar_MouseUp);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::QuanLyHotel.Properties.Resources.icons8_user_male_50px;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(41, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 47);
+            this.panel1.TabIndex = 10;
+            // 
+            // MinimizeButton
+            // 
+            this.MinimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.Image = global::QuanLyHotel.Properties.Resources.MinimizeButtonIcon;
+            this.MinimizeButton.Location = new System.Drawing.Point(898, 3);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(18, 24);
+            this.MinimizeButton.TabIndex = 9;
+            this.MinimizeButton.UseVisualStyleBackColor = true;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Image = global::QuanLyHotel.Properties.Resources.CloseButtonIcon;
+            this.CloseButton.Location = new System.Drawing.Point(919, 3);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(18, 24);
+            this.CloseButton.TabIndex = 8;
+            this.CloseButton.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -70,17 +105,6 @@
             this.button1.Size = new System.Drawing.Size(25, 27);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(271, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 40);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "LOGIN";
             // 
             // txtUsername
             // 
@@ -152,41 +176,6 @@
             this.panel2.Size = new System.Drawing.Size(36, 29);
             this.panel2.TabIndex = 8;
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::QuanLyHotel.Properties.Resources.icons8_user_male_50px;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(41, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(49, 47);
-            this.panel1.TabIndex = 10;
-            // 
-            // MinimizeButton
-            // 
-            this.MinimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MinimizeButton.FlatAppearance.BorderSize = 0;
-            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeButton.Image = global::QuanLyHotel.Properties.Resources.MinimizeButtonIcon;
-            this.MinimizeButton.Location = new System.Drawing.Point(898, 3);
-            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.MinimizeButton.Name = "MinimizeButton";
-            this.MinimizeButton.Size = new System.Drawing.Size(18, 24);
-            this.MinimizeButton.TabIndex = 9;
-            this.MinimizeButton.UseVisualStyleBackColor = true;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CloseButton.FlatAppearance.BorderSize = 0;
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.Image = global::QuanLyHotel.Properties.Resources.CloseButtonIcon;
-            this.CloseButton.Location = new System.Drawing.Point(919, 3);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(18, 24);
-            this.CloseButton.TabIndex = 8;
-            this.CloseButton.UseVisualStyleBackColor = true;
-            // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +184,17 @@
             this.txtPassword.Size = new System.Drawing.Size(229, 29);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(271, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 40);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "LOGIN";
             // 
             // LoginWindow
             // 
@@ -214,8 +214,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginWindow";
             this.Text = "LoginWindow";
-            this.MoveBar.ResumeLayout(false);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginWindow_FormClosing);
+            this.MoveBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +228,6 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -236,5 +235,6 @@
         private System.Windows.Forms.Button btSignUp;
         private System.Windows.Forms.Button CloseButton1;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label1;
     }
 }

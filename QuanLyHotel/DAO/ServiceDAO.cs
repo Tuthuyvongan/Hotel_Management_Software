@@ -149,7 +149,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = int.Parse(reader["iDS"].ToString());
+                                srv.IDS = reader["iDS"].ToString();
                                 srv.NAME = reader["nAME"].ToString();
                                 srv.KIND = reader["kINd"].ToString();
                                 srv.COST = Decimal.Parse(reader["cOST"].ToString());
@@ -248,7 +248,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = int.Parse(reader["iDS"].ToString());
+                                srv.IDS = reader["iDS"].ToString();
                                 srv.NAME = reader["nAME"].ToString();
                                 srv.KIND = reader["kINd"].ToString();
                                 srv.COST = Decimal.Parse(reader["cOST"].ToString());

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using serviceBUS;
 using serviceDTO;
+using roomServiceBUS;
+using roomserviceDTO;
 
 namespace QuanLyHotel
 {
@@ -17,8 +19,10 @@ namespace QuanLyHotel
         public ServiceWindow()
         {
             InitializeComponent();
+            Panel.Hide();
         }
 
+        //Service
         private void loadData()
         {
             ServiceBUS ctmBus = new ServiceBUS();
@@ -83,31 +87,27 @@ namespace QuanLyHotel
             errorProvider3.Clear();
             errorProvider4.Clear();
             errorProvider5.Clear();
-            if (txtIDService.Text == "")
+            if (txtNameService.Text == "")
             {
-                errorProvider1.SetError(txtIDService, "not null!");
-            }
-            else if (txtNameService.Text == "")
-            {
-                errorProvider2.SetError(txtNameService, "not null!");
+                errorProvider1.SetError(txtNameService, "not null!");
             }
             else if (txtKindService.Text == "")
             {
-                errorProvider3.SetError(txtKindService, "not null!");
+                errorProvider2.SetError(txtKindService, "not null!");
             }
             else if (txtCostService.Text == "")
             {
-                errorProvider4.SetError(txtCostService, "not null!");
+                errorProvider3.SetError(txtCostService, "not null!");
             }
             else if (txtNoteService.Text == "")
             {
-                errorProvider5.SetError(txtNoteService, "not null!");
+                errorProvider4.SetError(txtNoteService, "not null!");
             }
             else
             {
                 ServiceBUS srvBUS = new ServiceBUS();
                 ServiceDTO srv = new ServiceDTO();
-                srv.IDS = int.Parse(txtIDService.Text);
+                srv.IDS =  txtNameService.Text+"@"+txtKindService.Text+"$"+txtCostService.Text;
                 srv.NAME = txtNameService.Text;
                 srv.KIND = txtKindService.Text;
                 srv.COST = Decimal.Parse(txtCostService.Text);
@@ -125,7 +125,7 @@ namespace QuanLyHotel
         {
             ServiceBUS srvBUS = new ServiceBUS();
             ServiceDTO srv = new ServiceDTO();
-            srv.IDS = int.Parse(txtIDService.Text);
+            srv.IDS = txtNameService.Text + "@" + txtKindService.Text + "$" + txtCostService.Text;
             srv.NAME = txtNameService.Text;
             srv.KIND = txtKindService.Text;
             srv.COST = Decimal.Parse(txtCostService.Text);
@@ -142,7 +142,7 @@ namespace QuanLyHotel
         {
             ServiceBUS srvBUS = new ServiceBUS();
             ServiceDTO srv = new ServiceDTO();
-            srv.IDS = int.Parse(txtIDService.Text);
+            srv.IDS = txtNameService.Text + "@" + txtKindService.Text + "$" + txtCostService.Text;
             srv.NAME = txtNameService.Text;
             srv.KIND = txtKindService.Text;
             srv.COST = Decimal.Parse(txtCostService.Text);
@@ -158,6 +158,42 @@ namespace QuanLyHotel
         private void BtLoadService_Click(object sender, EventArgs e)
         {
             this.loadData();
+        }
+
+
+
+
+        //Use service
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtIDR.Text = dataGridView1.Rows[numrow].Cells[1].Value.ToString();
+        }
+
+        private void DataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtIDS.Text = dataGridView1.Rows[numrow].Cells[1].Value.ToString();
+        }
+
+        private void BtUsedService_Click(object sender, EventArgs e)
+        {
+            RoomServiceBUS rsBUS = new RoomServiceBUS();
+            RoomServiceDTO rs = new RoomServiceDTO();
+            rs.IDR_S = "";
+            rs.IDR = txtIDR.Text;
+            rs.IDS = txtIDS.Text;
+            rs.TIME = DateTime.Parse(dtDateService.Text);
+            rs.NUMBER = int.Parse(txtNumberService.Text);
+            rs.COST = 1* int.Parse(txtNumberService.Text);         //công thức lấy cost service
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

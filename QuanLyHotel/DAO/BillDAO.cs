@@ -36,9 +36,9 @@ namespace billDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDB", bll.IDB);
-                    //cmd.Parameters.AddWithValue("@iDR", bll.IDR);
-                    //cmd.Parameters.AddWithValue("@iDC", bll.IDC);
-                    //cmd.Parameters.AddWithValue("@iDM", bll.IDM);
+                    cmd.Parameters.AddWithValue("@iDR", bll.IDR);
+                    cmd.Parameters.AddWithValue("@iDC", bll.IDC);
+                    cmd.Parameters.AddWithValue("@iDM", bll.IDM);
                     cmd.Parameters.AddWithValue("@cOST", bll.COST);
                     cmd.Parameters.AddWithValue("@checkIN", bll.CheckIn);
                     cmd.Parameters.AddWithValue("@checkOUT", bll.CheckOut);
@@ -108,9 +108,9 @@ namespace billDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDB", bll.IDB);
-                    //cmd.Parameters.AddWithValue("@iDR", bll.IDR);
-                    //cmd.Parameters.AddWithValue("@iDC", bll.IDC);
-                    //cmd.Parameters.AddWithValue("@iDM", bll.IDM);
+                    cmd.Parameters.AddWithValue("@iDR", bll.IDR);
+                    cmd.Parameters.AddWithValue("@iDC", bll.IDC);
+                    cmd.Parameters.AddWithValue("@iDM", bll.IDM);
                     cmd.Parameters.AddWithValue("@cOST", bll.COST);
                     cmd.Parameters.AddWithValue("@checkIN", bll.CheckIn);
                     cmd.Parameters.AddWithValue("@checkOUT", bll.CheckOut);
@@ -158,13 +158,13 @@ namespace billDAO
                             while (reader.Read())
                             {
                                 BillDTO bll = new BillDTO();
-                                bll.IDB = int.Parse(reader["iDC"].ToString());
-                                //bll.IDR = int.Parse(reader["iDC"].ToString());
-                                //bll.IDC = int.Parse(reader["iDC"].ToString());
-                                //bll.IDM = int.Parse(reader["iDC"].ToString());
+                                bll.IDB = reader["iDB"].ToString();
+                                bll.IDR = reader["iDR"].ToString();
+                                bll.IDC = reader["iDC"].ToString();
+                                bll.IDM = reader["iDM"].ToString();
                                 bll.COST = Decimal.Parse(reader["cOST"].ToString());
-                                bll.CheckIn = reader["checkIN"].ToString();
-                                bll.CheckOut = reader["checkOUT"].ToString();
+                                //bll.CheckIn = reader["checkIN"].ToString();
+                                //bll.CheckOut = reader["checkOUT"].ToString();
                                 IsDateBill.Add(bll);
                             }
                         }
@@ -209,7 +209,7 @@ namespace billDAO
                             while (reader.Read())
                             {
                                 BillDTO bll = new BillDTO();
-                                bll.CheckIn = reader["checkIN"].ToString();
+                                //bll.CheckIn = reader["checkIN"].ToString();
                                 lsDateBill.Add(bll);
                             }
                         }
@@ -261,13 +261,13 @@ namespace billDAO
                             while (reader.Read())
                             {
                                 BillDTO bll = new BillDTO();
-                                bll.IDB = int.Parse(reader["iDC"].ToString());
-                                //bll.IDR = int.Parse(reader["iDC"].ToString());
-                                //bll.IDC = int.Parse(reader["iDC"].ToString());
-                                //bll.IDM = int.Parse(reader["iDC"].ToString());
+                                bll.IDB = reader["iDB"].ToString();
+                                bll.IDR = reader["iDR"].ToString();
+                                bll.IDC = reader["iDC"].ToString();
+                                bll.IDM = reader["iDM"].ToString();
                                 bll.COST = Decimal.Parse(reader["cOST"].ToString());
-                                bll.CheckIn = reader["checkIN"].ToString();
-                                bll.CheckOut = reader["checkOUT"].ToString();
+                                //bll.CheckIn = reader["checkIN"].ToString();
+                                //bll.CheckOut = reader["checkOUT"].ToString();
                                 lsTimKiem.Add(bll);
                             }
                         }

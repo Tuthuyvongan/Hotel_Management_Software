@@ -25,8 +25,8 @@ namespace kindRoomDAO
         public bool add(KindRoomDTO kr)
         {
             string query = string.Empty;
-            query += "INSERT INTO [KindRoom] (iDKR,nAME,numberOFBED,nOTE) ";
-            query += "VALUES (@iDKR,@nAME,@numberOFBED,@nOTE)";
+            query += "INSERT INTO [KindRoom] (iDKR,nAME,bedsAMOUNT,nOTE) ";
+            query += "VALUES (@iDKR,@nAME,@bedsAMOUNT,@nOTE)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -37,7 +37,7 @@ namespace kindRoomDAO
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDKR", kr.IDKR);
                     cmd.Parameters.AddWithValue("@nAME", kr.NAME);
-                    cmd.Parameters.AddWithValue("@numberOFBED", kr.NumberOFBED);
+                    cmd.Parameters.AddWithValue("@bedsAMOUNT", kr.BedsAMOUNT);
                     cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
                     
 
@@ -91,7 +91,7 @@ namespace kindRoomDAO
         public bool edit(KindRoomDTO kr)
         {
             string query = string.Empty;
-            query += "UPDATE KindRoom SET [nAME] = @nAME, [numberOFBED] = @numberOFBED, [nOTE] = @nOTE  WHERE [iDKR] = @iDKR";
+            query += "UPDATE KindRoom SET [nAME] = @nAME, [bedsAMOUNT] = @bedsAMOUNT, [nOTE] = @nOTE  WHERE [iDKR] = @iDKR";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -102,7 +102,7 @@ namespace kindRoomDAO
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDKR", kr.IDKR);
                     cmd.Parameters.AddWithValue("@nAME", kr.NAME);
-                    cmd.Parameters.AddWithValue("@numberOFBED", kr.NumberOFBED);
+                    cmd.Parameters.AddWithValue("@bedsAMOUNT", kr.BedsAMOUNT);
                     cmd.Parameters.AddWithValue("@nOTE", kr.NOTE);
                     try
                     {
@@ -124,7 +124,7 @@ namespace kindRoomDAO
         public List<KindRoomDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [iDKR], [nAME], [numberOFBED], [nOTE]";
+            query += "SELECT [iDKR], [nAME], [bedsAMOUNT], [nOTE]";
             query += "FROM [KindRoom]";
 
             List<KindRoomDTO> IsNameKindRoom = new List<KindRoomDTO>();
@@ -148,9 +148,9 @@ namespace kindRoomDAO
                             while (reader.Read())
                             {
                                 KindRoomDTO kr = new KindRoomDTO();
-                                kr.IDKR = int.Parse(reader["iDKR"].ToString());
+                                kr.IDKR = reader["iDKR"].ToString();
                                 kr.NAME = reader["nAME"].ToString();
-                                kr.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
+                                kr.BedsAMOUNT = int.Parse(reader["bedsAMOUNT"].ToString());
                                 kr.NOTE = reader["nOTE"].ToString();
                                 IsNameKindRoom.Add(kr);
                             }
@@ -217,11 +217,11 @@ namespace kindRoomDAO
         public List<KindRoomDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [iDKR], [nAME], [numberOFBED], [nOTE]";
+            query += "SELECT [iDKR], [nAME], [bedsAMOUNT], [nOTE]";
             query += "FROM [KindRoom]";
             query += " WHERE ([nAME] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([iDKR] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([numberOFBED] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([bedsAMOUNT] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([nOTE] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<KindRoomDTO> lsTimKiem = new List<KindRoomDTO>();
@@ -245,9 +245,9 @@ namespace kindRoomDAO
                             while (reader.Read())
                             {
                                 KindRoomDTO kr = new KindRoomDTO();
-                                kr.IDKR = int.Parse(reader["iDKR"].ToString());
+                                kr.IDKR = reader["iDKR"].ToString();
                                 kr.NAME = reader["nAME"].ToString();
-                                kr.NumberOFBED = int.Parse(reader["numberOFBED"].ToString());
+                                kr.BedsAMOUNT = int.Parse(reader["bedsAMOUNT"].ToString());
                                 kr.NOTE = reader["nOTE"].ToString();
                                 lsTimKiem.Add(kr);
                             }

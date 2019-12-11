@@ -15,5 +15,39 @@ namespace roomServiceBUS
         {
             rsDao = new RoomServiceDAO();
         }
+        public bool add(RoomServiceDTO pt)
+        {
+            bool re = rsDao.add(pt);
+            return re;
+        }
+
+        public bool delete(RoomServiceDTO pt)
+        {
+            bool re = rsDao.delete(pt);
+            return re;
+        }
+
+        public bool edit(RoomServiceDTO pt)
+        {
+            bool re = rsDao.edit(pt);
+            return re;
+        }
+
+        public List<RoomServiceDTO> select()
+        {
+            return rsDao.select();
+        }
+        public List<RoomServiceDTO> selectNameRoom()
+        {
+            return rsDao.selectNameRoom();
+        }
+        public List<RoomServiceDTO> search(string Keyword)
+        {
+            return rsDao.search(Keyword);
+        }
+        public List<RoomServiceDTO> selectCost(string sKeyword)
+        {
+            return rsDao.selectCost(sKeyword);
+        }
     }
 }

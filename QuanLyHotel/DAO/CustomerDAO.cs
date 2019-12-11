@@ -156,7 +156,7 @@ namespace customerDAO
                             while (reader.Read())
                             {
                                 CustomerDTO ctm = new CustomerDTO();
-                                ctm.IDC = int.Parse(reader["iDC"].ToString());
+                                ctm.IDC = reader["iDC"].ToString();
                                 ctm.NAME = reader["nAME"].ToString();
                                 ctm.GENDER = reader["gENDER"].ToString();
                                 ctm.PhoneNUMBER = reader["phoneNUMBER"].ToString();
@@ -257,7 +257,7 @@ namespace customerDAO
                             while (reader.Read())
                             {
                                 CustomerDTO ctm = new CustomerDTO();
-                                ctm.IDC = int.Parse(reader["iDC"].ToString());
+                                ctm.IDC = reader["iDC"].ToString();
                                 ctm.NAME = reader["nAME"].ToString();
                                 ctm.GENDER = reader["gENDER"].ToString();
                                 ctm.PhoneNUMBER = reader["phoneNUMBER"].ToString();

@@ -28,7 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btLoadCheckIn = new System.Windows.Forms.Button();
@@ -43,26 +56,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.txtIDR = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtIDC = new System.Windows.Forms.TextBox();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtRow = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,159 +86,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(940, 115);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 115);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(940, 505);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btLoadCheckIn);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.btCheckIn);
-            this.panel3.Controls.Add(this.btEditCheckIn);
-            this.panel3.Controls.Add(this.txtSearchRoom);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtSearchCustomer);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(940, 505);
-            this.panel3.TabIndex = 0;
-            // 
-            // btLoadCheckIn
-            // 
-            this.btLoadCheckIn.BackColor = System.Drawing.Color.Firebrick;
-            this.btLoadCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLoadCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btLoadCheckIn.Location = new System.Drawing.Point(15, 463);
-            this.btLoadCheckIn.Name = "btLoadCheckIn";
-            this.btLoadCheckIn.Size = new System.Drawing.Size(241, 31);
-            this.btLoadCheckIn.TabIndex = 34;
-            this.btLoadCheckIn.Text = "Load";
-            this.btLoadCheckIn.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(379, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 40);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "CHECK IN";
-            // 
-            // btCheckIn
-            // 
-            this.btCheckIn.BackColor = System.Drawing.Color.Firebrick;
-            this.btCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btCheckIn.Location = new System.Drawing.Point(14, 352);
-            this.btCheckIn.Name = "btCheckIn";
-            this.btCheckIn.Size = new System.Drawing.Size(241, 31);
-            this.btCheckIn.TabIndex = 30;
-            this.btCheckIn.Text = "Check In";
-            this.btCheckIn.UseVisualStyleBackColor = false;
-            // 
-            // btEditCheckIn
-            // 
-            this.btEditCheckIn.BackColor = System.Drawing.Color.Firebrick;
-            this.btEditCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEditCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEditCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btEditCheckIn.Location = new System.Drawing.Point(15, 405);
-            this.btEditCheckIn.Name = "btEditCheckIn";
-            this.btEditCheckIn.Size = new System.Drawing.Size(241, 31);
-            this.btEditCheckIn.TabIndex = 31;
-            this.btEditCheckIn.Text = "Edit";
-            this.btEditCheckIn.UseVisualStyleBackColor = false;
-            // 
-            // txtSearchRoom
-            // 
-            this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchRoom.Location = new System.Drawing.Point(356, 118);
-            this.txtSearchRoom.Name = "txtSearchRoom";
-            this.txtSearchRoom.Size = new System.Drawing.Size(511, 29);
-            this.txtSearchRoom.TabIndex = 29;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 22);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Search";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(280, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 31);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "ROOM";
-            // 
-            // txtSearchCustomer
-            // 
-            this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCustomer.Location = new System.Drawing.Point(84, 118);
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(172, 29);
-            this.txtSearchCustomer.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 22);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Search";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 31);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "CUSTOMER";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(287, 160);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(636, 334);
-            this.dataGridView2.TabIndex = 23;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(241, 159);
-            this.dataGridView1.TabIndex = 22;
             // 
             // panel7
             // 
@@ -361,6 +219,245 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "TIÊU ĐỀ";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 115);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(940, 505);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtRow);
+            this.panel3.Controls.Add(this.dtCheckOut);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.dtCheckIn);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.Panel);
+            this.panel3.Controls.Add(this.btLoadCheckIn);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.btCheckIn);
+            this.panel3.Controls.Add(this.btEditCheckIn);
+            this.panel3.Controls.Add(this.txtSearchRoom);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtSearchCustomer);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(940, 505);
+            this.panel3.TabIndex = 0;
+            // 
+            // btLoadCheckIn
+            // 
+            this.btLoadCheckIn.BackColor = System.Drawing.Color.Firebrick;
+            this.btLoadCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLoadCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btLoadCheckIn.Location = new System.Drawing.Point(276, 51);
+            this.btLoadCheckIn.Name = "btLoadCheckIn";
+            this.btLoadCheckIn.Size = new System.Drawing.Size(125, 31);
+            this.btLoadCheckIn.TabIndex = 34;
+            this.btLoadCheckIn.Text = "Load";
+            this.btLoadCheckIn.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(379, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(192, 40);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "CHECK IN";
+            // 
+            // btCheckIn
+            // 
+            this.btCheckIn.BackColor = System.Drawing.Color.Firebrick;
+            this.btCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btCheckIn.Location = new System.Drawing.Point(14, 51);
+            this.btCheckIn.Name = "btCheckIn";
+            this.btCheckIn.Size = new System.Drawing.Size(125, 31);
+            this.btCheckIn.TabIndex = 30;
+            this.btCheckIn.Text = "Check In";
+            this.btCheckIn.UseVisualStyleBackColor = false;
+            this.btCheckIn.Click += new System.EventHandler(this.BtCheckIn_Click);
+            // 
+            // btEditCheckIn
+            // 
+            this.btEditCheckIn.BackColor = System.Drawing.Color.Firebrick;
+            this.btEditCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEditCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btEditCheckIn.Location = new System.Drawing.Point(145, 51);
+            this.btEditCheckIn.Name = "btEditCheckIn";
+            this.btEditCheckIn.Size = new System.Drawing.Size(125, 31);
+            this.btEditCheckIn.TabIndex = 31;
+            this.btEditCheckIn.Text = "Edit";
+            this.btEditCheckIn.UseVisualStyleBackColor = false;
+            // 
+            // txtSearchRoom
+            // 
+            this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRoom.Location = new System.Drawing.Point(345, 141);
+            this.txtSearchRoom.Name = "txtSearchRoom";
+            this.txtSearchRoom.Size = new System.Drawing.Size(398, 29);
+            this.txtSearchRoom.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(272, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 22);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Search";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(270, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 31);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "ROOM";
+            // 
+            // txtSearchCustomer
+            // 
+            this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchCustomer.Location = new System.Drawing.Point(86, 141);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(180, 29);
+            this.txtSearchCustomer.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 22);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Search";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(8, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 31);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "CUSTOMER";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(276, 188);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(467, 302);
+            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellClick);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 188);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(257, 302);
+            this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            // 
+            // txtIDR
+            // 
+            this.txtIDR.Location = new System.Drawing.Point(3, 2);
+            this.txtIDR.Name = "txtIDR";
+            this.txtIDR.Size = new System.Drawing.Size(10, 20);
+            this.txtIDR.TabIndex = 35;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // txtIDC
+            // 
+            this.txtIDC.Location = new System.Drawing.Point(3, 2);
+            this.txtIDC.Name = "txtIDC";
+            this.txtIDC.Size = new System.Drawing.Size(10, 20);
+            this.txtIDC.TabIndex = 36;
+            // 
+            // Panel
+            // 
+            this.Panel.Controls.Add(this.txtIDC);
+            this.Panel.Controls.Add(this.txtIDR);
+            this.Panel.Location = new System.Drawing.Point(407, 57);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(30, 25);
+            this.Panel.TabIndex = 37;
+            // 
+            // dtCheckIn
+            // 
+            this.dtCheckIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtCheckIn.Location = new System.Drawing.Point(799, 51);
+            this.dtCheckIn.Margin = new System.Windows.Forms.Padding(2);
+            this.dtCheckIn.Name = "dtCheckIn";
+            this.dtCheckIn.Size = new System.Drawing.Size(122, 26);
+            this.dtCheckIn.TabIndex = 52;
+            this.dtCheckIn.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(713, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 19);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Check In";
+            // 
+            // dtCheckOut
+            // 
+            this.dtCheckOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtCheckOut.Location = new System.Drawing.Point(799, 81);
+            this.dtCheckOut.Margin = new System.Windows.Forms.Padding(2);
+            this.dtCheckOut.Name = "dtCheckOut";
+            this.dtCheckOut.Size = new System.Drawing.Size(122, 26);
+            this.dtCheckOut.TabIndex = 54;
+            this.dtCheckOut.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(713, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 19);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Check Out";
+            // 
+            // txtRow
+            // 
+            this.txtRow.Location = new System.Drawing.Point(475, 86);
+            this.txtRow.Name = "txtRow";
+            this.txtRow.Size = new System.Drawing.Size(10, 20);
+            this.txtRow.TabIndex = 37;
+            // 
             // CheckInWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,17 +467,19 @@
             this.Name = "CheckInWindow";
             this.Size = new System.Drawing.Size(940, 620);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Panel.ResumeLayout(false);
+            this.Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,5 +513,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel Panel;
+        private System.Windows.Forms.TextBox txtIDC;
+        private System.Windows.Forms.TextBox txtIDR;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        public System.Windows.Forms.DateTimePicker dtCheckOut;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.DateTimePicker dtCheckIn;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtRow;
     }
 }

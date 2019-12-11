@@ -75,8 +75,6 @@
             this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtIDCustomer = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -238,8 +236,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtIDCustomer);
-            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.dtBirthday);
             this.panel2.Controls.Add(this.btLoadCustomer);
             this.panel2.Controls.Add(this.btCustomer);
@@ -305,7 +301,7 @@
             this.btCustomer.Name = "btCustomer";
             this.btCustomer.Size = new System.Drawing.Size(334, 31);
             this.btCustomer.TabIndex = 47;
-            this.btCustomer.Text = "Add";
+            this.btCustomer.Text = "Save";
             this.btCustomer.UseVisualStyleBackColor = false;
             // 
             // txtEmailCustomer
@@ -433,7 +429,7 @@
             this.txtCustomerContent.ForeColor = System.Drawing.Color.Black;
             this.txtCustomerContent.Location = new System.Drawing.Point(523, 37);
             this.txtCustomerContent.Name = "txtCustomerContent";
-            this.txtCustomerContent.Size = new System.Drawing.Size(302, 40);
+            this.txtCustomerContent.Size = new System.Drawing.Size(301, 40);
             this.txtCustomerContent.TabIndex = 14;
             this.txtCustomerContent.Text = "ADD CUSTOMER";
             // 
@@ -444,7 +440,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(22, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 40);
+            this.label3.Size = new System.Drawing.Size(217, 40);
             this.label3.TabIndex = 13;
             this.label3.Text = "CUSTOMER";
             // 
@@ -548,24 +544,6 @@
             // 
             this.errorProvider8.ContainerControl = this;
             // 
-            // txtIDCustomer
-            // 
-            this.txtIDCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDCustomer.Location = new System.Drawing.Point(635, 103);
-            this.txtIDCustomer.Name = "txtIDCustomer";
-            this.txtIDCustomer.Size = new System.Drawing.Size(269, 26);
-            this.txtIDCustomer.TabIndex = 51;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(526, 106);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(27, 19);
-            this.label16.TabIndex = 50;
-            this.label16.Text = "ID";
-            // 
             // CustomerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,7 +622,5 @@
         private System.Windows.Forms.ErrorProvider errorProvider6;
         private System.Windows.Forms.ErrorProvider errorProvider7;
         private System.Windows.Forms.ErrorProvider errorProvider8;
-        private System.Windows.Forms.TextBox txtIDCustomer;
-        private System.Windows.Forms.Label label16;
     }
 }

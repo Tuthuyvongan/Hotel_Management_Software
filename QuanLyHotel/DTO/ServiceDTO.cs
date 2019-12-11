@@ -8,13 +8,13 @@ namespace serviceDTO
 {
     public class ServiceDTO
     {
-        private int iDS;
+        private string iDS;
         private string nAME;
         private string kIND;
         private Decimal cOST;
         private string nOTE;
 
-        public int IDS { get => iDS; set => iDS = value; }
+        public string IDS { get => iDS; set => iDS = value; }
         public string NAME { get => nAME; set => nAME = value; }
         public string KIND { get => kIND; set => kIND = value; }
         public Decimal COST { get => cOST; set => cOST = value; }
