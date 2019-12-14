@@ -47,13 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckInWindow.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CheckInWindow.Designer.cs">
       <DependentUpon>CheckInWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="CheckOutWindow.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CheckOutWindow.Designer.cs">
       <DependentUpon>CheckOutWindow.cs</DependentUpon>
@@ -63,6 +63,12 @@
     </Compile>
     <Compile Include="CustomerWindow.Designer.cs">
       <DependentUpon>CustomerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeWindow.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerWindow.resx">
       <DependentUpon>CustomerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeWindow.resx">
       <DependentUpon>HomeWindow.cs</DependentUpon>
@@ -212,6 +221,9 @@
       <Project>{f5b7e05d-827e-4416-8313-bc79b935de7a}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Icon23px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

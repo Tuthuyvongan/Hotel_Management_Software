@@ -143,6 +143,16 @@ namespace QuanLyHotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu_Icon23px {
+            get {
+                object obj = ResourceManager.GetObject("Menu Icon23px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MinimizeButtonIcon {
             get {
                 object obj = ResourceManager.GetObject("MinimizeButtonIcon", resourceCulture);

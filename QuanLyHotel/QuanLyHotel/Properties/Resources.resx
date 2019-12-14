@@ -121,6 +121,9 @@
   <data name="checkinicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkinicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="settingicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hotel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,7 +160,7 @@
   <data name="customericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settingicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Menu Icon23px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu Icon23px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
