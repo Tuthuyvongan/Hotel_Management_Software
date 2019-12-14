@@ -88,7 +88,7 @@
             this.btLoadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
-            this.btLoadCustomer.Location = new System.Drawing.Point(308, 211);
+            this.btLoadCustomer.Location = new System.Drawing.Point(308, 149);
             this.btLoadCustomer.MinimumSize = new System.Drawing.Size(83, 32);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(83, 32);
@@ -205,7 +205,7 @@
             this.btAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btAddCustomer.Location = new System.Drawing.Point(14, 158);
+            this.btAddCustomer.Location = new System.Drawing.Point(14, 149);
             this.btAddCustomer.MinimumSize = new System.Drawing.Size(83, 32);
             this.btAddCustomer.Name = "btAddCustomer";
             this.btAddCustomer.Size = new System.Drawing.Size(83, 32);
@@ -219,7 +219,7 @@
             this.btDeleteCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btDeleteCustomer.ForeColor = System.Drawing.Color.White;
-            this.btDeleteCustomer.Location = new System.Drawing.Point(215, 158);
+            this.btDeleteCustomer.Location = new System.Drawing.Point(215, 149);
             this.btDeleteCustomer.MinimumSize = new System.Drawing.Size(83, 32);
             this.btDeleteCustomer.Name = "btDeleteCustomer";
             this.btDeleteCustomer.Size = new System.Drawing.Size(83, 32);
@@ -236,19 +236,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(5, 25);
+            this.label3.Location = new System.Drawing.Point(10, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 40);
+            this.label3.Size = new System.Drawing.Size(353, 40);
             this.label3.TabIndex = 13;
-            this.label3.Text = "CUSTOMER";
+            this.label3.Text = "Customer Information";
             // 
             // txtSearchCustomer
             // 
             this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtSearchCustomer.Location = new System.Drawing.Point(83, 211);
             this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(215, 32);
+            this.txtSearchCustomer.Size = new System.Drawing.Size(308, 32);
             this.txtSearchCustomer.TabIndex = 11;
             // 
             // btEditCustomer
@@ -257,7 +257,7 @@
             this.btEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btEditCustomer.ForeColor = System.Drawing.Color.White;
-            this.btEditCustomer.Location = new System.Drawing.Point(114, 158);
+            this.btEditCustomer.Location = new System.Drawing.Point(114, 149);
             this.btEditCustomer.MinimumSize = new System.Drawing.Size(83, 32);
             this.btEditCustomer.Name = "btEditCustomer";
             this.btEditCustomer.Size = new System.Drawing.Size(83, 32);

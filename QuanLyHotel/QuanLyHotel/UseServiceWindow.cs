@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QuanLyHotel
 {
-    public partial class CheckOutWindow : Form
+    public partial class UseServiceWindow : Form
     {
-        public CheckOutWindow()
+        public UseServiceWindow()
         {
             InitializeComponent();
         }
 
-        private void BtCheckOut_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

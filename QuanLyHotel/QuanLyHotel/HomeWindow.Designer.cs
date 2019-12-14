@@ -39,18 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btLoadRoom = new System.Windows.Forms.Button();
-            this.btSearchKindRoom = new System.Windows.Forms.TextBox();
+            this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lbName = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbKind = new System.Windows.Forms.Label();
@@ -65,7 +60,6 @@
             this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -103,6 +97,7 @@
             this.btUseService.TabIndex = 121;
             this.btUseService.Text = "Service";
             this.btUseService.UseVisualStyleBackColor = false;
+            this.btUseService.Click += new System.EventHandler(this.BtUseService_Click);
             // 
             // btCheckInRoom
             // 
@@ -182,7 +177,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 318);
+            this.label3.Location = new System.Drawing.Point(3, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(233, 31);
             this.label3.TabIndex = 110;
@@ -211,13 +206,13 @@
             this.btLoadRoom.Text = "Load";
             this.btLoadRoom.UseVisualStyleBackColor = false;
             // 
-            // btSearchKindRoom
+            // txtSearchRoom
             // 
-            this.btSearchKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchKindRoom.Location = new System.Drawing.Point(73, 362);
-            this.btSearchKindRoom.Name = "btSearchKindRoom";
-            this.btSearchKindRoom.Size = new System.Drawing.Size(267, 29);
-            this.btSearchKindRoom.TabIndex = 126;
+            this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRoom.Location = new System.Drawing.Point(73, 362);
+            this.txtSearchRoom.Name = "txtSearchRoom";
+            this.txtSearchRoom.Size = new System.Drawing.Size(267, 29);
+            this.txtSearchRoom.TabIndex = 126;
             // 
             // label5
             // 
@@ -281,59 +276,6 @@
             this.label6.Size = new System.Drawing.Size(67, 22);
             this.label6.TabIndex = 135;
             this.label6.Text = "Search";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(458, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(248, 31);
-            this.label7.TabIndex = 138;
-            this.label7.Text = "Service Information";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(709, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 29);
-            this.button2.TabIndex = 142;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(525, 53);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 29);
-            this.textBox7.TabIndex = 141;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(457, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 22);
-            this.label8.TabIndex = 140;
-            this.label8.Text = "Search";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(457, 88);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(357, 227);
-            this.dataGridView3.TabIndex = 139;
             // 
             // lbName
             // 
@@ -477,18 +419,13 @@
             this.Controls.Add(this.lbKind);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btLoadRoom);
-            this.Controls.Add(this.btSearchKindRoom);
+            this.Controls.Add(this.txtSearchRoom);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btCheckOut);
@@ -506,7 +443,6 @@
             this.Size = new System.Drawing.Size(821, 652);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -530,18 +466,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btLoadRoom;
-        private System.Windows.Forms.TextBox btSearchKindRoom;
+        private System.Windows.Forms.TextBox txtSearchRoom;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbKind;

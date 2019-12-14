@@ -114,6 +114,12 @@
     <Compile Include="SighUpWindow.Designer.cs">
       <DependentUpon>SighUpWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UseServiceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UseServiceWindow.Designer.cs">
+      <DependentUpon>UseServiceWindow.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckInWindow.resx">
       <DependentUpon>CheckInWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SighUpWindow.resx">
       <DependentUpon>SighUpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseServiceWindow.resx">
+      <DependentUpon>UseServiceWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

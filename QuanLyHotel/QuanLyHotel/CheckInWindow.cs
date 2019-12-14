@@ -29,5 +29,10 @@ namespace QuanLyHotel
         {
             
         }
+
+        private void BtCheckIn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -43,7 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtNameCustomer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btLoadCheckIn = new System.Windows.Forms.Button();
+            this.btLoadCustomer = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btCheckIn = new System.Windows.Forms.Button();
             this.txtSearchCustomer = new System.Windows.Forms.TextBox();
@@ -206,18 +206,18 @@
             this.label6.TabIndex = 203;
             this.label6.Text = "Name:";
             // 
-            // btLoadCheckIn
+            // btLoadCustomer
             // 
-            this.btLoadCheckIn.BackColor = System.Drawing.Color.Firebrick;
-            this.btLoadCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadCheckIn.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btLoadCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btLoadCheckIn.Location = new System.Drawing.Point(582, 65);
-            this.btLoadCheckIn.Name = "btLoadCheckIn";
-            this.btLoadCheckIn.Size = new System.Drawing.Size(107, 26);
-            this.btLoadCheckIn.TabIndex = 200;
-            this.btLoadCheckIn.Text = "Load";
-            this.btLoadCheckIn.UseVisualStyleBackColor = false;
+            this.btLoadCustomer.BackColor = System.Drawing.Color.Firebrick;
+            this.btLoadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
+            this.btLoadCustomer.Location = new System.Drawing.Point(582, 65);
+            this.btLoadCustomer.Name = "btLoadCustomer";
+            this.btLoadCustomer.Size = new System.Drawing.Size(107, 26);
+            this.btLoadCustomer.TabIndex = 200;
+            this.btLoadCustomer.Text = "Load";
+            this.btLoadCustomer.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -242,6 +242,7 @@
             this.btCheckIn.TabIndex = 198;
             this.btCheckIn.Text = "Check In";
             this.btCheckIn.UseVisualStyleBackColor = false;
+            this.btCheckIn.Click += new System.EventHandler(this.BtCheckIn_Click);
             // 
             // txtSearchCustomer
             // 
@@ -340,7 +341,7 @@
             this.Controls.Add(this.txtIdentifyCardCustomer);
             this.Controls.Add(this.txtNameCustomer);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btLoadCheckIn);
+            this.Controls.Add(this.btLoadCustomer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btCheckIn);
             this.Controls.Add(this.txtSearchCustomer);
@@ -375,7 +376,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNameCustomer;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btLoadCheckIn;
+        private System.Windows.Forms.Button btLoadCustomer;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btCheckIn;
         private System.Windows.Forms.TextBox txtSearchCustomer;

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.MoveBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.MinimizeButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btLogin = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.MinimizeButton = new System.Windows.Forms.Button();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.MoveBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,42 @@
             this.MoveBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveBar_MouseDown);
             this.MoveBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveBar_MouseMove);
             this.MoveBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MoveBar_MouseUp);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.BackgroundImage = global::QuanLyHotel.Properties.Resources.icons8_user_male_50px;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(41, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 47);
+            this.panel1.TabIndex = 10;
+            // 
+            // MinimizeButton
+            // 
+            this.MinimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.Image = global::QuanLyHotel.Properties.Resources.MinimizeButtonIcon;
+            this.MinimizeButton.Location = new System.Drawing.Point(898, 3);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(18, 24);
+            this.MinimizeButton.TabIndex = 9;
+            this.MinimizeButton.UseVisualStyleBackColor = true;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Image = global::QuanLyHotel.Properties.Resources.CloseButtonIcon;
+            this.CloseButton.Location = new System.Drawing.Point(919, 3);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(18, 24);
+            this.CloseButton.TabIndex = 8;
+            this.CloseButton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -157,42 +193,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(36, 29);
             this.panel2.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.BackgroundImage = global::QuanLyHotel.Properties.Resources.icons8_user_male_50px;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(41, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(49, 47);
-            this.panel1.TabIndex = 10;
-            // 
-            // MinimizeButton
-            // 
-            this.MinimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MinimizeButton.FlatAppearance.BorderSize = 0;
-            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeButton.Image = global::QuanLyHotel.Properties.Resources.MinimizeButtonIcon;
-            this.MinimizeButton.Location = new System.Drawing.Point(898, 3);
-            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.MinimizeButton.Name = "MinimizeButton";
-            this.MinimizeButton.Size = new System.Drawing.Size(18, 24);
-            this.MinimizeButton.TabIndex = 9;
-            this.MinimizeButton.UseVisualStyleBackColor = true;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CloseButton.FlatAppearance.BorderSize = 0;
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.Image = global::QuanLyHotel.Properties.Resources.CloseButtonIcon;
-            this.CloseButton.Location = new System.Drawing.Point(919, 3);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(18, 24);
-            this.CloseButton.TabIndex = 8;
-            this.CloseButton.UseVisualStyleBackColor = true;
             // 
             // LoginWindow
             // 

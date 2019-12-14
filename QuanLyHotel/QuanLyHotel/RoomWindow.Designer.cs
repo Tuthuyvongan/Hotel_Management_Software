@@ -41,11 +41,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btSearchKindRoom = new System.Windows.Forms.TextBox();
+            this.txtNameRoom = new System.Windows.Forms.TextBox();
+            this.txtKindRoom = new System.Windows.Forms.ComboBox();
+            this.txtBedsAmount = new System.Windows.Forms.TextBox();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -190,6 +190,8 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Red;
             this.panel7.Controls.Add(this.label8);
             this.panel7.ForeColor = System.Drawing.Color.White;
@@ -209,54 +211,56 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Name";
             // 
-            // textBox1
+            // txtNameRoom
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(134, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 29);
-            this.textBox1.TabIndex = 156;
+            this.txtNameRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNameRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameRoom.Location = new System.Drawing.Point(134, 68);
+            this.txtNameRoom.Name = "txtNameRoom";
+            this.txtNameRoom.Size = new System.Drawing.Size(312, 29);
+            this.txtNameRoom.TabIndex = 156;
             // 
-            // comboBox1
+            // txtKindRoom
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 30);
-            this.comboBox1.TabIndex = 157;
+            this.txtKindRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtKindRoom.FormattingEnabled = true;
+            this.txtKindRoom.Location = new System.Drawing.Point(134, 103);
+            this.txtKindRoom.Name = "txtKindRoom";
+            this.txtKindRoom.Size = new System.Drawing.Size(312, 30);
+            this.txtKindRoom.TabIndex = 157;
             // 
-            // textBox2
+            // txtBedsAmount
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(134, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 29);
-            this.textBox2.TabIndex = 158;
+            this.txtBedsAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBedsAmount.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBedsAmount.Location = new System.Drawing.Point(134, 139);
+            this.txtBedsAmount.Name = "txtBedsAmount";
+            this.txtBedsAmount.Size = new System.Drawing.Size(312, 29);
+            this.txtBedsAmount.TabIndex = 158;
             // 
-            // textBox3
+            // txtCost
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(134, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 29);
-            this.textBox3.TabIndex = 159;
+            this.txtCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCost.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(134, 174);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(312, 29);
+            this.txtCost.TabIndex = 159;
             // 
-            // btSearchKindRoom
+            // txtSearchRoom
             // 
-            this.btSearchKindRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSearchKindRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearchKindRoom.Location = new System.Drawing.Point(86, 330);
-            this.btSearchKindRoom.Name = "btSearchKindRoom";
-            this.btSearchKindRoom.Size = new System.Drawing.Size(267, 29);
-            this.btSearchKindRoom.TabIndex = 160;
+            this.txtSearchRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRoom.Location = new System.Drawing.Point(86, 330);
+            this.txtSearchRoom.Name = "txtSearchRoom";
+            this.txtSearchRoom.Size = new System.Drawing.Size(267, 29);
+            this.txtSearchRoom.TabIndex = 160;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -278,6 +282,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Controls.Add(this.label9);
             this.panel2.ForeColor = System.Drawing.Color.White;
@@ -303,11 +309,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btSearchKindRoom);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchRoom);
+            this.Controls.Add(this.txtCost);
+            this.Controls.Add(this.txtBedsAmount);
+            this.Controls.Add(this.txtKindRoom);
+            this.Controls.Add(this.txtNameRoom);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -349,11 +355,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox btSearchKindRoom;
+        private System.Windows.Forms.TextBox txtNameRoom;
+        private System.Windows.Forms.ComboBox txtKindRoom;
+        private System.Windows.Forms.TextBox txtBedsAmount;
+        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.TextBox txtSearchRoom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;

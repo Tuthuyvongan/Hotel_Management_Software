@@ -37,12 +37,11 @@
             this.btRoom = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btService = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.roomWindow1 = new QuanLyHotel.RoomWindow();
             this.homeWindow1 = new QuanLyHotel.HomeWindow();
             this.customerWindow1 = new QuanLyHotel.CustomerWindow();
+            this.roomWindow1 = new QuanLyHotel.RoomWindow();
+            this.serviceWindow1 = new QuanLyHotel.ServiceWindow();
             this.MenuBar.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuBar
@@ -62,7 +61,7 @@
             this.MenuBar.MaximumSize = new System.Drawing.Size(150, 0);
             this.MenuBar.MinimumSize = new System.Drawing.Size(43, 0);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(150, 652);
+            this.MenuBar.Size = new System.Drawing.Size(150, 724);
             this.MenuBar.TabIndex = 4;
             // 
             // btMenu
@@ -212,54 +211,54 @@
             this.btService.Text = "Service";
             this.btService.UseCompatibleTextRendering = true;
             this.btService.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.customerWindow1);
-            this.panel1.Controls.Add(this.roomWindow1);
-            this.panel1.Controls.Add(this.homeWindow1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(150, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 652);
-            this.panel1.TabIndex = 5;
-            // 
-            // roomWindow1
-            // 
-            this.roomWindow1.Location = new System.Drawing.Point(3, 3);
-            this.roomWindow1.MinimumSize = new System.Drawing.Size(821, 652);
-            this.roomWindow1.Name = "roomWindow1";
-            this.roomWindow1.Size = new System.Drawing.Size(821, 652);
-            this.roomWindow1.TabIndex = 1;
+            this.btService.Click += new System.EventHandler(this.BtService_Click);
             // 
             // homeWindow1
             // 
-            this.homeWindow1.Location = new System.Drawing.Point(0, 0);
+            this.homeWindow1.Location = new System.Drawing.Point(150, 0);
             this.homeWindow1.Margin = new System.Windows.Forms.Padding(0);
             this.homeWindow1.MinimumSize = new System.Drawing.Size(821, 652);
             this.homeWindow1.Name = "homeWindow1";
             this.homeWindow1.Size = new System.Drawing.Size(821, 652);
-            this.homeWindow1.TabIndex = 0;
+            this.homeWindow1.TabIndex = 5;
             // 
             // customerWindow1
             // 
-            this.customerWindow1.Location = new System.Drawing.Point(0, 0);
+            this.customerWindow1.Location = new System.Drawing.Point(150, 0);
             this.customerWindow1.Name = "customerWindow1";
             this.customerWindow1.Size = new System.Drawing.Size(821, 652);
-            this.customerWindow1.TabIndex = 2;
+            this.customerWindow1.TabIndex = 6;
+            // 
+            // roomWindow1
+            // 
+            this.roomWindow1.Location = new System.Drawing.Point(150, 0);
+            this.roomWindow1.MinimumSize = new System.Drawing.Size(821, 652);
+            this.roomWindow1.Name = "roomWindow1";
+            this.roomWindow1.Size = new System.Drawing.Size(821, 652);
+            this.roomWindow1.TabIndex = 7;
+            // 
+            // serviceWindow1
+            // 
+            this.serviceWindow1.Location = new System.Drawing.Point(150, 0);
+            this.serviceWindow1.MinimumSize = new System.Drawing.Size(821, 652);
+            this.serviceWindow1.Name = "serviceWindow1";
+            this.serviceWindow1.Size = new System.Drawing.Size(821, 652);
+            this.serviceWindow1.TabIndex = 8;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 652);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(971, 724);
+            this.Controls.Add(this.serviceWindow1);
+            this.Controls.Add(this.roomWindow1);
+            this.Controls.Add(this.customerWindow1);
+            this.Controls.Add(this.homeWindow1);
             this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.MenuBar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -275,9 +274,9 @@
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btService;
         private System.Windows.Forms.Button btMenu;
-        private System.Windows.Forms.Panel panel1;
-        private RoomWindow roomWindow1;
         private HomeWindow homeWindow1;
         private CustomerWindow customerWindow1;
+        private RoomWindow roomWindow1;
+        private ServiceWindow serviceWindow1;
     }
 }

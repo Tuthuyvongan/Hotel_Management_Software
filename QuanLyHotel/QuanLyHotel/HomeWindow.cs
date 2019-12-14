@@ -28,5 +28,11 @@ namespace QuanLyHotel
             CheckOutWindow checkOut = new CheckOutWindow();
             checkOut.Show();
         }
+
+        private void BtUseService_Click(object sender, EventArgs e)
+        {
+            UseServiceWindow useService = new UseServiceWindow();
+            useService.Show();
+        }
     }
 }

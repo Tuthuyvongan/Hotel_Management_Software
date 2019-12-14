@@ -39,22 +39,29 @@ namespace QuanLyHotel
 
         private void BtHome_AutoSizeChanged(object sender, EventArgs e)
         {
-            //this.Width = ControlPanel.Width;
+            this.Width = ControlPanel.Width;
         }
 
         private void BtHome_Click(object sender, EventArgs e)
         {
             homeWindow1.BringToFront();
+            homeWindow1.Dock=HomeWindow
         }
 
         private void BtRoom_Click(object sender, EventArgs e)
         {
             roomWindow1.BringToFront();
+
         }
 
         private void BtCustomer_Click(object sender, EventArgs e)
         {
             customerWindow1.BringToFront();
+        }
+
+        private void BtService_Click(object sender, EventArgs e)
+        {
+            serviceWindow1.BringToFront();
         }
     }
 }
