@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.MenuBar = new System.Windows.Forms.Panel();
-            this.SlidePanel = new System.Windows.Forms.Panel();
             this.btCustomer = new System.Windows.Forms.Button();
             this.btSetting = new System.Windows.Forms.Button();
+            this.SlidePanel = new System.Windows.Forms.Panel();
             this.btCheckOut = new System.Windows.Forms.Button();
             this.btCheckIn = new System.Windows.Forms.Button();
             this.btRoom = new System.Windows.Forms.Button();
@@ -56,15 +56,6 @@
             this.MenuBar.Name = "MenuBar";
             this.MenuBar.Size = new System.Drawing.Size(160, 450);
             this.MenuBar.TabIndex = 3;
-            // 
-            // SlidePanel
-            // 
-            this.SlidePanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SlidePanel.BackColor = System.Drawing.Color.White;
-            this.SlidePanel.Location = new System.Drawing.Point(0, 70);
-            this.SlidePanel.Name = "SlidePanel";
-            this.SlidePanel.Size = new System.Drawing.Size(5, 43);
-            this.SlidePanel.TabIndex = 2;
             // 
             // btCustomer
             // 
@@ -101,6 +92,15 @@
             this.btSetting.Text = "Setting";
             this.btSetting.UseCompatibleTextRendering = true;
             this.btSetting.UseVisualStyleBackColor = true;
+            // 
+            // SlidePanel
+            // 
+            this.SlidePanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SlidePanel.BackColor = System.Drawing.Color.White;
+            this.SlidePanel.Location = new System.Drawing.Point(0, 70);
+            this.SlidePanel.Name = "SlidePanel";
+            this.SlidePanel.Size = new System.Drawing.Size(5, 43);
+            this.SlidePanel.TabIndex = 2;
             // 
             // btCheckOut
             // 

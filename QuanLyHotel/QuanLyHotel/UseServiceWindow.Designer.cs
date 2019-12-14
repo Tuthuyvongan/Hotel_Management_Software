@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtDateService = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtNumberService = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.txtSearchService = new System.Windows.Forms.TextBox();
+            this.dtgvService = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,24 +41,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtDateService = new System.Windows.Forms.DateTimePicker();
+            this.txtNumberService = new System.Windows.Forms.TextBox();
+            this.txtSearchService = new System.Windows.Forms.TextBox();
             this.btLoadCustomer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtDateService
-            // 
-            this.dtDateService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateService.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateService.Location = new System.Drawing.Point(127, 209);
-            this.dtDateService.Margin = new System.Windows.Forms.Padding(2);
-            this.dtDateService.Name = "dtDateService";
-            this.dtDateService.Size = new System.Drawing.Size(109, 26);
-            this.dtDateService.TabIndex = 125;
-            this.dtDateService.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(58, 243);
@@ -71,16 +61,9 @@
             this.label14.TabIndex = 124;
             this.label14.Text = "Number";
             // 
-            // txtNumberService
-            // 
-            this.txtNumberService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumberService.Location = new System.Drawing.Point(127, 240);
-            this.txtNumberService.Name = "txtNumberService";
-            this.txtNumberService.Size = new System.Drawing.Size(109, 26);
-            this.txtNumberService.TabIndex = 123;
-            // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(58, 212);
@@ -90,24 +73,19 @@
             this.label12.TabIndex = 122;
             this.label12.Text = "Date";
             // 
-            // dataGridView2
+            // dtgvService
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 314);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(377, 222);
-            this.dataGridView2.TabIndex = 121;
-            // 
-            // txtSearchService
-            // 
-            this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchService.Location = new System.Drawing.Point(87, 279);
-            this.txtSearchService.Name = "txtSearchService";
-            this.txtSearchService.Size = new System.Drawing.Size(196, 29);
-            this.txtSearchService.TabIndex = 120;
+            this.dtgvService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvService.Location = new System.Drawing.Point(19, 314);
+            this.dtgvService.Name = "dtgvService";
+            this.dtgvService.Size = new System.Drawing.Size(377, 222);
+            this.dtgvService.TabIndex = 121;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(14, 282);
@@ -118,6 +96,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
@@ -129,6 +108,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
@@ -140,6 +120,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
@@ -151,6 +132,7 @@
             // 
             // lbBedsAmount
             // 
+            this.lbBedsAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbBedsAmount.AutoSize = true;
             this.lbBedsAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbBedsAmount.Location = new System.Drawing.Point(170, 140);
@@ -162,6 +144,7 @@
             // 
             // lbKind
             // 
+            this.lbKind.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbKind.AutoSize = true;
             this.lbKind.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbKind.Location = new System.Drawing.Point(170, 118);
@@ -172,6 +155,7 @@
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbName.Location = new System.Drawing.Point(170, 96);
@@ -183,6 +167,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(58, 140);
@@ -194,6 +179,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(58, 96);
@@ -205,6 +191,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(58, 118);
@@ -213,32 +200,65 @@
             this.label2.TabIndex = 228;
             this.label2.Text = "Kind:";
             // 
+            // dtDateService
+            // 
+            this.dtDateService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtDateService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateService.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDateService.Location = new System.Drawing.Point(127, 206);
+            this.dtDateService.Margin = new System.Windows.Forms.Padding(2);
+            this.dtDateService.Name = "dtDateService";
+            this.dtDateService.Size = new System.Drawing.Size(156, 26);
+            this.dtDateService.TabIndex = 236;
+            this.dtDateService.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            // 
+            // txtNumberService
+            // 
+            this.txtNumberService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumberService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumberService.Location = new System.Drawing.Point(127, 240);
+            this.txtNumberService.Name = "txtNumberService";
+            this.txtNumberService.Size = new System.Drawing.Size(156, 26);
+            this.txtNumberService.TabIndex = 237;
+            // 
+            // txtSearchService
+            // 
+            this.txtSearchService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchService.Location = new System.Drawing.Point(87, 279);
+            this.txtSearchService.Name = "txtSearchService";
+            this.txtSearchService.Size = new System.Drawing.Size(196, 29);
+            this.txtSearchService.TabIndex = 238;
+            // 
             // btLoadCustomer
             // 
+            this.btLoadCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btLoadCustomer.BackColor = System.Drawing.Color.Firebrick;
             this.btLoadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
-            this.btLoadCustomer.Location = new System.Drawing.Point(289, 279);
+            this.btLoadCustomer.Location = new System.Drawing.Point(289, 278);
+            this.btLoadCustomer.MaximumSize = new System.Drawing.Size(107, 30);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(107, 30);
-            this.btLoadCustomer.TabIndex = 234;
+            this.btLoadCustomer.TabIndex = 239;
             this.btLoadCustomer.Text = "Load";
             this.btLoadCustomer.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.Firebrick;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(151, 542);
+            this.button1.Location = new System.Drawing.Point(137, 542);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 42);
-            this.button1.TabIndex = 235;
+            this.button1.TabIndex = 240;
             this.button1.Text = "Use Service";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // UseServiceWindow
             // 
@@ -247,38 +267,35 @@
             this.ClientSize = new System.Drawing.Size(418, 588);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btLoadCustomer);
+            this.Controls.Add(this.txtSearchService);
+            this.Controls.Add(this.txtNumberService);
+            this.Controls.Add(this.dtDateService);
             this.Controls.Add(this.lbBedsAmount);
             this.Controls.Add(this.lbKind);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtDateService);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtNumberService);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.txtSearchService);
+            this.Controls.Add(this.dtgvService);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
+            this.MinimumSize = new System.Drawing.Size(434, 627);
             this.Name = "UseServiceWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.DateTimePicker dtDateService;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNumberService;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox txtSearchService;
+        private System.Windows.Forms.DataGridView dtgvService;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
@@ -289,6 +306,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DateTimePicker dtDateService;
+        private System.Windows.Forms.TextBox txtNumberService;
+        private System.Windows.Forms.TextBox txtSearchService;
         private System.Windows.Forms.Button btLoadCustomer;
         private System.Windows.Forms.Button button1;
     }

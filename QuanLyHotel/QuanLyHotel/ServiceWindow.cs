@@ -191,6 +191,9 @@ namespace QuanLyHotel
             //rs.COST = 1* int.Parse(txtNumberService.Text);         //công thức lấy cost service
         }
 
-        
+        private void BtAddKind_Click(object sender, EventArgs e)
+        {
+            //txtKindService.Items.Add(txtKind.Text);
+        }
     }
 }

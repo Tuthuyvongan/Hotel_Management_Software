@@ -191,7 +191,6 @@
             this.btHome.Text = "Home";
             this.btHome.UseCompatibleTextRendering = true;
             this.btHome.UseVisualStyleBackColor = true;
-            this.btHome.AutoSizeChanged += new System.EventHandler(this.BtHome_AutoSizeChanged);
             this.btHome.Click += new System.EventHandler(this.BtHome_Click);
             // 
             // btService

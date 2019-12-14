@@ -37,7 +37,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,16 +49,17 @@
             this.txtSearchCustomer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvCustomer = new System.Windows.Forms.DataGridView();
             this.txtIdentifyCardCustomer = new System.Windows.Forms.TextBox();
             this.txtPhoneCustomer = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // lbCost
             // 
+            this.lbCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCost.AutoSize = true;
             this.lbCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCost.Location = new System.Drawing.Point(128, 422);
@@ -69,6 +70,7 @@
             // 
             // lbBedsAmount
             // 
+            this.lbBedsAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbBedsAmount.AutoSize = true;
             this.lbBedsAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbBedsAmount.Location = new System.Drawing.Point(128, 387);
@@ -79,6 +81,7 @@
             // 
             // lbKind
             // 
+            this.lbKind.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbKind.AutoSize = true;
             this.lbKind.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbKind.Location = new System.Drawing.Point(128, 351);
@@ -89,6 +92,7 @@
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbName.Location = new System.Drawing.Point(128, 316);
@@ -99,6 +103,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(16, 387);
@@ -109,6 +114,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(16, 316);
@@ -119,6 +125,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(16, 351);
@@ -129,6 +136,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(16, 422);
@@ -139,6 +147,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -148,18 +157,20 @@
             this.label2.TabIndex = 211;
             this.label2.Text = "Room Information";
             // 
-            // dtBirthday
+            // dtDate
             // 
-            this.dtBirthday.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBirthday.Location = new System.Drawing.Point(134, 196);
-            this.dtBirthday.Name = "dtBirthday";
-            this.dtBirthday.Size = new System.Drawing.Size(205, 26);
-            this.dtBirthday.TabIndex = 210;
-            this.dtBirthday.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            this.dtDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDate.Location = new System.Drawing.Point(134, 196);
+            this.dtDate.Name = "dtDate";
+            this.dtDate.Size = new System.Drawing.Size(234, 26);
+            this.dtDate.TabIndex = 210;
+            this.dtDate.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(8, 135);
@@ -170,6 +181,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(12, 202);
@@ -180,6 +192,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(11, 167);
@@ -190,14 +203,16 @@
             // 
             // txtNameCustomer
             // 
+            this.txtNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNameCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.txtNameCustomer.Location = new System.Drawing.Point(134, 100);
             this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(205, 26);
+            this.txtNameCustomer.Size = new System.Drawing.Size(234, 26);
             this.txtNameCustomer.TabIndex = 204;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(8, 103);
@@ -208,11 +223,12 @@
             // 
             // btLoadCustomer
             // 
+            this.btLoadCustomer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btLoadCustomer.BackColor = System.Drawing.Color.Firebrick;
             this.btLoadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
-            this.btLoadCustomer.Location = new System.Drawing.Point(582, 65);
+            this.btLoadCustomer.Location = new System.Drawing.Point(683, 65);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(107, 26);
             this.btLoadCustomer.TabIndex = 200;
@@ -232,11 +248,12 @@
             // 
             // btCheckIn
             // 
+            this.btCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btCheckIn.BackColor = System.Drawing.Color.Firebrick;
             this.btCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btCheckIn.Location = new System.Drawing.Point(224, 456);
+            this.btCheckIn.Location = new System.Drawing.Point(71, 456);
             this.btCheckIn.Name = "btCheckIn";
             this.btCheckIn.Size = new System.Drawing.Size(217, 43);
             this.btCheckIn.TabIndex = 198;
@@ -246,17 +263,19 @@
             // 
             // txtSearchCustomer
             // 
+            this.txtSearchCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
-            this.txtSearchCustomer.Location = new System.Drawing.Point(423, 65);
+            this.txtSearchCustomer.Location = new System.Drawing.Point(456, 65);
             this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(153, 26);
+            this.txtSearchCustomer.Size = new System.Drawing.Size(221, 26);
             this.txtSearchCustomer.TabIndex = 197;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(358, 68);
+            this.label1.Location = new System.Drawing.Point(391, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 19);
             this.label1.TabIndex = 196;
@@ -264,6 +283,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -273,42 +293,47 @@
             this.label3.TabIndex = 195;
             this.label3.Text = "Customer Information";
             // 
-            // dataGridView1
+            // dtgvCustomer
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(362, 100);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(327, 340);
-            this.dataGridView1.TabIndex = 194;
+            this.dtgvCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCustomer.Location = new System.Drawing.Point(395, 100);
+            this.dtgvCustomer.Name = "dtgvCustomer";
+            this.dtgvCustomer.Size = new System.Drawing.Size(395, 340);
+            this.dtgvCustomer.TabIndex = 194;
             // 
             // txtIdentifyCardCustomer
             // 
+            this.txtIdentifyCardCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtIdentifyCardCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.txtIdentifyCardCustomer.Location = new System.Drawing.Point(134, 132);
             this.txtIdentifyCardCustomer.Name = "txtIdentifyCardCustomer";
-            this.txtIdentifyCardCustomer.Size = new System.Drawing.Size(205, 26);
+            this.txtIdentifyCardCustomer.Size = new System.Drawing.Size(234, 26);
             this.txtIdentifyCardCustomer.TabIndex = 205;
             // 
             // txtPhoneCustomer
             // 
+            this.txtPhoneCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtPhoneCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.txtPhoneCustomer.Location = new System.Drawing.Point(134, 164);
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(205, 26);
+            this.txtPhoneCustomer.Size = new System.Drawing.Size(234, 26);
             this.txtPhoneCustomer.TabIndex = 208;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 228);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(205, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(234, 26);
             this.dateTimePicker1.TabIndex = 221;
             this.dateTimePicker1.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(12, 234);
@@ -321,7 +346,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 511);
+            this.ClientSize = new System.Drawing.Size(811, 511);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbCost);
@@ -333,7 +358,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.dtDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPhoneCustomer);
             this.Controls.Add(this.label12);
@@ -347,13 +372,14 @@
             this.Controls.Add(this.txtSearchCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MinimumSize = new System.Drawing.Size(726, 550);
             this.Name = "CheckInWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInWindow_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +396,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.DateTimePicker dtBirthday;
+        public System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
@@ -382,7 +408,7 @@
         private System.Windows.Forms.TextBox txtSearchCustomer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvCustomer;
         private System.Windows.Forms.TextBox txtIdentifyCardCustomer;
         private System.Windows.Forms.TextBox txtPhoneCustomer;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;

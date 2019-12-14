@@ -65,6 +65,7 @@
             // 
             // lbCost
             // 
+            this.lbCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCost.AutoSize = true;
             this.lbCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCost.Location = new System.Drawing.Point(129, 190);
@@ -76,6 +77,7 @@
             // 
             // lbBedsAmount
             // 
+            this.lbBedsAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbBedsAmount.AutoSize = true;
             this.lbBedsAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbBedsAmount.Location = new System.Drawing.Point(129, 165);
@@ -87,6 +89,7 @@
             // 
             // lbKind
             // 
+            this.lbKind.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbKind.AutoSize = true;
             this.lbKind.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbKind.Location = new System.Drawing.Point(129, 143);
@@ -97,6 +100,7 @@
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbName.Location = new System.Drawing.Point(129, 121);
@@ -108,6 +112,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(17, 165);
@@ -119,6 +124,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(17, 121);
@@ -130,6 +136,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(17, 143);
@@ -140,6 +147,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(17, 190);
@@ -151,6 +159,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -162,6 +171,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(17, 43);
@@ -173,6 +183,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(17, 271);
@@ -184,6 +195,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(17, 321);
@@ -195,6 +207,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(17, 296);
@@ -206,6 +219,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(17, 246);
@@ -217,6 +231,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -228,6 +243,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(129, 321);
@@ -239,6 +255,7 @@
             // 
             // lbPhoneCustomer
             // 
+            this.lbPhoneCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbPhoneCustomer.AutoSize = true;
             this.lbPhoneCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbPhoneCustomer.Location = new System.Drawing.Point(129, 296);
@@ -250,6 +267,7 @@
             // 
             // lbIdentifyCard
             // 
+            this.lbIdentifyCard.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbIdentifyCard.AutoSize = true;
             this.lbIdentifyCard.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbIdentifyCard.Location = new System.Drawing.Point(129, 271);
@@ -260,6 +278,7 @@
             // 
             // lbNameCustomer
             // 
+            this.lbNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbNameCustomer.AutoSize = true;
             this.lbNameCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbNameCustomer.Location = new System.Drawing.Point(129, 246);
@@ -271,6 +290,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label16.Location = new System.Drawing.Point(17, 399);
@@ -282,6 +302,7 @@
             // 
             // lbCostRoom
             // 
+            this.lbCostRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCostRoom.AutoSize = true;
             this.lbCostRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCostRoom.Location = new System.Drawing.Point(129, 377);
@@ -294,6 +315,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label18.Location = new System.Drawing.Point(17, 377);
@@ -304,6 +326,7 @@
             // 
             // lbCheckIn
             // 
+            this.lbCheckIn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCheckIn.AutoSize = true;
             this.lbCheckIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCheckIn.Location = new System.Drawing.Point(129, 43);
@@ -315,6 +338,7 @@
             // 
             // lbCheckOut
             // 
+            this.lbCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCheckOut.AutoSize = true;
             this.lbCheckOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCheckOut.Location = new System.Drawing.Point(129, 68);
@@ -326,6 +350,7 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(17, 68);
@@ -337,6 +362,7 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label22.Location = new System.Drawing.Point(17, 424);
@@ -348,6 +374,7 @@
             // 
             // lbCostService
             // 
+            this.lbCostService.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbCostService.AutoSize = true;
             this.lbCostService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCostService.Location = new System.Drawing.Point(129, 399);
@@ -359,6 +386,7 @@
             // 
             // lbAnotherCost
             // 
+            this.lbAnotherCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbAnotherCost.AutoSize = true;
             this.lbAnotherCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbAnotherCost.Location = new System.Drawing.Point(129, 424);
@@ -370,6 +398,7 @@
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label25.Location = new System.Drawing.Point(17, 449);
@@ -381,6 +410,7 @@
             // 
             // lbSumCost
             // 
+            this.lbSumCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbSumCost.AutoSize = true;
             this.lbSumCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbSumCost.Location = new System.Drawing.Point(129, 449);
@@ -392,6 +422,7 @@
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.Black;
@@ -403,6 +434,7 @@
             // 
             // label30
             // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.Black;
@@ -414,12 +446,13 @@
             // 
             // btCheckOut
             // 
-            this.btCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btCheckOut.BackColor = System.Drawing.Color.Firebrick;
             this.btCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckOut.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckOut.ForeColor = System.Drawing.Color.White;
             this.btCheckOut.Location = new System.Drawing.Point(34, 518);
+            this.btCheckOut.MaximumSize = new System.Drawing.Size(217, 34);
             this.btCheckOut.Name = "btCheckOut";
             this.btCheckOut.Size = new System.Drawing.Size(217, 34);
             this.btCheckOut.TabIndex = 254;

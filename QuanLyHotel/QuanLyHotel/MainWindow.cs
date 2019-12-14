@@ -15,18 +15,16 @@ namespace QuanLyHotel
         public MainWindow()
         {
             InitializeComponent();
-            
+            homeWindow1.Dock = DockStyle.Fill;
+            homeWindow1.BringToFront();
         }
 
-        private void HomeButton_Click(object sender, EventArgs e)
+        
+        public void ChangeDock(Control a)
         {
-            
+            a.Dock = DockStyle.None;
         }
 
-        private void RoomButton_Click(object sender, EventArgs e)
-        {
-            
-        }
         //Click event
         private void BtMenu_Click(object sender, EventArgs e)
         {
@@ -37,31 +35,30 @@ namespace QuanLyHotel
             else MenuBar.Width = 150;
         }
 
-        private void BtHome_AutoSizeChanged(object sender, EventArgs e)
-        {
-            this.Width = ControlPanel.Width;
-        }
-
         private void BtHome_Click(object sender, EventArgs e)
         {
             homeWindow1.BringToFront();
-            homeWindow1.Dock=HomeWindow
+            homeWindow1.Dock = DockStyle.Fill;
         }
 
         private void BtRoom_Click(object sender, EventArgs e)
         {
             roomWindow1.BringToFront();
+            roomWindow1.Dock = DockStyle.Fill;
+            
 
         }
 
         private void BtCustomer_Click(object sender, EventArgs e)
         {
             customerWindow1.BringToFront();
+            customerWindow1.Dock = DockStyle.Fill;
         }
 
         private void BtService_Click(object sender, EventArgs e)
         {
             serviceWindow1.BringToFront();
+            serviceWindow1.Dock = DockStyle.Fill;
         }
     }
 }
