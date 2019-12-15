@@ -20,7 +20,7 @@ namespace QuanLyHotel
             InitializeComponent();
         }
 
-        //Service
+
         private void loadData()
         {
             ServiceBUS ctmBus = new ServiceBUS();
@@ -38,26 +38,26 @@ namespace QuanLyHotel
             dtgvService.AllowUserToAddRows = false;
             dtgvService.DataSource = list;
 
-            DataGridViewTextBoxColumn nAME = new DataGridViewTextBoxColumn();
-            nAME.Name = "nAME";
-            nAME.HeaderText = "Name:";
-            nAME.DataPropertyName = "nAME";
-            nAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvService.Columns.Add(nAME);
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(NAME);
 
-            DataGridViewTextBoxColumn kIND = new DataGridViewTextBoxColumn();
-            kIND.Name = "kINd";
-            kIND.HeaderText = "KIND";
-            kIND.DataPropertyName = "kINd";
-            kIND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvService.Columns.Add(kIND);
+            DataGridViewTextBoxColumn KIND = new DataGridViewTextBoxColumn();
+            KIND.Name = "kind";
+            KIND.HeaderText = "Kind";
+            KIND.DataPropertyName = "kind";
+            KIND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(KIND);
 
-            DataGridViewTextBoxColumn cOST = new DataGridViewTextBoxColumn();
-            cOST.Name = "cOST";
-            cOST.HeaderText = "COST";
-            cOST.DataPropertyName = "cOST";
-            cOST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvService.Columns.Add(cOST);
+            DataGridViewTextBoxColumn COST = new DataGridViewTextBoxColumn();
+            COST.Name = "cost";
+            COST.HeaderText = "Cost";
+            COST.DataPropertyName = "cost";
+            COST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(COST);
 
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvService.DataSource];
@@ -70,6 +70,7 @@ namespace QuanLyHotel
 
             ServiceBUS srvBUS = new ServiceBUS();
             ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
             srv.NAME = txtNameService.Text;
             srv.KIND = txtKindService.Text;
             srv.COST = Decimal.Parse(txtCostService.Text);
@@ -85,6 +86,7 @@ namespace QuanLyHotel
         {
             ServiceBUS srvBUS = new ServiceBUS();
             ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
             srv.NAME = txtNameService.Text;
             srv.KIND = txtKindService.Text;
             srv.COST = Decimal.Parse(txtCostService.Text);
@@ -100,6 +102,7 @@ namespace QuanLyHotel
         {
             ServiceBUS srvBUS = new ServiceBUS();
             ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
             srv.NAME = txtNameService.Text;
             srv.KIND = txtKindService.Text;
             srv.COST = Decimal.Parse(txtCostService.Text);
@@ -113,43 +116,9 @@ namespace QuanLyHotel
 
         private void BtLoadService_Click(object sender, EventArgs e)
         {
-            //this.loadData();
+            this.loadData();
         }
 
-
-
-
-        //Use service
-
-        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //int numrow;
-            //numrow = e.RowIndex;
-            //txtIDR.Text = dataGridView1.Rows[numrow].Cells[1].Value.ToString();
-        }
-
-        private void DataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //int numrow;
-            //numrow = e.RowIndex;
-            //txtIDS.Text = dataGridView1.Rows[numrow].Cells[1].Value.ToString();
-        }
-
-        private void BtUsedService_Click(object sender, EventArgs e)
-        {
-            //RoomServiceBUS rsBUS = new RoomServiceBUS();
-            //RoomServiceDTO rs = new RoomServiceDTO();
-            //rs.IDR_S = "";
-            //rs.IDR = txtIDR.Text;
-            //rs.IDS = txtIDS.Text;
-            //rs.TIME = DateTime.Parse(dtDateService.Text);
-            //rs.NUMBER = int.Parse(txtNumberService.Text);
-            //rs.COST = 1* int.Parse(txtNumberService.Text);         //công thức lấy cost service
-        }
-
-        private void BtAddKind_Click(object sender, EventArgs e)
-        {
-            //txtKindService.Items.Add(txtKind.Text);
-        }
+        
     }
 }

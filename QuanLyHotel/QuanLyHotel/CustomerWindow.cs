@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using customerBUS;
-//using customerDTO;
+using customerBUS;
+using customerDTO;
 
 namespace QuanLyHotel
 {
@@ -21,70 +21,65 @@ namespace QuanLyHotel
             
         }
 
-        //private void loadData()
-        //{
-        //    CustomerBUS ctmBus = new CustomerBUS();
-        //    List<CustomerDTO> list = ctmBus.select();
+        private void loadData()
+        {
+            CustomerBUS ctmBus = new CustomerBUS();
+            List<CustomerDTO> list = ctmBus.select();
 
-        //    if (list == null)
-        //    {
-        //        MessageBox.Show("Fail");
-        //        return;
-        //    }
-        //    dataGridView1.Columns.Clear();
-        //    dataGridView1.DataSource = null;
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvCustomer.Columns.Clear();
+            dtgvCustomer.DataSource = null;
 
-        //    dataGridView1.AutoGenerateColumns = false;
-        //    dataGridView1.AllowUserToAddRows = false;
-        //    dataGridView1.DataSource = list;
+            dtgvCustomer.AutoGenerateColumns = false;
+            dtgvCustomer.AllowUserToAddRows = false;
+            dtgvCustomer.DataSource = list;
 
-        //    DataGridViewTextBoxColumn iD = new DataGridViewTextBoxColumn();
-        //    iD.Name = "iDC";
-        //    iD.HeaderText = "ID";
-        //    iD.DataPropertyName = "iDC";
-        //    iD.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dataGridView1.Columns.Add(iD);
+            DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
+            ID.Name = "idc";
+            ID.HeaderText = "ID";
+            ID.DataPropertyName = "idc";
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(ID);
 
-        //    DataGridViewTextBoxColumn nAME = new DataGridViewTextBoxColumn();
-        //    nAME.Name = "nAME";
-        //    nAME.HeaderText = "Name:";
-        //    nAME.DataPropertyName = "nAME";
-        //    nAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dataGridView1.Columns.Add(nAME);
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(NAME);
 
-        //    DataGridViewTextBoxColumn gENDER = new DataGridViewTextBoxColumn();
-        //    gENDER.Name = "gENDER";
-        //    gENDER.HeaderText = "GENDER";
-        //    gENDER.DataPropertyName = "gENDER";
-        //    gENDER.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dataGridView1.Columns.Add(gENDER);
+            DataGridViewTextBoxColumn DATE = new DataGridViewTextBoxColumn();
+            DATE.Name = "gENDER";
+            DATE.HeaderText = "GENDER";
+            DATE.DataPropertyName = "gENDER";
+            DATE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(DATE);
 
-        //    DataGridViewTextBoxColumn eMAIL = new DataGridViewTextBoxColumn();
-        //    eMAIL.Name = "eMAIL";
-        //    eMAIL.HeaderText = "EMAIL";
-        //    eMAIL.DataPropertyName = "eMAIL";
-        //    eMAIL.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dataGridView1.Columns.Add(eMAIL);
+            DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
+            CMND.Name = "cmnd";
+            CMND.HeaderText = "Identify card";
+            CMND.DataPropertyName = "cmnd";
+            CMND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(CMND);
 
-        //    DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
-        //    pHONE.Name = "phoneNUMBER";
-        //    pHONE.HeaderText = "PHONE";
-        //    pHONE.DataPropertyName = "phoneNUMBER";
-        //    pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    dataGridView1.Columns.Add(pHONE);
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "phoneNUMBER";
+            pHONE.HeaderText = "PHONE";
+            pHONE.DataPropertyName = "phoneNUMBER";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(pHONE);
 
-        //    //DataGridViewTextBoxColumn aDDRESS = new DataGridViewTextBoxColumn();
-        //    //aDDRESS.Name = "aDDRESS";
-        //    //aDDRESS.HeaderText = "ADDRESS";
-        //    //aDDRESS.DataPropertyName = "aDDRESS";
-        //    //aDDRESS.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //    //dataGridView1.Columns.Add(aDDRESS);
+            
 
-        //    CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dataGridView1.DataSource];
-        //    myCurrencyManager.Refresh();
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvCustomer.DataSource];
+            myCurrencyManager.Refresh();
 
 
-        //}
+        }
 
         private void BtAddCustomer_Click(object sender, EventArgs e)
         {
@@ -130,69 +125,61 @@ namespace QuanLyHotel
             //}
             //else
             //{
-            //    CustomerBUS ctmBUS = new CustomerBUS();
-            //    CustomerDTO ctm = new CustomerDTO();
-            //    ctm.IDC = txtIdentifyCardCustomer+"@"+ txtEmailCustomer+"$"+ txtPhoneCustomer;
-            //    ctm.NAME = txtNameCustomer.Text;
-            //    ctm.GENDER = txtNameCustomer.Text;
-            //    ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);
-            //    ctm.ADDRESS = txtAddressCustomer.Text;
-            //    ctm.IdentifyCARD = txtIdentifyCardCustomer.Text;
-            //    ctm.EMAIL = txtEmailCustomer.Text;
-            //    ctm.PhoneNUMBER = txtPhoneCustomer.Text;
-            //    bool kq = ctmBUS.add(ctm);
-            //    if (kq == false)
-            //        MessageBox.Show("Fail!");
-            //    else
-            //        MessageBox.Show("Sussces");
-            //    this.loadData();
+            CustomerBUS ctmBUS = new CustomerBUS();
+            CustomerDTO ctm = new CustomerDTO();
+            ctm.IDC = txtNameCustomer.Text;
+            ctm.NAME = txtNameCustomer.Text;
+            ctm.PHONE = txtPhoneCustomer.Text;
+            ctm.DATE = DateTime.Parse(dtBirthday.Text);
+            ctm.CMND = txtIdentifyCardCustomer.Text;
+            
+            bool kq = ctmBUS.add(ctm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
             //}
         }
 
         private void BtEditCustomer_Click(object sender, EventArgs e)
         {
-            //CustomerBUS ctmBUS = new CustomerBUS();
-            //CustomerDTO ctm = new CustomerDTO();
-            //ctm.IDC = txtIdentifyCardCustomer + "@" + txtEmailCustomer + "$" + txtPhoneCustomer;
-            //ctm.NAME = txtNameCustomer.Text;
-            //ctm.GENDER = txtNameCustomer.Text;
-            //ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);
-            //ctm.ADDRESS = txtAddressCustomer.Text;
-            //ctm.IdentifyCARD = txtIdentifyCardCustomer.Text;
-            //ctm.EMAIL = txtEmailCustomer.Text;
-            //ctm.PhoneNUMBER = txtPhoneCustomer.Text;
-            //bool kq = ctmBUS.edit(ctm);
-            //if (kq == false)
-            //    MessageBox.Show("Fail!");
-            //else
-            //    MessageBox.Show("Sussces");
-            //this.loadData();
+            CustomerBUS ctmBUS = new CustomerBUS();
+            CustomerDTO ctm = new CustomerDTO();
+            ctm.IDC = txtNameCustomer.Text;
+            ctm.NAME = txtNameCustomer.Text;
+            ctm.PHONE = txtPhoneCustomer.Text;
+            ctm.DATE = DateTime.Parse(dtBirthday.Text);
+            ctm.CMND = txtIdentifyCardCustomer.Text;
+            bool kq = ctmBUS.edit(ctm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
         }
 
         private void BtLoadCustomer_Click(object sender, EventArgs e)
         {
-            //this.loadData();
-            
+            this.loadData();
+
         }
 
         private void BtDeleteCustomer_Click(object sender, EventArgs e)
         {
-            //CustomerBUS ctmBUS = new CustomerBUS();
-            //CustomerDTO ctm = new CustomerDTO();
-            //ctm.IDC = txtIdentifyCardCustomer + "@" + txtEmailCustomer + "$" + txtPhoneCustomer;
-            //ctm.NAME = txtNameCustomer.Text;
-            //ctm.GENDER = txtNameCustomer.Text;
-            //ctm.BIRTHDAY = DateTime.Parse(dtBirthday.Text);
-            //ctm.ADDRESS = txtAddressCustomer.Text;
-            //ctm.IdentifyCARD = txtIdentifyCardCustomer.Text;
-            //ctm.EMAIL = txtEmailCustomer.Text;
-            //ctm.PhoneNUMBER = txtPhoneCustomer.Text;
-            //bool kq = ctmBUS.delete(ctm);
-            //if (kq == false)
-            //    MessageBox.Show("Fail!");
-            //else
-            //    MessageBox.Show("Sussces");
-            //this.loadData();
+            CustomerBUS ctmBUS = new CustomerBUS();
+            CustomerDTO ctm = new CustomerDTO();
+            ctm.IDC = txtNameCustomer.Text;
+            ctm.NAME = txtNameCustomer.Text;
+            ctm.PHONE = txtPhoneCustomer.Text;
+            ctm.DATE = DateTime.Parse(dtBirthday.Text);
+            ctm.CMND = txtIdentifyCardCustomer.Text;
+            bool kq = ctmBUS.delete(ctm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
         }
        
     }

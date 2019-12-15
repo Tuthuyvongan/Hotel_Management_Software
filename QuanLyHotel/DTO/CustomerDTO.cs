@@ -8,22 +8,18 @@ namespace customerDTO
 {
     public class CustomerDTO
     {
-        private string iDC;
-        private string nAME;
-        private string gENDER;
-        private DateTime bIRTHDAY;
-        private string aDDRESS;
-        private string phoneNUMBER;
-        private string eMAIL;
-        private string identifyCARD;
+        /*#Fix*/
+        private string idc;
+        private string name;
+        private DateTime date;
+        private string phone;
+        private string cmnd;
 
-        public string IDC { get => iDC; set => iDC = value; }
-        public string NAME { get => nAME; set => nAME = value; }
-        public string GENDER { get => gENDER; set => gENDER = value; }
-        public DateTime BIRTHDAY { get => bIRTHDAY; set => bIRTHDAY = value; }
-        public string ADDRESS { get => aDDRESS; set => aDDRESS = value; }
-        public string PhoneNUMBER { get => phoneNUMBER; set => phoneNUMBER = value; }
-        public string EMAIL { get => eMAIL; set => eMAIL = value; }
-        public string IdentifyCARD { get => identifyCARD; set => identifyCARD = value; }
+        /*#Fix*/
+        public string IDC { get => idc; set => idc = value; }
+        public string NAME { get => name; set => name = value; }
+        public DateTime DATE { get => date; set => date = value; }
+        public string PHONE { get => phone; set => phone = value; }
+        public string CMND { get => cmnd; set => cmnd = value; }
     }
 }

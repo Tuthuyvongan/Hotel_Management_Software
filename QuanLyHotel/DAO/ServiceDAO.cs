@@ -27,8 +27,8 @@ namespace serviceDAO
             string query = string.Empty;
             //query += "INSERT INTO [Service] (iDS,nAME,kINd,cOST) ";
             //query += "VALUES (@iDS,@nAME,@kINd,@cOST)";
-            query += "INSERT INTO [service] (name,kind,cost) ";
-            query += "VALUES (@name,@kind,@cost)";
+            query += "INSERT INTO [service] (ids,name,kind,cost) ";
+            query += "VALUES (@ids,@name,@kind,@cost)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -37,7 +37,7 @@ namespace serviceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    //cmd.Parameters.AddWithValue("@iDS", rm.IDS);
+                    cmd.Parameters.AddWithValue("@ids", rm.IDS);
                     cmd.Parameters.AddWithValue("@name", rm.NAME);
                     cmd.Parameters.AddWithValue("@kind", rm.KIND);
                     cmd.Parameters.AddWithValue("@cost", rm.COST);
@@ -101,7 +101,7 @@ namespace serviceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    //cmd.Parameters.AddWithValue("@iDS", rm.IDS);
+                    cmd.Parameters.AddWithValue("@ids", rm.IDS);
                     cmd.Parameters.AddWithValue("@name", rm.NAME);
                     cmd.Parameters.AddWithValue("@kind", rm.KIND);
                     cmd.Parameters.AddWithValue("@cost", rm.COST);
@@ -149,7 +149,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = int.Parse(reader["ids"].ToString());
+                                srv.IDS = reader["ids"].ToString();
                                 srv.NAME = reader["name"].ToString();
                                 srv.KIND = reader["kind"].ToString();
                                 srv.COST = Decimal.Parse(reader["cost"].ToString());
@@ -223,7 +223,7 @@ namespace serviceDAO
             query += " WHERE ([name] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([kind] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([iDR] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([idr] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<ServiceDTO> lsTimKiem = new List<ServiceDTO>();
 
@@ -246,7 +246,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = int.Parse(reader["ids"].ToString());
+                                srv.IDS = reader["ids"].ToString();
                                 srv.NAME = reader["name"].ToString();
                                 srv.KIND = reader["kind"].ToString();
                                 srv.COST = Decimal.Parse(reader["cost"].ToString());

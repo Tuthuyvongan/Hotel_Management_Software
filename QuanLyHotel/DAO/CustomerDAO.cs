@@ -25,8 +25,10 @@ namespace customerDAO
         public bool add(CustomerDTO ctm)
         {
             string query = string.Empty;
+            /*#Fix*/
             query += "INSERT INTO [Customer] (iDC,nAME,gENDER,bIRTHDAY,aDDRESS,phoneNUMBER,eMAIL,identifyCARD) ";
             query += "VALUES (@iDC,@nAME,@gENDER,@bIRTHDAY,@aDDRESS,@phoneNUMBER,@eMAIL,@identifyCARD)";
+            
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -36,14 +38,10 @@ namespace customerDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDC", ctm.IDC);
-                    cmd.Parameters.AddWithValue("@nAME", ctm.NAME);
-                    cmd.Parameters.AddWithValue("@gENDER", ctm.GENDER);
-                    cmd.Parameters.AddWithValue("@bIRTHDAY", ctm.BIRTHDAY);
-                    cmd.Parameters.AddWithValue("@aDDRESS", ctm.ADDRESS);
-                    cmd.Parameters.AddWithValue("@phoneNUMBER", ctm.PhoneNUMBER);
-                    cmd.Parameters.AddWithValue("@eMAIL", ctm.EMAIL);
-                    cmd.Parameters.AddWithValue("@identifyCARD", ctm.IdentifyCARD);
-
+                    cmd.Parameters.AddWithValue("@name", ctm.NAME);
+                    cmd.Parameters.AddWithValue("@phone", ctm.PHONE);
+                    cmd.Parameters.AddWithValue("@date", ctm.DATE);
+                    cmd.Parameters.AddWithValue("@cmnd", ctm.CMND);
 
                     try
                     {
@@ -65,7 +63,7 @@ namespace customerDAO
         public bool delete(CustomerDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM Customer WHERE [iDC] = @iDC"; ;
+            query += "DELETE FROM customer WHERE [idc] = @idc"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -74,7 +72,7 @@ namespace customerDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDC", pt.IDC);
+                    cmd.Parameters.AddWithValue("@idc", pt.IDC);
                     try
                     {
                         con.Open();
@@ -95,7 +93,7 @@ namespace customerDAO
         public bool edit(CustomerDTO ctm)
         {
             string query = string.Empty;
-            query += "UPDATE Customer SET [nAME] = @nAME, [gENDER] = @gENDER, [bIRTHDAY] = @bIRTHDAY, [aDDRESS] = @aDDRESS, [phoneNUMBER] = @phoneNUMBER, [eMAIL] = @eMAIL, [identifyCARD] = @identifyCARD  WHERE [iDC] = @iDC";
+            query += "UPDATE customer SET [name] = @name, [phone] = @phone, [date] = @date, [cmnd] = @cmnd  WHERE [idc] = @idc";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -105,13 +103,10 @@ namespace customerDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@iDC", ctm.IDC);
-                    cmd.Parameters.AddWithValue("@nAME", ctm.NAME);
-                    cmd.Parameters.AddWithValue("@gENDER", ctm.GENDER);
-                    cmd.Parameters.AddWithValue("@bIRTHDAY", ctm.BIRTHDAY);
-                    cmd.Parameters.AddWithValue("@aDDRESS", ctm.ADDRESS);
-                    cmd.Parameters.AddWithValue("@phoneNUMBER", ctm.PhoneNUMBER);
-                    cmd.Parameters.AddWithValue("@eMAIL", ctm.EMAIL);
-                    cmd.Parameters.AddWithValue("@identifyCARD", ctm.IdentifyCARD);
+                    cmd.Parameters.AddWithValue("@name", ctm.NAME);
+                    cmd.Parameters.AddWithValue("@phone", ctm.PHONE);
+                    cmd.Parameters.AddWithValue("@date", ctm.DATE);
+                    cmd.Parameters.AddWithValue("@cmnd", ctm.CMND);
                     try
                     {
                         con.Open();
@@ -132,8 +127,8 @@ namespace customerDAO
         public List<CustomerDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [iDC], [nAME], [gENDER], [phoneNUMBER], [eMAIL], [identifyCARD]";
-            query += "FROM [Customer]";
+            query += "SELECT [idc], [name], [phone], [date], [cmnd]";
+            query += "FROM [customer]";
 
             List<CustomerDTO> IsNameCustomer = new List<CustomerDTO>();
 
@@ -156,12 +151,11 @@ namespace customerDAO
                             while (reader.Read())
                             {
                                 CustomerDTO ctm = new CustomerDTO();
-                                ctm.IDC = reader["iDC"].ToString();
+                                ctm.IDC = reader["idc"].ToString();
                                 ctm.NAME = reader["nAME"].ToString();
-                                ctm.GENDER = reader["gENDER"].ToString();
-                                ctm.PhoneNUMBER = reader["phoneNUMBER"].ToString();
-                                ctm.EMAIL = reader["eMAIL"].ToString();
-                                ctm.IdentifyCARD = reader["identifyCARD"].ToString();
+                                ctm.PHONE = reader["phone"].ToString();
+                                ctm.DATE = DateTime.Parse(reader["date"].ToString());
+                                ctm.CMND = reader["cmnd"].ToString();
                                 IsNameCustomer.Add(ctm);
                             }
                         }
@@ -182,8 +176,8 @@ namespace customerDAO
         public List<CustomerDTO> selectNameCustomer()
         {
             string query = string.Empty;
-            query += "SELECT [nAME]";
-            query += "FROM [Customer]";
+            query += "SELECT [name]";
+            query += "FROM [customer]";
 
             List<CustomerDTO> lsNameCustomer = new List<CustomerDTO>();
 
@@ -206,7 +200,7 @@ namespace customerDAO
                             while (reader.Read())
                             {
                                 CustomerDTO kr = new CustomerDTO();
-                                kr.NAME = reader["nAME"].ToString();
+                                kr.NAME = reader["name"].ToString();
                                 lsNameCustomer.Add(kr);
                             }
                         }
@@ -227,14 +221,13 @@ namespace customerDAO
         public List<CustomerDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [iDC], [nAME], [gENDER], [phoneNUMBER], [eMAIL], [identifyCARD]";
-            query += "FROM [Customer]";
-            query += " WHERE ([nAME] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([iDC] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([gENDER] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([phoneNUMBER] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([eMAIL] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([identifyCARD] LIKE CONCAT('%',@Keyword,'%'))";
+            query += "SELECT [idc], [name], [phone], [date], [cmnd]";
+            query += "FROM [customer]";
+            query += " WHERE ([namee] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([idc] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([phone] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([date] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([cmnd] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<CustomerDTO> lsTimKiem = new List<CustomerDTO>();
 
@@ -257,12 +250,11 @@ namespace customerDAO
                             while (reader.Read())
                             {
                                 CustomerDTO ctm = new CustomerDTO();
-                                ctm.IDC = reader["iDC"].ToString();
+                                ctm.IDC = reader["idc"].ToString();
                                 ctm.NAME = reader["nAME"].ToString();
-                                ctm.GENDER = reader["gENDER"].ToString();
-                                ctm.PhoneNUMBER = reader["phoneNUMBER"].ToString();
-                                ctm.EMAIL = reader["eMAIL"].ToString();
-                                ctm.IdentifyCARD = reader["identifyCARD"].ToString();
+                                ctm.PHONE = reader["phone"].ToString();
+                                ctm.DATE = DateTime.Parse(reader["date"].ToString());
+                                ctm.CMND = reader["cmnd"].ToString();
                                 lsTimKiem.Add(ctm);
                             }
                         }
