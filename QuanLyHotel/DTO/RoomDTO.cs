@@ -9,7 +9,7 @@ namespace roomDTO
 {
     public class RoomDTO
     {
-        private string idr;
+        private int idr;
         private string name;
         private string status;
         private decimal cost;
@@ -25,7 +25,7 @@ namespace roomDTO
         //    this.Bedamount = (int)row["bedamount"];
         //    this.Roomkind = row["romkind"].ToString();
         //}
-        public string Idr { get => idr; set => idr = value; }
+        public int Idr { get => idr; set => idr = value; }
         public string Name { get => name; set => name = value; }
         public string Status { get => status; set => status = value; }
         public decimal Cost { get => cost; set => cost = value; }

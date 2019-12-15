@@ -25,8 +25,10 @@ namespace serviceDAO
         public bool add(ServiceDTO rm)
         {
             string query = string.Empty;
-            query += "INSERT INTO [Service] (iDS,nAME,kINd,cOST,nOTE) ";
-            query += "VALUES (@iDS,@nAME,@kINd,@cOST,@nOTE)";
+            //query += "INSERT INTO [Service] (iDS,nAME,kINd,cOST) ";
+            //query += "VALUES (@iDS,@nAME,@kINd,@cOST)";
+            query += "INSERT INTO [service] (name,kind,cost) ";
+            query += "VALUES (@name,@kind,@cost)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -35,11 +37,10 @@ namespace serviceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDS", rm.IDS);
-                    cmd.Parameters.AddWithValue("@nAME", rm.NAME);
-                    cmd.Parameters.AddWithValue("@kINd", rm.KIND);
-                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
+                    //cmd.Parameters.AddWithValue("@iDS", rm.IDS);
+                    cmd.Parameters.AddWithValue("@name", rm.NAME);
+                    cmd.Parameters.AddWithValue("@kind", rm.KIND);
+                    cmd.Parameters.AddWithValue("@cost", rm.COST);
 
                     try
                     {
@@ -61,7 +62,7 @@ namespace serviceDAO
         public bool delete(ServiceDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM Service WHERE [iDS] = @iDS"; ;
+            query += "DELETE FROM service WHERE [ids] = @ids"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -70,7 +71,7 @@ namespace serviceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDS", pt.IDS);
+                    cmd.Parameters.AddWithValue("@ids", pt.IDS);
                     try
                     {
                         con.Open();
@@ -91,7 +92,7 @@ namespace serviceDAO
         public bool edit(ServiceDTO rm)
         {
             string query = string.Empty;
-            query += "UPDATE Service SET [nAME] = @nAME, [kINd] = @kINd, [cOST] = @cOST,[nOTE]=@nOTE  WHERE [iDS] = @iDS";
+            query += "UPDATE Service SET [name] = @name, [kind] = @kind, [cost] = @cost  WHERE [ids] = @ids";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -100,11 +101,10 @@ namespace serviceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDS", rm.IDS);
-                    cmd.Parameters.AddWithValue("@nAME", rm.NAME);
-                    cmd.Parameters.AddWithValue("@kINd", rm.KIND);
-                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
-                    cmd.Parameters.AddWithValue("@nOTE", rm.NOTE);
+                    //cmd.Parameters.AddWithValue("@iDS", rm.IDS);
+                    cmd.Parameters.AddWithValue("@name", rm.NAME);
+                    cmd.Parameters.AddWithValue("@kind", rm.KIND);
+                    cmd.Parameters.AddWithValue("@cost", rm.COST);
                     try
                     {
                         con.Open();
@@ -125,8 +125,8 @@ namespace serviceDAO
         public List<ServiceDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [nAME], [kINd], [cOST], [iDS],[nOTE] ";
-            query += "FROM [Service]";
+            query += "SELECT [name], [kind], [cost], [ids] ";
+            query += "FROM [service]";
 
             List<ServiceDTO> IsNameService = new List<ServiceDTO>();
 
@@ -149,11 +149,10 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = reader["iDS"].ToString();
-                                srv.NAME = reader["nAME"].ToString();
-                                srv.KIND = reader["kINd"].ToString();
-                                srv.COST = Decimal.Parse(reader["cOST"].ToString());
-                                srv.NOTE = reader["nOTE"].ToString();
+                                srv.IDS = int.Parse(reader["ids"].ToString());
+                                srv.NAME = reader["name"].ToString();
+                                srv.KIND = reader["kind"].ToString();
+                                srv.COST = Decimal.Parse(reader["cost"].ToString());
                                 IsNameService.Add(srv);
                             }
                         }
@@ -174,8 +173,8 @@ namespace serviceDAO
         public List<ServiceDTO> selectNameService()
         {
             string query = string.Empty;
-            query += "SELECT [nAME]";
-            query += "FROM [Service]";
+            query += "SELECT [name]";
+            query += "FROM [service]";
 
             List<ServiceDTO> lsNameService = new List<ServiceDTO>();
 
@@ -198,7 +197,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO pt = new ServiceDTO();
-                                pt.NAME = reader["nAME"].ToString();
+                                pt.NAME = reader["name"].ToString();
                                 lsNameService.Add(pt);
                             }
                         }
@@ -219,13 +218,12 @@ namespace serviceDAO
         public List<ServiceDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [nAME], [kINd], [cOST], [iDR], [nOTE]";
-            query += "FROM [Service]";
-            query += " WHERE ([nAME] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([kINd] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([cOST] LIKE CONCAT('%',@Keyword,'%'))";
+            query += "SELECT [name], [kind], [cost], [idr]";
+            query += "FROM [service]";
+            query += " WHERE ([name] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([kind] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([iDR] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([nOTE] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<ServiceDTO> lsTimKiem = new List<ServiceDTO>();
 
@@ -248,11 +246,10 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO srv = new ServiceDTO();
-                                srv.IDS = reader["iDS"].ToString();
-                                srv.NAME = reader["nAME"].ToString();
-                                srv.KIND = reader["kINd"].ToString();
-                                srv.COST = Decimal.Parse(reader["cOST"].ToString());
-                                srv.NOTE = reader["nOTE"].ToString();
+                                srv.IDS = int.Parse(reader["ids"].ToString());
+                                srv.NAME = reader["name"].ToString();
+                                srv.KIND = reader["kind"].ToString();
+                                srv.COST = Decimal.Parse(reader["cost"].ToString());
                                 lsTimKiem.Add(srv);
                             }
                         }
@@ -273,9 +270,9 @@ namespace serviceDAO
         public List<ServiceDTO> selectCost(string sKeyword)
         {
             string query = string.Empty;
-            query += "SELECT [cOST]";
-            query += "FROM [Service]";
-            query += " WHERE ([nAME] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += "SELECT [cost]";
+            query += "FROM [service]";
+            query += " WHERE ([name] LIKE CONCAT('%',@sKeyword,'%'))";
 
             List<ServiceDTO> lsCost = new List<ServiceDTO>();
 
@@ -298,7 +295,7 @@ namespace serviceDAO
                             while (reader.Read())
                             {
                                 ServiceDTO pt = new ServiceDTO();
-                                pt.COST = Decimal.Parse(reader["cOST"].ToString());
+                                pt.COST = Decimal.Parse(reader["cost"].ToString());
                                 lsCost.Add(pt);
                             }
                         }

@@ -223,6 +223,8 @@
             this.btAddRoom.TabIndex = 190;
             this.btAddRoom.Text = "Add";
             this.btAddRoom.UseVisualStyleBackColor = false;
+            /*Truong*/
+            this.btAddRoom.Click += new System.EventHandler(this.BtAddRoom_Click);
             // 
             // btEditRoom
             // 
@@ -237,6 +239,8 @@
             this.btEditRoom.TabIndex = 191;
             this.btEditRoom.Text = "Edit";
             this.btEditRoom.UseVisualStyleBackColor = false;
+            /*Truong*/
+            this.btEditRoom.Click += new System.EventHandler(this.BtEditRoom_Click);
             // 
             // btDeleteRoom
             // 
@@ -251,6 +255,8 @@
             this.btDeleteRoom.TabIndex = 192;
             this.btDeleteRoom.Text = "Delete";
             this.btDeleteRoom.UseVisualStyleBackColor = false;
+            /*Truong*/
+            this.btDeleteRoom.Click += new System.EventHandler(this.BtDeleteRoom_Click);
             // 
             // txtSearchRoom
             // 

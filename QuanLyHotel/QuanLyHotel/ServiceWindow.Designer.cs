@@ -34,7 +34,6 @@
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -50,7 +49,6 @@
             this.txtNameService = new System.Windows.Forms.TextBox();
             this.txtKindService = new System.Windows.Forms.ComboBox();
             this.txtCostService = new System.Windows.Forms.TextBox();
-            this.txtNoteService = new System.Windows.Forms.TextBox();
             this.btAddService = new System.Windows.Forms.Button();
             this.btEditService = new System.Windows.Forms.Button();
             this.btDeleteService = new System.Windows.Forms.Button();
@@ -92,17 +90,6 @@
             // errorProvider5
             // 
             this.errorProvider5.ContainerControl = this;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(12, 142);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 22);
-            this.label17.TabIndex = 83;
-            this.label17.Text = "Note";
             // 
             // label16
             // 
@@ -266,16 +253,6 @@
             this.txtCostService.Size = new System.Drawing.Size(119, 29);
             this.txtCostService.TabIndex = 182;
             // 
-            // txtNoteService
-            // 
-            this.txtNoteService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNoteService.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.txtNoteService.Location = new System.Drawing.Point(76, 139);
-            this.txtNoteService.MaximumSize = new System.Drawing.Size(450, 29);
-            this.txtNoteService.Name = "txtNoteService";
-            this.txtNoteService.Size = new System.Drawing.Size(314, 29);
-            this.txtNoteService.TabIndex = 183;
-            // 
             // btAddService
             // 
             this.btAddService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -283,7 +260,7 @@
             this.btAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddService.ForeColor = System.Drawing.Color.White;
-            this.btAddService.Location = new System.Drawing.Point(16, 184);
+            this.btAddService.Location = new System.Drawing.Point(14, 152);
             this.btAddService.Name = "btAddService";
             this.btAddService.Size = new System.Drawing.Size(74, 31);
             this.btAddService.TabIndex = 185;
@@ -297,7 +274,7 @@
             this.btEditService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditService.ForeColor = System.Drawing.Color.White;
-            this.btEditService.Location = new System.Drawing.Point(95, 184);
+            this.btEditService.Location = new System.Drawing.Point(93, 152);
             this.btEditService.Name = "btEditService";
             this.btEditService.Size = new System.Drawing.Size(74, 31);
             this.btEditService.TabIndex = 187;
@@ -311,7 +288,7 @@
             this.btDeleteService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteService.ForeColor = System.Drawing.Color.White;
-            this.btDeleteService.Location = new System.Drawing.Point(175, 184);
+            this.btDeleteService.Location = new System.Drawing.Point(173, 152);
             this.btDeleteService.Name = "btDeleteService";
             this.btDeleteService.Size = new System.Drawing.Size(74, 31);
             this.btDeleteService.TabIndex = 188;
@@ -325,7 +302,7 @@
             this.btLoadService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoadService.ForeColor = System.Drawing.Color.White;
-            this.btLoadService.Location = new System.Drawing.Point(255, 184);
+            this.btLoadService.Location = new System.Drawing.Point(253, 152);
             this.btLoadService.Name = "btLoadService";
             this.btLoadService.Size = new System.Drawing.Size(74, 31);
             this.btLoadService.TabIndex = 189;
@@ -367,7 +344,7 @@
             this.btAddKind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddKind.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddKind.ForeColor = System.Drawing.Color.White;
-            this.btAddKind.Location = new System.Drawing.Point(417, 142);
+            this.btAddKind.Location = new System.Drawing.Point(415, 152);
             this.btAddKind.Name = "btAddKind";
             this.btAddKind.Size = new System.Drawing.Size(74, 31);
             this.btAddKind.TabIndex = 193;
@@ -381,7 +358,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(495, 142);
+            this.button4.Location = new System.Drawing.Point(493, 152);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 31);
             this.button4.TabIndex = 194;
@@ -395,7 +372,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(575, 142);
+            this.button3.Location = new System.Drawing.Point(573, 152);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 31);
             this.button3.TabIndex = 195;
@@ -456,7 +433,6 @@
             this.Controls.Add(this.btDeleteService);
             this.Controls.Add(this.btEditService);
             this.Controls.Add(this.btAddService);
-            this.Controls.Add(this.txtNoteService);
             this.Controls.Add(this.txtCostService);
             this.Controls.Add(this.txtKindService);
             this.Controls.Add(this.txtNameService);
@@ -466,7 +442,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgvUseService);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -494,7 +469,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -520,7 +494,6 @@
         private System.Windows.Forms.Button btDeleteService;
         private System.Windows.Forms.Button btEditService;
         private System.Windows.Forms.Button btAddService;
-        private System.Windows.Forms.TextBox txtNoteService;
         private System.Windows.Forms.TextBox txtCostService;
         private System.Windows.Forms.ComboBox txtKindService;
         private System.Windows.Forms.TextBox txtNameService;

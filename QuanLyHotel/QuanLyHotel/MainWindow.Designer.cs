@@ -224,6 +224,7 @@
             // customerWindow1
             // 
             this.customerWindow1.Location = new System.Drawing.Point(150, 0);
+            this.customerWindow1.MinimumSize = new System.Drawing.Size(821, 652);
             this.customerWindow1.Name = "customerWindow1";
             this.customerWindow1.Size = new System.Drawing.Size(821, 652);
             this.customerWindow1.TabIndex = 6;

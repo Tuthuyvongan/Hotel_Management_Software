@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using roomBUS;
+using roomDAO;
+using roomDTO;
 
 namespace QuanLyHotel
 {
@@ -16,6 +19,118 @@ namespace QuanLyHotel
         {
             InitializeComponent();
             
+        }
+
+        /*Truong*/
+        private void loadData()
+        {
+            RoomBUS rmBus = new RoomBUS();
+            List<RoomDTO> list = rmBus.select();
+
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvRoom.Columns.Clear();
+            dtgvRoom.DataSource = null;
+
+            dtgvRoom.AutoGenerateColumns = false;
+            dtgvRoom.AllowUserToAddRows = false;
+            dtgvRoom.DataSource = list;
+
+            DataGridViewTextBoxColumn iD = new DataGridViewTextBoxColumn();
+            iD.Name = "idr";
+            iD.HeaderText = "ID";
+            iD.DataPropertyName = "idr";
+            iD.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(iD);
+
+            DataGridViewTextBoxColumn nAME = new DataGridViewTextBoxColumn();
+            nAME.Name = "name";
+            nAME.HeaderText = "Name:";
+            nAME.DataPropertyName = "name";
+            nAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(nAME);
+
+            DataGridViewTextBoxColumn gENDER = new DataGridViewTextBoxColumn();
+            gENDER.Name = "status";
+            gENDER.HeaderText = "Status";
+            gENDER.DataPropertyName = "status";
+            gENDER.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(gENDER);
+
+            DataGridViewTextBoxColumn eMAIL = new DataGridViewTextBoxColumn();
+            eMAIL.Name = "bedamount";
+            eMAIL.HeaderText = "Bed Amount";
+            eMAIL.DataPropertyName = "bedamount";
+            eMAIL.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(eMAIL);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "roomkind";
+            pHONE.HeaderText = "Room Kind";
+            pHONE.DataPropertyName = "roomkind";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(pHONE);
+
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+
+        private void BtAddRoom_Click(object sender, EventArgs e)
+        {
+            RoomBUS rmBUS = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.Name = txtNameRoom.Text;
+            rm.Roomkind = txtKindRoom.Text;
+            rm.Status = "Trống";
+            rm.Bedamount = int.Parse(txtBedsAmount.Text);
+            rm.Cost = Decimal.Parse(txtCost.Text);
+            bool kq = rmBUS.add(rm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void BtEditRoom_Click(object sender, EventArgs e)
+        {
+            RoomBUS rmBUS = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.Name = txtNameRoom.Text;
+            rm.Roomkind = txtKindRoom.Text;
+            rm.Status = "Trống";
+            rm.Bedamount = int.Parse(txtBedsAmount.Text);
+            rm.Cost = Decimal.Parse(txtCost.Text);
+            bool kq = rmBUS.edit(rm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void BtDeleteRoom_Click(object sender, EventArgs e)
+        {
+            RoomBUS rmBUS = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.Name = txtNameRoom.Text;
+            rm.Roomkind = txtKindRoom.Text;
+            rm.Status = "Trống";
+            rm.Bedamount = int.Parse(txtBedsAmount.Text);
+            rm.Cost = Decimal.Parse(txtCost.Text);
+            bool kq = rmBUS.delete(rm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
         }
     }
 }
