@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using userBUS;
-//using userDTO;
+using userBUS;
+using userDTO;
 
 namespace QuanLyHotel
 {
@@ -55,33 +55,47 @@ namespace QuanLyHotel
         //Click event
         private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo!", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            //{
-            //    e.Cancel = true;
-            //}
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo!", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //UserBUS ndBUS = new UserBUS();
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            UserBUS ndBUS = new UserBUS();
 
-            //UserDTO tn = new UserDTO();
-            //string IDU = txtUsername.Text;
-            //string PASSWORD = txtPassword.Text;
-            //if (ndBUS.kiemtra(tn, IDU, PASSWORD))
-            //{
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                MainWindow f = new MainWindow();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
-            //}
-            
+            UserDTO tn = new UserDTO();
+            string IDU = txtUsername.Text;
+            string PASSWORD = txtPassword.Text;
+            if (txtUsername.Text == "")
+            {
+                errorProvider1.SetError(txtUsername, "Không được để trống!");
+            }
+            if (txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "Không được để trống!");
+            }
+            else
+            {
+
+                if (ndBUS.kiemtra(tn, IDU, PASSWORD))
+                {
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    MainWindow f = new MainWindow();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                }
+            }
+
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)

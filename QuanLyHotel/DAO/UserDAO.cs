@@ -26,8 +26,8 @@ namespace userDAO
         public bool add(UserDTO nd)
         {
             string query = string.Empty;
-            query += "INSERT INTO [User] (iDU,nAME,pASSWORD) ";
-            query += "VALUES (@iDU,@nAME,@pASSWORD)";
+            query += "INSERT INTO [manager] (idm,name,phone,email,password,level,gender,cmnd) ";
+            query += "VALUES (@idm,@name,@phone,@email,@password,@level,@gender,@cmnd)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -36,9 +36,14 @@ namespace userDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDU", nd.IDU);
-                    cmd.Parameters.AddWithValue("@nAME", nd.NAME);
-                    cmd.Parameters.AddWithValue("@pASSWORD", nd.PASSWORD);
+                    cmd.Parameters.AddWithValue("@idm", nd.Idm);
+                    cmd.Parameters.AddWithValue("@name", nd.Name);
+                    cmd.Parameters.AddWithValue("@password", nd.Password);
+                    cmd.Parameters.AddWithValue("@phone", nd.Phone);
+                    cmd.Parameters.AddWithValue("@email", nd.Email);
+                    cmd.Parameters.AddWithValue("@level", nd.Level);
+                    cmd.Parameters.AddWithValue("@gender", nd.Gender);
+                    cmd.Parameters.AddWithValue("@cmnd", nd.Cmnd);
 
                     try
                     {
@@ -60,7 +65,7 @@ namespace userDAO
         public bool fix(UserDTO nd)
         {
             string query = string.Empty;
-            query += "UPDATE User SET [PASSWORD] = @pASSWORD WHERE [IDU] = @iDU";
+            query += "UPDATE manager SET [password] = @password, WHERE [idm] = @idm";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -69,8 +74,8 @@ namespace userDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDU", nd.IDU);
-                    cmd.Parameters.AddWithValue("@pASSWORD", nd.PASSWORD);
+                    cmd.Parameters.AddWithValue("@idm", nd.Idm);
+                    cmd.Parameters.AddWithValue("@password", nd.Password);
 
                     try
                     {
@@ -91,11 +96,11 @@ namespace userDAO
         }
 
 
-        public List<UserDTO> select(string IDU, string PASSWORD)
+        public List<UserDTO> select(string IDM, string PASSWORD)
         {
             string query = string.Empty;
-            query += "SELECT *from [User]";
-            query += "where iDU = '" + IDU + "'and pASSWORD = '" + PASSWORD + "'";
+            query += "SELECT *from [manager]";
+            query += "where idm = '" + IDM + "'and password = '" + PASSWORD + "'";
 
 
 
@@ -122,8 +127,8 @@ namespace userDAO
                             {
                                 UserDTO nc = new UserDTO();
 
-                                nc.IDU = reader["iDu"].ToString();
-                                nc.PASSWORD = reader["pASSWORD"].ToString();
+                                nc.Idm = reader["idm"].ToString();
+                                nc.Password = reader["password"].ToString();
                                 listNguoidungDTO.Add(nc);
                             }
                         }
@@ -178,8 +183,8 @@ namespace userDAO
         {
             string query = string.Empty;
 
-            query += "SELECT (iDU),(pASSWORD) from [User]";
-            query += "where [iDU] = N'" + @IDU + "'and [PassWord] = N'" + PASSWORD + "'";
+            query += "SELECT (idm),(password) from [manager]";
+            query += "where [idm] = N'" + @IDU + "'and [password] = N'" + PASSWORD + "'";
 
             DataTable resuft = ExcuteQuery(query);
             return resuft.Rows.Count > 0;

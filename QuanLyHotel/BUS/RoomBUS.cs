@@ -37,17 +37,17 @@ namespace roomBUS
         {
             return rDao.select();
         }
-        public List<RoomDTO> selectNameRoom()
-        {
-            return rDao.selectNameRoom();
-        }
+        //public List<RoomDTO> selectNameRoom()
+        //{
+        //    return rDao.selectNameRoom();
+        //}
         public List<RoomDTO> search(string Keyword)
         {
             return rDao.search(Keyword);
         }
-        public List<RoomDTO> selectCost(string sKeyword)
-        {
-            return rDao.selectCost(sKeyword);
-        }
+        //public List<RoomDTO> selectCost(string sKeyword)
+        //{
+        //    return rDao.selectCost(sKeyword);
+        //}
     }
 }

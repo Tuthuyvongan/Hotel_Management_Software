@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using roomDTO;
+using roomBUS;
+using roomDAO;
 
 namespace QuanLyHotel
 {
@@ -15,8 +18,24 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
+            LoadRoom();
         }
-
+          
+        void LoadRoom()
+        {
+            RoomDAO roomList = new RoomDAO();
+            List<RoomDAO> listRoom = roomList.LoadRoomList();
+            if (listRoom == null)
+            {
+                MessageBox.Show("Có lỗi khi lấy thông tin từ DB");
+                return;
+            }
+            foreach(RoomDAO item in listRoom)
+            {
+                Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
+                panelflr.Controls.Add(btn);
+            }
+        }
         private void BtCheckInRoom_Click(object sender, EventArgs e)
         {
             CheckInWindow checkIn = new CheckInWindow(lbName.Text,lbKind.Text,lbBedsAmount.Text,lbCost.Text);
@@ -33,6 +52,11 @@ namespace QuanLyHotel
         {
             UseServiceWindow useService = new UseServiceWindow();
             useService.Show();
+        }
+
+        private void btCheckInRoom_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
