@@ -31,17 +31,16 @@
             this.lbCost = new System.Windows.Forms.Label();
             this.lbBedsAmount = new System.Windows.Forms.Label();
             this.lbKind = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
+            this.lbNameRoom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNameCustomer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btLoadCustomer = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,10 +49,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgvCustomer = new System.Windows.Forms.DataGridView();
-            this.txtIdentifyCardCustomer = new System.Windows.Forms.TextBox();
-            this.txtPhoneCustomer = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.lbIdentifyCard = new System.Windows.Forms.Label();
+            this.lbNameCustomer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,16 +90,16 @@
             this.lbKind.TabIndex = 217;
             this.lbKind.Text = "Name";
             // 
-            // lbName
+            // lbNameRoom
             // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(128, 316);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(49, 19);
-            this.lbName.TabIndex = 216;
-            this.lbName.Text = "Name";
+            this.lbNameRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameRoom.AutoSize = true;
+            this.lbNameRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbNameRoom.Location = new System.Drawing.Point(128, 316);
+            this.lbNameRoom.Name = "lbNameRoom";
+            this.lbNameRoom.Size = new System.Drawing.Size(49, 19);
+            this.lbNameRoom.TabIndex = 216;
+            this.lbNameRoom.Text = "Name";
             // 
             // label4
             // 
@@ -157,23 +157,23 @@
             this.label2.TabIndex = 211;
             this.label2.Text = "Room Information";
             // 
-            // dtDate
+            // dtCheckIn
             // 
-            this.dtDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(134, 196);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(234, 26);
-            this.dtDate.TabIndex = 210;
-            this.dtDate.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            this.dtCheckIn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtCheckIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dtCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtCheckIn.Location = new System.Drawing.Point(132, 57);
+            this.dtCheckIn.Name = "dtCheckIn";
+            this.dtCheckIn.Size = new System.Drawing.Size(150, 26);
+            this.dtCheckIn.TabIndex = 210;
+            this.dtCheckIn.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(8, 135);
+            this.label7.Location = new System.Drawing.Point(16, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 19);
             this.label7.TabIndex = 209;
@@ -184,38 +184,29 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(12, 202);
+            this.label12.Location = new System.Drawing.Point(20, 63);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 19);
+            this.label12.Size = new System.Drawing.Size(71, 19);
             this.label12.TabIndex = 207;
-            this.label12.Text = "Date:";
+            this.label12.Text = "CheckIn:";
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(11, 167);
+            this.label8.Location = new System.Drawing.Point(19, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 19);
             this.label8.TabIndex = 206;
             this.label8.Text = "Phone:";
-            // 
-            // txtNameCustomer
-            // 
-            this.txtNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNameCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNameCustomer.Location = new System.Drawing.Point(134, 100);
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(234, 26);
-            this.txtNameCustomer.TabIndex = 204;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(8, 103);
+            this.label6.Location = new System.Drawing.Point(16, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 19);
             this.label6.TabIndex = 203;
@@ -287,7 +278,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(10, 59);
+            this.label3.Location = new System.Drawing.Point(14, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(278, 31);
             this.label3.TabIndex = 195;
@@ -302,69 +293,84 @@
             this.dtgvCustomer.Size = new System.Drawing.Size(395, 340);
             this.dtgvCustomer.TabIndex = 194;
             // 
-            // txtIdentifyCardCustomer
+            // dtCheckOut
             // 
-            this.txtIdentifyCardCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtIdentifyCardCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtIdentifyCardCustomer.Location = new System.Drawing.Point(134, 132);
-            this.txtIdentifyCardCustomer.Name = "txtIdentifyCardCustomer";
-            this.txtIdentifyCardCustomer.Size = new System.Drawing.Size(234, 26);
-            this.txtIdentifyCardCustomer.TabIndex = 205;
-            // 
-            // txtPhoneCustomer
-            // 
-            this.txtPhoneCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPhoneCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPhoneCustomer.Location = new System.Drawing.Point(134, 164);
-            this.txtPhoneCustomer.Name = "txtPhoneCustomer";
-            this.txtPhoneCustomer.Size = new System.Drawing.Size(234, 26);
-            this.txtPhoneCustomer.TabIndex = 208;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 228);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 26);
-            this.dateTimePicker1.TabIndex = 221;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
+            this.dtCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtCheckOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dtCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtCheckOut.Location = new System.Drawing.Point(132, 89);
+            this.dtCheckOut.Name = "dtCheckOut";
+            this.dtCheckOut.Size = new System.Drawing.Size(150, 26);
+            this.dtCheckOut.TabIndex = 221;
+            this.dtCheckOut.Value = new System.DateTime(2019, 10, 24, 0, 0, 0, 0);
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(12, 234);
+            this.label9.Location = new System.Drawing.Point(20, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 19);
             this.label9.TabIndex = 220;
             this.label9.Text = "Check Out:";
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPhone.Location = new System.Drawing.Point(128, 249);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(49, 19);
+            this.lbPhone.TabIndex = 224;
+            this.lbPhone.Text = "Name";
+            // 
+            // lbIdentifyCard
+            // 
+            this.lbIdentifyCard.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbIdentifyCard.AutoSize = true;
+            this.lbIdentifyCard.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbIdentifyCard.Location = new System.Drawing.Point(128, 217);
+            this.lbIdentifyCard.Name = "lbIdentifyCard";
+            this.lbIdentifyCard.Size = new System.Drawing.Size(49, 19);
+            this.lbIdentifyCard.TabIndex = 223;
+            this.lbIdentifyCard.Text = "Name";
+            // 
+            // lbNameCustomer
+            // 
+            this.lbNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameCustomer.AutoSize = true;
+            this.lbNameCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbNameCustomer.Location = new System.Drawing.Point(128, 185);
+            this.lbNameCustomer.Name = "lbNameCustomer";
+            this.lbNameCustomer.Size = new System.Drawing.Size(49, 19);
+            this.lbNameCustomer.TabIndex = 222;
+            this.lbNameCustomer.Text = "Name";
             // 
             // CheckInWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 511);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lbPhone);
+            this.Controls.Add(this.lbIdentifyCard);
+            this.Controls.Add(this.lbNameCustomer);
+            this.Controls.Add(this.dtCheckOut);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbCost);
             this.Controls.Add(this.lbBedsAmount);
             this.Controls.Add(this.lbKind);
-            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.lbNameRoom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtDate);
+            this.Controls.Add(this.dtCheckIn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtPhoneCustomer);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtIdentifyCardCustomer);
-            this.Controls.Add(this.txtNameCustomer);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btLoadCustomer);
             this.Controls.Add(this.label5);
@@ -378,7 +384,6 @@
             this.Name = "CheckInWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInWindow";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -390,17 +395,16 @@
         private System.Windows.Forms.Label lbCost;
         private System.Windows.Forms.Label lbBedsAmount;
         private System.Windows.Forms.Label lbKind;
-        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbNameRoom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.DateTimePicker dtDate;
+        public System.Windows.Forms.DateTimePicker dtCheckIn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNameCustomer;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btLoadCustomer;
         private System.Windows.Forms.Label label5;
@@ -409,9 +413,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dtgvCustomer;
-        private System.Windows.Forms.TextBox txtIdentifyCardCustomer;
-        private System.Windows.Forms.TextBox txtPhoneCustomer;
-        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dtCheckOut;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbPhone;
+        private System.Windows.Forms.Label lbIdentifyCard;
+        private System.Windows.Forms.Label lbNameCustomer;
     }
 }

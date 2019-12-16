@@ -451,7 +451,7 @@
             this.btCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckOut.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btCheckOut.Location = new System.Drawing.Point(34, 518);
+            this.btCheckOut.Location = new System.Drawing.Point(45, 518);
             this.btCheckOut.MaximumSize = new System.Drawing.Size(217, 34);
             this.btCheckOut.Name = "btCheckOut";
             this.btCheckOut.Size = new System.Drawing.Size(217, 34);
@@ -464,7 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 564);
+            this.ClientSize = new System.Drawing.Size(330, 564);
             this.Controls.Add(this.btCheckOut);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label27);

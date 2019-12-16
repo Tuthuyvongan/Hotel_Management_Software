@@ -12,13 +12,19 @@ namespace QuanLyHotel
 {
     public partial class MainWindow : Form
     {
+
         public MainWindow()
         {
             InitializeComponent();
             //homeWindow1.Dock = DockStyle.Fill;
             //homeWindow1.BringToFront();
         }
-
+        string username="", level = "";
+        public MainWindow(string Username, string Level)
+        {
+            username = Username;
+            level = Level;
+        }
         
         public void ChangeDock(Control a)
         {
@@ -45,7 +51,7 @@ namespace QuanLyHotel
         {
             //roomWindow1.BringToFront();
             //roomWindow1.Dock = DockStyle.Fill;
-            
+
 
         }
 

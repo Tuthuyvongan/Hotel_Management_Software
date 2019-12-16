@@ -43,9 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvUseService = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtNameService = new System.Windows.Forms.TextBox();
             this.txtKindService = new System.Windows.Forms.ComboBox();
             this.txtCostService = new System.Windows.Forms.TextBox();
@@ -54,11 +51,6 @@
             this.btDeleteService = new System.Windows.Forms.Button();
             this.btLoadService = new System.Windows.Forms.Button();
             this.txtSearchService1 = new System.Windows.Forms.TextBox();
-            this.txtKind = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btAddKind = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -189,40 +181,6 @@
             this.label2.TabIndex = 171;
             this.label2.Text = "Search";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(411, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(314, 31);
-            this.label3.TabIndex = 172;
-            this.label3.Text = "Kind Service Information";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(410, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 22);
-            this.label4.TabIndex = 173;
-            this.label4.Text = "Name";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(411, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 22);
-            this.label5.TabIndex = 178;
-            this.label5.Text = "Cost";
-            // 
             // txtNameService
             // 
             this.txtNameService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -319,66 +277,6 @@
             this.txtSearchService1.Size = new System.Drawing.Size(307, 29);
             this.txtSearchService1.TabIndex = 190;
             // 
-            // txtKind
-            // 
-            this.txtKind.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtKind.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.txtKind.Location = new System.Drawing.Point(474, 68);
-            this.txtKind.Name = "txtKind";
-            this.txtKind.Size = new System.Drawing.Size(314, 29);
-            this.txtKind.TabIndex = 191;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(474, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(314, 29);
-            this.textBox2.TabIndex = 192;
-            // 
-            // btAddKind
-            // 
-            this.btAddKind.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btAddKind.BackColor = System.Drawing.Color.Firebrick;
-            this.btAddKind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddKind.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddKind.ForeColor = System.Drawing.Color.White;
-            this.btAddKind.Location = new System.Drawing.Point(415, 152);
-            this.btAddKind.Name = "btAddKind";
-            this.btAddKind.Size = new System.Drawing.Size(74, 31);
-            this.btAddKind.TabIndex = 193;
-            this.btAddKind.Text = "Add";
-            this.btAddKind.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(493, 152);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 31);
-            this.button4.TabIndex = 194;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(573, 152);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 31);
-            this.button3.TabIndex = 195;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -423,11 +321,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btAddKind);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtKind);
             this.Controls.Add(this.txtSearchService1);
             this.Controls.Add(this.btLoadService);
             this.Controls.Add(this.btDeleteService);
@@ -436,9 +329,6 @@
             this.Controls.Add(this.txtCostService);
             this.Controls.Add(this.txtKindService);
             this.Controls.Add(this.txtNameService);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgvUseService);
             this.Controls.Add(this.label1);
@@ -477,18 +367,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dtgvUseService;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btAddKind;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtKind;
         private System.Windows.Forms.TextBox txtSearchService1;
         private System.Windows.Forms.Button btLoadService;
         private System.Windows.Forms.Button btDeleteService;

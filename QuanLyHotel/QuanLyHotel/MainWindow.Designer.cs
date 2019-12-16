@@ -33,7 +33,7 @@
             this.btCustomer = new System.Windows.Forms.Button();
             this.btSetting = new System.Windows.Forms.Button();
             this.btCheckOut = new System.Windows.Forms.Button();
-            this.btCheckIn = new System.Windows.Forms.Button();
+            this.btAccount = new System.Windows.Forms.Button();
             this.btRoom = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btService = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.MenuBar.Controls.Add(this.btCustomer);
             this.MenuBar.Controls.Add(this.btSetting);
             this.MenuBar.Controls.Add(this.btCheckOut);
-            this.MenuBar.Controls.Add(this.btCheckIn);
+            this.MenuBar.Controls.Add(this.btAccount);
             this.MenuBar.Controls.Add(this.btRoom);
             this.MenuBar.Controls.Add(this.btHome);
             this.MenuBar.Controls.Add(this.btService);
@@ -109,7 +109,7 @@
             this.btSetting.ForeColor = System.Drawing.Color.White;
             this.btSetting.Image = global::QuanLyHotel.Properties.Resources.settingicon;
             this.btSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSetting.Location = new System.Drawing.Point(5, 263);
+            this.btSetting.Location = new System.Drawing.Point(5, 361);
             this.btSetting.Name = "btSetting";
             this.btSetting.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btSetting.Size = new System.Drawing.Size(145, 43);
@@ -127,7 +127,7 @@
             this.btCheckOut.ForeColor = System.Drawing.Color.White;
             this.btCheckOut.Image = global::QuanLyHotel.Properties.Resources.checkouticon;
             this.btCheckOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCheckOut.Location = new System.Drawing.Point(5, 361);
+            this.btCheckOut.Location = new System.Drawing.Point(5, 312);
             this.btCheckOut.Name = "btCheckOut";
             this.btCheckOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btCheckOut.Size = new System.Drawing.Size(145, 43);
@@ -136,23 +136,23 @@
             this.btCheckOut.UseCompatibleTextRendering = true;
             this.btCheckOut.UseVisualStyleBackColor = true;
             // 
-            // btCheckIn
+            // btAccount
             // 
-            this.btCheckIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btCheckIn.FlatAppearance.BorderSize = 0;
-            this.btCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCheckIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btCheckIn.Image = global::QuanLyHotel.Properties.Resources.checkinicon;
-            this.btCheckIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCheckIn.Location = new System.Drawing.Point(5, 312);
-            this.btCheckIn.Name = "btCheckIn";
-            this.btCheckIn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btCheckIn.Size = new System.Drawing.Size(145, 43);
-            this.btCheckIn.TabIndex = 2;
-            this.btCheckIn.Text = "Check in";
-            this.btCheckIn.UseCompatibleTextRendering = true;
-            this.btCheckIn.UseVisualStyleBackColor = true;
+            this.btAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btAccount.FlatAppearance.BorderSize = 0;
+            this.btAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btAccount.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAccount.ForeColor = System.Drawing.Color.White;
+            this.btAccount.Image = global::QuanLyHotel.Properties.Resources.checkinicon;
+            this.btAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAccount.Location = new System.Drawing.Point(5, 263);
+            this.btAccount.Name = "btAccount";
+            this.btAccount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btAccount.Size = new System.Drawing.Size(145, 43);
+            this.btAccount.TabIndex = 2;
+            this.btAccount.Text = "Account";
+            this.btAccount.UseCompatibleTextRendering = true;
+            this.btAccount.UseVisualStyleBackColor = true;
             // 
             // btRoom
             // 
@@ -258,14 +258,11 @@
         private System.Windows.Forms.Button btCustomer;
         private System.Windows.Forms.Button btSetting;
         private System.Windows.Forms.Button btCheckOut;
-        private System.Windows.Forms.Button btCheckIn;
+        private System.Windows.Forms.Button btAccount;
         private System.Windows.Forms.Button btRoom;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btService;
         private System.Windows.Forms.Button btMenu;
-        private CustomerWindow customerWindow1;
-        private RoomWindow roomWindow1;
-        private ServiceWindow serviceWindow1;
         private RoomWindow roomWindow2;
         private ServiceWindow serviceWindow2;
         private CustomerWindow customerWindow2;

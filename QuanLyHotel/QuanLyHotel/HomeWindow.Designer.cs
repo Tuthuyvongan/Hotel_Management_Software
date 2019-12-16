@@ -30,11 +30,9 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
             this.lbKind = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbBedsAmount = new System.Windows.Forms.Label();
@@ -44,9 +42,7 @@
             this.btCheckOut = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panelflr = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,17 +68,6 @@
             this.label1.Size = new System.Drawing.Size(66, 22);
             this.label1.TabIndex = 117;
             this.label1.Text = "Status:";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(566, 336);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 22);
-            this.label12.TabIndex = 113;
-            this.label12.Text = "Name:";
             // 
             // label18
             // 
@@ -119,17 +104,6 @@
             this.label3.Size = new System.Drawing.Size(233, 31);
             this.label3.TabIndex = 110;
             this.label3.Text = "Room Information";
-            // 
-            // lbName
-            // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(685, 336);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(58, 22);
-            this.lbName.TabIndex = 143;
-            this.lbName.Text = "Name";
             // 
             // lbKind
             // 
@@ -182,7 +156,7 @@
             this.btUseService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUseService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUseService.ForeColor = System.Drawing.Color.White;
-            this.btUseService.Location = new System.Drawing.Point(338, 577);
+            this.btUseService.Location = new System.Drawing.Point(13, 562);
             this.btUseService.MaximumSize = new System.Drawing.Size(113, 60);
             this.btUseService.MinimumSize = new System.Drawing.Size(113, 40);
             this.btUseService.Name = "btUseService";
@@ -190,6 +164,7 @@
             this.btUseService.TabIndex = 162;
             this.btUseService.Text = "Add ";
             this.btUseService.UseVisualStyleBackColor = false;
+            this.btUseService.Click += new System.EventHandler(this.BtUseService_Click_1);
             // 
             // btCheckInRoom
             // 
@@ -223,6 +198,7 @@
             this.btCheckOut.TabIndex = 164;
             this.btCheckOut.Text = "Check Out";
             this.btCheckOut.UseVisualStyleBackColor = false;
+            this.btCheckOut.Click += new System.EventHandler(this.BtCheckOut_Click_1);
             // 
             // label4
             // 
@@ -248,20 +224,11 @@
             this.panel2.Controls.Add(this.lbStatus);
             this.panel2.Controls.Add(this.lbCost);
             this.panel2.Controls.Add(this.lbBedsAmount);
-            this.panel2.Location = new System.Drawing.Point(516, 55);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(518, 55);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 442);
             this.panel2.TabIndex = 167;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 518);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(260, 21);
-            this.comboBox1.TabIndex = 168;
             // 
             // label5
             // 
@@ -277,19 +244,10 @@
             this.label5.TabIndex = 169;
             this.label5.Text = "Add Service";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(193, 552);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(260, 21);
-            this.comboBox2.TabIndex = 170;
-            // 
             // panelflr
             // 
             this.panelflr.Location = new System.Drawing.Point(13, 55);
-            this.panelflr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelflr.Margin = new System.Windows.Forms.Padding(2);
             this.panelflr.Name = "panelflr";
             this.panelflr.Size = new System.Drawing.Size(470, 441);
             this.panelflr.TabIndex = 171;
@@ -298,17 +256,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelflr);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelflr);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btCheckOut);
             this.Controls.Add(this.btCheckInRoom);
             this.Controls.Add(this.btUseService);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(821, 652);
@@ -324,11 +278,9 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbKind;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label lbBedsAmount;
@@ -338,9 +290,7 @@
         private System.Windows.Forms.Button btCheckOut;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panelflr;
     }
 }

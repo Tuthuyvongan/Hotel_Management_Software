@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountWindow.Designer.cs">
+      <DependentUpon>AccountWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckInWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="UseServiceWindow.Designer.cs">
       <DependentUpon>UseServiceWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountWindow.resx">
+      <DependentUpon>AccountWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckInWindow.resx">
       <DependentUpon>CheckInWindow.cs</DependentUpon>
     </EmbeddedResource>

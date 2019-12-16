@@ -35,9 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtgvRoom = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtNameRoom = new System.Windows.Forms.TextBox();
             this.txtKindRoom = new System.Windows.Forms.ComboBox();
             this.txtBedsAmount = new System.Windows.Forms.TextBox();
@@ -47,11 +44,6 @@
             this.btDeleteRoom = new System.Windows.Forms.Button();
             this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.btLoadRoom = new System.Windows.Forms.Button();
-            this.txtKind = new System.Windows.Forms.TextBox();
-            this.txtCostKind = new System.Windows.Forms.TextBox();
-            this.btAddKind = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRoom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,40 +124,6 @@
             this.dtgvRoom.Size = new System.Drawing.Size(834, 274);
             this.dtgvRoom.TabIndex = 154;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(514, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 22);
-            this.label1.TabIndex = 179;
-            this.label1.Text = "Name";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(512, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(299, 31);
-            this.label8.TabIndex = 178;
-            this.label8.Text = "Kind Room Information";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(514, 111);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 22);
-            this.label9.TabIndex = 184;
-            this.label9.Text = "Cost";
-            // 
             // txtNameRoom
             // 
             this.txtNameRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -223,8 +181,6 @@
             this.btAddRoom.TabIndex = 190;
             this.btAddRoom.Text = "Add";
             this.btAddRoom.UseVisualStyleBackColor = false;
-            /*Truong*/
-            //this.btAddRoom.Click += new System.EventHandler(this.BtAddRoom_Click);
             // 
             // btEditRoom
             // 
@@ -239,8 +195,6 @@
             this.btEditRoom.TabIndex = 191;
             this.btEditRoom.Text = "Edit";
             this.btEditRoom.UseVisualStyleBackColor = false;
-            /*Truong*/
-            //this.btEditRoom.Click += new System.EventHandler(this.BtEditRoom_Click);
             // 
             // btDeleteRoom
             // 
@@ -255,8 +209,6 @@
             this.btDeleteRoom.TabIndex = 192;
             this.btDeleteRoom.Text = "Delete";
             this.btDeleteRoom.UseVisualStyleBackColor = false;
-            /*Truong*/
-            //this.btDeleteRoom.Click += new System.EventHandler(this.BtDeleteRoom_Click);
             // 
             // txtSearchRoom
             // 
@@ -282,76 +234,10 @@
             this.btLoadRoom.Text = "Load";
             this.btLoadRoom.UseVisualStyleBackColor = false;
             // 
-            // txtKind
-            // 
-            this.txtKind.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtKind.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.txtKind.Location = new System.Drawing.Point(577, 73);
-            this.txtKind.Name = "txtKind";
-            this.txtKind.Size = new System.Drawing.Size(274, 29);
-            this.txtKind.TabIndex = 195;
-            // 
-            // txtCostKind
-            // 
-            this.txtCostKind.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtCostKind.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCostKind.Location = new System.Drawing.Point(577, 107);
-            this.txtCostKind.MaximumSize = new System.Drawing.Size(450, 29);
-            this.txtCostKind.Name = "txtCostKind";
-            this.txtCostKind.Size = new System.Drawing.Size(274, 29);
-            this.txtCostKind.TabIndex = 196;
-            // 
-            // btAddKind
-            // 
-            this.btAddKind.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btAddKind.BackColor = System.Drawing.Color.Firebrick;
-            this.btAddKind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddKind.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddKind.ForeColor = System.Drawing.Color.White;
-            this.btAddKind.Location = new System.Drawing.Point(518, 147);
-            this.btAddKind.Name = "btAddKind";
-            this.btAddKind.Size = new System.Drawing.Size(104, 31);
-            this.btAddKind.TabIndex = 197;
-            this.btAddKind.Text = "Add";
-            this.btAddKind.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(628, 147);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 31);
-            this.button4.TabIndex = 198;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(738, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 31);
-            this.button3.TabIndex = 199;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // RoomWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btAddKind);
-            this.Controls.Add(this.txtCostKind);
-            this.Controls.Add(this.txtKind);
             this.Controls.Add(this.btLoadRoom);
             this.Controls.Add(this.txtSearchRoom);
             this.Controls.Add(this.btDeleteRoom);
@@ -361,9 +247,6 @@
             this.Controls.Add(this.txtBedsAmount);
             this.Controls.Add(this.txtKindRoom);
             this.Controls.Add(this.txtNameRoom);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.dtgvRoom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -388,9 +271,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dtgvRoom;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNameRoom;
         private System.Windows.Forms.ComboBox txtKindRoom;
         private System.Windows.Forms.TextBox txtBedsAmount;
@@ -400,10 +280,5 @@
         private System.Windows.Forms.Button btDeleteRoom;
         private System.Windows.Forms.TextBox txtSearchRoom;
         private System.Windows.Forms.Button btLoadRoom;
-        private System.Windows.Forms.TextBox txtKind;
-        private System.Windows.Forms.TextBox txtCostKind;
-        private System.Windows.Forms.Button btAddKind;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
     }
 }

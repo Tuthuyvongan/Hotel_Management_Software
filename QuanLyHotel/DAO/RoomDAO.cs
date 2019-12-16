@@ -31,7 +31,7 @@ namespace roomDAO
         public RoomDAO(DataRow row)
         {
             RoomDTO data = new RoomDTO();
-            data.Idr = int.Parse(row["idr"].ToString());
+            data.Idr = row["idr"].ToString();
             data.Name = row["name"].ToString();
             data.Status = row["status"].ToString();
             data.Cost = (decimal)row["cost"];
@@ -85,11 +85,11 @@ namespace roomDAO
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
-            //query += "INSERT INTO [Room] (idr,name,cost,bedamount,roomkind) ";
-            //query += "VALUES (@idr,@name,@cost,@bedamount,@roomkind)";
+            query += "INSERT INTO [Room] (idr,name,cost,bedamount,roomkind) ";
+            query += "VALUES (@idr,@name,@cost,@bedamount,@roomkind)";
 
-            query += "INSERT INTO [room] (name,cost,status,bedamount,roomkind) ";
-            query += "VALUES (@name,@cost,@status,@bedamount,@roomkind)";
+            //query += "INSERT INTO [room] (name,cost,status,bedamount,roomkind) ";
+            //query += "VALUES (@name,@cost,@status,@bedamount,@roomkind)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -98,7 +98,7 @@ namespace roomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    //cmd.Parameters.AddWithValue("@idr", rm.Idr);
+                    cmd.Parameters.AddWithValue("@idr", rm.Idr);
                     cmd.Parameters.AddWithValue("@name", rm.Name);
                     cmd.Parameters.AddWithValue("@cost", rm.Cost);
                     cmd.Parameters.AddWithValue("@status", rm.Status);
@@ -214,7 +214,7 @@ namespace roomDAO
                             while (reader.Read())
                             {
                                 RoomDTO rm = new RoomDTO();
-                                rm.Idr = int.Parse(reader["idr"].ToString());
+                                rm.Idr = reader["idr"].ToString();
                                 rm.Name = reader["name"].ToString();
                                 rm.Bedamount = int.Parse(reader["bedamount"].ToString());
                                 rm.Status = reader["status"].ToString();
@@ -237,51 +237,51 @@ namespace roomDAO
             }
             return IsNameRoom;
         }
-        //public List<RoomDTO> selectNameRoom()
-        //{
-        //    string query = string.Empty;
-        //    query += "SELECT [nAME]";
-        //    query += "FROM [Room]";
+        public List<RoomDTO> selectNameRoom()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [room]";
 
-        //    List<RoomDTO> lsNameRoom = new List<RoomDTO>();
+            List<RoomDTO> lsNameRoom = new List<RoomDTO>();
 
-        //    using (SqlConnection con = new SqlConnection(ConnectionString))
-        //    {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
 
-        //        using (SqlCommand cmd = new SqlCommand())
-        //        {
-        //            cmd.Connection = con;
-        //            cmd.CommandType = System.Data.CommandType.Text;
-        //            cmd.CommandText = query;
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
 
-        //            try
-        //            {
-        //                con.Open();
-        //                SqlDataReader reader = null;
-        //                reader = cmd.ExecuteReader();
-        //                if (reader.HasRows == true)
-        //                {
-        //                    while (reader.Read())
-        //                    {
-        //                        RoomDTO pt = new RoomDTO();
-        //                        pt.NAME = reader["nAME"].ToString();
-        //                        lsNameRoom.Add(pt);
-        //                    }
-        //                }
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomDTO pt = new RoomDTO();
+                                pt.Name = reader["name"].ToString();
+                                lsNameRoom.Add(pt);
+                            }
+                        }
 
-        //                con.Close();
-        //                con.Dispose();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                con.Close();
-        //                Console.WriteLine(ex);
-        //                throw;
-        //            }
-        //        }
-        //    }
-        //    return lsNameRoom;
-        //}
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return lsNameRoom;
+        }
         public List<RoomDTO> search(string Keyword)
         {
             string query = string.Empty;
@@ -315,7 +315,7 @@ namespace roomDAO
                             while (reader.Read())
                             {
                                 RoomDTO rm = new RoomDTO();
-                                rm.Idr = int.Parse(reader["idr"].ToString());
+                                rm.Idr = reader["idr"].ToString();
                                 rm.Name = reader["name"].ToString();
                                 rm.Bedamount = int.Parse(reader["bedamount"].ToString());
                                 rm.Status = reader["status"].ToString();
@@ -338,53 +338,53 @@ namespace roomDAO
             }
             return lsTimKiem;
         }
-        //    public List<RoomDTO> selectCost(string sKeyword)
-        //    {
-        //        string query = string.Empty;
-        //        query += "SELECT [cOST]";
-        //        query += "FROM [Room]";
-        //        query += " WHERE ([nAME] LIKE CONCAT('%',@sKeyword,'%'))";
+        public List<RoomDTO> selectCost(string sKeyword)
+        {
+            string query = string.Empty;
+            query += "SELECT [cost]";
+            query += "FROM [room]";
+            query += " WHERE ([name] LIKE CONCAT('%',@sKeyword,'%'))";
 
-        //        List<RoomDTO> lsCost = new List<RoomDTO>();
+            List<RoomDTO> lsCost = new List<RoomDTO>();
 
-        //        using (SqlConnection con = new SqlConnection(ConnectionString))
-        //        {
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
 
-        //            using (SqlCommand cmd = new SqlCommand())
-        //            {
-        //                cmd.Connection = con;
-        //                cmd.CommandType = System.Data.CommandType.Text;
-        //                cmd.CommandText = query;
-        //                cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-        //                try
-        //                {
-        //                    con.Open();
-        //                    SqlDataReader reader = null;
-        //                    reader = cmd.ExecuteReader();
-        //                    if (reader.HasRows == true)
-        //                    {
-        //                        while (reader.Read())
-        //                        {
-        //                            RoomDTO pt = new RoomDTO();
-        //                            pt.COST = Decimal.Parse(reader["cOST"].ToString());
-        //                            lsCost.Add(pt);
-        //                        }
-        //                    }
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomDTO pt = new RoomDTO();
+                                pt.Cost = Decimal.Parse(reader["cost"].ToString());
+                                lsCost.Add(pt);
+                            }
+                        }
 
-        //                    con.Close();
-        //                    con.Dispose();
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    con.Close();
-        //                    Console.WriteLine(ex);
-        //                    throw;
-        //                }
-        //            }
-        //        }
-        //        return lsCost;
-        //    }
-        //}
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return lsCost;
+        }
     }
-
 }
+
+

@@ -36,8 +36,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbBedsAmount = new System.Windows.Forms.Label();
-            this.lbKind = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
+            this.lbKindRoom = new System.Windows.Forms.Label();
+            this.lbNameRoom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +46,12 @@
             this.txtSearchService = new System.Windows.Forms.TextBox();
             this.btLoadCustomer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbKindService = new System.Windows.Forms.Label();
+            this.lbNameService = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbCost = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,9 +84,9 @@
             this.dtgvService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvService.Location = new System.Drawing.Point(19, 314);
+            this.dtgvService.Location = new System.Drawing.Point(19, 413);
             this.dtgvService.Name = "dtgvService";
-            this.dtgvService.Size = new System.Drawing.Size(377, 222);
+            this.dtgvService.Size = new System.Drawing.Size(377, 123);
             this.dtgvService.TabIndex = 121;
             // 
             // label10
@@ -88,7 +94,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(14, 282);
+            this.label10.Location = new System.Drawing.Point(14, 381);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 22);
             this.label10.TabIndex = 119;
@@ -142,28 +148,28 @@
             this.lbBedsAmount.TabIndex = 233;
             this.lbBedsAmount.Text = "Name";
             // 
-            // lbKind
+            // lbKindRoom
             // 
-            this.lbKind.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbKind.AutoSize = true;
-            this.lbKind.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbKind.Location = new System.Drawing.Point(170, 118);
-            this.lbKind.Name = "lbKind";
-            this.lbKind.Size = new System.Drawing.Size(49, 19);
-            this.lbKind.TabIndex = 232;
-            this.lbKind.Text = "Name";
+            this.lbKindRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbKindRoom.AutoSize = true;
+            this.lbKindRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbKindRoom.Location = new System.Drawing.Point(170, 118);
+            this.lbKindRoom.Name = "lbKindRoom";
+            this.lbKindRoom.Size = new System.Drawing.Size(49, 19);
+            this.lbKindRoom.TabIndex = 232;
+            this.lbKindRoom.Text = "Name";
             // 
-            // lbName
+            // lbNameRoom
             // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(170, 96);
-            this.lbName.Margin = new System.Windows.Forms.Padding(3);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(49, 19);
-            this.lbName.TabIndex = 231;
-            this.lbName.Text = "Name";
+            this.lbNameRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameRoom.AutoSize = true;
+            this.lbNameRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbNameRoom.Location = new System.Drawing.Point(170, 96);
+            this.lbNameRoom.Margin = new System.Windows.Forms.Padding(3);
+            this.lbNameRoom.Name = "lbNameRoom";
+            this.lbNameRoom.Size = new System.Drawing.Size(49, 19);
+            this.lbNameRoom.TabIndex = 231;
+            this.lbNameRoom.Text = "Name";
             // 
             // label4
             // 
@@ -226,7 +232,7 @@
             this.txtSearchService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchService.Location = new System.Drawing.Point(87, 279);
+            this.txtSearchService.Location = new System.Drawing.Point(87, 378);
             this.txtSearchService.Name = "txtSearchService";
             this.txtSearchService.Size = new System.Drawing.Size(196, 29);
             this.txtSearchService.TabIndex = 238;
@@ -238,7 +244,7 @@
             this.btLoadCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
-            this.btLoadCustomer.Location = new System.Drawing.Point(289, 278);
+            this.btLoadCustomer.Location = new System.Drawing.Point(289, 377);
             this.btLoadCustomer.MaximumSize = new System.Drawing.Size(107, 30);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(107, 30);
@@ -260,19 +266,97 @@
             this.button1.Text = "Use Service";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lbKindService
+            // 
+            this.lbKindService.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbKindService.AutoSize = true;
+            this.lbKindService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbKindService.Location = new System.Drawing.Point(170, 304);
+            this.lbKindService.Margin = new System.Windows.Forms.Padding(3);
+            this.lbKindService.Name = "lbKindService";
+            this.lbKindService.Size = new System.Drawing.Size(49, 19);
+            this.lbKindService.TabIndex = 244;
+            this.lbKindService.Text = "Name";
+            // 
+            // lbNameService
+            // 
+            this.lbNameService.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameService.AutoSize = true;
+            this.lbNameService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbNameService.Location = new System.Drawing.Point(170, 279);
+            this.lbNameService.Margin = new System.Windows.Forms.Padding(3);
+            this.lbNameService.Name = "lbNameService";
+            this.lbNameService.Size = new System.Drawing.Size(49, 19);
+            this.lbNameService.TabIndex = 243;
+            this.lbNameService.Text = "Name";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(58, 279);
+            this.label6.Margin = new System.Windows.Forms.Padding(3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 19);
+            this.label6.TabIndex = 242;
+            this.label6.Text = "Name:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(58, 304);
+            this.label9.Margin = new System.Windows.Forms.Padding(3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 19);
+            this.label9.TabIndex = 241;
+            this.label9.Text = "Kind:";
+            // 
+            // lbCost
+            // 
+            this.lbCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCost.AutoSize = true;
+            this.lbCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbCost.Location = new System.Drawing.Point(170, 329);
+            this.lbCost.Margin = new System.Windows.Forms.Padding(3);
+            this.lbCost.Name = "lbCost";
+            this.lbCost.Size = new System.Drawing.Size(49, 19);
+            this.lbCost.TabIndex = 246;
+            this.lbCost.Text = "Name";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(58, 329);
+            this.label15.Margin = new System.Windows.Forms.Padding(3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 19);
+            this.label15.TabIndex = 245;
+            this.label15.Text = "Cost:";
+            // 
             // UseServiceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 588);
+            this.Controls.Add(this.lbCost);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lbKindService);
+            this.Controls.Add(this.lbNameService);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btLoadCustomer);
             this.Controls.Add(this.txtSearchService);
             this.Controls.Add(this.txtNumberService);
             this.Controls.Add(this.dtDateService);
             this.Controls.Add(this.lbBedsAmount);
-            this.Controls.Add(this.lbKind);
-            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.lbKindRoom);
+            this.Controls.Add(this.lbNameRoom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -301,8 +385,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbBedsAmount;
-        private System.Windows.Forms.Label lbKind;
-        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbKindRoom;
+        private System.Windows.Forms.Label lbNameRoom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -311,5 +395,11 @@
         private System.Windows.Forms.TextBox txtSearchService;
         private System.Windows.Forms.Button btLoadCustomer;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbKindService;
+        private System.Windows.Forms.Label lbNameService;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbCost;
+        private System.Windows.Forms.Label label15;
     }
 }

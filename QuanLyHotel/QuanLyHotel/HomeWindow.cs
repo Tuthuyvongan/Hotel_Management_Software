@@ -38,7 +38,7 @@ namespace QuanLyHotel
         }
         private void BtCheckInRoom_Click(object sender, EventArgs e)
         {
-            CheckInWindow checkIn = new CheckInWindow(lbName.Text,lbKind.Text,lbBedsAmount.Text,lbCost.Text);
+            CheckInWindow checkIn = new CheckInWindow(lbName.Text, lbKind.Text, lbBedsAmount.Text, lbCost.Text);
             checkIn.Show();
         }
 
@@ -56,7 +56,20 @@ namespace QuanLyHotel
 
         private void btCheckInRoom_Click_1(object sender, EventArgs e)
         {
+            CheckInWindow checkIn = new CheckInWindow(lbName.Text, lbKind.Text, lbBedsAmount.Text, lbCost.Text);
+            checkIn.Show();
+        }
 
+        private void BtCheckOut_Click_1(object sender, EventArgs e)
+        {
+            CheckOutWindow checkOut = new CheckOutWindow();
+            checkOut.Show();
+        }
+
+        private void BtUseService_Click_1(object sender, EventArgs e)
+        {
+            UseServiceWindow useService = new UseServiceWindow();
+            useService.Show();
         }
     }
 }

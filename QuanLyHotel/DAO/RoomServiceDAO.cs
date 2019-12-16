@@ -25,8 +25,8 @@ namespace roomServiceDAO
         public bool add(RoomServiceDTO rm)
         {
             string query = string.Empty;
-            query += "INSERT INTO [Room_Service] (iDR_S,iDR,iDS,tIME,nUMBER,cOST) ";
-            query += "VALUES (@iDR_S,@iDR,@iDS,@tIME,@nUMBER,@cOST)";
+            query += "INSERT INTO [room_service] (idrs,idr,ids,time,number,cost) ";
+            query += "VALUES (@idrs,@idr,@ids,@time,@number,@cost)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -35,12 +35,12 @@ namespace roomServiceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDR_S", rm.IDR_S);
-                    cmd.Parameters.AddWithValue("@iDR", rm.IDR);
-                    cmd.Parameters.AddWithValue("@iDS", rm.IDS);
-                    cmd.Parameters.AddWithValue("@tIME", rm.TIME);
-                    cmd.Parameters.AddWithValue("@nUMBER", rm.NUMBER);
-                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
+                    cmd.Parameters.AddWithValue("@idrs", rm.IDR_S);
+                    cmd.Parameters.AddWithValue("@idr", rm.IDR);
+                    cmd.Parameters.AddWithValue("@ids", rm.IDS);
+                    cmd.Parameters.AddWithValue("@time", rm.TIME);
+                    cmd.Parameters.AddWithValue("@number", rm.NUMBER);
+                    cmd.Parameters.AddWithValue("@cost", rm.COST);
 
                     try
                     {
@@ -62,7 +62,7 @@ namespace roomServiceDAO
         public bool delete(RoomServiceDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM Room_Service WHERE [iDR_S] = @iDR_S"; ;
+            query += "DELETE FROM room_service WHERE [idrs] = @idrs"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -71,7 +71,7 @@ namespace roomServiceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDR_S", pt.IDR);
+                    cmd.Parameters.AddWithValue("@idrs", pt.IDR_S);
                     try
                     {
                         con.Open();
@@ -92,7 +92,7 @@ namespace roomServiceDAO
         public bool edit(RoomServiceDTO rm)
         {
             string query = string.Empty;
-            query += "UPDATE Room_Service SET [iDR] = @iDR, [iDS] = @iDS, [tIME] = @tIME, [nUMBER] = @nUMBER, [cOST] = @cOST  WHERE [iDR_S] = @iDR_S";
+            query += "UPDATE room_service SET [idr] = @idr, [ids] = @ids, [time] = @time, [number] = @number, [cost] = @cost  WHERE [idrs] = @idrs";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -101,12 +101,12 @@ namespace roomServiceDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@iDR_S", rm.IDR_S);
-                    cmd.Parameters.AddWithValue("@iDR", rm.IDR);
-                    cmd.Parameters.AddWithValue("@iDS", rm.IDS);
-                    cmd.Parameters.AddWithValue("@tIME", rm.TIME);
-                    cmd.Parameters.AddWithValue("@nUMBER", rm.NUMBER);
-                    cmd.Parameters.AddWithValue("@cOST", rm.COST);
+                    cmd.Parameters.AddWithValue("@idrs", rm.IDR_S);
+                    cmd.Parameters.AddWithValue("@idr", rm.IDR);
+                    cmd.Parameters.AddWithValue("@ids", rm.IDS);
+                    cmd.Parameters.AddWithValue("@time", rm.TIME);
+                    cmd.Parameters.AddWithValue("@number", rm.NUMBER);
+                    cmd.Parameters.AddWithValue("@cost", rm.COST);
                     try
                     {
                         con.Open();
@@ -127,8 +127,8 @@ namespace roomServiceDAO
         public List<RoomServiceDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [nAME], [sTATUS], [cOST], [nBED], [iDR],[nOTE] ";
-            query += "FROM [Room_Service]";
+            query += "SELECT [idr], [ids], [time], [number],[cost] ";
+            query += "FROM [room_service]";
 
             List<RoomServiceDTO> IsNameRoom = new List<RoomServiceDTO>();
 
@@ -151,11 +151,12 @@ namespace roomServiceDAO
                             while (reader.Read())
                             {
                                 RoomServiceDTO rm = new RoomServiceDTO();
-                                rm.IDR_S = reader["iDR_S"].ToString();
-                                rm.IDR = reader["iDR"].ToString();
-                                rm.IDS = reader["iDS"].ToString();
-                                rm.NUMBER = int.Parse(reader["nUMBER"].ToString());
-                                rm.COST = Decimal.Parse(reader["cOST"].ToString());
+                                rm.IDR_S = reader["idrs"].ToString();
+                                rm.IDR = reader["idr"].ToString();
+                                rm.IDS = reader["ids"].ToString();
+                                rm.TIME = DateTime.Parse(reader["time"].ToString());
+                                rm.NUMBER = int.Parse(reader["number"].ToString());
+                                rm.COST = Decimal.Parse(reader["cost"].ToString());
                                 IsNameRoom.Add(rm);
                             }
                         }
@@ -176,8 +177,8 @@ namespace roomServiceDAO
         public List<RoomServiceDTO> selectNameRoom()
         {
             string query = string.Empty;
-            query += "SELECT [iDR_S]";
-            query += "FROM [Room_Service]";
+            query += "SELECT [idrs]";
+            query += "FROM [room_service]";
 
             List<RoomServiceDTO> lsNameRoom = new List<RoomServiceDTO>();
 
@@ -200,7 +201,7 @@ namespace roomServiceDAO
                             while (reader.Read())
                             {
                                 RoomServiceDTO pt = new RoomServiceDTO();
-                                pt.IDR_S = reader["iDR_S"].ToString();
+                                pt.IDR_S = reader["idrs"].ToString();
                                 lsNameRoom.Add(pt);
                             }
                         }
@@ -221,14 +222,14 @@ namespace roomServiceDAO
         public List<RoomServiceDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [iDR], [iDS], [nUMBER], [cOST], [tIME], [iDR_S]";
-            query += "FROM [Room_Service]";
-            query += " WHERE ([iDR] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([iDS] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([nUMBER] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([cOST] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([tIME] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([iDR_S] LIKE CONCAT('%',@Keyword,'%'))";
+            query += "SELECT [idr], [ids], [number], [cost], [time], [idrs]";
+            query += "FROM [room_service]";
+            query += " WHERE ([idr] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([ids] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([number] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([time] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([idrs] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<RoomServiceDTO> lsTimKiem = new List<RoomServiceDTO>();
 
@@ -251,11 +252,12 @@ namespace roomServiceDAO
                             while (reader.Read())
                             {
                                 RoomServiceDTO rm = new RoomServiceDTO();
-                                rm.IDR_S = reader["iDR_S"].ToString();
-                                rm.IDR = reader["iDR"].ToString();
-                                rm.IDS = reader["iDS"].ToString();
-                                rm.NUMBER = int.Parse(reader["nUMBER"].ToString());
-                                rm.COST = Decimal.Parse(reader["cOST"].ToString());
+                                rm.IDR_S = reader["idrs"].ToString();
+                                rm.IDR = reader["idr"].ToString();
+                                rm.IDS = reader["ids"].ToString();
+                                rm.TIME = DateTime.Parse(reader["time"].ToString());
+                                rm.NUMBER = int.Parse(reader["number"].ToString());
+                                rm.COST = Decimal.Parse(reader["cost"].ToString());
                                 lsTimKiem.Add(rm);
                             }
                         }
@@ -276,9 +278,9 @@ namespace roomServiceDAO
         public List<RoomServiceDTO> selectCost(string sKeyword)
         {
             string query = string.Empty;
-            query += "SELECT [cOST]";
-            query += "FROM [Room_Service]";
-            query += " WHERE ([iDR_S] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += "SELECT [cost]";
+            query += "FROM [room_service]";
+            query += " WHERE ([idrs] LIKE CONCAT('%',@sKeyword,'%'))";
 
             List<RoomServiceDTO> lsCost = new List<RoomServiceDTO>();
 
@@ -301,7 +303,7 @@ namespace roomServiceDAO
                             while (reader.Read())
                             {
                                 RoomServiceDTO pt = new RoomServiceDTO();
-                                pt.COST = Decimal.Parse(reader["cOST"].ToString());
+                                pt.COST = Decimal.Parse(reader["cost"].ToString());
                                 lsCost.Add(pt);
                             }
                         }

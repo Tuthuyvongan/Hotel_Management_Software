@@ -62,6 +62,72 @@ namespace userDAO
             }
                 return true;
         }
+        public bool delete(UserDTO pt)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM service WHERE [idm] = @idm"; ;
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@idm", pt.Idm);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool edit(UserDTO us)
+        {
+            string query = string.Empty;
+            query += "UPDATE Service SET [name] = @name, [phone] = @phone, [email] = @email,[level] = @level,[gender] = @gender,[cmnd] = @cmnd  WHERE [idm] = @ids";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.AddWithValue("@idm", us.Idm);
+                    cmd.Parameters.AddWithValue("@name", us.Name);
+                    cmd.Parameters.AddWithValue("@password", us.Password);
+                    cmd.Parameters.AddWithValue("@phone", us.Phone);
+                    cmd.Parameters.AddWithValue("@email", us.Email);
+                    cmd.Parameters.AddWithValue("@level", us.Level);
+                    cmd.Parameters.AddWithValue("@gender", us.Gender);
+                    cmd.Parameters.AddWithValue("@cmnd", us.Cmnd);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return true;
+        }
         public bool fix(UserDTO nd)
         {
             string query = string.Empty;
