@@ -21,6 +21,14 @@ namespace QuanLyHotel
             InitializeComponent();
             this.loadData();
         }
+        public UseServiceWindow(string name, string kind, string bedamount)
+        {
+            InitializeComponent();
+            this.loadData();
+            lbNameRoom.Text = name;
+            lbKindRoom.Text = kind;
+            lbBedsAmount.Text = bedamount;
+        }
         private void loadData()
         {
             ServiceBUS ctmBus = new ServiceBUS();

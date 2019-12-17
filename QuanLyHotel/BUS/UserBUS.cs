@@ -20,6 +20,16 @@ namespace userBUS
             bool re = usDao.add(tn);
             return re;
         }
+        public bool edit(UserDTO tn)
+        {
+            bool re = usDao.edit(tn);
+            return re;
+        }
+        public bool delete(UserDTO tn)
+        {
+            bool re = usDao.delete(tn);
+            return re;
+        }
 
         public bool fix(UserDTO tn)
         {
@@ -30,6 +40,10 @@ namespace userBUS
         {
             bool re = usDao.kiemtra(tn, IDU, PASSWORD);
             return re;
+        }
+        public List<UserDTO> select()
+        {
+            return usDao.select();
         }
     }
   

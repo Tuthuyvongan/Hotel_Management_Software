@@ -257,5 +257,57 @@ namespace userDAO
 
             
         }
+        public List<UserDTO> select()
+        {
+            string query = string.Empty;
+            query += "SELECT [idm], [password], [name], [gender], [phone], [email], [level], [cmnd] ";
+            query += "FROM [manager]";
+
+            List<UserDTO> IsNameService = new List<UserDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                UserDTO srv = new UserDTO();
+                                srv.Idm = reader["idm"].ToString();
+                                srv.Password = reader["password"].ToString();
+                                srv.Name = reader["name"].ToString();
+                                srv.Email = reader["email"].ToString();
+                                srv.Phone = reader["phone"].ToString();
+                                srv.Gender = reader["gender"].ToString();
+                                srv.Cmnd = reader["cmnd"].ToString();
+                                srv.Level =int.Parse(reader["level"].ToString());
+                                IsNameService.Add(srv);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return IsNameService;
+        }
     }
 }

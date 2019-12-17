@@ -53,9 +53,9 @@ namespace QuanLyHotel
             dtgvCustomer.Columns.Add(NAME);
 
             DataGridViewTextBoxColumn DATE = new DataGridViewTextBoxColumn();
-            DATE.Name = "gENDER";
-            DATE.HeaderText = "GENDER";
-            DATE.DataPropertyName = "gENDER";
+            DATE.Name = "date";
+            DATE.HeaderText = "Date";
+            DATE.DataPropertyName = "date";
             DATE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvCustomer.Columns.Add(DATE);
 
@@ -67,9 +67,9 @@ namespace QuanLyHotel
             dtgvCustomer.Columns.Add(CMND);
 
             DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
-            pHONE.Name = "phoneNUMBER";
-            pHONE.HeaderText = "PHONE";
-            pHONE.DataPropertyName = "phoneNUMBER";
+            pHONE.Name = "phone";
+            pHONE.HeaderText = "Phone";
+            pHONE.DataPropertyName = "phone";
             pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvCustomer.Columns.Add(pHONE);
 

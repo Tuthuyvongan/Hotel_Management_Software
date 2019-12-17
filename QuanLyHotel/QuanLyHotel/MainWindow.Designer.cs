@@ -40,6 +40,8 @@
             this.roomWindow2 = new QuanLyHotel.RoomWindow();
             this.serviceWindow2 = new QuanLyHotel.ServiceWindow();
             this.customerWindow2 = new QuanLyHotel.CustomerWindow();
+            this.homeWindow1 = new QuanLyHotel.HomeWindow();
+            this.accountWindow1 = new QuanLyHotel.AccountWindow();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,6 +155,7 @@
             this.btAccount.Text = "Account";
             this.btAccount.UseCompatibleTextRendering = true;
             this.btAccount.UseVisualStyleBackColor = true;
+            this.btAccount.Click += new System.EventHandler(this.BtAccount_Click);
             // 
             // btRoom
             // 
@@ -235,11 +238,30 @@
             this.customerWindow2.Size = new System.Drawing.Size(821, 652);
             this.customerWindow2.TabIndex = 7;
             // 
+            // homeWindow1
+            // 
+            this.homeWindow1.Location = new System.Drawing.Point(212, 0);
+            this.homeWindow1.Margin = new System.Windows.Forms.Padding(0);
+            this.homeWindow1.MinimumSize = new System.Drawing.Size(821, 652);
+            this.homeWindow1.Name = "homeWindow1";
+            this.homeWindow1.Size = new System.Drawing.Size(821, 652);
+            this.homeWindow1.TabIndex = 8;
+            // 
+            // accountWindow1
+            // 
+            this.accountWindow1.Location = new System.Drawing.Point(212, 0);
+            this.accountWindow1.MinimumSize = new System.Drawing.Size(821, 652);
+            this.accountWindow1.Name = "accountWindow1";
+            this.accountWindow1.Size = new System.Drawing.Size(821, 652);
+            this.accountWindow1.TabIndex = 9;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 724);
+            this.Controls.Add(this.accountWindow1);
+            this.Controls.Add(this.homeWindow1);
             this.Controls.Add(this.customerWindow2);
             this.Controls.Add(this.serviceWindow2);
             this.Controls.Add(this.roomWindow2);
@@ -266,5 +288,7 @@
         private RoomWindow roomWindow2;
         private ServiceWindow serviceWindow2;
         private CustomerWindow customerWindow2;
+        private HomeWindow homeWindow1;
+        private AccountWindow accountWindow1;
     }
 }

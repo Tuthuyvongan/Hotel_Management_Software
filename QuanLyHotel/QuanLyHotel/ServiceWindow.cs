@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using serviceBUS;
 using serviceDTO;
+using roomserviceDTO;
+using roomServiceBUS;
 
 
 namespace QuanLyHotel
@@ -119,6 +121,63 @@ namespace QuanLyHotel
             this.loadData();
         }
 
-        
+        private void loadDataRoomService()
+        {
+            RoomServiceBUS ctmBus = new RoomServiceBUS();
+            List<RoomServiceDTO> list = ctmBus.select();
+
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvUseService.Columns.Clear();
+            dtgvUseService.DataSource = null;
+
+            dtgvUseService.AutoGenerateColumns = false;
+            dtgvUseService.AllowUserToAddRows = false;
+            dtgvUseService.DataSource = list;
+
+            DataGridViewTextBoxColumn IDS = new DataGridViewTextBoxColumn();
+            IDS.Name = "ids";
+            IDS.HeaderText = "Service:";
+            IDS.DataPropertyName = "ids";
+            IDS.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(IDS);
+
+            DataGridViewTextBoxColumn IDR = new DataGridViewTextBoxColumn();
+            IDR.Name = "idr";
+            IDR.HeaderText = "Room";
+            IDR.DataPropertyName = "idr";
+            IDR.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(IDR);
+
+            DataGridViewTextBoxColumn Time = new DataGridViewTextBoxColumn();
+            Time.Name = "time";
+            Time.HeaderText = "Time";
+            Time.DataPropertyName = "time";
+            Time.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(Time);
+
+            DataGridViewTextBoxColumn NUMBER = new DataGridViewTextBoxColumn();
+            NUMBER.Name = "number";
+            NUMBER.HeaderText = "Number";
+            NUMBER.DataPropertyName = "number";
+            NUMBER.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(NUMBER);
+
+            DataGridViewTextBoxColumn COST = new DataGridViewTextBoxColumn();
+            COST.Name = "cost";
+            COST.HeaderText = "Cost";
+            COST.DataPropertyName = "cost";
+            COST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(COST);
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvUseService.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
     }
 }

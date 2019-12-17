@@ -18,14 +18,16 @@ namespace QuanLyHotel
         {
             InitializeComponent();
         }
+        string username = "";
+        //int level = 0;
+        
         public string idm = "";
-        public CheckInWindow(string id)
-        {
-            idm = id;
-        }
-        public CheckInWindow(string name, string kind, string bedamount, string cost)
+        
+        public CheckInWindow(string Username,/*, int Level*/string name, string kind, string bedamount, string cost)
         {
             InitializeComponent();
+            username = Username;
+            //level = Level;
             lbNameRoom.Text = name;
             lbKind.Text = kind;
             lbBedsAmount.Text = bedamount;
@@ -40,7 +42,7 @@ namespace QuanLyHotel
             BillDTO bll = new BillDTO();
             bll.IDB = lbNameCustomer.Text+"/"+dtCheckIn.Text+"/"+dtCheckOut.Text+"@"+lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
-            bll.IDM =idm;
+            bll.IDM = username;
             bll.IDR = lbNameRoom.Text;
             
             bll.CheckIn =DateTime.Parse(dtCheckIn.Text);

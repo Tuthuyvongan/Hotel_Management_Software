@@ -21,7 +21,7 @@ namespace QuanLyHotel
             
         }
 
-        /*Truong*/
+        
         private void loadData()
         {
             RoomBUS rmBus = new RoomBUS();

@@ -31,7 +31,7 @@
             this.lbCost = new System.Windows.Forms.Label();
             this.lbBedsAmount = new System.Windows.Forms.Label();
             this.lbKind = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
+            this.lbNameRoom = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -98,17 +98,17 @@
             this.lbKind.TabIndex = 226;
             this.lbKind.Text = "Name";
             // 
-            // lbName
+            // lbNameRoom
             // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(129, 121);
-            this.lbName.Margin = new System.Windows.Forms.Padding(3);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(49, 19);
-            this.lbName.TabIndex = 225;
-            this.lbName.Text = "Name";
+            this.lbNameRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbNameRoom.AutoSize = true;
+            this.lbNameRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.lbNameRoom.Location = new System.Drawing.Point(129, 121);
+            this.lbNameRoom.Margin = new System.Windows.Forms.Padding(3);
+            this.lbNameRoom.Name = "lbNameRoom";
+            this.lbNameRoom.Size = new System.Drawing.Size(49, 19);
+            this.lbNameRoom.TabIndex = 225;
+            this.lbNameRoom.Text = "Name";
             // 
             // label4
             // 
@@ -492,7 +492,7 @@
             this.Controls.Add(this.lbCost);
             this.Controls.Add(this.lbBedsAmount);
             this.Controls.Add(this.lbKind);
-            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.lbNameRoom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -512,7 +512,7 @@
         private System.Windows.Forms.Label lbCost;
         private System.Windows.Forms.Label lbBedsAmount;
         private System.Windows.Forms.Label lbKind;
-        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbNameRoom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

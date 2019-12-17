@@ -155,7 +155,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(411, 255);
+            this.label1.Location = new System.Drawing.Point(419, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 31);
             this.label1.TabIndex = 87;
@@ -165,9 +165,9 @@
             // 
             this.dtgvUseService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvUseService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvUseService.Location = new System.Drawing.Point(425, 414);
+            this.dtgvUseService.Location = new System.Drawing.Point(425, 152);
             this.dtgvUseService.Name = "dtgvUseService";
-            this.dtgvUseService.Size = new System.Drawing.Size(374, 217);
+            this.dtgvUseService.Size = new System.Drawing.Size(374, 479);
             this.dtgvUseService.TabIndex = 88;
             // 
             // label2
@@ -175,7 +175,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(422, 356);
+            this.label2.Location = new System.Drawing.Point(430, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 22);
             this.label2.TabIndex = 171;
@@ -284,7 +284,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(425, 311);
+            this.button2.Location = new System.Drawing.Point(433, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 31);
             this.button2.TabIndex = 196;
@@ -298,7 +298,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(505, 311);
+            this.button1.Location = new System.Drawing.Point(513, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 31);
             this.button1.TabIndex = 197;
@@ -309,7 +309,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(495, 353);
+            this.textBox1.Location = new System.Drawing.Point(503, 109);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 29);
             this.textBox1.TabIndex = 198;
