@@ -26,8 +26,8 @@ namespace customerDAO
         {
             string query = string.Empty;
             /*#Fix*/
-            query += "INSERT INTO [Customer] (iDC,nAME,gENDER,bIRTHDAY,aDDRESS,phoneNUMBER,eMAIL,identifyCARD) ";
-            query += "VALUES (@iDC,@nAME,@gENDER,@bIRTHDAY,@aDDRESS,@phoneNUMBER,@eMAIL,@identifyCARD)";
+            query += "INSERT INTO [customer] (idc,name,phone,date,cmnd) ";
+            query += "VALUES (@idc,@name,@phone,@date,@cmnd)";
             
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {

@@ -25,8 +25,7 @@ namespace serviceDAO
         public bool add(ServiceDTO rm)
         {
             string query = string.Empty;
-            //query += "INSERT INTO [Service] (iDS,nAME,kINd,cOST) ";
-            //query += "VALUES (@iDS,@nAME,@kINd,@cOST)";
+
             query += "INSERT INTO [service] (ids,name,kind,cost) ";
             query += "VALUES (@ids,@name,@kind,@cost)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
@@ -92,7 +91,7 @@ namespace serviceDAO
         public bool edit(ServiceDTO rm)
         {
             string query = string.Empty;
-            query += "UPDATE Service SET [name] = @name, [kind] = @kind, [cost] = @cost  WHERE [ids] = @ids";
+            query += "UPDATE service SET [name] = @name, [kind] = @kind, [cost] = @cost  WHERE [ids] = @ids";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 

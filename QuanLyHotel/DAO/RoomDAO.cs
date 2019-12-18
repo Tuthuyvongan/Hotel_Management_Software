@@ -30,6 +30,7 @@ namespace roomDAO
 
         public RoomDAO(DataRow row)
         {
+            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
             RoomDTO data = new RoomDTO();
             data.Idr = row["idr"].ToString();
             data.Name = row["name"].ToString();
@@ -85,11 +86,9 @@ namespace roomDAO
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
-            query += "INSERT INTO [Room] (idr,name,cost,bedamount,roomkind) ";
-            query += "VALUES (@idr,@name,@cost,@bedamount,@roomkind)";
+            query += "INSERT INTO [room] (idr,name,cost,status,bedamount,roomkind) ";
+            query += "VALUES (@idr,@name,@cost,@status,@bedamount,@roomkind)";
 
-            //query += "INSERT INTO [room] (name,cost,status,bedamount,roomkind) ";
-            //query += "VALUES (@name,@cost,@status,@bedamount,@roomkind)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -164,7 +163,7 @@ namespace roomDAO
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    //cmd.Parameters.AddWithValue("@idr", rm.Idr);
+                    cmd.Parameters.AddWithValue("@idr", rm.Idr);
                     cmd.Parameters.AddWithValue("@name", rm.Name);
                     cmd.Parameters.AddWithValue("@cost", rm.Cost);
                     cmd.Parameters.AddWithValue("@status", rm.Status);
@@ -190,7 +189,7 @@ namespace roomDAO
         public List<RoomDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [name], [status], [cost], [bedamount], [idr] ";
+            query += "SELECT [name], [status], [cost], [bedamount], [roomkind], [idr] ";
             query += "FROM [room]";
 
             List<RoomDTO> IsNameRoom = new List<RoomDTO>();

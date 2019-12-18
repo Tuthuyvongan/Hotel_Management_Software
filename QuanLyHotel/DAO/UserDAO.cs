@@ -65,7 +65,7 @@ namespace userDAO
         public bool delete(UserDTO pt)
         {
             string query = string.Empty;
-            query += "DELETE FROM service WHERE [idm] = @idm"; ;
+            query += "DELETE FROM manager WHERE [idm] = @idm"; ;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -95,7 +95,7 @@ namespace userDAO
         public bool edit(UserDTO us)
         {
             string query = string.Empty;
-            query += "UPDATE Service SET [name] = @name, [phone] = @phone, [email] = @email,[level] = @level,[gender] = @gender,[cmnd] = @cmnd  WHERE [idm] = @ids";
+            query += "UPDATE manager SET [name] = @name, [phone] = @phone, [email] = @email,[level] = @level,[gender] = @gender,[cmnd] = @cmnd  WHERE [idm] = @idm";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 

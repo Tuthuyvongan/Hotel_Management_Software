@@ -209,7 +209,7 @@ namespace billDAO
                             while (reader.Read())
                             {
                                 BillDTO bll = new BillDTO();
-                                bll.CheckIn = DateTime.Parse(reader["checkIN"].ToString());
+                                bll.CheckIn = DateTime.Parse(reader["checkin"].ToString());
                                 lsDateBill.Add(bll);
                             }
                         }
