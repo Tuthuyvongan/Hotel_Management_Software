@@ -142,6 +142,7 @@
             this.txtPhoneCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtPhoneCustomer.Location = new System.Drawing.Point(157, 121);
             this.txtPhoneCustomer.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtPhoneCustomer.MaxLength = 40;
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
             this.txtPhoneCustomer.Size = new System.Drawing.Size(269, 29);
             this.txtPhoneCustomer.TabIndex = 85;
@@ -175,6 +176,7 @@
             this.txtIdentifyCardCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtIdentifyCardCustomer.Location = new System.Drawing.Point(157, 86);
             this.txtIdentifyCardCustomer.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtIdentifyCardCustomer.MaxLength = 40;
             this.txtIdentifyCardCustomer.Name = "txtIdentifyCardCustomer";
             this.txtIdentifyCardCustomer.Size = new System.Drawing.Size(269, 29);
             this.txtIdentifyCardCustomer.TabIndex = 82;
@@ -185,6 +187,7 @@
             this.txtNameCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtNameCustomer.Location = new System.Drawing.Point(157, 52);
             this.txtNameCustomer.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtNameCustomer.MaxLength = 40;
             this.txtNameCustomer.Name = "txtNameCustomer";
             this.txtNameCustomer.Size = new System.Drawing.Size(269, 29);
             this.txtNameCustomer.TabIndex = 81;
@@ -265,6 +268,7 @@
             this.txtSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtSearchCustomer.Location = new System.Drawing.Point(95, 277);
+            this.txtSearchCustomer.MaxLength = 40;
             this.txtSearchCustomer.Name = "txtSearchCustomer";
             this.txtSearchCustomer.Size = new System.Drawing.Size(308, 32);
             this.txtSearchCustomer.TabIndex = 92;

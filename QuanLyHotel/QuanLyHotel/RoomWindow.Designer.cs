@@ -145,6 +145,7 @@
             this.txtNameRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameRoom.Location = new System.Drawing.Point(134, 73);
             this.txtNameRoom.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtNameRoom.MaxLength = 40;
             this.txtNameRoom.Name = "txtNameRoom";
             this.txtNameRoom.Size = new System.Drawing.Size(359, 29);
             this.txtNameRoom.TabIndex = 186;
@@ -159,6 +160,7 @@
             "Thường"});
             this.txtKindRoom.Location = new System.Drawing.Point(134, 108);
             this.txtKindRoom.MaximumSize = new System.Drawing.Size(450, 0);
+            this.txtKindRoom.MaxLength = 40;
             this.txtKindRoom.Name = "txtKindRoom";
             this.txtKindRoom.Size = new System.Drawing.Size(359, 30);
             this.txtKindRoom.TabIndex = 187;
@@ -169,6 +171,7 @@
             this.txtBedsAmount.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBedsAmount.Location = new System.Drawing.Point(134, 147);
             this.txtBedsAmount.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtBedsAmount.MaxLength = 40;
             this.txtBedsAmount.Name = "txtBedsAmount";
             this.txtBedsAmount.Size = new System.Drawing.Size(359, 29);
             this.txtBedsAmount.TabIndex = 188;
@@ -180,6 +183,7 @@
             this.txtCost.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCost.Location = new System.Drawing.Point(134, 182);
             this.txtCost.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtCost.MaxLength = 40;
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(359, 29);
             this.txtCost.TabIndex = 189;
@@ -233,6 +237,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchRoom.Location = new System.Drawing.Point(86, 329);
+            this.txtSearchRoom.MaxLength = 40;
             this.txtSearchRoom.Name = "txtSearchRoom";
             this.txtSearchRoom.Size = new System.Drawing.Size(314, 29);
             this.txtSearchRoom.TabIndex = 193;

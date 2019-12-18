@@ -276,6 +276,7 @@
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(235, 96);
+            this.txtUsername.MaxLength = 40;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUsername.Size = new System.Drawing.Size(250, 26);
@@ -286,6 +287,7 @@
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(235, 128);
+            this.txtPassword.MaxLength = 40;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(250, 26);
@@ -297,6 +299,7 @@
             this.txtRePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRePassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePassword.Location = new System.Drawing.Point(235, 160);
+            this.txtRePassword.MaxLength = 40;
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRePassword.Size = new System.Drawing.Size(250, 26);
@@ -308,6 +311,7 @@
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(235, 209);
+            this.txtName.MaxLength = 40;
             this.txtName.Name = "txtName";
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtName.Size = new System.Drawing.Size(250, 26);
@@ -328,6 +332,7 @@
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(235, 273);
+            this.txtPhone.MaxLength = 20;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPhone.Size = new System.Drawing.Size(250, 26);
@@ -339,6 +344,7 @@
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(235, 306);
+            this.txtEmail.MaxLength = 40;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtEmail.Size = new System.Drawing.Size(250, 26);
@@ -349,6 +355,7 @@
             this.txtIdentifyCard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdentifyCard.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentifyCard.Location = new System.Drawing.Point(235, 340);
+            this.txtIdentifyCard.MaxLength = 20;
             this.txtIdentifyCard.Name = "txtIdentifyCard";
             this.txtIdentifyCard.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtIdentifyCard.Size = new System.Drawing.Size(250, 26);

@@ -230,6 +230,7 @@
             this.txtNumberService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumberService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumberService.Location = new System.Drawing.Point(127, 240);
+            this.txtNumberService.MaxLength = 40;
             this.txtNumberService.Name = "txtNumberService";
             this.txtNumberService.Size = new System.Drawing.Size(156, 26);
             this.txtNumberService.TabIndex = 237;
@@ -241,6 +242,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchService.Location = new System.Drawing.Point(87, 378);
+            this.txtSearchService.MaxLength = 40;
             this.txtSearchService.Name = "txtSearchService";
             this.txtSearchService.Size = new System.Drawing.Size(196, 29);
             this.txtSearchService.TabIndex = 238;

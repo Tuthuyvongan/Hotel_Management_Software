@@ -18,7 +18,7 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
-            //loadData();
+            this.loadData();
         }
         string username = "";
         public HomeWindow(string Username)

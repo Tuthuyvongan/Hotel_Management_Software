@@ -181,6 +181,7 @@
             this.txtNameService.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtNameService.Location = new System.Drawing.Point(76, 69);
             this.txtNameService.MaximumSize = new System.Drawing.Size(450, 29);
+            this.txtNameService.MaxLength = 40;
             this.txtNameService.Name = "txtNameService";
             this.txtNameService.Size = new System.Drawing.Size(314, 29);
             this.txtNameService.TabIndex = 180;
@@ -191,6 +192,7 @@
             this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtKindService.FormattingEnabled = true;
             this.txtKindService.Location = new System.Drawing.Point(76, 103);
+            this.txtKindService.MaxLength = 40;
             this.txtKindService.Name = "txtKindService";
             this.txtKindService.Size = new System.Drawing.Size(117, 30);
             this.txtKindService.TabIndex = 181;
@@ -201,6 +203,7 @@
             this.txtCostService.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtCostService.Location = new System.Drawing.Point(271, 104);
             this.txtCostService.MaximumSize = new System.Drawing.Size(255, 29);
+            this.txtCostService.MaxLength = 40;
             this.txtCostService.Name = "txtCostService";
             this.txtCostService.Size = new System.Drawing.Size(119, 29);
             this.txtCostService.TabIndex = 182;
@@ -268,6 +271,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchService1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchService1.Location = new System.Drawing.Point(83, 257);
+            this.txtSearchService1.MaxLength = 40;
             this.txtSearchService1.Name = "txtSearchService1";
             this.txtSearchService1.Size = new System.Drawing.Size(307, 29);
             this.txtSearchService1.TabIndex = 190;
@@ -305,6 +309,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(503, 109);
+            this.textBox1.MaxLength = 40;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 29);
             this.textBox1.TabIndex = 198;

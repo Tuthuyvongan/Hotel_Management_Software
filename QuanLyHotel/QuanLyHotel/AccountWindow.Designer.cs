@@ -73,6 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchRoom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchRoom.Location = new System.Drawing.Point(86, 297);
+            this.txtSearchRoom.MaxLength = 40;
             this.txtSearchRoom.Name = "txtSearchRoom";
             this.txtSearchRoom.Size = new System.Drawing.Size(314, 29);
             this.txtSearchRoom.TabIndex = 197;
