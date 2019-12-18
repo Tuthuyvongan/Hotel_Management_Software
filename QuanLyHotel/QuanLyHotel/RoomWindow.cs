@@ -74,19 +74,44 @@ namespace QuanLyHotel
 
         private void BtAddRoom_Click(object sender, EventArgs e)
         {
-            RoomBUS rmBUS = new RoomBUS();
-            RoomDTO rm = new RoomDTO();
-            rm.Name = txtNameRoom.Text;
-            rm.Roomkind = txtKindRoom.Text;
-            rm.Status = "Empty";
-            rm.Bedamount = int.Parse(txtBedsAmount.Text);
-            rm.Cost = Decimal.Parse(txtCost.Text);
-            bool kq = rmBUS.add(rm);
-            if (kq == false)
-                MessageBox.Show("Fail!");
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+            errorProvider4.Clear();
+
+            if (txtNameRoom.Text == "")
+            {
+                errorProvider1.SetError(txtNameRoom, "not null!");
+            }
+            else if (txtKindRoom.Text == "")
+            {
+                errorProvider2.SetError(txtKindRoom, "not null!");
+            }
+            else if (txtBedsAmount.Text == "")
+            {
+                errorProvider3.SetError(txtBedsAmount, "not null!");
+            }
+            else if (txtCost.Text=="")
+            {
+                errorProvider4.SetError(txtCost, "not null!");
+            }
+
             else
-                MessageBox.Show("Sussces");
-            this.loadData();
+            {
+                RoomBUS rmBUS = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.Name = txtNameRoom.Text;
+                rm.Roomkind = txtKindRoom.Text;
+                rm.Status = "Empty";
+                rm.Bedamount = int.Parse(txtBedsAmount.Text);
+                rm.Cost = Decimal.Parse(txtCost.Text);
+                bool kq = rmBUS.add(rm);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+            }
         }
 
         private void BtEditRoom_Click(object sender, EventArgs e)
@@ -131,6 +156,34 @@ namespace QuanLyHotel
             txtKindRoom.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
             txtBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
             txtCost.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
+        }
+
+        private void TxtBedsAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider5.SetError(txtBedsAmount, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider5.Clear();
+            }
+        }
+
+        private void TxtCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider6.SetError(txtBedsAmount, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider6.Clear();
+            }
         }
     }
 }

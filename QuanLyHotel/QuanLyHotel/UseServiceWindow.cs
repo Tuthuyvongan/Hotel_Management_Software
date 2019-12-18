@@ -77,21 +77,50 @@ namespace QuanLyHotel
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            RoomServiceBUS roomServiceBUS = new RoomServiceBUS();
-            RoomServiceDTO roomService = new RoomServiceDTO();
-            roomService.IDR_S = lbNameRoom.Text;
-            roomService.IDR = lbNameRoom.Text;
-            roomService.IDS = lbNameService.Text;
-            roomService.TIME = DateTime.Parse(dtDateService.Text);
-            roomService.NUMBER = int.Parse(txtNumberService.Text);
-            roomService.COST = Decimal.Parse(lbCost.Text)*Decimal.Parse(txtNumberService.Text);
-            bool kq = roomServiceBUS.add(roomService);
-            if (kq == false)
-                MessageBox.Show("Fail!");
+            errorProvider1.Clear();
+            //errorProvider2.Clear();
+
+            if (txtNumberService.Text == "")
+            {
+                errorProvider1.SetError(txtNumberService, "not null!");
+            }
+            //else if (txtKindService.Text == "")
+            //{
+            //    errorProvider2.SetError(txtKindService, "not null!");
+            //}
+            
             else
-                MessageBox.Show("Sussces");
-            this.loadData();
-            this.Close();
+            {
+                RoomServiceBUS roomServiceBUS = new RoomServiceBUS();
+                RoomServiceDTO roomService = new RoomServiceDTO();
+                roomService.IDR_S = lbNameRoom.Text;
+                roomService.IDR = lbNameRoom.Text;
+                roomService.IDS = lbNameService.Text;
+                roomService.TIME = DateTime.Parse(dtDateService.Text);
+                roomService.NUMBER = int.Parse(txtNumberService.Text);
+                roomService.COST = Decimal.Parse(lbCost.Text) * Decimal.Parse(txtNumberService.Text);
+                bool kq = roomServiceBUS.add(roomService);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+                this.Close();
+            }
+        }
+
+        private void TxtNumberService_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider3.SetError(txtNumberService, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider3.Clear();
+            }
         }
     }
 }

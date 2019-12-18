@@ -93,7 +93,9 @@ namespace QuanLyHotel
 
         private void BtLoadAccount_Click(object sender, EventArgs e)
         {
+            
             this.loadData();
+            
         }
 
         private void BtEditAccount_Click(object sender, EventArgs e)

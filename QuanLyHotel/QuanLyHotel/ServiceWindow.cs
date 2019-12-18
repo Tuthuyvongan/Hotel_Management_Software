@@ -71,19 +71,40 @@ namespace QuanLyHotel
         }
         private void BtAddService_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
 
-            ServiceBUS srvBUS = new ServiceBUS();
-            ServiceDTO srv = new ServiceDTO();
-            srv.IDS = txtNameService.Text;
-            srv.NAME = txtNameService.Text;
-            srv.KIND = txtKindService.Text;
-            srv.COST = Decimal.Parse(txtCostService.Text);
-            bool kq = srvBUS.add(srv);
-            if (kq == false)
-                MessageBox.Show("Fail!");
+
+            if (txtNameService.Text == "")
+            {
+                errorProvider1.SetError(txtNameService, "not null!");
+            }
+            else if (txtKindService.Text == "")
+            {
+                errorProvider2.SetError(txtKindService, "not null!");
+            }
+            else if (txtCostService.Text == "")
+            {
+                errorProvider3.SetError(txtCostService, "not null!");
+            }
+            
+
             else
-                MessageBox.Show("Sussces");
-            this.loadData();
+            {
+                ServiceBUS srvBUS = new ServiceBUS();
+                ServiceDTO srv = new ServiceDTO();
+                srv.IDS = txtNameService.Text;
+                srv.NAME = txtNameService.Text;
+                srv.KIND = txtKindService.Text;
+                srv.COST = Decimal.Parse(txtCostService.Text);
+                bool kq = srvBUS.add(srv);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+            }
         }
 
         private void BtEditService_Click(object sender, EventArgs e)
@@ -180,6 +201,20 @@ namespace QuanLyHotel
             myCurrencyManager.Refresh();
 
 
+        }
+
+        private void TxtCostService_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider4.SetError(txtCostService, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider4.Clear();
+            }
         }
     }
 }

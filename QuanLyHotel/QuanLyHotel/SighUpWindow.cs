@@ -62,11 +62,10 @@ namespace QuanLyHotel
             errorProvider6.Clear();
             errorProvider7.Clear();
             errorProvider8.Clear();
+            errorProvider11.Clear();
 
             UserBUS UsBus = new UserBUS();
             UserDTO Us = new UserDTO();
-            ManagerBUS mngBus = new ManagerBUS();
-            ManagerDTO mng = new ManagerDTO();
             if (txtUsername.Text == "")
             {
                 errorProvider1.SetError(txtUsername, "Không được để trống!");
@@ -95,9 +94,13 @@ namespace QuanLyHotel
             {
                 errorProvider5.SetError(txtGender, "Không được để trống!");
             }
-            if (textBoxidc.Text == "")
+            if (txtIdentifyCard.Text == "")
             {
-                errorProvider8.SetError(textBoxidc, "Không được để trống!");
+                errorProvider8.SetError(txtIdentifyCard, "Không được để trống!");
+            }
+            if(txtPassword.Text!=txtRePassword.Text)
+            {
+                errorProvider11.SetError(txtRePassword, "Mật khẩu không trùng khớp!");
             }
             else
             {
@@ -107,7 +110,8 @@ namespace QuanLyHotel
                 Us.Phone = txtPhone.Text;
                 Us.Email = txtEmail.Text;
                 Us.Gender = txtGender.Text;
-                Us.Cmnd = textBoxidc.Text;
+                Us.Cmnd = txtIdentifyCard.Text;
+                Us.Level = 1;
                 bool kq = UsBus.add(Us);
                 if (kq == false)
                     MessageBox.Show("Tài khoản đã tồn tại. Vui lòng kiểm tra lại dữ liệu");
@@ -126,13 +130,41 @@ namespace QuanLyHotel
                 txtGender.Text = "";
                 txtPhone.Text = "";
                 txtRePassword.Text = "";
-                textBoxidc.Text = "";
+                txtIdentifyCard.Text = "";
             }
         }
 
         private void SighUpWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TxtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider9.SetError(txtPhone, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider9.Clear();
+            }
+        }
+
+        private void TextBoxidc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider10.SetError(txtIdentifyCard, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider10.Clear();
+            }
         }
     }
 }

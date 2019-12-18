@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dtgvService = new System.Windows.Forms.DataGridView();
@@ -45,14 +46,20 @@
             this.txtNumberService = new System.Windows.Forms.TextBox();
             this.txtSearchService = new System.Windows.Forms.TextBox();
             this.btLoadCustomer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btUseService = new System.Windows.Forms.Button();
             this.lbKindService = new System.Windows.Forms.Label();
             this.lbNameService = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbCost = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // label14
@@ -226,6 +233,7 @@
             this.txtNumberService.Name = "txtNumberService";
             this.txtNumberService.Size = new System.Drawing.Size(156, 26);
             this.txtNumberService.TabIndex = 237;
+            this.txtNumberService.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberService_KeyPress);
             // 
             // txtSearchService
             // 
@@ -252,19 +260,19 @@
             this.btLoadCustomer.Text = "Load";
             this.btLoadCustomer.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btUseService
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(137, 542);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 42);
-            this.button1.TabIndex = 240;
-            this.button1.Text = "Use Service";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btUseService.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btUseService.BackColor = System.Drawing.Color.Firebrick;
+            this.btUseService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUseService.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btUseService.ForeColor = System.Drawing.Color.White;
+            this.btUseService.Location = new System.Drawing.Point(137, 542);
+            this.btUseService.Name = "btUseService";
+            this.btUseService.Size = new System.Drawing.Size(132, 42);
+            this.btUseService.TabIndex = 240;
+            this.btUseService.Text = "Use Service";
+            this.btUseService.UseVisualStyleBackColor = false;
             // 
             // lbKindService
             // 
@@ -338,6 +346,18 @@
             this.label15.TabIndex = 245;
             this.label15.Text = "Cost:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
             // UseServiceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,7 +369,7 @@
             this.Controls.Add(this.lbNameService);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btUseService);
             this.Controls.Add(this.btLoadCustomer);
             this.Controls.Add(this.txtSearchService);
             this.Controls.Add(this.txtNumberService);
@@ -371,6 +391,9 @@
             this.Name = "UseServiceWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,12 +417,15 @@
         private System.Windows.Forms.TextBox txtNumberService;
         private System.Windows.Forms.TextBox txtSearchService;
         private System.Windows.Forms.Button btLoadCustomer;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btUseService;
         private System.Windows.Forms.Label lbKindService;
         private System.Windows.Forms.Label lbNameService;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbCost;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }
