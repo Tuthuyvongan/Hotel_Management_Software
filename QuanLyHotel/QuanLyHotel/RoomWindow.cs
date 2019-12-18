@@ -18,7 +18,7 @@ namespace QuanLyHotel
         public RoomWindow()
         {
             InitializeComponent();
-            
+            loadData();
         }
 
         
@@ -68,12 +68,8 @@ namespace QuanLyHotel
             pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvRoom.Columns.Add(pHONE);
 
-
-
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
-
-
         }
 
         private void BtAddRoom_Click(object sender, EventArgs e)
@@ -125,6 +121,16 @@ namespace QuanLyHotel
             else
                 MessageBox.Show("Sussces");
             this.loadData();
+        }
+
+        private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtNameRoom.Text = dtgvRoom.Rows[numrow].Cells[1].Value.ToString();
+            txtKindRoom.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
+            txtBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
+            txtCost.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
         }
     }
 }

@@ -106,5 +106,83 @@ namespace QuanLyHotel
             SighUpWindow B = new SighUpWindow();
             B.Show();
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ( e.KeyCode == Keys.Enter)
+            {
+                errorProvider1.Clear();
+                errorProvider2.Clear();
+                UserBUS ndBUS = new UserBUS();
+
+                UserDTO tn = new UserDTO();
+                string IDU = txtUsername.Text;
+                string PASSWORD = txtPassword.Text;
+                if (txtUsername.Text == "")
+                {
+                    errorProvider1.SetError(txtUsername, "Không được để trống!");
+                }
+                if (txtPassword.Text == "")
+                {
+                    errorProvider1.SetError(txtPassword, "Không được để trống!");
+                }
+                else
+                {
+
+                    if (ndBUS.kiemtra(tn, IDU, PASSWORD))
+                    {
+                        txtUsername.Text = "";
+                        txtPassword.Text = "";
+                        MainWindow f = new MainWindow();
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                    }
+                }
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                errorProvider1.Clear();
+                errorProvider2.Clear();
+                UserBUS ndBUS = new UserBUS();
+
+                UserDTO tn = new UserDTO();
+                string IDU = txtUsername.Text;
+                string PASSWORD = txtPassword.Text;
+                if (txtUsername.Text == "")
+                {
+                    errorProvider1.SetError(txtUsername, "Không được để trống!");
+                }
+                if (txtPassword.Text == "")
+                {
+                    errorProvider1.SetError(txtPassword, "Không được để trống!");
+                }
+                else
+                {
+
+                    if (ndBUS.kiemtra(tn, IDU, PASSWORD))
+                    {
+                        txtUsername.Text = "";
+                        txtPassword.Text = "";
+                        MainWindow f = new MainWindow();
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                    }
+                }
+            }
+        }
     }
 }

@@ -59,5 +59,16 @@ namespace QuanLyHotel
             CheckInWindow checkIn = new CheckInWindow(username,lbName.Text,lbKind.Text,lbBedsAmount.Text,lbCost.Text);
             checkIn.Show();
         }
+
+        private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            lbName.Text = dtgvRoom.Rows[numrow].Cells[1].Value.ToString();
+            lbKind.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
+            lbStatus.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
+            lbBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
+            lbCost.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
+        }
     }
 }

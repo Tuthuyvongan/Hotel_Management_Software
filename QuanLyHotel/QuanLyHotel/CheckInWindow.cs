@@ -55,5 +55,18 @@ namespace QuanLyHotel
                 MessageBox.Show("Sussces");
             this.Close();
         }
+
+        private void dtgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            lbNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
+            lbIdentifyCard.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
+            lbPhone.Text = dtgvCustomer.Rows[numrow].Cells[3].Value.ToString();
+            lbNameRoom.Text = dtgvCustomer.Rows[numrow].Cells[4].Value.ToString();
+            lbKind.Text = dtgvCustomer.Rows[numrow].Cells[5].Value.ToString();
+            lbBedsAmount.Text = dtgvCustomer.Rows[numrow].Cells[6].Value.ToString();
+            lbCost.Text = dtgvCustomer.Rows[numrow].Cells[7].Value.ToString();
+        }
     }
 }
