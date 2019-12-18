@@ -32,16 +32,16 @@
             this.btMenu = new System.Windows.Forms.Button();
             this.btCustomer = new System.Windows.Forms.Button();
             this.btSetting = new System.Windows.Forms.Button();
-            this.btCheckOut = new System.Windows.Forms.Button();
             this.btAccount = new System.Windows.Forms.Button();
             this.btRoom = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btService = new System.Windows.Forms.Button();
-            this.roomWindow2 = new QuanLyHotel.RoomWindow();
-            this.serviceWindow2 = new QuanLyHotel.ServiceWindow();
-            this.customerWindow2 = new QuanLyHotel.CustomerWindow();
-            this.homeWindow1 = new QuanLyHotel.HomeWindow();
-            this.accountWindow1 = new QuanLyHotel.AccountWindow();
+            this.homeWindow2 = new QuanLyHotel.HomeWindow();
+            this.accountWindow2 = new QuanLyHotel.AccountWindow();
+            this.customerWindow1 = new QuanLyHotel.CustomerWindow();
+            this.serviceWindow1 = new QuanLyHotel.ServiceWindow();
+            this.roomWindow1 = new QuanLyHotel.RoomWindow();
+            this.settingWindow1 = new QuanLyHotel.SettingWindow();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,6 @@
             this.MenuBar.Controls.Add(this.btMenu);
             this.MenuBar.Controls.Add(this.btCustomer);
             this.MenuBar.Controls.Add(this.btSetting);
-            this.MenuBar.Controls.Add(this.btCheckOut);
             this.MenuBar.Controls.Add(this.btAccount);
             this.MenuBar.Controls.Add(this.btRoom);
             this.MenuBar.Controls.Add(this.btHome);
@@ -59,10 +58,10 @@
             this.MenuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuBar.Location = new System.Drawing.Point(0, 0);
             this.MenuBar.Margin = new System.Windows.Forms.Padding(0);
-            this.MenuBar.MaximumSize = new System.Drawing.Size(150, 0);
-            this.MenuBar.MinimumSize = new System.Drawing.Size(43, 0);
+            this.MenuBar.MaximumSize = new System.Drawing.Size(200, 0);
+            this.MenuBar.MinimumSize = new System.Drawing.Size(57, 0);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(150, 724);
+            this.MenuBar.Size = new System.Drawing.Size(200, 891);
             this.MenuBar.TabIndex = 4;
             // 
             // btMenu
@@ -74,10 +73,11 @@
             this.btMenu.ForeColor = System.Drawing.Color.White;
             this.btMenu.Image = global::QuanLyHotel.Properties.Resources.Menu_Icon23px;
             this.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btMenu.Location = new System.Drawing.Point(5, 21);
+            this.btMenu.Location = new System.Drawing.Point(7, 26);
+            this.btMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btMenu.Name = "btMenu";
             this.btMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btMenu.Size = new System.Drawing.Size(38, 43);
+            this.btMenu.Size = new System.Drawing.Size(51, 53);
             this.btMenu.TabIndex = 7;
             this.btMenu.UseCompatibleTextRendering = true;
             this.btMenu.UseVisualStyleBackColor = true;
@@ -92,10 +92,11 @@
             this.btCustomer.ForeColor = System.Drawing.Color.White;
             this.btCustomer.Image = global::QuanLyHotel.Properties.Resources.customericon;
             this.btCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCustomer.Location = new System.Drawing.Point(5, 165);
+            this.btCustomer.Location = new System.Drawing.Point(7, 203);
+            this.btCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btCustomer.Name = "btCustomer";
             this.btCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btCustomer.Size = new System.Drawing.Size(145, 43);
+            this.btCustomer.Size = new System.Drawing.Size(193, 53);
             this.btCustomer.TabIndex = 6;
             this.btCustomer.Text = "Customer";
             this.btCustomer.UseCompatibleTextRendering = true;
@@ -111,32 +112,15 @@
             this.btSetting.ForeColor = System.Drawing.Color.White;
             this.btSetting.Image = global::QuanLyHotel.Properties.Resources.settingicon;
             this.btSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSetting.Location = new System.Drawing.Point(5, 361);
+            this.btSetting.Location = new System.Drawing.Point(7, 385);
+            this.btSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btSetting.Name = "btSetting";
             this.btSetting.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btSetting.Size = new System.Drawing.Size(145, 43);
+            this.btSetting.Size = new System.Drawing.Size(193, 53);
             this.btSetting.TabIndex = 5;
             this.btSetting.Text = "Setting";
             this.btSetting.UseCompatibleTextRendering = true;
             this.btSetting.UseVisualStyleBackColor = true;
-            // 
-            // btCheckOut
-            // 
-            this.btCheckOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btCheckOut.FlatAppearance.BorderSize = 0;
-            this.btCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCheckOut.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btCheckOut.Image = global::QuanLyHotel.Properties.Resources.checkouticon;
-            this.btCheckOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCheckOut.Location = new System.Drawing.Point(5, 312);
-            this.btCheckOut.Name = "btCheckOut";
-            this.btCheckOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btCheckOut.Size = new System.Drawing.Size(145, 43);
-            this.btCheckOut.TabIndex = 3;
-            this.btCheckOut.Text = "Check out";
-            this.btCheckOut.UseCompatibleTextRendering = true;
-            this.btCheckOut.UseVisualStyleBackColor = true;
             // 
             // btAccount
             // 
@@ -147,10 +131,11 @@
             this.btAccount.ForeColor = System.Drawing.Color.White;
             this.btAccount.Image = global::QuanLyHotel.Properties.Resources.checkinicon;
             this.btAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAccount.Location = new System.Drawing.Point(5, 263);
+            this.btAccount.Location = new System.Drawing.Point(7, 324);
+            this.btAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btAccount.Name = "btAccount";
             this.btAccount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btAccount.Size = new System.Drawing.Size(145, 43);
+            this.btAccount.Size = new System.Drawing.Size(193, 53);
             this.btAccount.TabIndex = 2;
             this.btAccount.Text = "Account";
             this.btAccount.UseCompatibleTextRendering = true;
@@ -166,10 +151,11 @@
             this.btRoom.ForeColor = System.Drawing.Color.White;
             this.btRoom.Image = global::QuanLyHotel.Properties.Resources.roomicon;
             this.btRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRoom.Location = new System.Drawing.Point(5, 116);
+            this.btRoom.Location = new System.Drawing.Point(7, 143);
+            this.btRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btRoom.Name = "btRoom";
             this.btRoom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btRoom.Size = new System.Drawing.Size(145, 43);
+            this.btRoom.Size = new System.Drawing.Size(193, 53);
             this.btRoom.TabIndex = 1;
             this.btRoom.Text = "Room";
             this.btRoom.UseCompatibleTextRendering = true;
@@ -185,10 +171,11 @@
             this.btHome.ForeColor = System.Drawing.Color.White;
             this.btHome.Image = global::QuanLyHotel.Properties.Resources.homeicon;
             this.btHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHome.Location = new System.Drawing.Point(5, 70);
+            this.btHome.Location = new System.Drawing.Point(7, 86);
+            this.btHome.Margin = new System.Windows.Forms.Padding(4);
             this.btHome.Name = "btHome";
             this.btHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btHome.Size = new System.Drawing.Size(145, 43);
+            this.btHome.Size = new System.Drawing.Size(193, 53);
             this.btHome.TabIndex = 0;
             this.btHome.Text = "Home";
             this.btHome.UseCompatibleTextRendering = true;
@@ -204,71 +191,87 @@
             this.btService.ForeColor = System.Drawing.Color.White;
             this.btService.Image = global::QuanLyHotel.Properties.Resources.serviceicon;
             this.btService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btService.Location = new System.Drawing.Point(5, 214);
+            this.btService.Location = new System.Drawing.Point(7, 263);
+            this.btService.Margin = new System.Windows.Forms.Padding(4);
             this.btService.Name = "btService";
             this.btService.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btService.Size = new System.Drawing.Size(145, 43);
+            this.btService.Size = new System.Drawing.Size(193, 53);
             this.btService.TabIndex = 4;
             this.btService.Text = "Service";
             this.btService.UseCompatibleTextRendering = true;
             this.btService.UseVisualStyleBackColor = true;
             this.btService.Click += new System.EventHandler(this.BtService_Click);
             // 
-            // roomWindow2
+            // homeWindow2
             // 
-            this.roomWindow2.Location = new System.Drawing.Point(156, 0);
-            this.roomWindow2.MinimumSize = new System.Drawing.Size(821, 652);
-            this.roomWindow2.Name = "roomWindow2";
-            this.roomWindow2.Size = new System.Drawing.Size(868, 652);
-            this.roomWindow2.TabIndex = 5;
+            this.homeWindow2.Location = new System.Drawing.Point(226, 0);
+            this.homeWindow2.Margin = new System.Windows.Forms.Padding(0);
+            this.homeWindow2.MinimumSize = new System.Drawing.Size(1095, 802);
+            this.homeWindow2.Name = "homeWindow2";
+            this.homeWindow2.Size = new System.Drawing.Size(1095, 802);
+            this.homeWindow2.TabIndex = 5;
             // 
-            // serviceWindow2
+            // accountWindow2
             // 
-            this.serviceWindow2.Location = new System.Drawing.Point(153, 0);
-            this.serviceWindow2.MinimumSize = new System.Drawing.Size(821, 652);
-            this.serviceWindow2.Name = "serviceWindow2";
-            this.serviceWindow2.Size = new System.Drawing.Size(821, 652);
-            this.serviceWindow2.TabIndex = 6;
+            this.accountWindow2.Location = new System.Drawing.Point(204, 0);
+            this.accountWindow2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accountWindow2.MinimumSize = new System.Drawing.Size(1095, 802);
+            this.accountWindow2.Name = "accountWindow2";
+            this.accountWindow2.Size = new System.Drawing.Size(1095, 802);
+            this.accountWindow2.TabIndex = 6;
             // 
-            // customerWindow2
+            // customerWindow1
             // 
-            this.customerWindow2.Location = new System.Drawing.Point(156, 0);
-            this.customerWindow2.MinimumSize = new System.Drawing.Size(821, 652);
-            this.customerWindow2.Name = "customerWindow2";
-            this.customerWindow2.Size = new System.Drawing.Size(821, 652);
-            this.customerWindow2.TabIndex = 7;
+            this.customerWindow1.Location = new System.Drawing.Point(204, 0);
+            this.customerWindow1.Margin = new System.Windows.Forms.Padding(4);
+            this.customerWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
+            this.customerWindow1.Name = "customerWindow1";
+            this.customerWindow1.Size = new System.Drawing.Size(1095, 802);
+            this.customerWindow1.TabIndex = 7;
             // 
-            // homeWindow1
+            // serviceWindow1
             // 
-            this.homeWindow1.Location = new System.Drawing.Point(212, 0);
-            this.homeWindow1.Margin = new System.Windows.Forms.Padding(0);
-            this.homeWindow1.MinimumSize = new System.Drawing.Size(821, 652);
-            this.homeWindow1.Name = "homeWindow1";
-            this.homeWindow1.Size = new System.Drawing.Size(821, 652);
-            this.homeWindow1.TabIndex = 8;
+            this.serviceWindow1.Location = new System.Drawing.Point(208, 0);
+            this.serviceWindow1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serviceWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
+            this.serviceWindow1.Name = "serviceWindow1";
+            this.serviceWindow1.Size = new System.Drawing.Size(1095, 802);
+            this.serviceWindow1.TabIndex = 8;
             // 
-            // accountWindow1
+            // roomWindow1
             // 
-            this.accountWindow1.Location = new System.Drawing.Point(212, 0);
-            this.accountWindow1.MinimumSize = new System.Drawing.Size(821, 652);
-            this.accountWindow1.Name = "accountWindow1";
-            this.accountWindow1.Size = new System.Drawing.Size(821, 652);
-            this.accountWindow1.TabIndex = 9;
+            this.roomWindow1.Location = new System.Drawing.Point(206, 0);
+            this.roomWindow1.Margin = new System.Windows.Forms.Padding(4);
+            this.roomWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
+            this.roomWindow1.Name = "roomWindow1";
+            this.roomWindow1.Size = new System.Drawing.Size(1157, 802);
+            this.roomWindow1.TabIndex = 9;
+            // 
+            // settingWindow1
+            // 
+            this.settingWindow1.Location = new System.Drawing.Point(226, 39);
+            this.settingWindow1.Margin = new System.Windows.Forms.Padding(0);
+            this.settingWindow1.Name = "settingWindow1";
+            this.settingWindow1.Size = new System.Drawing.Size(1253, 763);
+            this.settingWindow1.TabIndex = 10;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 724);
-            this.Controls.Add(this.accountWindow1);
-            this.Controls.Add(this.homeWindow1);
-            this.Controls.Add(this.customerWindow2);
-            this.Controls.Add(this.serviceWindow2);
-            this.Controls.Add(this.roomWindow2);
+            this.ClientSize = new System.Drawing.Size(1376, 891);
+            this.Controls.Add(this.settingWindow1);
+            this.Controls.Add(this.roomWindow1);
+            this.Controls.Add(this.serviceWindow1);
+            this.Controls.Add(this.customerWindow1);
+            this.Controls.Add(this.accountWindow2);
+            this.Controls.Add(this.homeWindow2);
             this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MenuBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -279,7 +282,6 @@
         private System.Windows.Forms.Panel MenuBar;
         private System.Windows.Forms.Button btCustomer;
         private System.Windows.Forms.Button btSetting;
-        private System.Windows.Forms.Button btCheckOut;
         private System.Windows.Forms.Button btAccount;
         private System.Windows.Forms.Button btRoom;
         private System.Windows.Forms.Button btHome;
@@ -290,5 +292,11 @@
         private CustomerWindow customerWindow2;
         private HomeWindow homeWindow1;
         private AccountWindow accountWindow1;
+        private HomeWindow homeWindow2;
+        private AccountWindow accountWindow2;
+        private CustomerWindow customerWindow1;
+        private ServiceWindow serviceWindow1;
+        private RoomWindow roomWindow1;
+        private SettingWindow settingWindow1;
     }
 }

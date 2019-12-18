@@ -16,16 +16,16 @@ namespace QuanLyHotel
         public MainWindow()
         {
             InitializeComponent();
-            homeWindow1.Dock = DockStyle.Fill;
-            homeWindow1.BringToFront();
+            homeWindow2.Dock = DockStyle.Fill;
+            homeWindow2.BringToFront();
         }
         string username = "";
         int level = 0;
         public MainWindow(string Username, int Level)
         {
             InitializeComponent();
-            homeWindow1.Dock = DockStyle.Fill;
-            homeWindow1.BringToFront();
+            homeWindow2.Dock = DockStyle.Fill;
+            homeWindow2.BringToFront();
             username = Username;
             level = Level;
             if (level == 1)
@@ -51,34 +51,34 @@ namespace QuanLyHotel
 
         private void BtHome_Click(object sender, EventArgs e)
         {
-            homeWindow1.BringToFront();
-            homeWindow1.Dock = DockStyle.Fill;
+            homeWindow2.BringToFront();
+            homeWindow2.Dock = DockStyle.Fill;
         }
 
         private void BtRoom_Click(object sender, EventArgs e)
         {
-            roomWindow2.BringToFront();
-            roomWindow2.Dock = DockStyle.Fill;
+            roomWindow1.BringToFront();
+            roomWindow1.Dock = DockStyle.Fill;
 
 
         }
 
         private void BtCustomer_Click(object sender, EventArgs e)
         {
-            customerWindow2.BringToFront();
-            customerWindow2.Dock = DockStyle.Fill;
+            customerWindow1.BringToFront();
+            customerWindow1.Dock = DockStyle.Fill;
         }
 
         private void BtService_Click(object sender, EventArgs e)
         {
-            serviceWindow2.BringToFront();
-            serviceWindow2.Dock = DockStyle.Fill;
+            serviceWindow1.BringToFront();
+            serviceWindow1.Dock = DockStyle.Fill;
         }
 
         private void BtAccount_Click(object sender, EventArgs e)
         {
-            accountWindow1.BringToFront();
-            accountWindow1.Dock = DockStyle.Fill;
+            accountWindow2.BringToFront();
+            accountWindow2.Dock = DockStyle.Fill;
         }
     }
 }

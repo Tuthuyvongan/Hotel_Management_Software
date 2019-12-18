@@ -21,7 +21,7 @@ namespace QuanLyHotel
         {
             InitializeComponent();
             this.loadData();
-            this.loadDataRoomService();
+            loadDataRoomService();
         }
 
 
