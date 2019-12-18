@@ -1,0 +1,10 @@
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\BUS.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\BUS.pdb
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\DAO.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\DTO.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\DAO.pdb
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\bin\Debug\DTO.pdb
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\obj\Debug\BUS.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\BUS\obj\Debug\BUS.pdb

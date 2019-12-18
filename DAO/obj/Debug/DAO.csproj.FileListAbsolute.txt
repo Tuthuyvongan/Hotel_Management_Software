@@ -1,0 +1,8 @@
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\bin\Debug\DAO.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\bin\Debug\DAO.pdb
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\bin\Debug\DTO.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\bin\Debug\DTO.pdb
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\obj\Debug\DAO.dll
+C:\Users\vip\Documents\GitHub\Hotel_Management_Software\QuanLyHotel\DAO\obj\Debug\DAO.pdb
