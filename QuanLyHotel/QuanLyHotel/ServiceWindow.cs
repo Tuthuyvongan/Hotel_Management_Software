@@ -20,6 +20,8 @@ namespace QuanLyHotel
         public ServiceWindow()
         {
             InitializeComponent();
+            this.loadData();
+            this.loadDataRoomService();
         }
 
 

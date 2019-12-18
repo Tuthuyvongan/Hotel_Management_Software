@@ -18,7 +18,7 @@ namespace QuanLyHotel
         public CustomerWindow()
         {
             InitializeComponent();
-            
+            this.loadData();
         }
 
         private void loadData()

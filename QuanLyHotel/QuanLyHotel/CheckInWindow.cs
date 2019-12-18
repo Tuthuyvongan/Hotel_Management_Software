@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using billBUS;
 using billDTO;
+using customerBUS;
+using customerDTO;
 
 namespace QuanLyHotel
 {
@@ -32,9 +34,68 @@ namespace QuanLyHotel
             lbKind.Text = kind;
             lbBedsAmount.Text = bedamount;
             lbCost.Text = cost;
+            this.loadData();
         }
 
-        
+        private void loadData()
+        {
+            CustomerBUS ctmBus = new CustomerBUS();
+            List<CustomerDTO> list = ctmBus.select();
+
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvCustomer.Columns.Clear();
+            dtgvCustomer.DataSource = null;
+
+            dtgvCustomer.AutoGenerateColumns = false;
+            dtgvCustomer.AllowUserToAddRows = false;
+            dtgvCustomer.DataSource = list;
+
+            DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
+            ID.Name = "idc";
+            ID.HeaderText = "ID";
+            ID.DataPropertyName = "idc";
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(ID);
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(NAME);
+
+            DataGridViewTextBoxColumn DATE = new DataGridViewTextBoxColumn();
+            DATE.Name = "date";
+            DATE.HeaderText = "Date";
+            DATE.DataPropertyName = "date";
+            DATE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(DATE);
+
+            DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
+            CMND.Name = "cmnd";
+            CMND.HeaderText = "Identify card";
+            CMND.DataPropertyName = "cmnd";
+            CMND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(CMND);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "phone";
+            pHONE.HeaderText = "Phone";
+            pHONE.DataPropertyName = "phone";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(pHONE);
+
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvCustomer.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
 
         private void BtCheckIn_Click(object sender, EventArgs e)
         {

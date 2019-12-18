@@ -18,7 +18,7 @@ namespace QuanLyHotel
         public RoomWindow()
         {
             InitializeComponent();
-            loadData();
+            this.loadData();
         }
 
         
@@ -78,7 +78,7 @@ namespace QuanLyHotel
             RoomDTO rm = new RoomDTO();
             rm.Name = txtNameRoom.Text;
             rm.Roomkind = txtKindRoom.Text;
-            rm.Status = "Trống";
+            rm.Status = "Empty";
             rm.Bedamount = int.Parse(txtBedsAmount.Text);
             rm.Cost = Decimal.Parse(txtCost.Text);
             bool kq = rmBUS.add(rm);
