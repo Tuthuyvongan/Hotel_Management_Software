@@ -12,20 +12,21 @@ namespace QuanLyHotel
 {
     public partial class MainWindow : Form
     {
-
+        
         public MainWindow()
         {
             InitializeComponent();
-            homeWindow2.Dock = DockStyle.Fill;
-            homeWindow2.BringToFront();
+            homeWindow1.Dock = DockStyle.Fill;
+            homeWindow1.BringToFront();
         }
         string username = "";
         int level = 0;
         public MainWindow(string Username, int Level)
         {
             InitializeComponent();
-            homeWindow2.Dock = DockStyle.Fill;
-            homeWindow2.BringToFront();
+            homeWindow1.Dock = DockStyle.Fill;
+            homeWindow1.BringToFront();
+            
             username = Username;
             level = Level;
             if (level == 1)
@@ -51,8 +52,8 @@ namespace QuanLyHotel
 
         private void BtHome_Click(object sender, EventArgs e)
         {
-            homeWindow2.BringToFront();
-            homeWindow2.Dock = DockStyle.Fill;
+            homeWindow1.BringToFront();
+            homeWindow1.Dock = DockStyle.Fill;
         }
 
         private void BtRoom_Click(object sender, EventArgs e)
@@ -77,8 +78,8 @@ namespace QuanLyHotel
 
         private void BtAccount_Click(object sender, EventArgs e)
         {
-            accountWindow2.BringToFront();
-            accountWindow2.Dock = DockStyle.Fill;
+            accountWindow1.BringToFront();
+            accountWindow1.Dock = DockStyle.Fill;
         }
     }
 }

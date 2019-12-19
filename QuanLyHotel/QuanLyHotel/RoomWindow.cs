@@ -18,13 +18,13 @@ namespace QuanLyHotel
         public RoomWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //this.loadData();
         }
 
-        
+        private RoomBUS rmBus;
         private void loadData()
         {
-            RoomBUS rmBus = new RoomBUS();
+            rmBus = new RoomBUS();
             List<RoomDTO> list = rmBus.select();
 
             if (list == null)
@@ -72,90 +72,20 @@ namespace QuanLyHotel
             myCurrencyManager.Refresh();
         }
 
-        private void BtAddRoom_Click(object sender, EventArgs e)
-        {
-            errorProvider1.Clear();
-            errorProvider2.Clear();
-            errorProvider3.Clear();
-            errorProvider4.Clear();
 
-            if (txtNameRoom.Text == "")
-            {
-                errorProvider1.SetError(txtNameRoom, "not null!");
-            }
-            else if (txtKindRoom.Text == "")
-            {
-                errorProvider2.SetError(txtKindRoom, "not null!");
-            }
-            else if (txtBedsAmount.Text == "")
-            {
-                errorProvider3.SetError(txtBedsAmount, "not null!");
-            }
-            else if (txtCost.Text=="")
-            {
-                errorProvider4.SetError(txtCost, "not null!");
-            }
 
-            else
-            {
-                RoomBUS rmBUS = new RoomBUS();
-                RoomDTO rm = new RoomDTO();
-                rm.Name = txtNameRoom.Text;
-                rm.Roomkind = txtKindRoom.Text;
-                rm.Status = "Empty";
-                rm.Bedamount = int.Parse(txtBedsAmount.Text);
-                rm.Cost = Decimal.Parse(txtCost.Text);
-                bool kq = rmBUS.add(rm);
-                if (kq == false)
-                    MessageBox.Show("Fail!");
-                else
-                    MessageBox.Show("Sussces");
-                this.loadData();
-            }
-        }
 
-        private void BtEditRoom_Click(object sender, EventArgs e)
-        {
-            RoomBUS rmBUS = new RoomBUS();
-            RoomDTO rm = new RoomDTO();
-            rm.Name = txtNameRoom.Text;
-            rm.Roomkind = txtKindRoom.Text;
-            rm.Status = "Trống";
-            rm.Bedamount = int.Parse(txtBedsAmount.Text);
-            rm.Cost = Decimal.Parse(txtCost.Text);
-            bool kq = rmBUS.edit(rm);
-            if (kq == false)
-                MessageBox.Show("Fail!");
-            else
-                MessageBox.Show("Sussces");
-            this.loadData();
-        }
 
-        private void BtDeleteRoom_Click(object sender, EventArgs e)
-        {
-            RoomBUS rmBUS = new RoomBUS();
-            RoomDTO rm = new RoomDTO();
-            rm.Name = txtNameRoom.Text;
-            rm.Roomkind = txtKindRoom.Text;
-            rm.Status = "Trống";
-            rm.Bedamount = int.Parse(txtBedsAmount.Text);
-            rm.Cost = Decimal.Parse(txtCost.Text);
-            bool kq = rmBUS.delete(rm);
-            if (kq == false)
-                MessageBox.Show("Fail!");
-            else
-                MessageBox.Show("Sussces");
-            this.loadData();
-        }
+
 
         private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
             numrow = e.RowIndex;
-            txtNameRoom.Text = dtgvRoom.Rows[numrow].Cells[1].Value.ToString();
-            txtKindRoom.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
-            txtBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
-            txtCost.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
+            txtNameRoom.Text = dtgvRoom.Rows[numrow].Cells[0].Value.ToString();
+            txtKindRoom.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
+            txtBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
+          
         }
 
         private void TxtBedsAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -184,6 +114,90 @@ namespace QuanLyHotel
             {
                 errorProvider6.Clear();
             }
+        }
+
+        private void btLoadRoom_Click(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void btAddRoom_Click_1(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+            errorProvider4.Clear();
+
+            if (txtNameRoom.Text == "")
+            {
+                errorProvider1.SetError(txtNameRoom, "not null!");
+            }
+            else if (txtKindRoom.Text == "")
+            {
+                errorProvider2.SetError(txtKindRoom, "not null!");
+            }
+            else if (txtBedsAmount.Text == "")
+            {
+                errorProvider3.SetError(txtBedsAmount, "not null!");
+            }
+            else if (txtCost.Text == "")
+            {
+                errorProvider4.SetError(txtCost, "not null!");
+            }
+
+            else
+            {
+                rmBus = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.Idr = txtNameRoom.Text;
+                rm.Name = txtNameRoom.Text;
+                rm.Roomkind = txtKindRoom.Text;
+                rm.Status = "Empty";
+                rm.Bedamount = int.Parse(txtBedsAmount.Text);
+                rm.Cost = Decimal.Parse(txtCost.Text);
+                bool kq = rmBus.add(rm);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+            }
+        }
+
+        private void btEditRoom_Click_1(object sender, EventArgs e)
+        {
+            rmBus = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.Idr = txtNameRoom.Text;
+            rm.Name = txtNameRoom.Text;
+            rm.Roomkind = txtKindRoom.Text;
+            rm.Status = "Empty";
+            rm.Bedamount = int.Parse(txtBedsAmount.Text);
+            rm.Cost = Decimal.Parse(txtCost.Text);
+            bool kq = rmBus.edit(rm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void btDeleteRoom_Click_1(object sender, EventArgs e)
+        {
+            rmBus = new RoomBUS();
+            RoomDTO rm = new RoomDTO();
+            rm.Idr = txtNameRoom.Text;
+            rm.Name = txtNameRoom.Text;
+            rm.Roomkind = txtKindRoom.Text;
+            rm.Status = "Empty";
+            rm.Bedamount = int.Parse(txtBedsAmount.Text);
+            rm.Cost = Decimal.Parse(txtCost.Text);
+            bool kq = rmBus.delete(rm);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
         }
     }
 }

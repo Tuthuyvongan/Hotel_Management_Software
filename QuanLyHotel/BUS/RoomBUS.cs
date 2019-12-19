@@ -33,6 +33,12 @@ namespace roomBUS
             return re;
         }
 
+        public bool editStatus(RoomDTO pt)
+        {
+            bool re = rDao.editStatus(pt);
+            return re;
+        }
+
         public List<RoomDTO> select()
         {
             return rDao.select();

@@ -11,6 +11,8 @@ using billBUS;
 using billDTO;
 using customerBUS;
 using customerDTO;
+using roomDTO;
+using roomBUS;
 
 namespace QuanLyHotel
 {
@@ -20,26 +22,25 @@ namespace QuanLyHotel
         {
             InitializeComponent();
         }
-        string username = "";
-        //int level = 0;
+
         
-        public string idm = "";
         
-        public CheckInWindow(string Username,/*, int Level*/string name, string kind, string bedamount, string cost)
+        public CheckInWindow(string name, string kind, string bedamount, string cost)
         {
             InitializeComponent();
-            username = Username;
             //level = Level;
             lbNameRoom.Text = name;
             lbKind.Text = kind;
             lbBedsAmount.Text = bedamount;
             lbCost.Text = cost;
-            this.loadData();
+            //this.loadData();
         }
-
+        private CustomerBUS ctmBus;
+        
+        private BillBUS bllBUS;
         private void loadData()
         {
-            CustomerBUS ctmBus = new CustomerBUS();
+            ctmBus = new CustomerBUS();
             List<CustomerDTO> list = ctmBus.select();
 
             if (list == null)
@@ -54,26 +55,15 @@ namespace QuanLyHotel
             dtgvCustomer.AllowUserToAddRows = false;
             dtgvCustomer.DataSource = list;
 
-            DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
-            ID.Name = "idc";
-            ID.HeaderText = "ID";
-            ID.DataPropertyName = "idc";
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvCustomer.Columns.Add(ID);
+           
 
             DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
-            NAME.Name = "name";
+            NAME.Name = "idc";
             NAME.HeaderText = "Name:";
-            NAME.DataPropertyName = "name";
+            NAME.DataPropertyName = "idc";
             NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvCustomer.Columns.Add(NAME);
 
-            DataGridViewTextBoxColumn DATE = new DataGridViewTextBoxColumn();
-            DATE.Name = "date";
-            DATE.HeaderText = "Date";
-            DATE.DataPropertyName = "date";
-            DATE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvCustomer.Columns.Add(DATE);
 
             DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
             CMND.Name = "cmnd";
@@ -99,11 +89,10 @@ namespace QuanLyHotel
 
         private void BtCheckIn_Click(object sender, EventArgs e)
         {
-            BillBUS bllBUS = new BillBUS();
+            bllBUS = new BillBUS();
             BillDTO bll = new BillDTO();
             bll.IDB = lbNameCustomer.Text+"/"+dtCheckIn.Text+"/"+dtCheckOut.Text+"@"+lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
-            bll.IDM = username;
             bll.IDR = lbNameRoom.Text;
             
             bll.CheckIn =DateTime.Parse(dtCheckIn.Text);
@@ -114,6 +103,7 @@ namespace QuanLyHotel
                 MessageBox.Show("Fail!");
             else
                 MessageBox.Show("Sussces");
+            
             this.Close();
         }
 
@@ -121,13 +111,15 @@ namespace QuanLyHotel
         {
             int numrow;
             numrow = e.RowIndex;
-            lbNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
-            lbIdentifyCard.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
-            lbPhone.Text = dtgvCustomer.Rows[numrow].Cells[3].Value.ToString();
-            lbNameRoom.Text = dtgvCustomer.Rows[numrow].Cells[4].Value.ToString();
-            lbKind.Text = dtgvCustomer.Rows[numrow].Cells[5].Value.ToString();
-            lbBedsAmount.Text = dtgvCustomer.Rows[numrow].Cells[6].Value.ToString();
-            lbCost.Text = dtgvCustomer.Rows[numrow].Cells[7].Value.ToString();
+            lbNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[0].Value.ToString();
+            lbIdentifyCard.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
+            lbPhone.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
+            
+        }
+
+        private void btLoadCustomer_Click(object sender, EventArgs e)
+        {
+            this.loadData();
         }
     }
 }

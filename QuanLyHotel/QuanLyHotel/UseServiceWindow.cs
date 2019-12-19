@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using roomServiceBUS;
 using roomserviceDTO;
-using roomServiceBUS;
 using serviceBUS;
 using serviceDTO;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace QuanLyHotel
 {
@@ -19,20 +13,22 @@ namespace QuanLyHotel
         public UseServiceWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //this.loadData();
         }
         public UseServiceWindow(string name, string kind, string bedamount)
         {
             InitializeComponent();
-            this.loadData();
+            //this.loadData();
             lbNameRoom.Text = name;
             lbKindRoom.Text = kind;
             lbBedsAmount.Text = bedamount;
         }
+        private ServiceBUS srvBus;
+        private RoomServiceBUS roomServiceBUS;
         private void loadData()
         {
-            ServiceBUS ctmBus = new ServiceBUS();
-            List<ServiceDTO> list = ctmBus.select();
+            srvBus = new ServiceBUS();
+            List<ServiceDTO> list = srvBus.select();
 
             if (list == null)
             {
@@ -75,39 +71,6 @@ namespace QuanLyHotel
         }
         
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            errorProvider1.Clear();
-            //errorProvider2.Clear();
-
-            if (txtNumberService.Text == "")
-            {
-                errorProvider1.SetError(txtNumberService, "not null!");
-            }
-            //else if (txtKindService.Text == "")
-            //{
-            //    errorProvider2.SetError(txtKindService, "not null!");
-            //}
-            
-            else
-            {
-                RoomServiceBUS roomServiceBUS = new RoomServiceBUS();
-                RoomServiceDTO roomService = new RoomServiceDTO();
-                roomService.IDR_S = lbNameRoom.Text;
-                roomService.IDR = lbNameRoom.Text;
-                roomService.IDS = lbNameService.Text;
-                roomService.TIME = DateTime.Parse(dtDateService.Text);
-                roomService.NUMBER = int.Parse(txtNumberService.Text);
-                roomService.COST = Decimal.Parse(lbCost.Text) * Decimal.Parse(txtNumberService.Text);
-                bool kq = roomServiceBUS.add(roomService);
-                if (kq == false)
-                    MessageBox.Show("Fail!");
-                else
-                    MessageBox.Show("Sussces");
-                this.loadData();
-                this.Close();
-            }
-        }
 
         private void TxtNumberService_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -121,6 +84,55 @@ namespace QuanLyHotel
             {
                 errorProvider3.Clear();
             }
+        }
+
+        private void btLoadCustomer_Click(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void dtgvService_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            lbNameService.Text = dtgvService.Rows[numrow].Cells[0].Value.ToString();
+            lbKindRoom.Text = dtgvService.Rows[numrow].Cells[1].Value.ToString();
+            lbCost.Text = dtgvService.Rows[numrow].Cells[2].Value.ToString();
+        }
+
+        private void btUseService_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            //errorProvider2.Clear();
+
+            if (txtNumberService.Text == "")
+            {
+                errorProvider1.SetError(txtNumberService, "not null!");
+            }
+            //else if (txtKindService.Text == "")
+            //{
+            //    errorProvider2.SetError(txtKindService, "not null!");
+            //}
+
+            else
+            {
+                roomServiceBUS = new RoomServiceBUS();
+                RoomServiceDTO roomService = new RoomServiceDTO();
+                roomService.IDR_S = lbNameRoom.Text;
+                roomService.IDR = lbNameRoom.Text;
+                roomService.IDS = lbNameService.Text;
+                roomService.TIME = DateTime.Parse(dtDateService.Text);
+                roomService.NUMBER = int.Parse(txtNumberService.Text);
+                roomService.COST = Decimal.Parse(lbCost.Text) * Decimal.Parse(txtNumberService.Text);
+                bool kq = roomServiceBUS.add(roomService);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+
+            }
+            this.Close();
         }
     }
 }

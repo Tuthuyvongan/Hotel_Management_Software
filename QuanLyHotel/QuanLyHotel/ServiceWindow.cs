@@ -20,15 +20,16 @@ namespace QuanLyHotel
         public ServiceWindow()
         {
             InitializeComponent();
-            this.loadData();
-            this.loadDataRoomService();
+            //loadData();
+            //this.loadDataRoomService();
         }
 
-
+        private ServiceBUS srvBUS;
+        private RoomServiceBUS rsrvBus;
         private void loadData()
         {
-            ServiceBUS ctmBus = new ServiceBUS();
-            List<ServiceDTO> list = ctmBus.select();
+            srvBUS = new ServiceBUS();
+            List<ServiceDTO> list = srvBUS.select();
 
             if (list == null)
             {
@@ -69,75 +70,10 @@ namespace QuanLyHotel
 
 
         }
-        private void BtAddService_Click(object sender, EventArgs e)
-        {
-            errorProvider1.Clear();
-            errorProvider2.Clear();
-            errorProvider3.Clear();
 
 
-            if (txtNameService.Text == "")
-            {
-                errorProvider1.SetError(txtNameService, "not null!");
-            }
-            else if (txtKindService.Text == "")
-            {
-                errorProvider2.SetError(txtKindService, "not null!");
-            }
-            else if (txtCostService.Text == "")
-            {
-                errorProvider3.SetError(txtCostService, "not null!");
-            }
-            
 
-            else
-            {
-                ServiceBUS srvBUS = new ServiceBUS();
-                ServiceDTO srv = new ServiceDTO();
-                srv.IDS = txtNameService.Text;
-                srv.NAME = txtNameService.Text;
-                srv.KIND = txtKindService.Text;
-                srv.COST = Decimal.Parse(txtCostService.Text);
-                bool kq = srvBUS.add(srv);
-                if (kq == false)
-                    MessageBox.Show("Fail!");
-                else
-                    MessageBox.Show("Sussces");
-                this.loadData();
-            }
-        }
 
-        private void BtEditService_Click(object sender, EventArgs e)
-        {
-            ServiceBUS srvBUS = new ServiceBUS();
-            ServiceDTO srv = new ServiceDTO();
-            srv.IDS = txtNameService.Text;
-            srv.NAME = txtNameService.Text;
-            srv.KIND = txtKindService.Text;
-            srv.COST = Decimal.Parse(txtCostService.Text);
-            bool kq = srvBUS.edit(srv);
-            if (kq == false)
-                MessageBox.Show("Fail!");
-            else
-                MessageBox.Show("Sussces");
-            this.loadData();
-        }
-
-        private void BtDeleteService_Click(object sender, EventArgs e)
-        {
-            ServiceBUS srvBUS = new ServiceBUS();
-            ServiceDTO srv = new ServiceDTO();
-            srv.IDS = txtNameService.Text;
-            srv.NAME = txtNameService.Text;
-            srv.KIND = txtKindService.Text;
-            srv.COST = Decimal.Parse(txtCostService.Text);
-            bool kq = srvBUS.delete(srv);
-            if (kq == false)
-                MessageBox.Show("Fail!");
-            else
-                MessageBox.Show("Sussces");
-            this.loadData();
-        }
 
         private void BtLoadService_Click(object sender, EventArgs e)
         {
@@ -146,8 +82,8 @@ namespace QuanLyHotel
 
         private void loadDataRoomService()
         {
-            RoomServiceBUS ctmBus = new RoomServiceBUS();
-            List<RoomServiceDTO> list = ctmBus.select();
+            rsrvBus = new RoomServiceBUS();
+            List<RoomServiceDTO> list = rsrvBus.select();
 
             if (list == null)
             {
@@ -215,6 +151,89 @@ namespace QuanLyHotel
             {
                 errorProvider4.Clear();
             }
+        }
+
+        private void btLoadService_Click_1(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.loadDataRoomService();
+        }
+
+        private void btAddService_Click_1(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+
+
+            if (txtNameService.Text == "")
+            {
+                errorProvider1.SetError(txtNameService, "not null!");
+            }
+            else if (txtKindService.Text == "")
+            {
+                errorProvider2.SetError(txtKindService, "not null!");
+            }
+            else if (txtCostService.Text == "")
+            {
+                errorProvider3.SetError(txtCostService, "not null!");
+            }
+
+
+            else
+            {
+                srvBUS = new ServiceBUS();
+
+                ServiceDTO srv = new ServiceDTO();
+                srv.IDS = txtNameService.Text;
+                srv.NAME = txtNameService.Text;
+                srv.KIND = txtKindService.Text;
+                srv.COST = Decimal.Parse(txtCostService.Text);
+                bool kq = srvBUS.add(srv);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+            }
+        }
+
+        private void btEditService_Click_1(object sender, EventArgs e)
+        {
+            srvBUS = new ServiceBUS();
+
+            ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
+            srv.NAME = txtNameService.Text;
+            srv.KIND = txtKindService.Text;
+            srv.COST = Decimal.Parse(txtCostService.Text);
+            bool kq = srvBUS.edit(srv);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void btDeleteService_Click_1(object sender, EventArgs e)
+        {
+            srvBUS = new ServiceBUS();
+
+            ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
+            srv.NAME = txtNameService.Text;
+            srv.KIND = txtKindService.Text;
+            srv.COST = Decimal.Parse(txtCostService.Text);
+            bool kq = srvBUS.delete(srv);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
         }
     }
 }

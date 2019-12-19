@@ -18,7 +18,7 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //loadData();
         }
         string username = "";
         public HomeWindow(string Username)
@@ -41,9 +41,10 @@ namespace QuanLyHotel
             //    panelflr.Controls.Add(btn);
             //}
         }
+        private RoomBUS rmBus;
         private void loadData()
         {
-            RoomBUS rmBus = new RoomBUS();
+            rmBus = new RoomBUS();
             List<RoomDTO> list = rmBus.select();
 
             if (list == null)
@@ -87,36 +88,53 @@ namespace QuanLyHotel
             pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvRoom.Columns.Add(pHONE);
 
+            DataGridViewTextBoxColumn Cost = new DataGridViewTextBoxColumn();
+            Cost.Name = "cost";
+            Cost.HeaderText = "Cost";
+            Cost.DataPropertyName = "cost";
+            Cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(Cost);
+
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
         }
-        private void BtCheckOut_Click_1(object sender, EventArgs e)
-        {
-            CheckOutWindow checkOut = new CheckOutWindow();
-            checkOut.Show();
-        }
-
-        private void BtUseService_Click_1(object sender, EventArgs e)
-        {
-            UseServiceWindow useService = new UseServiceWindow(lbName.Text,lbKind.Text,lbBedsAmount.Text);
-            useService.Show();
-        }
-
-        private void BtCheckInRoom_Click(object sender, EventArgs e)
-        {
-            CheckInWindow checkIn = new CheckInWindow(username,lbName.Text,lbKind.Text,lbBedsAmount.Text,lbCost.Text);
-            checkIn.Show();
-        }
+       
 
         private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
             numrow = e.RowIndex;
-            lbName.Text = dtgvRoom.Rows[numrow].Cells[1].Value.ToString();
-            lbKind.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
-            lbStatus.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
-            lbBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
-            lbCost.Text = dtgvRoom.Rows[numrow].Cells[4].Value.ToString();
+            lbName.Text = dtgvRoom.Rows[numrow].Cells[0].Value.ToString();
+            lbStatus.Text = dtgvRoom.Rows[numrow].Cells[1].Value.ToString();
+            lbBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
+            lbKind.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
+            lbCost.Text = Convert.ToString(dtgvRoom.Rows[numrow].Cells[4].Value);
+            
+        }
+
+        private void btLoadRoom_Click(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void btCheckInRoom_Click_1(object sender, EventArgs e)
+        {
+            
+           
+        CheckInWindow checkIn = new CheckInWindow( lbName.Text, lbKind.Text, lbBedsAmount.Text, lbCost.Text);
+            checkIn.Show();
+        }
+
+        private void btCheckOut_Click(object sender, EventArgs e)
+        {
+            CheckOutWindow checkOut = new CheckOutWindow();
+            checkOut.Show();
+        }
+
+        private void btUseService_Click(object sender, EventArgs e)
+        {
+            UseServiceWindow useService = new UseServiceWindow(lbName.Text, lbKind.Text, lbBedsAmount.Text);
+            useService.Show();
         }
     }
 }

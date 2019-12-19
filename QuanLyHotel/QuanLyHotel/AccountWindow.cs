@@ -17,12 +17,13 @@ namespace QuanLyHotel
         public AccountWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //loadData();
         }
+        private UserBUS userBUS;
         private void loadData()
         {
-            UserBUS ctmBus = new UserBUS();
-            List<UserDTO> list = ctmBus.select();
+            userBUS = new UserBUS();
+            List<UserDTO> list = userBUS.select();
 
             if (list == null)
             {
@@ -100,7 +101,7 @@ namespace QuanLyHotel
 
         private void BtEditAccount_Click(object sender, EventArgs e)
         {
-            UserBUS ctmBUS = new UserBUS();
+            userBUS = new UserBUS();
             UserDTO ctm = new UserDTO();
             ctm.Idm = ctm.Idm;
             ctm.Password = ctm.Password;
@@ -110,7 +111,7 @@ namespace QuanLyHotel
             ctm.Cmnd = lbCmnd.Text;
             ctm.Level = ctm.Level;
             ctm.Gender = lbGender.Text;
-            bool kq = ctmBUS.edit(ctm);
+            bool kq = userBUS.edit(ctm);
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
@@ -120,7 +121,7 @@ namespace QuanLyHotel
 
         private void BtDeleteAcount_Click(object sender, EventArgs e)
         {
-            UserBUS ctmBUS = new UserBUS();
+            userBUS = new UserBUS();
             UserDTO ctm = new UserDTO();
             ctm.Idm = ctm.Idm;
             ctm.Password = ctm.Password;
@@ -130,12 +131,25 @@ namespace QuanLyHotel
             ctm.Cmnd = lbCmnd.Text;
             ctm.Level = ctm.Level;
             ctm.Gender = lbGender.Text;
-            bool kq = ctmBUS.delete(ctm);
+            bool kq = userBUS.delete(ctm);
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
                 MessageBox.Show("Sussces");
             this.loadData();
+        }
+
+        private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            lbUsername.Text = dtgvAccount.Rows[numrow].Cells[0].Value.ToString();
+            lbPassword.Text = dtgvAccount.Rows[numrow].Cells[1].Value.ToString();
+            lbName.Text = dtgvAccount.Rows[numrow].Cells[2].Value.ToString();
+            lbGender.Text = dtgvAccount.Rows[numrow].Cells[3].Value.ToString();
+            lbEmail.Text = dtgvAccount.Rows[numrow].Cells[6].Value.ToString();
+            lbPhone.Text = dtgvAccount.Rows[numrow].Cells[5].Value.ToString();
+            lbCmnd.Text = dtgvAccount.Rows[numrow].Cells[4].Value.ToString();
         }
     }
 }

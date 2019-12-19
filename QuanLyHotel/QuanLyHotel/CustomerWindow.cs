@@ -18,13 +18,13 @@ namespace QuanLyHotel
         public CustomerWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //loadData();
         }
-
+        private CustomerBUS ctmBUS;
         private void loadData()
         {
-            CustomerBUS ctmBus = new CustomerBUS();
-            List<CustomerDTO> list = ctmBus.select();
+            ctmBUS = new CustomerBUS();
+            List<CustomerDTO> list = ctmBUS.select();
 
             if (list == null)
             {
@@ -81,13 +81,55 @@ namespace QuanLyHotel
 
         }
 
-        private void BtAddCustomer_Click(object sender, EventArgs e)
+
+
+
+
+        private void BtLoadCustomer_Click(object sender, EventArgs e)
+        {
+            this.loadData();
+
+        }
+
+
+
+        private void dtgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txtNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
+            txtIdentifyCardCustomer.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
+            txtPhoneCustomer.Text = dtgvCustomer.Rows[numrow].Cells[3].Value.ToString();
+            //dtBirthday.Text = dtgvCustomer.Rows[numrow].Cells[4].Value.ToString();
+        }
+
+        private void TxtPhoneCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            int keydown = e.KeyChar;
+            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
+            {
+                errorProvider5.SetError(txtPhoneCustomer, "Không được nhập chữ");
+                e.KeyChar = (char)0;
+            }
+            else
+            {
+                errorProvider5.Clear();
+            }
+        }
+
+        private void btLoadCustomer_Click_1(object sender, EventArgs e)
+        {
+            this.loadData();
+        }
+
+        private void btAddCustomer_Click_1(object sender, EventArgs e)
         {
             errorProvider1.Clear();
             errorProvider2.Clear();
             errorProvider3.Clear();
             //errorProvider4.Clear();
-            
+
             if (txtNameCustomer.Text == "")
             {
                 errorProvider1.SetError(txtNameCustomer, "not null!");
@@ -107,14 +149,14 @@ namespace QuanLyHotel
 
             else
             {
-                CustomerBUS ctmBUS = new CustomerBUS();
+                ctmBUS = new CustomerBUS();
                 CustomerDTO ctm = new CustomerDTO();
                 ctm.IDC = txtNameCustomer.Text;
                 ctm.NAME = txtNameCustomer.Text;
                 ctm.PHONE = txtPhoneCustomer.Text;
                 ctm.DATE = DateTime.Parse(dtBirthday.Text);
                 ctm.CMND = txtIdentifyCardCustomer.Text;
-            
+
                 bool kq = ctmBUS.add(ctm);
                 if (kq == false)
                     MessageBox.Show("Fail!");
@@ -124,9 +166,9 @@ namespace QuanLyHotel
             }
         }
 
-        private void BtEditCustomer_Click(object sender, EventArgs e)
+        private void btEditCustomer_Click_1(object sender, EventArgs e)
         {
-            CustomerBUS ctmBUS = new CustomerBUS();
+            ctmBUS = new CustomerBUS();
             CustomerDTO ctm = new CustomerDTO();
             ctm.IDC = txtNameCustomer.Text;
             ctm.NAME = txtNameCustomer.Text;
@@ -141,15 +183,9 @@ namespace QuanLyHotel
             this.loadData();
         }
 
-        private void BtLoadCustomer_Click(object sender, EventArgs e)
+        private void btDeleteCustomer_Click_1(object sender, EventArgs e)
         {
-            this.loadData();
-
-        }
-
-        private void BtDeleteCustomer_Click(object sender, EventArgs e)
-        {
-            CustomerBUS ctmBUS = new CustomerBUS();
+            ctmBUS = new CustomerBUS();
             CustomerDTO ctm = new CustomerDTO();
             ctm.IDC = txtNameCustomer.Text;
             ctm.NAME = txtNameCustomer.Text;
@@ -162,31 +198,6 @@ namespace QuanLyHotel
             else
                 MessageBox.Show("Sussces");
             this.loadData();
-        }
-
-        private void dtgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int numrow;
-            numrow = e.RowIndex;
-            txtNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
-            txtIdentifyCardCustomer.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
-            txtPhoneCustomer.Text = dtgvCustomer.Rows[numrow].Cells[3].Value.ToString();
-            dtBirthday.Text = dtgvCustomer.Rows[numrow].Cells[4].Value.ToString();
-        }
-
-        private void TxtPhoneCustomer_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-            int keydown = e.KeyChar;
-            if (keydown > 57 || (keydown < 48 && keydown > 9 && keydown < 7))
-            {
-                errorProvider5.SetError(txtPhoneCustomer, "Không được nhập chữ");
-                e.KeyChar = (char)0;
-            }
-            else
-            {
-                errorProvider5.Clear();
-            }
         }
     }
 }

@@ -17,8 +17,9 @@ namespace QuanLyHotel
         public CheckOutWindow()
         {
             InitializeComponent();
-            this.loadData();
+            //this.loadData();
         }
+        private BillBUS bllBus;
         string username = "";
         public CheckOutWindow(string Username)
         {
@@ -26,8 +27,8 @@ namespace QuanLyHotel
         }
         private void loadData()
         {
-            BillBUS ctmBus = new BillBUS();
-            List<BillDTO> list = ctmBus.select();
+            bllBus = new BillBUS();
+            List<BillDTO> list = bllBus.select();
 
             if (list == null)
             {
@@ -55,12 +56,6 @@ namespace QuanLyHotel
             IDC.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvBill.Columns.Add(IDC);
 
-            DataGridViewTextBoxColumn IDM = new DataGridViewTextBoxColumn();
-            IDM.Name = "idm";
-            IDM.HeaderText = "Manager";
-            IDM.DataPropertyName = "idm";
-            IDM.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvBill.Columns.Add(IDM);
 
             DataGridViewTextBoxColumn Cost = new DataGridViewTextBoxColumn();
             Cost.Name = "cost";
@@ -89,25 +84,41 @@ namespace QuanLyHotel
 
 
         }
-        private void BtCheckOut_Click(object sender, EventArgs e)
+
+        private void btLoadCustomer_Click(object sender, EventArgs e)
         {
-            BillBUS bllBUS = new BillBUS();
+            this.loadData();
+        }
+
+        private void btCheckOut_Click_1(object sender, EventArgs e)
+        {
+            bllBus = new BillBUS();
             BillDTO bll = new BillDTO();
             bll.IDB = lbNameCustomer.Text + "/" + lbCheckIn.Text + "/" + lbCheckOut.Text + "@" + lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
-            bll.IDM = username;
             bll.IDR = lbNameRoom.Text;
 
             bll.CheckIn = DateTime.Parse(lbCheckIn.Text);
             bll.CheckOut = DateTime.Parse(lbCheckOut.Text);
             lbCostRoom.Text = bll.COST.ToString();
             bll.COST = Decimal.Parse(lbCostRoom.Text);/**Decimal.Parse((dtCheckOut-dtCheckIn).Tostring())*/
-            bool kq = bllBUS.edit(bll);
+            bool kq = bllBus.edit(bll);
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
                 MessageBox.Show("Sussces");
             this.Close();
+        }
+
+        private void dtgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            lbNameRoom.Text = dtgvBill.Rows[numrow].Cells[0].Value.ToString();
+            lbNameCustomer.Text = dtgvBill.Rows[numrow].Cells[1].Value.ToString();
+            lbSumCost.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[2].Value);
+            lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[3].Value);
+            lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[4].Value);
         }
     }
 }

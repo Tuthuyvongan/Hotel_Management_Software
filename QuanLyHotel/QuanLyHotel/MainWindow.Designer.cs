@@ -36,12 +36,11 @@
             this.btRoom = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btService = new System.Windows.Forms.Button();
-            this.homeWindow2 = new QuanLyHotel.HomeWindow();
-            this.accountWindow2 = new QuanLyHotel.AccountWindow();
+            this.accountWindow1 = new QuanLyHotel.AccountWindow();
             this.customerWindow1 = new QuanLyHotel.CustomerWindow();
-            this.serviceWindow1 = new QuanLyHotel.ServiceWindow();
             this.roomWindow1 = new QuanLyHotel.RoomWindow();
-            this.settingWindow1 = new QuanLyHotel.SettingWindow();
+            this.serviceWindow1 = new QuanLyHotel.ServiceWindow();
+            this.homeWindow1 = new QuanLyHotel.HomeWindow();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,70 +201,56 @@
             this.btService.UseVisualStyleBackColor = true;
             this.btService.Click += new System.EventHandler(this.BtService_Click);
             // 
-            // homeWindow2
+            // accountWindow1
             // 
-            this.homeWindow2.Location = new System.Drawing.Point(226, 0);
-            this.homeWindow2.Margin = new System.Windows.Forms.Padding(0);
-            this.homeWindow2.MinimumSize = new System.Drawing.Size(1095, 802);
-            this.homeWindow2.Name = "homeWindow2";
-            this.homeWindow2.Size = new System.Drawing.Size(1095, 802);
-            this.homeWindow2.TabIndex = 5;
-            // 
-            // accountWindow2
-            // 
-            this.accountWindow2.Location = new System.Drawing.Point(204, 0);
-            this.accountWindow2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.accountWindow2.MinimumSize = new System.Drawing.Size(1095, 802);
-            this.accountWindow2.Name = "accountWindow2";
-            this.accountWindow2.Size = new System.Drawing.Size(1095, 802);
-            this.accountWindow2.TabIndex = 6;
+            this.accountWindow1.Location = new System.Drawing.Point(414, 71);
+            this.accountWindow1.Margin = new System.Windows.Forms.Padding(4);
+            this.accountWindow1.Name = "accountWindow1";
+            this.accountWindow1.Size = new System.Drawing.Size(50, 50);
+            this.accountWindow1.TabIndex = 5;
             // 
             // customerWindow1
             // 
-            this.customerWindow1.Location = new System.Drawing.Point(204, 0);
+            this.customerWindow1.Location = new System.Drawing.Point(459, 85);
             this.customerWindow1.Margin = new System.Windows.Forms.Padding(4);
-            this.customerWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
             this.customerWindow1.Name = "customerWindow1";
-            this.customerWindow1.Size = new System.Drawing.Size(1095, 802);
-            this.customerWindow1.TabIndex = 7;
-            // 
-            // serviceWindow1
-            // 
-            this.serviceWindow1.Location = new System.Drawing.Point(208, 0);
-            this.serviceWindow1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.serviceWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
-            this.serviceWindow1.Name = "serviceWindow1";
-            this.serviceWindow1.Size = new System.Drawing.Size(1095, 802);
-            this.serviceWindow1.TabIndex = 8;
+            this.customerWindow1.Size = new System.Drawing.Size(50, 50);
+            this.customerWindow1.TabIndex = 6;
             // 
             // roomWindow1
             // 
-            this.roomWindow1.Location = new System.Drawing.Point(206, 0);
+            this.roomWindow1.Location = new System.Drawing.Point(482, 69);
             this.roomWindow1.Margin = new System.Windows.Forms.Padding(4);
-            this.roomWindow1.MinimumSize = new System.Drawing.Size(1095, 802);
             this.roomWindow1.Name = "roomWindow1";
-            this.roomWindow1.Size = new System.Drawing.Size(1157, 802);
-            this.roomWindow1.TabIndex = 9;
+            this.roomWindow1.Size = new System.Drawing.Size(50, 50);
+            this.roomWindow1.TabIndex = 8;
             // 
-            // settingWindow1
+            // serviceWindow1
             // 
-            this.settingWindow1.Location = new System.Drawing.Point(226, 39);
-            this.settingWindow1.Margin = new System.Windows.Forms.Padding(0);
-            this.settingWindow1.Name = "settingWindow1";
-            this.settingWindow1.Size = new System.Drawing.Size(1253, 763);
-            this.settingWindow1.TabIndex = 10;
+            this.serviceWindow1.Location = new System.Drawing.Point(488, 103);
+            this.serviceWindow1.Margin = new System.Windows.Forms.Padding(4);
+            this.serviceWindow1.Name = "serviceWindow1";
+            this.serviceWindow1.Size = new System.Drawing.Size(50, 50);
+            this.serviceWindow1.TabIndex = 9;
+            // 
+            // homeWindow1
+            // 
+            this.homeWindow1.Location = new System.Drawing.Point(488, 157);
+            this.homeWindow1.Margin = new System.Windows.Forms.Padding(0);
+            this.homeWindow1.Name = "homeWindow1";
+            this.homeWindow1.Size = new System.Drawing.Size(50, 50);
+            this.homeWindow1.TabIndex = 10;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1376, 891);
-            this.Controls.Add(this.settingWindow1);
-            this.Controls.Add(this.roomWindow1);
+            this.Controls.Add(this.homeWindow1);
             this.Controls.Add(this.serviceWindow1);
+            this.Controls.Add(this.roomWindow1);
             this.Controls.Add(this.customerWindow1);
-            this.Controls.Add(this.accountWindow2);
-            this.Controls.Add(this.homeWindow2);
+            this.Controls.Add(this.accountWindow1);
             this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -287,16 +272,10 @@
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btService;
         private System.Windows.Forms.Button btMenu;
-        private RoomWindow roomWindow2;
-        private ServiceWindow serviceWindow2;
-        private CustomerWindow customerWindow2;
-        private HomeWindow homeWindow1;
         private AccountWindow accountWindow1;
-        private HomeWindow homeWindow2;
-        private AccountWindow accountWindow2;
         private CustomerWindow customerWindow1;
-        private ServiceWindow serviceWindow1;
         private RoomWindow roomWindow1;
-        private SettingWindow settingWindow1;
+        private ServiceWindow serviceWindow1;
+        private HomeWindow homeWindow1;
     }
 }

@@ -25,8 +25,8 @@ namespace billDAO
         public bool add(BillDTO bll)
         {
             string query = string.Empty;
-            query += "INSERT INTO [bill] (idb,idr,idc,idm,cost,check,checkout) ";
-            query += "VALUES (@idb,@idr,@idc,@idm,@cost,@checkin,@checkout)";
+            query += "INSERT INTO [bill] (idb,idr,idc,cost,checkin,checkout) ";
+            query += "VALUES (@idb,@idr,@idc,@cost,@checkin,@checkout)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -38,7 +38,6 @@ namespace billDAO
                     cmd.Parameters.AddWithValue("@idb", bll.IDB);
                     cmd.Parameters.AddWithValue("@idr", bll.IDR);
                     cmd.Parameters.AddWithValue("@idc", bll.IDC);
-                    cmd.Parameters.AddWithValue("@idm", bll.IDM);
                     cmd.Parameters.AddWithValue("@cost", bll.COST);
                     cmd.Parameters.AddWithValue("@checkin", bll.CheckIn);
                     cmd.Parameters.AddWithValue("@checkout", bll.CheckOut);
@@ -98,7 +97,7 @@ namespace billDAO
         public bool edit(BillDTO bll)
         {
             string query = string.Empty;
-            query += "UPDATE bill SET [idr] = @idr, [idc] = @idc, [idm] = @idm, [cost] = @cost, [checkin] = @checkin, [checkout] = @checkout  WHERE [idb] = @idb";
+            query += "UPDATE bill SET [idr] = @idr, [idc] = @idc, [cost] = @cost, [checkin] = @checkin, [checkout] = @checkout  WHERE [idb] = @idb";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -110,7 +109,6 @@ namespace billDAO
                     cmd.Parameters.AddWithValue("@idb", bll.IDB);
                     cmd.Parameters.AddWithValue("@idr", bll.IDR);
                     cmd.Parameters.AddWithValue("@idc", bll.IDC);
-                    cmd.Parameters.AddWithValue("@idm", bll.IDM);
                     cmd.Parameters.AddWithValue("@cost", bll.COST);
                     cmd.Parameters.AddWithValue("@checkin", bll.CheckIn);
                     cmd.Parameters.AddWithValue("@checkout", bll.CheckOut);
@@ -134,7 +132,7 @@ namespace billDAO
         public List<BillDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [idb], [idr], [idc], [idm], [cost], [checkin], [checkout]";
+            query += "SELECT [idb], [idr], [idc], [cost], [checkin], [checkout]";
             query += "FROM [bill]";
 
             List<BillDTO> IsDateBill = new List<BillDTO>();
@@ -161,7 +159,6 @@ namespace billDAO
                                 bll.IDB = reader["idb"].ToString();
                                 bll.IDR = reader["idr"].ToString();
                                 bll.IDC = reader["idc"].ToString();
-                                bll.IDM = reader["idm"].ToString();
                                 bll.COST = Decimal.Parse(reader["cost"].ToString());
                                 bll.CheckIn = DateTime.Parse(reader["checkin"].ToString());
                                 bll.CheckOut = DateTime.Parse(reader["checkout"].ToString());
@@ -230,14 +227,13 @@ namespace billDAO
         public List<BillDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [idb], [idr], [idc], [idm], [cost], [checkin], [checkout]";
+            query += "SELECT [idb], [idr], [idc], [cost], [checkin], [checkout]";
             query += "FROM [bill]";
             query += " WHERE ([checkin] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([checkout] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([idb] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([idr] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([idc] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([idm] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
 
             List<BillDTO> lsTimKiem = new List<BillDTO>();
@@ -264,7 +260,7 @@ namespace billDAO
                                 bll.IDB = reader["idb"].ToString();
                                 bll.IDR = reader["idr"].ToString();
                                 bll.IDC = reader["idc"].ToString();
-                                bll.IDM = reader["idm"].ToString();
+
                                 bll.COST = Decimal.Parse(reader["cost"].ToString());
                                 bll.CheckIn = DateTime.Parse(reader["checkin"].ToString());
                                 bll.CheckOut = DateTime.Parse(reader["checkout"].ToString());

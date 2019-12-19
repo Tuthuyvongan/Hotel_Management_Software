@@ -186,6 +186,42 @@ namespace roomDAO
             }
             return true;
         }
+        public bool editStatus(RoomDTO rm)
+        {
+            string query = string.Empty;
+            query += "UPDATE room SET [status] = @status WHERE [idr] = @idr";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@idr", rm.Idr);
+                    cmd.Parameters.AddWithValue("@name", rm.Name);
+                    cmd.Parameters.AddWithValue("@cost", rm.Cost);
+                    cmd.Parameters.AddWithValue("@status", rm.Status);
+                    cmd.Parameters.AddWithValue("@bedamount", rm.Bedamount);
+                    cmd.Parameters.AddWithValue("@roomkind", rm.Roomkind);
+
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return true;
+        }
         public List<RoomDTO> select()
         {
             string query = string.Empty;
