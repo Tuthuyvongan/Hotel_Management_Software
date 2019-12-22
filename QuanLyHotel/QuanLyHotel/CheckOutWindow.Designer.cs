@@ -105,9 +105,8 @@
             this.lbSumCost.Location = new System.Drawing.Point(172, 386);
             this.lbSumCost.Margin = new System.Windows.Forms.Padding(4);
             this.lbSumCost.Name = "lbSumCost";
-            this.lbSumCost.Size = new System.Drawing.Size(59, 23);
+            this.lbSumCost.Size = new System.Drawing.Size(0, 23);
             this.lbSumCost.TabIndex = 270;
-            this.lbSumCost.Text = "Name";
             // 
             // label25
             // 
@@ -132,6 +131,7 @@
             this.lbCostService.Size = new System.Drawing.Size(59, 23);
             this.lbCostService.TabIndex = 268;
             this.lbCostService.Text = "Name";
+            this.lbCostService.Visible = false;
             // 
             // lbCheckOut
             // 
@@ -141,9 +141,8 @@
             this.lbCheckOut.Location = new System.Drawing.Point(172, 84);
             this.lbCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.lbCheckOut.Name = "lbCheckOut";
-            this.lbCheckOut.Size = new System.Drawing.Size(59, 23);
+            this.lbCheckOut.Size = new System.Drawing.Size(0, 23);
             this.lbCheckOut.TabIndex = 267;
-            this.lbCheckOut.Text = "Name";
             // 
             // label21
             // 
@@ -168,6 +167,7 @@
             this.label16.Size = new System.Drawing.Size(124, 23);
             this.label16.TabIndex = 265;
             this.label16.Text = "Cost Service:";
+            this.label16.Visible = false;
             // 
             // lbCostRoom
             // 
@@ -181,6 +181,7 @@
             this.lbCostRoom.Size = new System.Drawing.Size(59, 23);
             this.lbCostRoom.TabIndex = 264;
             this.lbCostRoom.Text = "Name";
+            this.lbCostRoom.Visible = false;
             // 
             // label18
             // 
@@ -193,6 +194,7 @@
             this.label18.Size = new System.Drawing.Size(110, 23);
             this.label18.TabIndex = 263;
             this.label18.Text = "Cost Room:";
+            this.label18.Visible = false;
             // 
             // lbCheckIn
             // 
@@ -202,9 +204,8 @@
             this.lbCheckIn.Location = new System.Drawing.Point(172, 53);
             this.lbCheckIn.Margin = new System.Windows.Forms.Padding(4);
             this.lbCheckIn.Name = "lbCheckIn";
-            this.lbCheckIn.Size = new System.Drawing.Size(59, 23);
+            this.lbCheckIn.Size = new System.Drawing.Size(0, 23);
             this.lbCheckIn.TabIndex = 262;
-            this.lbCheckIn.Text = "Name";
             // 
             // lbNameCustomer
             // 
@@ -214,9 +215,8 @@
             this.lbNameCustomer.Location = new System.Drawing.Point(172, 229);
             this.lbNameCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.lbNameCustomer.Name = "lbNameCustomer";
-            this.lbNameCustomer.Size = new System.Drawing.Size(59, 23);
+            this.lbNameCustomer.Size = new System.Drawing.Size(0, 23);
             this.lbNameCustomer.TabIndex = 261;
-            this.lbNameCustomer.Text = "Name";
             // 
             // label9
             // 
@@ -263,9 +263,8 @@
             this.lbNameRoom.Location = new System.Drawing.Point(172, 149);
             this.lbNameRoom.Margin = new System.Windows.Forms.Padding(4);
             this.lbNameRoom.Name = "lbNameRoom";
-            this.lbNameRoom.Size = new System.Drawing.Size(59, 23);
+            this.lbNameRoom.Size = new System.Drawing.Size(0, 23);
             this.lbNameRoom.TabIndex = 257;
-            this.lbNameRoom.Text = "Name";
             // 
             // label10
             // 

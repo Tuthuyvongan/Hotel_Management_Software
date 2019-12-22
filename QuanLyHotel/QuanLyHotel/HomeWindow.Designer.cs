@@ -136,9 +136,8 @@
             this.lbName.Location = new System.Drawing.Point(1148, -10);
             this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(71, 26);
+            this.lbName.Size = new System.Drawing.Size(0, 26);
             this.lbName.TabIndex = 207;
-            this.lbName.Text = "Name";
             // 
             // label18
             // 
@@ -196,9 +195,8 @@
             this.lbKind.Location = new System.Drawing.Point(1149, 25);
             this.lbKind.Margin = new System.Windows.Forms.Padding(4);
             this.lbKind.Name = "lbKind";
-            this.lbKind.Size = new System.Drawing.Size(64, 26);
+            this.lbKind.Size = new System.Drawing.Size(0, 26);
             this.lbKind.TabIndex = 202;
-            this.lbKind.Text = "Kind";
             // 
             // lbStatus
             // 
@@ -208,9 +206,8 @@
             this.lbStatus.Location = new System.Drawing.Point(1148, 59);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(75, 26);
+            this.lbStatus.Size = new System.Drawing.Size(0, 26);
             this.lbStatus.TabIndex = 203;
-            this.lbStatus.Text = "Status";
             // 
             // lbCost
             // 
@@ -220,9 +217,8 @@
             this.lbCost.Location = new System.Drawing.Point(1148, 128);
             this.lbCost.Margin = new System.Windows.Forms.Padding(4);
             this.lbCost.Name = "lbCost";
-            this.lbCost.Size = new System.Drawing.Size(58, 26);
+            this.lbCost.Size = new System.Drawing.Size(0, 26);
             this.lbCost.TabIndex = 205;
-            this.lbCost.Text = "Cost";
             // 
             // lbBedsAmount
             // 
@@ -232,9 +228,8 @@
             this.lbBedsAmount.Location = new System.Drawing.Point(1149, 94);
             this.lbBedsAmount.Margin = new System.Windows.Forms.Padding(4);
             this.lbBedsAmount.Name = "lbBedsAmount";
-            this.lbBedsAmount.Size = new System.Drawing.Size(61, 26);
+            this.lbBedsAmount.Size = new System.Drawing.Size(0, 26);
             this.lbBedsAmount.TabIndex = 204;
-            this.lbBedsAmount.Text = "Beds";
             // 
             // btCheckOut
             // 
@@ -324,9 +319,8 @@
             this.label7.Location = new System.Drawing.Point(963, 515);
             this.label7.Margin = new System.Windows.Forms.Padding(4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 26);
+            this.label7.Size = new System.Drawing.Size(0, 26);
             this.label7.TabIndex = 213;
-            this.label7.Text = "userName";
             // 
             // HomeWindow
             // 
@@ -356,6 +350,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "HomeWindow";
             this.Size = new System.Drawing.Size(1331, 697);
+            this.Load += new System.EventHandler(this.HomeWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

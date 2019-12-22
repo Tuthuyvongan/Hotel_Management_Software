@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.MenuBar = new System.Windows.Forms.Panel();
             this.btMenu = new System.Windows.Forms.Button();
             this.btCustomer = new System.Windows.Forms.Button();
@@ -253,10 +254,10 @@
             this.Controls.Add(this.accountWindow1);
             this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MenuBar.ResumeLayout(false);
             this.ResumeLayout(false);
 

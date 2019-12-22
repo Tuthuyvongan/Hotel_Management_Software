@@ -38,12 +38,12 @@ namespace QuanLyHotel
             dtgvCustomer.AllowUserToAddRows = false;
             dtgvCustomer.DataSource = list;
 
-            DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
-            ID.Name = "idc";
-            ID.HeaderText = "ID";
-            ID.DataPropertyName = "idc";
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dtgvCustomer.Columns.Add(ID);
+            //DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
+            //ID.Name = "idc";
+            //ID.HeaderText = "ID";
+            //ID.DataPropertyName = "idc";
+            //ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dtgvCustomer.Columns.Add(ID);
 
             DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
             NAME.Name = "name";
@@ -97,10 +97,10 @@ namespace QuanLyHotel
         {
             int numrow;
             numrow = e.RowIndex;
-            txtNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
+            txtNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[0].Value.ToString();
             txtIdentifyCardCustomer.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
             txtPhoneCustomer.Text = dtgvCustomer.Rows[numrow].Cells[3].Value.ToString();
-            //dtBirthday.Text = dtgvCustomer.Rows[numrow].Cells[4].Value.ToString();
+            dtBirthday.Text = Convert.ToString(dtgvCustomer.Rows[numrow].Cells[1].Value);
         }
 
         private void TxtPhoneCustomer_KeyPress(object sender, KeyPressEventArgs e)

@@ -68,6 +68,12 @@ namespace QuanLyHotel
             pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvRoom.Columns.Add(pHONE);
 
+            DataGridViewTextBoxColumn cOST = new DataGridViewTextBoxColumn();
+            cOST.Name = "cost";
+            cOST.HeaderText = "Cost";
+            cOST.DataPropertyName = "cost";
+            cOST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(cOST);
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
         }
@@ -85,7 +91,7 @@ namespace QuanLyHotel
             txtNameRoom.Text = dtgvRoom.Rows[numrow].Cells[0].Value.ToString();
             txtKindRoom.Text = dtgvRoom.Rows[numrow].Cells[3].Value.ToString();
             txtBedsAmount.Text = dtgvRoom.Rows[numrow].Cells[2].Value.ToString();
-          
+            txtCost.Text = Convert.ToString(dtgvRoom.Rows[numrow].Cells[4].Value);
         }
 
         private void TxtBedsAmount_KeyPress(object sender, KeyPressEventArgs e)

@@ -136,5 +136,10 @@ namespace QuanLyHotel
             UseServiceWindow useService = new UseServiceWindow(lbName.Text, lbKind.Text, lbBedsAmount.Text);
             useService.Show();
         }
+
+        private void HomeWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -169,9 +169,8 @@
             this.lbName.Location = new System.Drawing.Point(203, 88);
             this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(71, 26);
+            this.lbName.Size = new System.Drawing.Size(0, 26);
             this.lbName.TabIndex = 213;
-            this.lbName.Text = "Name";
             // 
             // label18
             // 
@@ -229,9 +228,8 @@
             this.lbGender.Location = new System.Drawing.Point(204, 122);
             this.lbGender.Margin = new System.Windows.Forms.Padding(4);
             this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(89, 26);
+            this.lbGender.Size = new System.Drawing.Size(0, 26);
             this.lbGender.TabIndex = 208;
-            this.lbGender.Text = "Gender";
             // 
             // lbPhone
             // 
@@ -241,9 +239,8 @@
             this.lbPhone.Location = new System.Drawing.Point(203, 157);
             this.lbPhone.Margin = new System.Windows.Forms.Padding(4);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(76, 26);
+            this.lbPhone.Size = new System.Drawing.Size(0, 26);
             this.lbPhone.TabIndex = 209;
-            this.lbPhone.Text = "Phone";
             // 
             // lbCmnd
             // 
@@ -253,9 +250,8 @@
             this.lbCmnd.Location = new System.Drawing.Point(203, 226);
             this.lbCmnd.Margin = new System.Windows.Forms.Padding(4);
             this.lbCmnd.Name = "lbCmnd";
-            this.lbCmnd.Size = new System.Drawing.Size(145, 26);
+            this.lbCmnd.Size = new System.Drawing.Size(0, 26);
             this.lbCmnd.TabIndex = 211;
-            this.lbCmnd.Text = "Identify card";
             // 
             // lbEmail
             // 
@@ -265,9 +261,8 @@
             this.lbEmail.Location = new System.Drawing.Point(204, 191);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(73, 26);
+            this.lbEmail.Size = new System.Drawing.Size(0, 26);
             this.lbEmail.TabIndex = 210;
-            this.lbEmail.Text = "Email";
             // 
             // label4
             // 
@@ -289,9 +284,8 @@
             this.lbUsername.Location = new System.Drawing.Point(203, 19);
             this.lbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(71, 26);
+            this.lbUsername.Size = new System.Drawing.Size(0, 26);
             this.lbUsername.TabIndex = 217;
-            this.lbUsername.Text = "Name";
             // 
             // label7
             // 
@@ -313,9 +307,8 @@
             this.lbPassword.Location = new System.Drawing.Point(204, 53);
             this.lbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(108, 26);
+            this.lbPassword.Size = new System.Drawing.Size(0, 26);
             this.lbPassword.TabIndex = 215;
-            this.lbPassword.Text = "password";
             // 
             // AccountWindow
             // 
