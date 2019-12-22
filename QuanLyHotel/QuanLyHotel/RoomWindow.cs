@@ -22,6 +22,10 @@ namespace QuanLyHotel
         }
 
         private RoomBUS rmBus;
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             rmBus = new RoomBUS();
@@ -79,11 +83,10 @@ namespace QuanLyHotel
         }
 
 
-
-
-
-
-
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
@@ -205,5 +208,6 @@ namespace QuanLyHotel
                 MessageBox.Show("Sussces");
             this.loadData();
         }
+        #endregion
     }
 }

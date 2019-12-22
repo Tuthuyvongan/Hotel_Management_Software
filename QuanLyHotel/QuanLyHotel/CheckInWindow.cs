@@ -38,6 +38,10 @@ namespace QuanLyHotel
         private CustomerBUS ctmBus;
         
         private BillBUS bllBUS;
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             ctmBus = new CustomerBUS();
@@ -87,6 +91,10 @@ namespace QuanLyHotel
 
         }
 
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void BtCheckIn_Click(object sender, EventArgs e)
         {
             bllBUS = new BillBUS();
@@ -113,13 +121,13 @@ namespace QuanLyHotel
             numrow = e.RowIndex;
             lbNameCustomer.Text = dtgvCustomer.Rows[numrow].Cells[0].Value.ToString();
             lbIdentifyCard.Text = dtgvCustomer.Rows[numrow].Cells[1].Value.ToString();
-            lbPhone.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();
-            
+            lbPhone.Text = dtgvCustomer.Rows[numrow].Cells[2].Value.ToString();          
         }
 
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
             this.loadData();
         }
+        #endregion
     }
 }

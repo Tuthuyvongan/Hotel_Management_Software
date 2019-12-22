@@ -25,6 +25,10 @@ namespace QuanLyHotel
         {
             username = Username;
         }
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             bllBus = new BillBUS();
@@ -85,6 +89,10 @@ namespace QuanLyHotel
 
         }
 
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
             this.loadData();
@@ -120,5 +128,6 @@ namespace QuanLyHotel
             lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[3].Value);
             lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[4].Value);
         }
+        #endregion
     }
 }

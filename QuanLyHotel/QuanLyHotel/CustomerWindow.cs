@@ -21,6 +21,10 @@ namespace QuanLyHotel
             //loadData();
         }
         private CustomerBUS ctmBUS;
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             ctmBUS = new CustomerBUS();
@@ -81,18 +85,15 @@ namespace QuanLyHotel
 
         }
 
-
-
-
-
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void BtLoadCustomer_Click(object sender, EventArgs e)
         {
             this.loadData();
 
         }
-
-
-
         private void dtgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
@@ -199,5 +200,6 @@ namespace QuanLyHotel
                 MessageBox.Show("Sussces");
             this.loadData();
         }
+        #endregion
     }
 }

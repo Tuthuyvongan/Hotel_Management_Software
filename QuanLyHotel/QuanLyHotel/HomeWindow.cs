@@ -26,6 +26,10 @@ namespace QuanLyHotel
             InitializeComponent();
             username = Username;
         }
+
+        //
+        //---- LOAD DATA
+        //
         void LoadRoom()
         {
             //RoomDAO roomList = new RoomDAO();
@@ -98,8 +102,11 @@ namespace QuanLyHotel
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
         }
-       
 
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
@@ -141,5 +148,6 @@ namespace QuanLyHotel
         {
 
         }
+        #endregion
     }
 }

@@ -131,11 +131,12 @@
             this.dtgvService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dtgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvService.Location = new System.Drawing.Point(13, 351);
-            this.dtgvService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvService.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvService.Name = "dtgvService";
             this.dtgvService.RowHeadersWidth = 51;
             this.dtgvService.Size = new System.Drawing.Size(755, 417);
             this.dtgvService.TabIndex = 70;
+            this.dtgvService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvService_CellClick);
             // 
             // label15
             // 
@@ -168,7 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvUseService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvUseService.Location = new System.Drawing.Point(815, 179);
-            this.dtgvUseService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvUseService.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvUseService.Name = "dtgvUseService";
             this.dtgvUseService.RowHeadersWidth = 51;
             this.dtgvUseService.Size = new System.Drawing.Size(499, 590);
@@ -191,11 +192,11 @@
             this.txtNameService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameService.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtNameService.Location = new System.Drawing.Point(101, 81);
-            this.txtNameService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNameService.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameService.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtNameService.MaxLength = 40;
             this.txtNameService.Name = "txtNameService";
-            this.txtNameService.Size = new System.Drawing.Size(599, 29);
+            this.txtNameService.Size = new System.Drawing.Size(599, 34);
             this.txtNameService.TabIndex = 180;
             // 
             // txtKindService
@@ -204,7 +205,7 @@
             this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtKindService.FormattingEnabled = true;
             this.txtKindService.Location = new System.Drawing.Point(101, 123);
-            this.txtKindService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKindService.Margin = new System.Windows.Forms.Padding(4);
             this.txtKindService.MaxLength = 40;
             this.txtKindService.Name = "txtKindService";
             this.txtKindService.Size = new System.Drawing.Size(155, 34);
@@ -215,11 +216,11 @@
             this.txtCostService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCostService.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtCostService.Location = new System.Drawing.Point(361, 124);
-            this.txtCostService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCostService.Margin = new System.Windows.Forms.Padding(4);
             this.txtCostService.MaximumSize = new System.Drawing.Size(339, 29);
             this.txtCostService.MaxLength = 40;
             this.txtCostService.Name = "txtCostService";
-            this.txtCostService.Size = new System.Drawing.Size(339, 29);
+            this.txtCostService.Size = new System.Drawing.Size(339, 34);
             this.txtCostService.TabIndex = 182;
             this.txtCostService.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCostService_KeyPress);
             // 
@@ -231,7 +232,7 @@
             this.btAddService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddService.ForeColor = System.Drawing.Color.White;
             this.btAddService.Location = new System.Drawing.Point(19, 179);
-            this.btAddService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAddService.Margin = new System.Windows.Forms.Padding(4);
             this.btAddService.Name = "btAddService";
             this.btAddService.Size = new System.Drawing.Size(99, 38);
             this.btAddService.TabIndex = 185;
@@ -247,7 +248,7 @@
             this.btEditService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditService.ForeColor = System.Drawing.Color.White;
             this.btEditService.Location = new System.Drawing.Point(124, 179);
-            this.btEditService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEditService.Margin = new System.Windows.Forms.Padding(4);
             this.btEditService.Name = "btEditService";
             this.btEditService.Size = new System.Drawing.Size(99, 38);
             this.btEditService.TabIndex = 187;
@@ -263,7 +264,7 @@
             this.btDeleteService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteService.ForeColor = System.Drawing.Color.White;
             this.btDeleteService.Location = new System.Drawing.Point(231, 179);
-            this.btDeleteService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDeleteService.Margin = new System.Windows.Forms.Padding(4);
             this.btDeleteService.Name = "btDeleteService";
             this.btDeleteService.Size = new System.Drawing.Size(99, 38);
             this.btDeleteService.TabIndex = 188;
@@ -279,7 +280,7 @@
             this.btLoadService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoadService.ForeColor = System.Drawing.Color.White;
             this.btLoadService.Location = new System.Drawing.Point(337, 179);
-            this.btLoadService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLoadService.Margin = new System.Windows.Forms.Padding(4);
             this.btLoadService.Name = "btLoadService";
             this.btLoadService.Size = new System.Drawing.Size(99, 38);
             this.btLoadService.TabIndex = 189;
@@ -292,7 +293,7 @@
             this.txtSearchService1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearchService1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchService1.Location = new System.Drawing.Point(111, 308);
-            this.txtSearchService1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchService1.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchService1.MaxLength = 40;
             this.txtSearchService1.Name = "txtSearchService1";
             this.txtSearchService1.Size = new System.Drawing.Size(656, 35);
@@ -306,7 +307,7 @@
             this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(825, 74);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 38);
             this.button2.TabIndex = 196;
@@ -321,7 +322,7 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(932, 74);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 38);
             this.button1.TabIndex = 197;
@@ -335,7 +336,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(919, 126);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 40;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(395, 35);
@@ -365,7 +366,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dtgvService);
             this.Controls.Add(this.label15);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ServiceWindow";
             this.Size = new System.Drawing.Size(1535, 794);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

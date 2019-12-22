@@ -25,6 +25,10 @@ namespace QuanLyHotel
         }
         private ServiceBUS srvBus;
         private RoomServiceBUS roomServiceBUS;
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             srvBus = new ServiceBUS();
@@ -69,9 +73,12 @@ namespace QuanLyHotel
 
 
         }
-        
 
 
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void TxtNumberService_KeyPress(object sender, KeyPressEventArgs e)
         {
             int keydown = e.KeyChar;
@@ -134,5 +141,6 @@ namespace QuanLyHotel
             }
             this.Close();
         }
+        #endregion
     }
 }

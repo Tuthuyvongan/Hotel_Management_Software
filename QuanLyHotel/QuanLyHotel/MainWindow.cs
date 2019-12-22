@@ -41,6 +41,10 @@ namespace QuanLyHotel
             a.Dock = DockStyle.None;
         }
 
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void BtMenu_Click(object sender, EventArgs e)
         {
             if(MenuBar.Width == 150)
@@ -81,5 +85,6 @@ namespace QuanLyHotel
             accountWindow1.BringToFront();
             accountWindow1.Dock = DockStyle.Fill;
         }
+        #endregion
     }
 }

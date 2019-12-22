@@ -53,6 +53,7 @@ namespace QuanLyHotel
 
 
         //Click event
+        #region Events
         private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo!", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
@@ -184,5 +185,6 @@ namespace QuanLyHotel
                 }
             }
         }
+        #endregion
     }
 }

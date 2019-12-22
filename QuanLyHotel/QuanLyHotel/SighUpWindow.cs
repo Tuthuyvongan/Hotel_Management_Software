@@ -44,7 +44,10 @@ namespace QuanLyHotel
                 Location = new Point(p.X - this.StartPoint.X, p.Y - this.StartPoint.Y);
             }
         }
-
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void LoginLabel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -166,5 +169,6 @@ namespace QuanLyHotel
                 errorProvider10.Clear();
             }
         }
+        #endregion
     }
 }
