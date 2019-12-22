@@ -18,7 +18,6 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
-            //loadData();
         }
         string username = "";
         public HomeWindow(string Username)
@@ -32,18 +31,19 @@ namespace QuanLyHotel
         //
         void LoadRoom()
         {
-            //RoomDAO roomList = new RoomDAO();
-            //List<RoomDAO> listRoom = roomList.LoadRoomList();
-            //if (listRoom == null)
-            //{
-            //    MessageBox.Show("Có lỗi khi lấy thông tin từ DB");
-            //    return;
-            //}
-            //foreach(RoomDAO item in listRoom)
-            //{
-            //    Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
-            //    panelflr.Controls.Add(btn);
-            //}
+            RoomDAO roomList = new RoomDAO();
+            List<RoomDAO> listRoom = roomList.LoadRoomList();
+            if (listRoom == null)
+            {
+                MessageBox.Show("Có lỗi khi lấy thông tin từ DB");
+                return;
+            }
+            foreach (RoomDAO item in listRoom)
+            {
+                Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
+                //btn.Text = item. + Environment.NewLine + item.editStatus;
+                flpRoom.Controls.Add(btn);
+            }
         }
         private RoomBUS rmBus;
         private void loadData()
@@ -122,6 +122,7 @@ namespace QuanLyHotel
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
             this.loadData();
+            this.LoadRoom();
         }
 
         private void btCheckInRoom_Click_1(object sender, EventArgs e)

@@ -40,9 +40,7 @@ namespace roomDAO
             //data.Roomkind = row["romkind"].ToString();
         }
         public class DataProvider
-        {
-            public static object Instance { get; internal set; }
-
+        { 
             public DataTable ExcuteQuery(string query,string ConnectionString, object[] parameter=null)
             {               
                 DataTable data = new DataTable();
@@ -74,8 +72,8 @@ namespace roomDAO
         {
             List<RoomDAO> Room = new List<RoomDAO>();
             DataProvider provider = new DataProvider();
-            string connectionstring = "Data Source=.\\SQLEXPRESS;Initial Catalog=Hotel_Management;Integrated Security=True";
-            DataTable data=provider.ExcuteQuery("exec dbo.use_getroomlist", connectionstring);
+            string connectionstring = "Data Source=.\\SQLEXPRESS01;Initial Catalog=Hotel_Management;Integrated Security=True";
+            DataTable data=provider.ExcuteQuery("USP_GetRoomList", connectionstring);
             foreach(DataRow item in data.Rows)
             {
                 RoomDAO room = new RoomDAO(item);

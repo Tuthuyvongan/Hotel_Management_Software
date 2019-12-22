@@ -49,6 +49,7 @@
             this.btUseService = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.flpRoom = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRoom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,11 @@
             // 
             this.dtgvRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dtgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvRoom.Location = new System.Drawing.Point(17, 29);
+            this.dtgvRoom.Location = new System.Drawing.Point(17, 515);
             this.dtgvRoom.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvRoom.Name = "dtgvRoom";
             this.dtgvRoom.RowHeadersWidth = 51;
-            this.dtgvRoom.Size = new System.Drawing.Size(667, 619);
+            this.dtgvRoom.Size = new System.Drawing.Size(667, 133);
             this.dtgvRoom.TabIndex = 178;
             this.dtgvRoom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRoom_CellClick);
             // 
@@ -322,10 +323,19 @@
             this.label7.Size = new System.Drawing.Size(0, 26);
             this.label7.TabIndex = 213;
             // 
+            // flpRoom
+            // 
+            this.flpRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flpRoom.Location = new System.Drawing.Point(17, 128);
+            this.flpRoom.Name = "flpRoom";
+            this.flpRoom.Size = new System.Drawing.Size(667, 356);
+            this.flpRoom.TabIndex = 214;
+            // 
             // HomeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flpRoom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -379,5 +389,6 @@
         private System.Windows.Forms.Button btUseService;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FlowLayoutPanel flpRoom;
     }
 }
