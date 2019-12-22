@@ -20,6 +20,10 @@ namespace QuanLyHotel
             //loadData();
         }
         private UserBUS userBUS;
+
+        //
+        //---- LOAD DATA
+        //
         private void loadData()
         {
             userBUS = new UserBUS();
@@ -92,13 +96,16 @@ namespace QuanLyHotel
 
         }
 
+        //
+        //---- EVENT : BTN OR CELL CLICK
+        //
+        #region Events
         private void BtLoadAccount_Click(object sender, EventArgs e)
         {
-            
-            this.loadData();
-            
-        }
 
+            this.loadData();
+
+        }
         private void BtEditAccount_Click(object sender, EventArgs e)
         {
             userBUS = new UserBUS();
@@ -118,7 +125,6 @@ namespace QuanLyHotel
                 MessageBox.Show("Sussces");
             this.loadData();
         }
-
         private void BtDeleteAcount_Click(object sender, EventArgs e)
         {
             userBUS = new UserBUS();
@@ -151,5 +157,6 @@ namespace QuanLyHotel
             lbPhone.Text = dtgvAccount.Rows[numrow].Cells[5].Value.ToString();
             lbCmnd.Text = dtgvAccount.Rows[numrow].Cells[4].Value.ToString();
         }
+        #endregion
     }
 }
