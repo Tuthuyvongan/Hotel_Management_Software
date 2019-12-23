@@ -129,6 +129,41 @@ namespace billDAO
             }
             return true;
         }
+
+        public bool editCost(BillDTO bll)
+        {
+            string query = string.Empty;
+            query += "UPDATE bill SET [cost] = @cost WHERE [idr] = @idr and [idc] = @idc and [checkin] = @checkin and [checkout] = @checkout";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@idr", bll.IDR);
+                    cmd.Parameters.AddWithValue("@idc", bll.IDC);
+                    cmd.Parameters.AddWithValue("@cost", bll.COST);
+                    cmd.Parameters.AddWithValue("@checkin", bll.CheckIn);
+                    cmd.Parameters.AddWithValue("@checkout", bll.CheckOut);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return true;
+        }
         public List<BillDTO> select()
         {
             string query = string.Empty;

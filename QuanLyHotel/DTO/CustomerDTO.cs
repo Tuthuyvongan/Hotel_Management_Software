@@ -8,14 +8,12 @@ namespace customerDTO
 {
     public class CustomerDTO
     {
-        /*#Fix*/
         private string idc;
         private string name;
         private DateTime date;
         private string phone;
         private string cmnd;
 
-        /*#Fix*/
         public string IDC { get => idc; set => idc = value; }
         public string NAME { get => name; set => name = value; }
         public DateTime DATE { get => date; set => date = value; }

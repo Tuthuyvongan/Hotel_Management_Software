@@ -22,9 +22,6 @@ namespace QuanLyHotel
         {
             InitializeComponent();
         }
-
-        
-        
         public CheckInWindow(string name, string kind, string bedamount, string cost)
         {
             InitializeComponent();
@@ -36,7 +33,7 @@ namespace QuanLyHotel
             //this.loadData();
         }
         private CustomerBUS ctmBus;
-        
+        private RoomBUS rmBUS;
         private BillBUS bllBUS;
 
         //
@@ -102,7 +99,6 @@ namespace QuanLyHotel
             bll.IDB = lbNameCustomer.Text+"/"+dtCheckIn.Text+"/"+dtCheckOut.Text+"@"+lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
             bll.IDR = lbNameRoom.Text;
-            
             bll.CheckIn =DateTime.Parse(dtCheckIn.Text);
             bll.CheckOut =DateTime.Parse(dtCheckOut.Text);
             bll.COST = Decimal.Parse(lbCost.Text);/**Decimal.Parse((dtCheckOut-dtCheckIn).Tostring())*/
@@ -110,7 +106,18 @@ namespace QuanLyHotel
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
-                MessageBox.Show("Sussces");
+            {
+                rmBUS = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.Idr = lbNameRoom.Text;
+                rm.Status = "Có Khách";
+                bool kq1 = rmBUS.editStatus(rm);
+                if(kq==false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+            }
+                
             
             this.Close();
         }

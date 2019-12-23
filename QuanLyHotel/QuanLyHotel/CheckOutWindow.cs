@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using billDTO;
 using billBUS;
+using roomBUS;
+using roomDTO;
 
 namespace QuanLyHotel
 {
@@ -20,6 +22,7 @@ namespace QuanLyHotel
             //this.loadData();
         }
         private BillBUS bllBus;
+        private RoomBUS rmBUS;
         string username = "";
         public CheckOutWindow(string Username)
         {
@@ -102,10 +105,8 @@ namespace QuanLyHotel
         {
             bllBus = new BillBUS();
             BillDTO bll = new BillDTO();
-            bll.IDB = lbNameCustomer.Text + "/" + lbCheckIn.Text + "/" + lbCheckOut.Text + "@" + lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
             bll.IDR = lbNameRoom.Text;
-
             bll.CheckIn = DateTime.Parse(lbCheckIn.Text);
             bll.CheckOut = DateTime.Parse(lbCheckOut.Text);
             lbCostRoom.Text = bll.COST.ToString();
@@ -114,7 +115,17 @@ namespace QuanLyHotel
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
-                MessageBox.Show("Sussces");
+            {
+                rmBUS = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.Idr = lbNameRoom.Text;
+                rm.Status = "Trống";
+                bool kq1 = rmBUS.editStatus(rm);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+            }
             this.Close();
         }
 
