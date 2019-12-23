@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BillDTO.cs" />
     <Compile Include="CustomerDTO.cs" />
+    <Compile Include="ExpenseDTO.cs" />
     <Compile Include="KindRoomDTO.cs" />
     <Compile Include="ManagerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

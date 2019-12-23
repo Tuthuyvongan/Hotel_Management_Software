@@ -70,6 +70,12 @@
     <Compile Include="CustomerWindow.Designer.cs">
       <DependentUpon>CustomerWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExpenseWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpenseWindow.designer.cs">
+      <DependentUpon>ExpenseWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="SighUpWindow.Designer.cs">
       <DependentUpon>SighUpWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatisticalWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatisticalWindow.designer.cs">
+      <DependentUpon>StatisticalWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="UseServiceWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerWindow.resx">
       <DependentUpon>CustomerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseWindow.resx">
+      <DependentUpon>ExpenseWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -171,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SighUpWindow.resx">
       <DependentUpon>SighUpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticalWindow.resx">
+      <DependentUpon>StatisticalWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UseServiceWindow.resx">
       <DependentUpon>UseServiceWindow.cs</DependentUpon>

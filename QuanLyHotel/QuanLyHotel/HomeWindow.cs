@@ -33,7 +33,9 @@ namespace QuanLyHotel
         //
         void LoadRoom()
         {
+            
             List<RoomDTO> listRoom = RoomDAO.Instance.LoadRoomList();
+            
             if (listRoom == null)
             {
                 MessageBox.Show("Có lỗi khi lấy thông tin từ DB");

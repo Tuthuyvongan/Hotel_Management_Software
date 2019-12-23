@@ -420,6 +420,53 @@ namespace roomDAO
             }
             return lsCost;
         }
+        #region test
+        public int GetSumRoom()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [room]";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomDTO pt = new RoomDTO();
+                                pt.Name = reader["name"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        #endregion
     }
 }
 

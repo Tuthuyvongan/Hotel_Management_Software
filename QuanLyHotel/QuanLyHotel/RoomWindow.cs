@@ -31,7 +31,7 @@ namespace QuanLyHotel
         {
             rmBus = new RoomBUS();
             List<RoomDTO> list = rmBus.select();
-
+            txtSumRoom.Text = rmBus.GetSumRoom().ToString();
             if (list == null)
             {
                 MessageBox.Show("Fail");
