@@ -49,7 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.btLoadCustomer = new System.Windows.Forms.Button();
-            this.txtSearchCustomer = new System.Windows.Forms.TextBox();
+            this.txtSearchBill = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
             this.SuspendLayout();
@@ -308,15 +308,15 @@
             this.btLoadCustomer.UseVisualStyleBackColor = false;
             this.btLoadCustomer.Click += new System.EventHandler(this.btLoadCustomer_Click);
             // 
-            // txtSearchCustomer
+            // txtSearchBill
             // 
-            this.txtSearchCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
-            this.txtSearchCustomer.Location = new System.Drawing.Point(362, 36);
-            this.txtSearchCustomer.MaxLength = 40;
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(274, 26);
-            this.txtSearchCustomer.TabIndex = 276;
+            this.txtSearchBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchBill.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
+            this.txtSearchBill.Location = new System.Drawing.Point(362, 36);
+            this.txtSearchBill.MaxLength = 40;
+            this.txtSearchBill.Name = "txtSearchBill";
+            this.txtSearchBill.Size = new System.Drawing.Size(274, 26);
+            this.txtSearchBill.TabIndex = 276;
             // 
             // label1
             // 
@@ -335,7 +335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 430);
             this.Controls.Add(this.btLoadCustomer);
-            this.Controls.Add(this.txtSearchCustomer);
+            this.Controls.Add(this.txtSearchBill);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgvBill);
             this.Controls.Add(this.btCheckOut);
@@ -389,7 +389,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgvBill;
         private System.Windows.Forms.Button btLoadCustomer;
-        private System.Windows.Forms.TextBox txtSearchCustomer;
+        private System.Windows.Forms.TextBox txtSearchBill;
         private System.Windows.Forms.Label label1;
     }
 }

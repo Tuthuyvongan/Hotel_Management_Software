@@ -32,6 +32,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             bllBus = new BillBUS();
@@ -91,14 +92,87 @@ namespace QuanLyHotel
 
 
         }
+        private void loadData(List<BillDTO> list)
+        {
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvBill.Columns.Clear();
+            dtgvBill.DataSource = null;
 
+            dtgvBill.AutoGenerateColumns = false;
+            dtgvBill.AllowUserToAddRows = false;
+            dtgvBill.DataSource = list;
+
+            DataGridViewTextBoxColumn IDR = new DataGridViewTextBoxColumn();
+            IDR.Name = "idr";
+            IDR.HeaderText = "Room";
+            IDR.DataPropertyName = "idr";
+            IDR.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvBill.Columns.Add(IDR);
+
+            DataGridViewTextBoxColumn IDC = new DataGridViewTextBoxColumn();
+            IDC.Name = "idc";
+            IDC.HeaderText = "Customer";
+            IDC.DataPropertyName = "idc";
+            IDC.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvBill.Columns.Add(IDC);
+
+
+            DataGridViewTextBoxColumn Cost = new DataGridViewTextBoxColumn();
+            Cost.Name = "cost";
+            Cost.HeaderText = "Cost";
+            Cost.DataPropertyName = "cost";
+            Cost.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvBill.Columns.Add(Cost);
+
+            DataGridViewTextBoxColumn CheckIn = new DataGridViewTextBoxColumn();
+            CheckIn.Name = "checkin";
+            CheckIn.HeaderText = "Check In";
+            CheckIn.DataPropertyName = "checkin";
+            CheckIn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvBill.Columns.Add(CheckIn);
+
+            DataGridViewTextBoxColumn CheckOut = new DataGridViewTextBoxColumn();
+            CheckOut.Name = "checkout";
+            CheckOut.HeaderText = "Check Out";
+            CheckOut.DataPropertyName = "checkout";
+            CheckOut.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvBill.Columns.Add(CheckOut);
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvBill.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
         //
         //---- EVENTS
         //
         #region Events
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchBill.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchBill.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<BillDTO> listTimKiem = bllBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<BillDTO> listTimKiem = bllBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
 
         private void btCheckOut_Click_1(object sender, EventArgs e)

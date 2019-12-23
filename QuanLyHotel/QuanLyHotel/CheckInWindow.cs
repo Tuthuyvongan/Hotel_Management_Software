@@ -39,6 +39,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             ctmBus = new CustomerBUS();
@@ -87,7 +88,52 @@ namespace QuanLyHotel
 
 
         }
+        private void loadData(List<CustomerDTO> list)
+        {
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvCustomer.Columns.Clear();
+            dtgvCustomer.DataSource = null;
 
+            dtgvCustomer.AutoGenerateColumns = false;
+            dtgvCustomer.AllowUserToAddRows = false;
+            dtgvCustomer.DataSource = list;
+
+
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "idc";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "idc";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(NAME);
+
+
+            DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
+            CMND.Name = "cmnd";
+            CMND.HeaderText = "Identify card";
+            CMND.DataPropertyName = "cmnd";
+            CMND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(CMND);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "phone";
+            pHONE.HeaderText = "Phone";
+            pHONE.DataPropertyName = "phone";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(pHONE);
+
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvCustomer.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
         //
         //---- EVENTS
         //
@@ -133,7 +179,24 @@ namespace QuanLyHotel
 
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchCustomer.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchCustomer.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<CustomerDTO> listTimKiem = ctmBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<CustomerDTO> listTimKiem = ctmBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
         #endregion
     }
