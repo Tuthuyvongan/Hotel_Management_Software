@@ -12,6 +12,13 @@ namespace roomDAO
 {
     public class RoomDAO
     {
+        private static RoomDAO instance;
+
+        public static RoomDAO Instance
+        {
+            get { if (instance == null) instance = new RoomDAO(); return RoomDAO.instance; }
+            private set { RoomDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString
@@ -25,20 +32,20 @@ namespace roomDAO
         }
 
 
-        public static int RoomWidth = 100;
-        public static int RoomHeigh = 100;
+        public static int RoomWidth = 90;
+        public static int RoomHeigh = 90;
 
-        public RoomDAO(DataRow row)
-        {
-            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-            RoomDTO data = new RoomDTO();
-            data.Idr = row["idr"].ToString();
-            data.Name = row["name"].ToString();
-            data.Status = row["status"].ToString();
-            data.Cost = (decimal)row["cost"];
-            data.Bedamount = (int)row["bedamount"];
-            //data.Roomkind = row["romkind"].ToString();
-        }
+        //public RoomDAO(DataRow row)
+        //{
+        //    connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        //    RoomDTO data = new RoomDTO();
+        //    data.Idr = row["idr"].ToString();
+        //    data.Name = row["name"].ToString();
+        //    data.Status = row["status"].ToString();
+        //    data.Cost = (decimal)row["cost"];
+        //    data.Bedamount = (int)row["bedamount"];
+        //    data.Roomkind = row["romkind"].ToString();
+        //}
         public class DataProvider
         { 
             public DataTable ExcuteQuery(string query,string ConnectionString, object[] parameter=null)
@@ -68,18 +75,18 @@ namespace roomDAO
                 return data;
             }
         }
-        public List<RoomDAO> LoadRoomList()
+        public List<RoomDTO> LoadRoomList()
         {
-            List<RoomDAO> Room = new List<RoomDAO>();
+            List<RoomDTO> RoomList = new List<RoomDTO>();
             DataProvider provider = new DataProvider();
             string connectionstring = "Data Source=.\\SQLEXPRESS01;Initial Catalog=Hotel_Management;Integrated Security=True";
             DataTable data=provider.ExcuteQuery("USP_GetRoomList", connectionstring);
             foreach(DataRow item in data.Rows)
             {
-                RoomDAO room = new RoomDAO(item);
-                Room.Add(room);
+                RoomDTO room = new RoomDTO(item);
+                RoomList.Add(room);
             }
-            return Room;
+            return RoomList;
         }
         public bool add(RoomDTO rm)
         {

@@ -74,7 +74,7 @@
             this.dtgvRoom.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvRoom.Name = "dtgvRoom";
             this.dtgvRoom.RowHeadersWidth = 51;
-            this.dtgvRoom.Size = new System.Drawing.Size(667, 133);
+            this.dtgvRoom.Size = new System.Drawing.Size(667, 160);
             this.dtgvRoom.TabIndex = 178;
             this.dtgvRoom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRoom_CellClick);
             // 
@@ -326,9 +326,10 @@
             // flpRoom
             // 
             this.flpRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flpRoom.AutoScroll = true;
             this.flpRoom.Location = new System.Drawing.Point(17, 128);
             this.flpRoom.Name = "flpRoom";
-            this.flpRoom.Size = new System.Drawing.Size(667, 356);
+            this.flpRoom.Size = new System.Drawing.Size(667, 444);
             this.flpRoom.TabIndex = 214;
             // 
             // HomeWindow

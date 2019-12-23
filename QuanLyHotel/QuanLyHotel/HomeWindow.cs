@@ -18,6 +18,8 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
+            LoadRoom();
+            loadData();
         }
         string username = "";
         public HomeWindow(string Username)
@@ -31,17 +33,40 @@ namespace QuanLyHotel
         //
         void LoadRoom()
         {
-            RoomDAO roomList = new RoomDAO();
-            List<RoomDAO> listRoom = roomList.LoadRoomList();
+            List<RoomDTO> listRoom = RoomDAO.Instance.LoadRoomList();
             if (listRoom == null)
             {
                 MessageBox.Show("Có lỗi khi lấy thông tin từ DB");
                 return;
             }
-            foreach (RoomDAO item in listRoom)
+            foreach (RoomDTO item in listRoom)
             {
                 Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
-                //btn.Text = item. + Environment.NewLine + item.editStatus;
+                // Thêm thuộc tính lên btn trong flow layout panel
+                btn.Text = item.Name + Environment.NewLine + item.Status;
+                // chỉnh màu trạng thái
+                if (item.Status == "Trống")
+                {
+                    btn.BackColor = Color.Aqua;
+                }
+                if (item.Status == "Có Khách")
+                {
+                    btn.BackColor = Color.Red;
+                }
+                //switch (item.Status)
+                //{
+                //    case (item.Status == "Trống" ):
+                //        {
+                //            btn.BackColor = Color.Aqua;
+                //            break;
+                //        }
+                //    case (item.Status == "Có Khách" ):
+                //        {
+                //            btn.BackColor = Color.Red;
+                //            break;
+                //        }
+                //}
+
                 flpRoom.Controls.Add(btn);
             }
         }
@@ -122,7 +147,6 @@ namespace QuanLyHotel
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
             this.loadData();
-            this.LoadRoom();
         }
 
         private void btCheckInRoom_Click_1(object sender, EventArgs e)

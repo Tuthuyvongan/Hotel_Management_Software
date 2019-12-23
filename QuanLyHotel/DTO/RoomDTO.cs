@@ -16,15 +16,29 @@ namespace roomDTO
         private int bedamount;
         private string roomkind;
 
-        //public RoomDTO(DataRow row)
-        //{
-        //    this.Idr = row["idr"].ToString();
-        //    this.Name = row["name"].ToString();
-        //    this.Status = row["status"].ToString();
-        //    this.Cost = (decimal)row["cost"];
-        //    this.Bedamount = (int)row["bedamount"];
-        //    this.Roomkind = row["romkind"].ToString();
-        //}
+        public RoomDTO(string idr, string name, string status, decimal cost, int bedamount, string roomkind)
+        {
+            this.Idr = idr;
+            this.Name = name;
+            this.Status = status;
+            this.Cost = cost;
+            this.Bedamount = bedamount;
+            this.Roomkind = roomkind;
+        }
+        public RoomDTO(DataRow row)
+        {
+            this.Idr = row["idr"].ToString();
+            this.Name = row["name"].ToString();
+            this.Status = row["status"].ToString();
+            this.Cost = (decimal)row["cost"];
+            this.Bedamount = (int)row["bedamount"];
+            this.Roomkind = row["roomkind"].ToString();
+        }
+
+        public RoomDTO()
+        {
+        }
+
         public string Idr { get => idr; set => idr = value; }
         public string Name { get => name; set => name = value; }
         public string Status { get => status; set => status = value; }
