@@ -26,6 +26,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             rmBus = new RoomBUS();
@@ -81,8 +82,60 @@ namespace QuanLyHotel
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
         }
+        private void loadData(List<RoomDTO> list)
+        {
+            
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvRoom.Columns.Clear();
+            dtgvRoom.DataSource = null;
+
+            dtgvRoom.AutoGenerateColumns = false;
+            dtgvRoom.AllowUserToAddRows = false;
+            dtgvRoom.DataSource = list;
 
 
+            DataGridViewTextBoxColumn nAME = new DataGridViewTextBoxColumn();
+            nAME.Name = "name";
+            nAME.HeaderText = "Name:";
+            nAME.DataPropertyName = "name";
+            nAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(nAME);
+
+            DataGridViewTextBoxColumn gENDER = new DataGridViewTextBoxColumn();
+            gENDER.Name = "status";
+            gENDER.HeaderText = "Status";
+            gENDER.DataPropertyName = "status";
+            gENDER.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(gENDER);
+
+            DataGridViewTextBoxColumn eMAIL = new DataGridViewTextBoxColumn();
+            eMAIL.Name = "bedamount";
+            eMAIL.HeaderText = "Bed Amount";
+            eMAIL.DataPropertyName = "bedamount";
+            eMAIL.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(eMAIL);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "roomkind";
+            pHONE.HeaderText = "Room Kind";
+            pHONE.DataPropertyName = "roomkind";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(pHONE);
+
+            DataGridViewTextBoxColumn cOST = new DataGridViewTextBoxColumn();
+            cOST.Name = "cost";
+            cOST.HeaderText = "Cost";
+            cOST.DataPropertyName = "cost";
+            cOST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvRoom.Columns.Add(cOST);
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
+            myCurrencyManager.Refresh();
+        }
+        #endregion
         //
         //---- EVENTS
         //
@@ -127,7 +180,24 @@ namespace QuanLyHotel
 
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchRoom.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchRoom.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<RoomDTO> listTimKiem = rmBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<RoomDTO> listTimKiem = rmBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
 
         private void btAddRoom_Click_1(object sender, EventArgs e)

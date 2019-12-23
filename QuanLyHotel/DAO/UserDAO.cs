@@ -309,5 +309,59 @@ namespace userDAO
             }
             return IsNameService;
         }
+        public List<UserDTO> search(string Keyword)
+        {
+            string query = string.Empty;
+            query += "SELECT [name], [phone], [email], [gender], [cmnd]";
+            query += "FROM [manager]";
+            query += " WHERE ([name] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([phone] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([email] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([gender] LIKE CONCAT('%',@Keyword,'%'))";
+            query += " OR ([cmnd] LIKE CONCAT('%',@Keyword,'%'))";
+
+            List<UserDTO> lsTimKiem = new List<UserDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@Keyword", Keyword);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                UserDTO mng = new UserDTO();
+                                mng.Name = reader["name"].ToString();
+                                mng.Phone = reader["phone"].ToString();
+                                mng.Email = reader["email"].ToString();
+                                mng.Gender = reader["gender"].ToString();
+                                mng.Cmnd = reader["cmnd"].ToString();
+                                lsTimKiem.Add(mng);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return lsTimKiem;
+        }
     }
 }

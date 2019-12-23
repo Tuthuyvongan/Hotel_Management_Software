@@ -204,11 +204,7 @@ namespace roomDAO
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@idr", rm.Idr);
-                    cmd.Parameters.AddWithValue("@name", rm.Name);
-                    cmd.Parameters.AddWithValue("@cost", rm.Cost);
                     cmd.Parameters.AddWithValue("@status", rm.Status);
-                    cmd.Parameters.AddWithValue("@bedamount", rm.Bedamount);
-                    cmd.Parameters.AddWithValue("@roomkind", rm.Roomkind);
 
                     try
                     {

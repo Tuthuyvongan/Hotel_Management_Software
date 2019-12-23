@@ -29,6 +29,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             srvBus = new ServiceBUS();
@@ -73,8 +74,48 @@ namespace QuanLyHotel
 
 
         }
+        private void loadData(List<ServiceDTO> list)
+        {
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvService.Columns.Clear();
+            dtgvService.DataSource = null;
+
+            dtgvService.AutoGenerateColumns = false;
+            dtgvService.AllowUserToAddRows = false;
+            dtgvService.DataSource = list;
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(NAME);
+
+            DataGridViewTextBoxColumn KIND = new DataGridViewTextBoxColumn();
+            KIND.Name = "kind";
+            KIND.HeaderText = "Kind";
+            KIND.DataPropertyName = "kind";
+            KIND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(KIND);
+
+            DataGridViewTextBoxColumn COST = new DataGridViewTextBoxColumn();
+            COST.Name = "cost";
+            COST.HeaderText = "Cost";
+            COST.DataPropertyName = "cost";
+            COST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(COST);
 
 
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvService.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
         //
         //---- EVENTS
         //
@@ -95,7 +136,24 @@ namespace QuanLyHotel
 
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
-            this.loadData();
+            if(txtSearchService.Text=="")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchService.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<ServiceDTO> listTimKiem = srvBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<ServiceDTO> listTimKiem = srvBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
 
         private void dtgvService_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -142,5 +200,6 @@ namespace QuanLyHotel
             this.Close();
         }
         #endregion
+        //
     }
 }

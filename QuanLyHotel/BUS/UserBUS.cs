@@ -45,6 +45,10 @@ namespace userBUS
         {
             return usDao.select();
         }
+        public List<UserDTO> search(string Keyword)
+        {
+            return usDao.search(Keyword);
+        }
     }
   
 }

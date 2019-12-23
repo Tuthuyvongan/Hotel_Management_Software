@@ -25,6 +25,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             ctmBUS = new CustomerBUS();
@@ -84,7 +85,63 @@ namespace QuanLyHotel
 
 
         }
+        private void loadData(List<CustomerDTO> list)
+        {
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvCustomer.Columns.Clear();
+            dtgvCustomer.DataSource = null;
 
+            dtgvCustomer.AutoGenerateColumns = false;
+            dtgvCustomer.AllowUserToAddRows = false;
+            dtgvCustomer.DataSource = list;
+
+            //DataGridViewTextBoxColumn ID = new DataGridViewTextBoxColumn();
+            //ID.Name = "idc";
+            //ID.HeaderText = "ID";
+            //ID.DataPropertyName = "idc";
+            //ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dtgvCustomer.Columns.Add(ID);
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(NAME);
+
+            DataGridViewTextBoxColumn DATE = new DataGridViewTextBoxColumn();
+            DATE.Name = "date";
+            DATE.HeaderText = "Date";
+            DATE.DataPropertyName = "date";
+            DATE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(DATE);
+
+            DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
+            CMND.Name = "cmnd";
+            CMND.HeaderText = "Identify card";
+            CMND.DataPropertyName = "cmnd";
+            CMND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(CMND);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "phone";
+            pHONE.HeaderText = "Phone";
+            pHONE.DataPropertyName = "phone";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(pHONE);
+
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvCustomer.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
         //
         //---- EVENTS
         //
@@ -121,7 +178,24 @@ namespace QuanLyHotel
 
         private void btLoadCustomer_Click_1(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchCustomer.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchCustomer.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<CustomerDTO> listTimKiem = ctmBUS.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<CustomerDTO> listTimKiem = ctmBUS.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
 
         private void btAddCustomer_Click_1(object sender, EventArgs e)

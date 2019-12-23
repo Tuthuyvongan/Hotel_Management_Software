@@ -30,6 +30,7 @@ namespace QuanLyHotel
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             srvBUS = new ServiceBUS();
@@ -74,17 +75,48 @@ namespace QuanLyHotel
 
 
         }
-
-
-        //
-        //---- LOAD DATA
-        //
-        #region Events
-        private void BtLoadService_Click(object sender, EventArgs e)
+        private void loadData(List<ServiceDTO> list)
         {
-            this.loadData();
-        }
+            
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvService.Columns.Clear();
+            dtgvService.DataSource = null;
 
+            dtgvService.AutoGenerateColumns = false;
+            dtgvService.AllowUserToAddRows = false;
+            dtgvService.DataSource = list;
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "name";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "name";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(NAME);
+
+            DataGridViewTextBoxColumn KIND = new DataGridViewTextBoxColumn();
+            KIND.Name = "kind";
+            KIND.HeaderText = "Kind";
+            KIND.DataPropertyName = "kind";
+            KIND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(KIND);
+
+            DataGridViewTextBoxColumn COST = new DataGridViewTextBoxColumn();
+            COST.Name = "cost";
+            COST.HeaderText = "Cost";
+            COST.DataPropertyName = "cost";
+            COST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvService.Columns.Add(COST);
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvService.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
         private void loadDataRoomService()
         {
             rsrvBus = new RoomServiceBUS();
@@ -143,7 +175,67 @@ namespace QuanLyHotel
 
 
         }
+        private void loadDataRoomService(List<RoomServiceDTO> list)
+        {
 
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvUseService.Columns.Clear();
+            dtgvUseService.DataSource = null;
+
+            dtgvUseService.AutoGenerateColumns = false;
+            dtgvUseService.AllowUserToAddRows = false;
+            dtgvUseService.DataSource = list;
+
+            DataGridViewTextBoxColumn IDS = new DataGridViewTextBoxColumn();
+            IDS.Name = "ids";
+            IDS.HeaderText = "Service:";
+            IDS.DataPropertyName = "ids";
+            IDS.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(IDS);
+
+            DataGridViewTextBoxColumn IDR = new DataGridViewTextBoxColumn();
+            IDR.Name = "idr";
+            IDR.HeaderText = "Room";
+            IDR.DataPropertyName = "idr";
+            IDR.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(IDR);
+
+            DataGridViewTextBoxColumn Time = new DataGridViewTextBoxColumn();
+            Time.Name = "time";
+            Time.HeaderText = "Time";
+            Time.DataPropertyName = "time";
+            Time.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(Time);
+
+            DataGridViewTextBoxColumn NUMBER = new DataGridViewTextBoxColumn();
+            NUMBER.Name = "number";
+            NUMBER.HeaderText = "Number";
+            NUMBER.DataPropertyName = "number";
+            NUMBER.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(NUMBER);
+
+            DataGridViewTextBoxColumn COST = new DataGridViewTextBoxColumn();
+            COST.Name = "cost";
+            COST.HeaderText = "Cost";
+            COST.DataPropertyName = "cost";
+            COST.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvUseService.Columns.Add(COST);
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvUseService.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
+        //
+        //---- EVENTS
+        //
+        #region Events
         private void TxtCostService_KeyPress(object sender, KeyPressEventArgs e)
         {
             int keydown = e.KeyChar;
@@ -160,12 +252,46 @@ namespace QuanLyHotel
 
         private void btLoadService_Click_1(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchService1.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchService1.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<ServiceDTO> listTimKiem = srvBUS.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<ServiceDTO> listTimKiem = srvBUS.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.loadDataRoomService();
+            if (txtSearchRoomService.Text == "")
+            {
+                this.loadDataRoomService();
+            }
+            else
+            {
+                string Key = txtSearchRoomService.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<RoomServiceDTO> listTimKiem = rsrvBus.select();
+                    this.loadDataRoomService(listTimKiem);
+                }
+                else
+                {
+                    List<RoomServiceDTO> listTimKiem = rsrvBus.search(Key);
+                    this.loadDataRoomService(listTimKiem);
+                }
+            }
         }
 
         private void btAddService_Click_1(object sender, EventArgs e)

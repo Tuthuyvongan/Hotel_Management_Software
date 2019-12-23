@@ -22,9 +22,6 @@ namespace QuanLyHotel
         {
             InitializeComponent();
         }
-
-        
-        
         public CheckInWindow(string name, string kind, string bedamount, string cost)
         {
             InitializeComponent();
@@ -36,12 +33,13 @@ namespace QuanLyHotel
             //this.loadData();
         }
         private CustomerBUS ctmBus;
-        
+        private RoomBUS rmBUS;
         private BillBUS bllBUS;
 
         //
         //---- LOAD DATA
         //
+        #region Load Data
         private void loadData()
         {
             ctmBus = new CustomerBUS();
@@ -90,7 +88,52 @@ namespace QuanLyHotel
 
 
         }
+        private void loadData(List<CustomerDTO> list)
+        {
+            if (list == null)
+            {
+                MessageBox.Show("Fail");
+                return;
+            }
+            dtgvCustomer.Columns.Clear();
+            dtgvCustomer.DataSource = null;
 
+            dtgvCustomer.AutoGenerateColumns = false;
+            dtgvCustomer.AllowUserToAddRows = false;
+            dtgvCustomer.DataSource = list;
+
+
+
+            DataGridViewTextBoxColumn NAME = new DataGridViewTextBoxColumn();
+            NAME.Name = "idc";
+            NAME.HeaderText = "Name:";
+            NAME.DataPropertyName = "idc";
+            NAME.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(NAME);
+
+
+            DataGridViewTextBoxColumn CMND = new DataGridViewTextBoxColumn();
+            CMND.Name = "cmnd";
+            CMND.HeaderText = "Identify card";
+            CMND.DataPropertyName = "cmnd";
+            CMND.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(CMND);
+
+            DataGridViewTextBoxColumn pHONE = new DataGridViewTextBoxColumn();
+            pHONE.Name = "phone";
+            pHONE.HeaderText = "Phone";
+            pHONE.DataPropertyName = "phone";
+            pHONE.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvCustomer.Columns.Add(pHONE);
+
+
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvCustomer.DataSource];
+            myCurrencyManager.Refresh();
+
+
+        }
+        #endregion
         //
         //---- EVENTS
         //
@@ -102,7 +145,6 @@ namespace QuanLyHotel
             bll.IDB = lbNameCustomer.Text+"/"+dtCheckIn.Text+"/"+dtCheckOut.Text+"@"+lbNameCustomer.Text;
             bll.IDC = lbNameCustomer.Text;
             bll.IDR = lbNameRoom.Text;
-            
             bll.CheckIn =DateTime.Parse(dtCheckIn.Text);
             bll.CheckOut =DateTime.Parse(dtCheckOut.Text);
             bll.COST = Decimal.Parse(lbCost.Text);/**Decimal.Parse((dtCheckOut-dtCheckIn).Tostring())*/
@@ -110,7 +152,18 @@ namespace QuanLyHotel
             if (kq == false)
                 MessageBox.Show("Fail!");
             else
-                MessageBox.Show("Sussces");
+            {
+                rmBUS = new RoomBUS();
+                RoomDTO rm = new RoomDTO();
+                rm.Idr = lbNameRoom.Text;
+                rm.Status = "Có Khách";
+                bool kq1 = rmBUS.editStatus(rm);
+                if(kq==false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+            }
+                
             
             this.Close();
         }
@@ -126,7 +179,24 @@ namespace QuanLyHotel
 
         private void btLoadCustomer_Click(object sender, EventArgs e)
         {
-            this.loadData();
+            if (txtSearchCustomer.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchCustomer.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<CustomerDTO> listTimKiem = ctmBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<CustomerDTO> listTimKiem = ctmBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
         }
         #endregion
     }
