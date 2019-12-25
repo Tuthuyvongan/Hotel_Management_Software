@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyHotel
 {
-    public partial class StatisticalWindow : UserControl
+    public partial class ReportWindow : UserControl
     {
-        public StatisticalWindow()
+        public ReportWindow()
         {
             InitializeComponent();
         }

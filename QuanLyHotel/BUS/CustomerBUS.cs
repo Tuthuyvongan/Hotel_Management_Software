@@ -45,5 +45,12 @@ namespace customerBUS
         {
             return ctmDao.search(Keyword);
         }
+        #region Sum
+        public int GetSumCustomer()
+        {
+            return ctmDao.GetSumCustomer();
+        }
+       
+        #endregion
     }
 }
