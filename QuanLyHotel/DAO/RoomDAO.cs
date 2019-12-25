@@ -1,4 +1,5 @@
 ﻿using roomDTO;
+using dataprovider;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -31,56 +32,16 @@ namespace roomDAO
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
 
-
         public static int RoomWidth = 90;
         public static int RoomHeigh = 90;
 
-        //public RoomDAO(DataRow row)
-        //{
-        //    connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-        //    RoomDTO data = new RoomDTO();
-        //    data.Idr = row["idr"].ToString();
-        //    data.Name = row["name"].ToString();
-        //    data.Status = row["status"].ToString();
-        //    data.Cost = (decimal)row["cost"];
-        //    data.Bedamount = (int)row["bedamount"];
-        //    data.Roomkind = row["romkind"].ToString();
-        //}
-        public class DataProvider
-        { 
-            public DataTable ExcuteQuery(string query,string ConnectionString, object[] parameter=null)
-            {               
-                DataTable data = new DataTable();
-                using (SqlConnection con = new SqlConnection(ConnectionString))
-                {
-                    con.Open();
-                    SqlCommand command = new SqlCommand(query, con);
-                    if (parameter!=null)
-                    {
-                        string[] listpara = query.Split();
-                        int i = 0;
-                        foreach(string item in listpara)
-                            {
-                            if(item.Contains('@'))
-                            {
-                                command.Parameters.AddWithValue(item, parameter[i]);
-                                i++;
-                            }
-                        }
-                    }
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    adapter.Fill(data);
-                    con.Close();
-                }
-                return data;
-            }
-        }
+       
+        #region Methods
         public List<RoomDTO> LoadRoomList()
         {
             List<RoomDTO> RoomList = new List<RoomDTO>();
-            DataProvider provider = new DataProvider();
-            string connectionstring = "Data Source=.\\SQLEXPRESS01;Initial Catalog=Hotel_Management;Integrated Security=True";
-            DataTable data=provider.ExcuteQuery("USP_GetRoomList", connectionstring);
+           
+            DataTable data = DataProvider.Instance.ExecuteQuery(@"USP_GetRoomList");
             foreach(DataRow item in data.Rows)
             {
                 RoomDTO room = new RoomDTO(item);
@@ -88,6 +49,33 @@ namespace roomDAO
             }
             return RoomList;
         }
+
+        public string GetRoomInfoByRoomID(string id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.room WHERE idr = '" + id + "'" );
+            if (data.Rows.Count > 0)
+            {
+                RoomDTO room = new RoomDTO(data.Rows[0]);
+                return room.Idr;
+            }
+            return null;
+        }
+
+        public List<RoomDTO> GetRoomInfo ( string id)
+        {
+            List<RoomDTO> listRoomInfo = new List<RoomDTO>();
+           
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.room WHERE idr =  '" + id + "'");
+
+            foreach ( DataRow item in data.Rows)
+            {
+                RoomDTO info = new RoomDTO(item);
+                listRoomInfo.Add(info);
+            }
+
+            return listRoomInfo;
+        }
+
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
@@ -420,6 +408,8 @@ namespace roomDAO
             }
             return lsCost;
         }
+        #endregion
+
         #region test
         public int GetSumRoom()
         {

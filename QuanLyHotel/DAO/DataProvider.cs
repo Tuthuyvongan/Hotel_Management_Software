@@ -6,18 +6,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAO
+namespace dataprovider
 {
     public class DataProvider
     {
+        private static DataProvider instance;
+        
+        public static DataProvider Instance
+        {
+            get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
+            private set { DataProvider.instance = value; }
+        }
+
         private string connectionSTR = "Data Source=.\\SQLEXPRESS01;Initial Catalog = Hotel_Management; Integrated Security = True";
 
         DataTable data = new DataTable();
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
+            DataTable data = new DataTable();
             using (SqlConnection con = new SqlConnection(connectionSTR))
             {
-                DataTable data = new DataTable();
                 con.Open();
 
                 SqlCommand command = new SqlCommand(query, con);

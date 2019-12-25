@@ -21,3 +21,4 @@ namespace expenseDTO
         public Decimal COST { get => cost; set => cost = value; }
 
     }
+}

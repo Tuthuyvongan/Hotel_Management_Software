@@ -33,7 +33,7 @@ namespace QuanLyHotel
         //
         void LoadRoom()
         {
-            
+            flpRoom.Controls.Clear();
             List<RoomDTO> listRoom = RoomDAO.Instance.LoadRoomList();
             
             if (listRoom == null)
@@ -44,34 +44,50 @@ namespace QuanLyHotel
             foreach (RoomDTO item in listRoom)
             {
                 Button btn = new Button() { Width = RoomDAO.RoomWidth, Height = RoomDAO.RoomHeigh };
+
                 // Thêm thuộc tính lên btn trong flow layout panel
                 btn.Text = item.Name + Environment.NewLine + item.Status;
+
+                btn.Click += btn_Click;
+                btn.Tag = item;
+
                 // chỉnh màu trạng thái
-                if (item.Status == "Trống")
+                btn.BackColor = Color.Aqua;
+                switch (item.Status)
                 {
-                    btn.BackColor = Color.Aqua;
+                    case "Trống":
+                        {
+                            btn.BackColor = Color.Aqua;
+                            break;
+                        }
+                    case "Có Khách":
+                        {
+                            btn.BackColor = Color.Red;
+                            break;
+                        }
+                    default:
+                        break;
                 }
-                if (item.Status == "Có Khách")
-                {
-                    btn.BackColor = Color.Red;
-                }
-                //switch (item.Status)
-                //{
-                //    case (item.Status == "Trống" ):
-                //        {
-                //            btn.BackColor = Color.Aqua;
-                //            break;
-                //        }
-                //    case (item.Status == "Có Khách" ):
-                //        {
-                //            btn.BackColor = Color.Red;
-                //            break;
-                //        }
-                //}
 
                 flpRoom.Controls.Add(btn);
             }
         }
+
+        #region LoadData
+        void ShowInfo(string id)
+        {
+            List<RoomDTO> listRoomInfo = RoomDAO.Instance.GetRoomInfo(RoomDAO.Instance.GetRoomInfoByRoomID(id));
+
+            foreach ( RoomDTO item in listRoomInfo)
+            {
+                lbName.Text = item.Name;
+                lbKind.Text = item.Roomkind;
+                lbStatus.Text = item.Status;
+                lbBedsAmount.Text = Convert.ToString(item.Bedamount);
+                lbCost.Text = Convert.ToString(item.Cost);
+            }
+        }
+
         private RoomBUS rmBus;
         private void loadData()
         {
@@ -129,11 +145,16 @@ namespace QuanLyHotel
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dtgvRoom.DataSource];
             myCurrencyManager.Refresh();
         }
-
+        #endregion
         //
         //---- EVENTS
         //
         #region Events
+        private void btn_Click(object sender, EventArgs e)
+        {
+            string roomID = ((sender as Button).Tag as RoomDTO).Idr;
+            ShowInfo(roomID);
+        }
         private void dtgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
@@ -149,6 +170,7 @@ namespace QuanLyHotel
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
             this.loadData();
+            this.LoadRoom();
         }
 
         private void btCheckInRoom_Click_1(object sender, EventArgs e)
