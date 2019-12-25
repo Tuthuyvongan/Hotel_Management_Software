@@ -32,7 +32,11 @@ namespace billBUS
             bool re = bDao.edit(pt);
             return re;
         }
-
+        public bool editCost(BillDTO pt)
+        {
+            bool re = bDao.editCost(pt);
+            return re;
+        }
         public List<BillDTO> select()
         {
             return bDao.select();

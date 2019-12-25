@@ -51,7 +51,6 @@
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtSumRoom = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -284,18 +283,10 @@
             // 
             this.errorProvider6.ContainerControl = this;
             // 
-            // txtSumRoom
-            // 
-            this.txtSumRoom.Location = new System.Drawing.Point(758, 226);
-            this.txtSumRoom.Name = "txtSumRoom";
-            this.txtSumRoom.Size = new System.Drawing.Size(100, 20);
-            this.txtSumRoom.TabIndex = 216;
-            // 
             // RoomWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtSumRoom);
             this.Controls.Add(this.btLoadRoom);
             this.Controls.Add(this.txtSearchRoom);
             this.Controls.Add(this.btDeleteRoom);
@@ -349,6 +340,5 @@
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
         private System.Windows.Forms.ErrorProvider errorProvider6;
-        private System.Windows.Forms.TextBox txtSumRoom;
     }
 }

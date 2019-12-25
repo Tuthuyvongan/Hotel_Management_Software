@@ -11,7 +11,8 @@ using billDTO;
 using billBUS;
 using roomBUS;
 using roomDTO;
-
+using roomServiceBUS;
+using roomserviceDTO;
 namespace QuanLyHotel
 {
     public partial class CheckOutWindow : Form
@@ -23,6 +24,7 @@ namespace QuanLyHotel
         }
         private BillBUS bllBus;
         private RoomBUS rmBUS;
+        private RoomServiceBUS srvBUS;
         string username = "";
         public CheckOutWindow(string Username)
         {
@@ -177,6 +179,10 @@ namespace QuanLyHotel
 
         private void btCheckOut_Click_1(object sender, EventArgs e)
         {
+            srvBUS = new RoomServiceBUS();
+            RoomServiceDTO srv = new RoomServiceDTO();
+            srv.IDR = lbNameRoom.Text;
+            lbCostService.Text = srvBUS.GetSumCostRoomServiceBill(srv,DateTime.Parse(lbCheckIn.Text),DateTime.Parse(lbCheckOut.Text)).ToString();
             bllBus = new BillBUS();
             BillDTO bll = new BillDTO();
             bll.IDC = lbNameCustomer.Text;
@@ -184,8 +190,8 @@ namespace QuanLyHotel
             bll.CheckIn = DateTime.Parse(lbCheckIn.Text);
             bll.CheckOut = DateTime.Parse(lbCheckOut.Text);
             lbCostRoom.Text = bll.COST.ToString();
-            bll.COST = Decimal.Parse(lbCostRoom.Text);/**Decimal.Parse((dtCheckOut-dtCheckIn).Tostring())*/
-            bool kq = bllBus.edit(bll);
+            bll.COST = Decimal.Parse(lbCostRoom.Text)/*+Decimal.Parse(lbCostService.Text)*/;
+            bool kq = bllBus.editCost(bll);
             if (kq == false)
                 MessageBox.Show("Fail!");
             else

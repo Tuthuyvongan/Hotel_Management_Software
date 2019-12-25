@@ -54,9 +54,9 @@ namespace roomServiceBUS
         {
             return rsDao.GetSumRoomService();
         }
-        public decimal GetSumCostRoomServiceBill()
+        public decimal GetSumCostRoomServiceBill(RoomServiceDTO a,DateTime b, DateTime c)
         {
-            return rsDao.GetSumRoomService();
+            return rsDao.GetSumCostRoomServiceBill(a, b,c);
         }
         public decimal GetSumCostRoomServiceReport()
         {

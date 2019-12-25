@@ -380,12 +380,12 @@ namespace roomServiceDAO
             }
             return Sum;
         }
-        public decimal GetSumCostRoomServiceBill()
+        public decimal GetSumCostRoomServiceBill(RoomServiceDTO a,DateTime b, DateTime c)
         {
             string query = string.Empty;
             query += "SELECT [cost]";
             query += "FROM [room_service]";
-            query += "WHERE [idr] = @idr and [ids] = @ids ";
+            query += "WHERE [idr] = @idr and [time] > "+ b +" and [time] < " + c;
 
             decimal Sum = 0;
 
@@ -410,7 +410,7 @@ namespace roomServiceDAO
                                 RoomServiceDTO pt = new RoomServiceDTO();
                                 pt.COST = Decimal.Parse(reader["cost"].ToString());
                                 pt.IDR = reader["idr"].ToString();
-                                pt.IDS = reader["ids"].ToString();
+                                pt.TIME = DateTime.Parse(reader["date"].ToString());
                                 Sum = Sum + pt.COST;
                             }
                         }
