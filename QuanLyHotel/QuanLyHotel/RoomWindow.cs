@@ -29,7 +29,7 @@ namespace QuanLyHotel
         #region Load Data
         private void loadData()
         {
-           
+            rmBus = new RoomBUS();
             List<RoomDTO> list = rmBus.select();
             if (list == null)
             {
