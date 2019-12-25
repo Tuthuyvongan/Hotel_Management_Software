@@ -49,6 +49,7 @@
     <Compile Include="KindRoomDTO.cs" />
     <Compile Include="ManagerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportDTO.cs" />
     <Compile Include="RoomDTO.cs" />
     <Compile Include="RoomServiceDTO.cs" />
     <Compile Include="ServiceDTO.cs" />

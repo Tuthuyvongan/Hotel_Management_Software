@@ -11,6 +11,12 @@ namespace roomServiceDAO
 {
     public class RoomServiceDAO
     {
+        private static RoomServiceDAO instance;
+        public static RoomServiceDAO Instance
+        {
+            get { if (instance == null) instance = new RoomServiceDAO(); return RoomServiceDAO.instance; }
+            private set { RoomServiceDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

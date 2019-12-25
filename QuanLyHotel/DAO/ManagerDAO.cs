@@ -11,6 +11,13 @@ namespace managerDAO
 {
     public class ManagerDAO
     {
+        private static ManagerDAO instance;
+
+        public static ManagerDAO Instance
+        {
+            get { if (instance == null) instance = new ManagerDAO(); return ManagerDAO.instance; }
+            private set { ManagerDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

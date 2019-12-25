@@ -11,6 +11,13 @@ namespace expenseDAO
 {
     public class ExpenseDAO
     {
+        private static ExpenseDAO instance;
+
+        public static ExpenseDAO Instance
+        {
+            get { if (instance == null) instance = new ExpenseDAO(); return ExpenseDAO.instance; }
+            private set { ExpenseDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

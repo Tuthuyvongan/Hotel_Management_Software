@@ -12,6 +12,12 @@ namespace userDAO
 {
     public class UserDAO
     {
+        private static UserDAO instance;
+        public static UserDAO Instance
+        {
+            get { if (instance == null) instance = new UserDAO(); return UserDAO.instance; }
+            private set { UserDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

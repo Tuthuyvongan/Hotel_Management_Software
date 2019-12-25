@@ -11,6 +11,13 @@ namespace kindRoomDAO
 {
     public class KindRoomDAO
     {
+        private static KindRoomDAO instance;
+
+        public static KindRoomDAO Instance
+        {
+            get { if (instance == null) instance = new KindRoomDAO(); return KindRoomDAO.instance; }
+            private set { KindRoomDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

@@ -11,6 +11,12 @@ namespace serviceDAO
 {
     public class ServiceDAO
     {
+        private static ServiceDAO instance;
+        public static ServiceDAO Instance
+        {
+            get { if (instance == null) instance = new ServiceDAO(); return ServiceDAO.instance; }
+            private set { ServiceDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString

@@ -11,6 +11,13 @@ namespace customerDAO
 {
     public class CustomerDAO
     {
+        private static CustomerDAO instance;
+
+        public static CustomerDAO Instance
+        {
+            get { if (instance == null) instance = new CustomerDAO(); return CustomerDAO.instance; }
+            private set { CustomerDAO.instance = value; }
+        }
         private string connectionString;
 
         public string ConnectionString
