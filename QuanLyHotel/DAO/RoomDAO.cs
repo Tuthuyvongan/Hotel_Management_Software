@@ -75,7 +75,10 @@ namespace roomDAO
 
             return listRoomInfo;
         }
-
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
@@ -211,6 +214,11 @@ namespace roomDAO
             }
             return true;
         }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
         public List<RoomDTO> select()
         {
             string query = string.Empty;
@@ -410,7 +418,10 @@ namespace roomDAO
         }
         #endregion
 
-        #region test
+        //
+        //Sum
+        //
+        #region Sum
         public int GetSumRoom()
         {
             string query = string.Empty;
@@ -456,8 +467,54 @@ namespace roomDAO
             }
             return Sum;
         }
+        public int GetSumStatusRoom()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [room]";
+            query += "WHERE [status] = @status ";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomDTO pt = new RoomDTO();
+                                pt.Name = reader["name"].ToString();
+                                pt.Status = reader["status"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        #endregion
         #endregion
     }
 }
-
-
