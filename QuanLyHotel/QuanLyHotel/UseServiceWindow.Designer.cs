@@ -68,7 +68,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(77, 299);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label14.Margin = new System.Windows.Forms.Padding(4);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(77, 23);
             this.label14.TabIndex = 124;
@@ -80,7 +80,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(77, 261);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label12.Margin = new System.Windows.Forms.Padding(4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 23);
             this.label12.TabIndex = 122;
@@ -92,8 +92,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvService.Location = new System.Drawing.Point(25, 508);
-            this.dtgvService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvService.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvService.Name = "dtgvService";
+            this.dtgvService.ReadOnly = true;
             this.dtgvService.RowHeadersWidth = 51;
             this.dtgvService.Size = new System.Drawing.Size(503, 151);
             this.dtgvService.TabIndex = 121;
@@ -156,7 +157,7 @@
             this.lbBedsAmount.AutoSize = true;
             this.lbBedsAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbBedsAmount.Location = new System.Drawing.Point(227, 172);
-            this.lbBedsAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbBedsAmount.Margin = new System.Windows.Forms.Padding(4);
             this.lbBedsAmount.Name = "lbBedsAmount";
             this.lbBedsAmount.Size = new System.Drawing.Size(59, 23);
             this.lbBedsAmount.TabIndex = 233;
@@ -180,7 +181,7 @@
             this.lbNameRoom.AutoSize = true;
             this.lbNameRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbNameRoom.Location = new System.Drawing.Point(227, 118);
-            this.lbNameRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbNameRoom.Margin = new System.Windows.Forms.Padding(4);
             this.lbNameRoom.Name = "lbNameRoom";
             this.lbNameRoom.Size = new System.Drawing.Size(59, 23);
             this.lbNameRoom.TabIndex = 231;
@@ -192,7 +193,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(77, 172);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label4.Margin = new System.Windows.Forms.Padding(4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 23);
             this.label4.TabIndex = 230;
@@ -204,7 +205,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(77, 118);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 229;
@@ -239,7 +240,7 @@
             this.txtNumberService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumberService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumberService.Location = new System.Drawing.Point(169, 295);
-            this.txtNumberService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumberService.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumberService.MaxLength = 40;
             this.txtNumberService.Name = "txtNumberService";
             this.txtNumberService.Size = new System.Drawing.Size(207, 30);
@@ -252,7 +253,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchService.Location = new System.Drawing.Point(116, 465);
-            this.txtSearchService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchService.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchService.MaxLength = 40;
             this.txtSearchService.Name = "txtSearchService";
             this.txtSearchService.Size = new System.Drawing.Size(260, 35);
@@ -266,7 +267,7 @@
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
             this.btLoadCustomer.Location = new System.Drawing.Point(385, 464);
-            this.btLoadCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLoadCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btLoadCustomer.MaximumSize = new System.Drawing.Size(143, 37);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(143, 37);
@@ -283,7 +284,7 @@
             this.btUseService.Font = new System.Drawing.Font("Times New Roman", 12.25F, System.Drawing.FontStyle.Bold);
             this.btUseService.ForeColor = System.Drawing.Color.White;
             this.btUseService.Location = new System.Drawing.Point(183, 667);
-            this.btUseService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btUseService.Margin = new System.Windows.Forms.Padding(4);
             this.btUseService.Name = "btUseService";
             this.btUseService.Size = new System.Drawing.Size(176, 52);
             this.btUseService.TabIndex = 240;
@@ -297,7 +298,7 @@
             this.lbKindService.AutoSize = true;
             this.lbKindService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbKindService.Location = new System.Drawing.Point(227, 374);
-            this.lbKindService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbKindService.Margin = new System.Windows.Forms.Padding(4);
             this.lbKindService.Name = "lbKindService";
             this.lbKindService.Size = new System.Drawing.Size(59, 23);
             this.lbKindService.TabIndex = 244;
@@ -309,7 +310,7 @@
             this.lbNameService.AutoSize = true;
             this.lbNameService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbNameService.Location = new System.Drawing.Point(227, 343);
-            this.lbNameService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbNameService.Margin = new System.Windows.Forms.Padding(4);
             this.lbNameService.Name = "lbNameService";
             this.lbNameService.Size = new System.Drawing.Size(59, 23);
             this.lbNameService.TabIndex = 243;
@@ -321,7 +322,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(77, 343);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label6.Margin = new System.Windows.Forms.Padding(4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 23);
             this.label6.TabIndex = 242;
@@ -333,7 +334,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(77, 374);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label9.Margin = new System.Windows.Forms.Padding(4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 23);
             this.label9.TabIndex = 241;
@@ -345,7 +346,7 @@
             this.lbCost.AutoSize = true;
             this.lbCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.lbCost.Location = new System.Drawing.Point(227, 405);
-            this.lbCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbCost.Margin = new System.Windows.Forms.Padding(4);
             this.lbCost.Name = "lbCost";
             this.lbCost.Size = new System.Drawing.Size(59, 23);
             this.lbCost.TabIndex = 246;
@@ -357,7 +358,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(77, 405);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label15.Margin = new System.Windows.Forms.Padding(4);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 23);
             this.label15.TabIndex = 245;
@@ -404,7 +405,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(573, 761);
             this.Name = "UseServiceWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
