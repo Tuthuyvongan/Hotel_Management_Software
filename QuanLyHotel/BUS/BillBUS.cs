@@ -45,5 +45,15 @@ namespace billBUS
         {
             return bDao.search(Keyword);
         }
+        #region Sum
+        public int GetSumBill()
+        {
+            return bDao.GetSumBill();
+        }
+        public decimal GetSumCostBill()
+        {
+            return bDao.GetSumCostBill();
+        }
+        #endregion
     }
 }

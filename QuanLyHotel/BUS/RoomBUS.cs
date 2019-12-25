@@ -55,10 +55,14 @@ namespace roomBUS
         //{
         //    return rDao.selectCost(sKeyword);
         //}
-        #region test
+        #region Sum
         public int GetSumRoom()
         {
             return rDao.GetSumRoom();
+        }
+        public int GetSumStatusRoom()
+        {
+            return rDao.GetSumStatusRoom();
         }
         #endregion
     }

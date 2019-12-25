@@ -22,6 +22,10 @@ namespace managerDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(ManagerDTO mng)
         {
             string query = string.Empty;
@@ -122,6 +126,11 @@ namespace managerDAO
             }
             return true;
         }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
         public List<ManagerDTO> select()
         {
             string query = string.Empty;
@@ -270,5 +279,12 @@ namespace managerDAO
             }
             return lsTimKiem;
         }
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
+
+        #endregion
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyHotel
 {
-    partial class StatisticalWindow
+    partial class ReportWindow
     {
         /// <summary> 
         /// Required designer variable.
@@ -83,9 +83,9 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(18, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(259, 31);
+            this.label16.Size = new System.Drawing.Size(245, 31);
             this.label16.TabIndex = 214;
-            this.label16.Text = "Expense Information";
+            this.label16.Text = "Report Information";
             // 
             // dtgvService
             // 
@@ -108,7 +108,7 @@
             this.label15.TabIndex = 216;
             this.label15.Text = "Search";
             // 
-            // StatisticalWindow
+            // ReportWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.dtgvService);
             this.Controls.Add(this.label15);
-            this.Name = "StatisticalWindow";
+            this.Name = "ReportWindow";
             this.Size = new System.Drawing.Size(962, 554);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvService)).EndInit();
             this.ResumeLayout(false);

@@ -23,6 +23,9 @@ namespace userDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
+        //
+        //Add Edit Delete
+        #region Add Edit Delete
         public bool add(UserDTO nd)
         {
             string query = string.Empty;
@@ -160,8 +163,11 @@ namespace userDAO
             }
             return true;
         }
-
-
+        #endregion
+        //
+        //List/Search/Login
+        //
+        #region List/Search/Login
         public List<UserDTO> select(string IDM, string PASSWORD)
         {
             string query = string.Empty;
@@ -363,5 +369,150 @@ namespace userDAO
             }
             return lsTimKiem;
         }
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
+        public int GetSumAccount()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [manager]";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                UserDTO pt = new UserDTO();
+                                pt.Name = reader["name"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        public int GetSumLevelAccount()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [manager]";
+            query += "WHERE [level] = @level";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                UserDTO pt = new UserDTO();
+                                pt.Name = reader["name"].ToString();
+                                pt.Level = int.Parse(reader["level"].ToString());
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        public int GetSumGenderAccount()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [manager]";
+            query += "WHERE [gender] = @gender";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                UserDTO pt = new UserDTO();
+                                pt.Name = reader["name"].ToString();
+                                pt.Gender = reader["gender"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        #endregion
     }
 }

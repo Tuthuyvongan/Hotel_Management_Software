@@ -22,6 +22,10 @@ namespace roomServiceDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(RoomServiceDTO rm)
         {
             string query = string.Empty;
@@ -124,6 +128,11 @@ namespace roomServiceDAO
             }
             return true;
         }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
         public List<RoomServiceDTO> select()
         {
             string query = string.Empty;
@@ -321,5 +330,152 @@ namespace roomServiceDAO
             }
             return lsCost;
         }
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
+        public int GetSumRoomService()
+        {
+            string query = string.Empty;
+            query += "SELECT [idrs]";
+            query += "FROM [room_service]";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomServiceDTO pt = new RoomServiceDTO();
+                                pt.IDR_S = reader["idrs"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        public decimal GetSumCostRoomServiceBill()
+        {
+            string query = string.Empty;
+            query += "SELECT [cost]";
+            query += "FROM [room_service]";
+            query += "WHERE [idr] = @idr and [ids] = @ids ";
+
+            decimal Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomServiceDTO pt = new RoomServiceDTO();
+                                pt.COST = Decimal.Parse(reader["cost"].ToString());
+                                pt.IDR = reader["idr"].ToString();
+                                pt.IDS = reader["ids"].ToString();
+                                Sum = Sum + pt.COST;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        public decimal GetSumCostRoomServiceReport()
+        {
+            string query = string.Empty;
+            query += "SELECT [cost]";
+            query += "FROM [room_service]";
+            query += "WHERE [idr] = @idr and [ids] = @ids ";
+
+            decimal Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomServiceDTO pt = new RoomServiceDTO();
+                                pt.COST = Decimal.Parse(reader["cost"].ToString());
+                                pt.IDR = reader["idr"].ToString();
+                                pt.IDS = reader["ids"].ToString();
+                                Sum = Sum + pt.COST;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        #endregion
     }
 }

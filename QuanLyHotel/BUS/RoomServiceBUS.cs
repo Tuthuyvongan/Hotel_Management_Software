@@ -49,5 +49,19 @@ namespace roomServiceBUS
         {
             return rsDao.selectCost(sKeyword);
         }
+        #region Sum
+        public int GetSumRoomService()
+        {
+            return rsDao.GetSumRoomService();
+        }
+        public decimal GetSumCostRoomServiceBill()
+        {
+            return rsDao.GetSumRoomService();
+        }
+        public decimal GetSumCostRoomServiceReport()
+        {
+            return rsDao.GetSumCostRoomServiceReport();
+        }
+        #endregion
     }
 }

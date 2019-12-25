@@ -22,6 +22,10 @@ namespace serviceDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(ServiceDTO rm)
         {
             string query = string.Empty;
@@ -121,6 +125,11 @@ namespace serviceDAO
             }
             return true;
         }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
         public List<ServiceDTO> select()
         {
             string query = string.Empty;
@@ -312,5 +321,57 @@ namespace serviceDAO
             }
             return lsCost;
         }
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
+        public int GetSumService()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [service]";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ServiceDTO pt = new ServiceDTO();
+                                pt.NAME = reader["name"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        
+        #endregion
     }
 }

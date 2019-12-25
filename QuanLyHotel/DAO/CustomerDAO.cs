@@ -22,10 +22,13 @@ namespace customerDAO
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(CustomerDTO ctm)
         {
             string query = string.Empty;
-            /*#Fix*/
             query += "INSERT INTO [customer] (idc,name,phone,date,cmnd) ";
             query += "VALUES (@idc,@name,@phone,@date,@cmnd)";
             
@@ -124,6 +127,11 @@ namespace customerDAO
             }
             return true;
         }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
         public List<CustomerDTO> select()
         {
             string query = string.Empty;
@@ -272,5 +280,57 @@ namespace customerDAO
             }
             return lsTimKiem;
         }
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
+        public int GetSumCustomer()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [customer]";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                CustomerDTO pt = new CustomerDTO();
+                                pt.NAME = reader["name"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        
+        #endregion
     }
 }

@@ -75,19 +75,10 @@ namespace roomDAO
                 return data;
             }
         }
-        public List<RoomDTO> LoadRoomList()
-        {
-            List<RoomDTO> RoomList = new List<RoomDTO>();
-            DataProvider provider = new DataProvider();
-            string connectionstring = "Data Source=.\\SQLEXPRESS01;Initial Catalog=Hotel_Management;Integrated Security=True";
-            DataTable data=provider.ExcuteQuery("USP_GetRoomList", connectionstring);
-            foreach(DataRow item in data.Rows)
-            {
-                RoomDTO room = new RoomDTO(item);
-                RoomList.Add(room);
-            }
-            return RoomList;
-        }
+        //
+        //Add Edit Delete
+        //
+        #region Add Edit Delete
         public bool add(RoomDTO rm)
         {
             string query = string.Empty;
@@ -222,6 +213,24 @@ namespace roomDAO
                 }
             }
             return true;
+        }
+        #endregion
+        //
+        //List/Search
+        //
+        #region List/Search
+        public List<RoomDTO> LoadRoomList()
+        {
+            List<RoomDTO> RoomList = new List<RoomDTO>();
+            DataProvider provider = new DataProvider();
+            string connectionstring = "Data Source=.\\SQLEXPRESS01;Initial Catalog=Hotel_Management;Integrated Security=True";
+            DataTable data = provider.ExcuteQuery("USP_GetRoomList", connectionstring);
+            foreach (DataRow item in data.Rows)
+            {
+                RoomDTO room = new RoomDTO(item);
+                RoomList.Add(room);
+            }
+            return RoomList;
         }
         public List<RoomDTO> select()
         {
@@ -420,7 +429,11 @@ namespace roomDAO
             }
             return lsCost;
         }
-        #region test
+        #endregion
+        //
+        //Sum
+        //
+        #region Sum
         public int GetSumRoom()
         {
             string query = string.Empty;
@@ -449,6 +462,53 @@ namespace roomDAO
                             {
                                 RoomDTO pt = new RoomDTO();
                                 pt.Name = reader["name"].ToString();
+                                Sum++;
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return Sum;
+        }
+        public int GetSumStatusRoom()
+        {
+            string query = string.Empty;
+            query += "SELECT [name]";
+            query += "FROM [room]";
+            query += "WHERE [status] = @status ";
+
+            int Sum = 0;
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                RoomDTO pt = new RoomDTO();
+                                pt.Name = reader["name"].ToString();
+                                pt.Status = reader["status"].ToString();
                                 Sum++;
                             }
                         }

@@ -49,5 +49,12 @@ namespace serviceBUS
         {
             return sDao.selectCost(sKeyword);
         }
+        #region Sum
+        public int GetSumService()
+        {
+            return sDao.GetSumService();
+        }
+ 
+        #endregion
     }
 }

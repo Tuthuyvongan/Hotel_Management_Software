@@ -49,6 +49,20 @@ namespace userBUS
         {
             return usDao.search(Keyword);
         }
+        #region Sum
+        public int GetSumAccount()
+        {
+            return usDao.GetSumAccount();
+        }
+        public int GetSumLevelAccount()
+        {
+            return usDao.GetSumLevelAccount();
+        }
+        public int GetSumGenderAccount()
+        {
+            return usDao.GetSumGenderAccount();
+        }
+        #endregion
     }
-  
+
 }
