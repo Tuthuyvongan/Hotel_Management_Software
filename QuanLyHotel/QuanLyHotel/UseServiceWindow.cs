@@ -183,7 +183,7 @@ namespace QuanLyHotel
             {
                 roomServiceBUS = new RoomServiceBUS();
                 RoomServiceDTO roomService = new RoomServiceDTO();
-                roomService.IDR_S = lbNameRoom.Text;
+                roomService.IDR_S = lbNameRoom.Text+"@"+lbNameService.Text;
                 roomService.IDR = lbNameRoom.Text;
                 roomService.IDS = lbNameService.Text;
                 roomService.TIME = DateTime.Parse(dtDateService.Text);

@@ -121,7 +121,7 @@ namespace QuanLyHotel
                 else
                 {
                     MessageBox.Show("Thêm tài khoản thành công");
-                    LoginWindow C = new LoginWindow(txtEmail.Text, txtPassword.Text);
+                    LoginWindow C = new LoginWindow(txtUsername.Text, txtPassword.Text);
                     this.Hide();
                     C.StartPosition = this.StartPosition;
                     C.ShowDialog();

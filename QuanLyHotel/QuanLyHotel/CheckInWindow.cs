@@ -141,7 +141,8 @@ namespace QuanLyHotel
         private void BtCheckIn_Click(object sender, EventArgs e)
         {
             TimeSpan a = dtCheckOut.Value.Subtract(dtCheckIn.Value);
-
+            decimal x = a.Days+1;
+            decimal y = Decimal.Parse(lbCost.Text) * x;
             bllBUS = new BillBUS();
             BillDTO bll = new BillDTO();
             bll.IDB = lbNameCustomer.Text+"/"+dtCheckIn.Text+"/"+dtCheckOut.Text+"@"+lbNameCustomer.Text;
@@ -149,7 +150,7 @@ namespace QuanLyHotel
             bll.IDR = lbNameRoom.Text;
             bll.CheckIn =DateTime.Parse(dtCheckIn.Text);
             bll.CheckOut =DateTime.Parse(dtCheckOut.Text);
-            bll.COST = Decimal.Parse((int.Parse(lbCost.Text) * a.Days).ToString());
+            bll.COST = Decimal.Parse(lbCost.Text) * x;
             bool kq = bllBUS.add(bll);
             if (kq == false)
                 MessageBox.Show("Fail!");

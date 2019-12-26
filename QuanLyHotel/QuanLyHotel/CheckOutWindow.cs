@@ -182,7 +182,7 @@ namespace QuanLyHotel
             srvBUS = new RoomServiceBUS();
             RoomServiceDTO srv = new RoomServiceDTO();
             srv.IDR = lbNameRoom.Text;
-            lbCostService.Text = srvBUS.GetSumCostRoomServiceBill(srv,DateTime.Parse(lbCheckIn.Text),DateTime.Parse(lbCheckOut.Text)).ToString();
+            
             bllBus = new BillBUS();
             BillDTO bll = new BillDTO();
             bll.IDC = lbNameCustomer.Text;
@@ -190,7 +190,7 @@ namespace QuanLyHotel
             bll.CheckIn = DateTime.Parse(lbCheckIn.Text);
             bll.CheckOut = DateTime.Parse(lbCheckOut.Text);
             lbCostRoom.Text = bll.COST.ToString();
-            bll.COST = Decimal.Parse(lbCostRoom.Text)/*+Decimal.Parse(lbCostService.Text)*/;
+            bll.COST = Decimal.Parse(lbCostRoom.Text);
             bool kq = bllBus.editCost(bll);
             if (kq == false)
                 MessageBox.Show("Fail!");
@@ -217,7 +217,7 @@ namespace QuanLyHotel
             lbNameCustomer.Text = dtgvBill.Rows[numrow].Cells[1].Value.ToString();
             lbSumCost.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[2].Value);
             lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[3].Value);
-            lbCheckIn.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[4].Value);
+            lbCheckOut.Text = Convert.ToString(dtgvBill.Rows[numrow].Cells[4].Value);
         }
         #endregion
     }

@@ -54,6 +54,10 @@ namespace userBUS
         {
             return usDao.GetSumAccount();
         }
+        public int GetLevel(UserDTO pt)
+        {
+            return usDao.GetLevel(pt);
+        }
         public int GetSumLevelAccount()
         {
             return usDao.GetSumLevelAccount();

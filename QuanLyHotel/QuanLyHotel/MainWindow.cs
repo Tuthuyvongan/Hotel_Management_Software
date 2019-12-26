@@ -19,21 +19,24 @@ namespace QuanLyHotel
             homeWindow1.Dock = DockStyle.Fill;
             homeWindow1.BringToFront();
         }
-        string username = "";
         int level = 0;
-        public MainWindow(string Username, int Level)
+        public MainWindow( int Level)
         {
             InitializeComponent();
             homeWindow1.Dock = DockStyle.Fill;
             homeWindow1.BringToFront();
             
-            username = Username;
             level = Level;
-            if (level == 1)
+            if (level == 2)
             {
                 btAccount.Show();
+                btRoom.Show();
             }
-            else btAccount.Hide();
+            else
+            {
+                btAccount.Hide();
+                btRoom.Hide();
+            }
         }
         
         public void ChangeDock(Control a)
@@ -85,6 +88,16 @@ namespace QuanLyHotel
             accountWindow1.BringToFront();
             accountWindow1.Dock = DockStyle.Fill;
         }
+        private void btExpense_MouseClick(object sender, EventArgs e)
+        {
+            
+        }
         #endregion
+
+        private void btExpense_Click(object sender, EventArgs e)
+        {
+            expenseWindow1.BringToFront();
+            expenseWindow1.Dock = DockStyle.Fill;
+        }
     }
 }

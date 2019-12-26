@@ -69,6 +69,7 @@ namespace QuanLyHotel
             UserBUS ndBUS = new UserBUS();
 
             UserDTO tn = new UserDTO();
+            tn.Idm = txtUsername.Text;
             string IDU = txtUsername.Text;
             string PASSWORD = txtPassword.Text;
             if (txtUsername.Text == "")
@@ -86,7 +87,7 @@ namespace QuanLyHotel
                 {
                     txtUsername.Text = "";
                     txtPassword.Text = "";
-                    MainWindow f = new MainWindow();
+                    MainWindow f = new MainWindow(ndBUS.GetLevel(tn));
                     this.Hide();
                     f.ShowDialog();
                     this.Show();

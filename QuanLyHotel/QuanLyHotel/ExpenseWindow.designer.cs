@@ -34,7 +34,6 @@
             this.btDeleteExpense = new System.Windows.Forms.Button();
             this.btEditExpense = new System.Windows.Forms.Button();
             this.btAddExpense = new System.Windows.Forms.Button();
-            this.txtCostExpense = new System.Windows.Forms.TextBox();
             this.txtKindExpense = new System.Windows.Forms.ComboBox();
             this.txtNameExpense = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCostExpense = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvExpense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -58,10 +58,11 @@
             // 
             // txtSearchExpense
             // 
-            this.txtSearchExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSearchExpense.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchExpense.Location = new System.Drawing.Point(120, 284);
-            this.txtSearchExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchExpense.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchExpense.MaxLength = 40;
             this.txtSearchExpense.Name = "txtSearchExpense";
             this.txtSearchExpense.Size = new System.Drawing.Size(520, 35);
@@ -69,13 +70,13 @@
             // 
             // btLoadExpense
             // 
-            this.btLoadExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btLoadExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btLoadExpense.BackColor = System.Drawing.Color.Firebrick;
             this.btLoadExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLoadExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLoadExpense.ForeColor = System.Drawing.Color.White;
             this.btLoadExpense.Location = new System.Drawing.Point(649, 283);
-            this.btLoadExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLoadExpense.Margin = new System.Windows.Forms.Padding(4);
             this.btLoadExpense.Name = "btLoadExpense";
             this.btLoadExpense.Size = new System.Drawing.Size(99, 38);
             this.btLoadExpense.TabIndex = 203;
@@ -91,7 +92,7 @@
             this.btDeleteExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteExpense.ForeColor = System.Drawing.Color.White;
             this.btDeleteExpense.Location = new System.Drawing.Point(236, 239);
-            this.btDeleteExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDeleteExpense.Margin = new System.Windows.Forms.Padding(4);
             this.btDeleteExpense.Name = "btDeleteExpense";
             this.btDeleteExpense.Size = new System.Drawing.Size(99, 38);
             this.btDeleteExpense.TabIndex = 202;
@@ -107,7 +108,7 @@
             this.btEditExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditExpense.ForeColor = System.Drawing.Color.White;
             this.btEditExpense.Location = new System.Drawing.Point(129, 239);
-            this.btEditExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEditExpense.Margin = new System.Windows.Forms.Padding(4);
             this.btEditExpense.Name = "btEditExpense";
             this.btEditExpense.Size = new System.Drawing.Size(99, 38);
             this.btEditExpense.TabIndex = 201;
@@ -123,7 +124,7 @@
             this.btAddExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddExpense.ForeColor = System.Drawing.Color.White;
             this.btAddExpense.Location = new System.Drawing.Point(24, 239);
-            this.btAddExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAddExpense.Margin = new System.Windows.Forms.Padding(4);
             this.btAddExpense.Name = "btAddExpense";
             this.btAddExpense.Size = new System.Drawing.Size(99, 38);
             this.btAddExpense.TabIndex = 200;
@@ -131,25 +132,13 @@
             this.btAddExpense.UseVisualStyleBackColor = false;
             this.btAddExpense.Click += new System.EventHandler(this.BtAddExpense_Click);
             // 
-            // txtCostExpense
-            // 
-            this.txtCostExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCostExpense.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
-            this.txtCostExpense.Location = new System.Drawing.Point(148, 172);
-            this.txtCostExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCostExpense.MaxLength = 40;
-            this.txtCostExpense.Name = "txtCostExpense";
-            this.txtCostExpense.Size = new System.Drawing.Size(599, 34);
-            this.txtCostExpense.TabIndex = 199;
-            this.txtCostExpense.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCostExpense_KeyPress);
-            // 
             // txtKindExpense
             // 
             this.txtKindExpense.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtKindExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtKindExpense.FormattingEnabled = true;
             this.txtKindExpense.Location = new System.Drawing.Point(148, 126);
-            this.txtKindExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKindExpense.Margin = new System.Windows.Forms.Padding(4);
             this.txtKindExpense.MaxLength = 40;
             this.txtKindExpense.Name = "txtKindExpense";
             this.txtKindExpense.Size = new System.Drawing.Size(219, 34);
@@ -160,7 +149,7 @@
             this.txtNameExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameExpense.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtNameExpense.Location = new System.Drawing.Point(148, 84);
-            this.txtNameExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNameExpense.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameExpense.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtNameExpense.MaxLength = 40;
             this.txtNameExpense.Name = "txtNameExpense";
@@ -218,10 +207,11 @@
             // 
             // dtgvExpense
             // 
-            this.dtgvExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtgvExpense.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvExpense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvExpense.Location = new System.Drawing.Point(28, 327);
-            this.dtgvExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvExpense.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvExpense.Name = "dtgvExpense";
             this.dtgvExpense.ReadOnly = true;
             this.dtgvExpense.RowHeadersWidth = 51;
@@ -246,7 +236,7 @@
             this.dtDateExpense.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.dtDateExpense.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDateExpense.Location = new System.Drawing.Point(463, 127);
-            this.dtDateExpense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtDateExpense.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateExpense.Name = "dtDateExpense";
             this.dtDateExpense.Size = new System.Drawing.Size(284, 35);
             this.dtDateExpense.TabIndex = 212;
@@ -280,10 +270,23 @@
             // 
             this.errorProvider4.ContainerControl = this;
             // 
+            // txtCostExpense
+            // 
+            this.txtCostExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCostExpense.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.txtCostExpense.Location = new System.Drawing.Point(149, 174);
+            this.txtCostExpense.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCostExpense.MaximumSize = new System.Drawing.Size(599, 29);
+            this.txtCostExpense.MaxLength = 40;
+            this.txtCostExpense.Name = "txtCostExpense";
+            this.txtCostExpense.Size = new System.Drawing.Size(599, 29);
+            this.txtCostExpense.TabIndex = 213;
+            // 
             // ExpenseWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtCostExpense);
             this.Controls.Add(this.dtDateExpense);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtSearchExpense);
@@ -291,7 +294,6 @@
             this.Controls.Add(this.btDeleteExpense);
             this.Controls.Add(this.btEditExpense);
             this.Controls.Add(this.btAddExpense);
-            this.Controls.Add(this.txtCostExpense);
             this.Controls.Add(this.txtKindExpense);
             this.Controls.Add(this.txtNameExpense);
             this.Controls.Add(this.label16);
@@ -300,7 +302,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dtgvExpense);
             this.Controls.Add(this.label15);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ExpenseWindow";
             this.Size = new System.Drawing.Size(1283, 682);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvExpense)).EndInit();
@@ -320,7 +322,6 @@
         private System.Windows.Forms.Button btDeleteExpense;
         private System.Windows.Forms.Button btEditExpense;
         private System.Windows.Forms.Button btAddExpense;
-        private System.Windows.Forms.TextBox txtCostExpense;
         private System.Windows.Forms.ComboBox txtKindExpense;
         private System.Windows.Forms.TextBox txtNameExpense;
         private System.Windows.Forms.Label label16;
@@ -335,5 +336,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.TextBox txtCostExpense;
     }
 }

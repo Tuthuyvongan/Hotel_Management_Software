@@ -84,11 +84,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCustomer.Location = new System.Drawing.Point(24, 513);
-            this.dtgvCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvCustomer.Name = "dtgvCustomer";
             this.dtgvCustomer.ReadOnly = true;
             this.dtgvCustomer.RowHeadersWidth = 51;
-            this.dtgvCustomer.Size = new System.Drawing.Size(1736, 391);
+            this.dtgvCustomer.Size = new System.Drawing.Size(1718, 391);
             this.dtgvCustomer.TabIndex = 79;
             this.dtgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCustomer_CellClick);
             // 
@@ -118,11 +118,10 @@
             // 
             // dtBirthday
             // 
-            this.dtBirthday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtBirthday.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.dtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBirthday.Location = new System.Drawing.Point(209, 254);
-            this.dtBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtBirthday.Margin = new System.Windows.Forms.Padding(4);
             this.dtBirthday.MaximumSize = new System.Drawing.Size(599, 29);
             this.dtBirthday.Name = "dtBirthday";
             this.dtBirthday.Size = new System.Drawing.Size(599, 29);
@@ -131,7 +130,6 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(23, 172);
@@ -143,10 +141,9 @@
             // 
             // txtPhoneCustomer
             // 
-            this.txtPhoneCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtPhoneCustomer.Location = new System.Drawing.Point(209, 210);
-            this.txtPhoneCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneCustomer.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtPhoneCustomer.MaxLength = 40;
             this.txtPhoneCustomer.Name = "txtPhoneCustomer";
@@ -156,7 +153,6 @@
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(23, 260);
@@ -168,7 +164,6 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(23, 215);
@@ -180,10 +175,9 @@
             // 
             // txtIdentifyCardCustomer
             // 
-            this.txtIdentifyCardCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdentifyCardCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtIdentifyCardCustomer.Location = new System.Drawing.Point(209, 167);
-            this.txtIdentifyCardCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdentifyCardCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdentifyCardCustomer.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtIdentifyCardCustomer.MaxLength = 40;
             this.txtIdentifyCardCustomer.Name = "txtIdentifyCardCustomer";
@@ -192,10 +186,9 @@
             // 
             // txtNameCustomer
             // 
-            this.txtNameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameCustomer.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.txtNameCustomer.Location = new System.Drawing.Point(209, 126);
-            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNameCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameCustomer.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtNameCustomer.MaxLength = 40;
             this.txtNameCustomer.Name = "txtNameCustomer";
@@ -204,7 +197,6 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(23, 130);
@@ -222,7 +214,7 @@
             this.btAddCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btAddCustomer.ForeColor = System.Drawing.Color.White;
             this.btAddCustomer.Location = new System.Drawing.Point(28, 313);
-            this.btAddCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAddCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btAddCustomer.MinimumSize = new System.Drawing.Size(111, 39);
             this.btAddCustomer.Name = "btAddCustomer";
             this.btAddCustomer.Size = new System.Drawing.Size(111, 39);
@@ -239,7 +231,7 @@
             this.btEditCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btEditCustomer.ForeColor = System.Drawing.Color.White;
             this.btEditCustomer.Location = new System.Drawing.Point(160, 313);
-            this.btEditCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEditCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btEditCustomer.MinimumSize = new System.Drawing.Size(111, 39);
             this.btEditCustomer.Name = "btEditCustomer";
             this.btEditCustomer.Size = new System.Drawing.Size(111, 39);
@@ -256,7 +248,7 @@
             this.btDeleteCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btDeleteCustomer.ForeColor = System.Drawing.Color.White;
             this.btDeleteCustomer.Location = new System.Drawing.Point(291, 313);
-            this.btDeleteCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDeleteCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btDeleteCustomer.MinimumSize = new System.Drawing.Size(111, 39);
             this.btDeleteCustomer.Name = "btDeleteCustomer";
             this.btDeleteCustomer.Size = new System.Drawing.Size(111, 39);
@@ -273,7 +265,7 @@
             this.btLoadCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.btLoadCustomer.ForeColor = System.Drawing.Color.White;
             this.btLoadCustomer.Location = new System.Drawing.Point(427, 313);
-            this.btLoadCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLoadCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.btLoadCustomer.MinimumSize = new System.Drawing.Size(111, 39);
             this.btLoadCustomer.Name = "btLoadCustomer";
             this.btLoadCustomer.Size = new System.Drawing.Size(111, 39);
@@ -287,7 +279,7 @@
             this.txtSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSearchCustomer.Font = new System.Drawing.Font("Times New Roman", 16.25F, System.Drawing.FontStyle.Bold);
             this.txtSearchCustomer.Location = new System.Drawing.Point(127, 402);
-            this.txtSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchCustomer.MaxLength = 40;
             this.txtSearchCustomer.Name = "txtSearchCustomer";
             this.txtSearchCustomer.Size = new System.Drawing.Size(409, 39);
@@ -313,7 +305,7 @@
             this.Controls.Add(this.dtgvCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerWindow";
             this.Size = new System.Drawing.Size(1784, 927);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();

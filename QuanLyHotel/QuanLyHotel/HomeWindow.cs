@@ -18,8 +18,11 @@ namespace QuanLyHotel
         public HomeWindow()
         {
             InitializeComponent();
-            LoadRoom();
-            loadData();
+            //if ( this.DesignMode is false)
+            //{
+            //    this.loadData();
+            //    this.LoadRoom();
+            //}
         }
         string username = "";
         public HomeWindow(string Username)

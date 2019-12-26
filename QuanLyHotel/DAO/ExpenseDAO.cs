@@ -34,8 +34,8 @@ namespace expenseDAO
         {
             string query = string.Empty;
 
-            query += "INSERT INTO [expense] (ids,name,kind,date,cost) ";
-            query += "VALUES (@ids,@name,@kind,@date,@cost)";
+            query += "INSERT INTO [expense] (ide,name,kind,date,cost) ";
+            query += "VALUES (@ide,@name,@kind,@date,@cost)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -134,7 +134,7 @@ namespace expenseDAO
         public List<ExpenseDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [name], [kind], [cost], [date], [ids] ";
+            query += "SELECT [name], [kind], [cost], [date], [ide] ";
             query += "FROM [expense]";
 
             List<ExpenseDTO> IsNameService = new List<ExpenseDTO>();

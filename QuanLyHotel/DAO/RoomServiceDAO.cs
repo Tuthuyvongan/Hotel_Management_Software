@@ -166,7 +166,7 @@ namespace roomServiceDAO
                             while (reader.Read())
                             {
                                 RoomServiceDTO rm = new RoomServiceDTO();
-                                rm.IDR_S = reader["idrs"].ToString();
+                                
                                 rm.IDR = reader["idr"].ToString();
                                 rm.IDS = reader["ids"].ToString();
                                 rm.TIME = DateTime.Parse(reader["time"].ToString());

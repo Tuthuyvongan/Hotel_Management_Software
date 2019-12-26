@@ -425,6 +425,38 @@ namespace userDAO
             }
             return Sum;
         }
+        public int GetLevel(UserDTO pt)
+        {
+            int level = 1;
+            string query = string.Empty;
+            query += "SELECT [level] FROM manager WHERE [idm] = @idm"; ;
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@idm", pt.Idm);
+                    level = pt.Level;
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return level;
+        }
         public int GetSumLevelAccount()
         {
             string query = string.Empty;
