@@ -377,5 +377,127 @@ namespace QuanLyHotel
             txtCostService.Text = Convert.ToString(dtgvService.Rows[numrow].Cells[2].Value);
         }
         #endregion
+
+        private void btAddService_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+
+
+            if (txtNameService.Text == "")
+            {
+                errorProvider1.SetError(txtNameService, "not null!");
+            }
+            else if (txtKindService.Text == "")
+            {
+                errorProvider2.SetError(txtKindService, "not null!");
+            }
+            else if (txtCostService.Text == "")
+            {
+                errorProvider3.SetError(txtCostService, "not null!");
+            }
+
+
+            else
+            {
+                srvBUS = new ServiceBUS();
+
+                ServiceDTO srv = new ServiceDTO();
+                srv.IDS = txtNameService.Text;
+                srv.NAME = txtNameService.Text;
+                srv.KIND = txtKindService.Text;
+                srv.COST = Decimal.Parse(txtCostService.Text);
+                bool kq = srvBUS.add(srv);
+                if (kq == false)
+                    MessageBox.Show("Fail!");
+                else
+                    MessageBox.Show("Sussces");
+                this.loadData();
+            }
+        }
+
+        private void btEditService_Click(object sender, EventArgs e)
+        {
+            srvBUS = new ServiceBUS();
+
+            ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
+            srv.NAME = txtNameService.Text;
+            srv.KIND = txtKindService.Text;
+            srv.COST = Decimal.Parse(txtCostService.Text);
+            bool kq = srvBUS.edit(srv);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void btDeleteService_Click(object sender, EventArgs e)
+        {
+            srvBUS = new ServiceBUS();
+
+            ServiceDTO srv = new ServiceDTO();
+            srv.IDS = txtNameService.Text;
+            srv.NAME = txtNameService.Text;
+            srv.KIND = txtKindService.Text;
+            srv.COST = Decimal.Parse(txtCostService.Text);
+            bool kq = srvBUS.delete(srv);
+            if (kq == false)
+                MessageBox.Show("Fail!");
+            else
+                MessageBox.Show("Sussces");
+            this.loadData();
+        }
+
+        private void btLoadService_Click(object sender, EventArgs e)
+        {
+            if (txtSearchService1.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchService1.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<ServiceDTO> listTimKiem = srvBUS.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<ServiceDTO> listTimKiem = srvBUS.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (txtSearchRoomService.Text == "")
+            {
+                this.loadDataRoomService();
+            }
+            else
+            {
+                string Key = txtSearchRoomService.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<RoomServiceDTO> listTimKiem = rsrvBus.select();
+                    this.loadDataRoomService(listTimKiem);
+                }
+                else
+                {
+                    List<RoomServiceDTO> listTimKiem = rsrvBus.search(Key);
+                    this.loadDataRoomService(listTimKiem);
+                }
+            }
+        }
     }
 }

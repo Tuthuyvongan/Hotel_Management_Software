@@ -19,6 +19,7 @@ namespace QuanLyHotel
         {
             InitializeComponent();
             //this.loadData();
+            btLoadRoom.Hide();
         }
 
         private RoomBUS rmBus;
@@ -278,5 +279,27 @@ namespace QuanLyHotel
             this.loadData();
         }
         #endregion
+
+        private void btLoadRoom1_Click(object sender, EventArgs e)
+        {
+            if (txtSearchRoom.Text == "")
+            {
+                this.loadData();
+            }
+            else
+            {
+                string Key = txtSearchRoom.Text.Trim();
+                if (Key == null || Key == string.Empty || Key.Length == 0)
+                {
+                    List<RoomDTO> listTimKiem = rmBus.select();
+                    this.loadData(listTimKiem);
+                }
+                else
+                {
+                    List<RoomDTO> listTimKiem = rmBus.search(Key);
+                    this.loadData(listTimKiem);
+                }
+            }
+        }
     }
 }
