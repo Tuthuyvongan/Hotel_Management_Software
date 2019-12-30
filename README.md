@@ -70,3 +70,6 @@ Any thing special with this software ?
 - Le Anh Vu - 17521269@gm.uit.edu.vn
 - Nguyen Tri Truong - 17521186@gm.uit.edu.vn
 - Nguyen Hoai Vi - 17521257@gm.uit.edu.vn
+
+#Repo Link :
+https://github.com/VixNH/Hotel_Management_Software.git
