@@ -81,6 +81,7 @@ namespace QuanLyHotel
         {
             serviceWindow1.BringToFront();
             serviceWindow1.Dock = DockStyle.Fill;
+
         }
 
         private void BtAccount_Click(object sender, EventArgs e)

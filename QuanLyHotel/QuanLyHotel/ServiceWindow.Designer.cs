@@ -221,11 +221,12 @@
             this.txtCostService.MaximumSize = new System.Drawing.Size(339, 29);
             this.txtCostService.MaxLength = 40;
             this.txtCostService.Name = "txtCostService";
-            this.txtCostService.Size = new System.Drawing.Size(339, 29);
+            this.txtCostService.Size = new System.Drawing.Size(339, 34);
             this.txtCostService.TabIndex = 219;
             // 
             // txtKindService
             // 
+            this.txtKindService.DisplayMember = "kind";
             this.txtKindService.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.txtKindService.FormattingEnabled = true;
             this.txtKindService.Location = new System.Drawing.Point(107, 139);
@@ -234,6 +235,7 @@
             this.txtKindService.Name = "txtKindService";
             this.txtKindService.Size = new System.Drawing.Size(155, 34);
             this.txtKindService.TabIndex = 218;
+            this.txtKindService.ValueMember = "kind";
             // 
             // txtNameService
             // 
@@ -243,7 +245,7 @@
             this.txtNameService.MaximumSize = new System.Drawing.Size(599, 29);
             this.txtNameService.MaxLength = 40;
             this.txtNameService.Name = "txtNameService";
-            this.txtNameService.Size = new System.Drawing.Size(599, 29);
+            this.txtNameService.Size = new System.Drawing.Size(599, 34);
             this.txtNameService.TabIndex = 217;
             // 
             // label16
@@ -303,6 +305,7 @@
             this.dtgvService.RowHeadersWidth = 51;
             this.dtgvService.Size = new System.Drawing.Size(687, 224);
             this.dtgvService.TabIndex = 211;
+            this.dtgvService.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvService_CellContentClick);
             // 
             // label15
             // 
@@ -343,6 +346,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ServiceWindow";
             this.Size = new System.Drawing.Size(1356, 601);
+            this.Load += new System.EventHandler(this.ServiceWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();

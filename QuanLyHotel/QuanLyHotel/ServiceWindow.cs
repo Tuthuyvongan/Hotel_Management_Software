@@ -22,6 +22,7 @@ namespace QuanLyHotel
             InitializeComponent();
             //loadData();
             //this.loadDataRoomService();
+
         }
 
         private ServiceBUS srvBUS;
@@ -31,9 +32,12 @@ namespace QuanLyHotel
         //---- LOAD DATA
         //
         #region Load Data
+
         private void loadData()
         {
+
             srvBUS = new ServiceBUS();
+            
             List<ServiceDTO> list = srvBUS.select();
 
             if (list == null)
@@ -452,13 +456,7 @@ namespace QuanLyHotel
         }
 
         private void btLoadService_Click(object sender, EventArgs e)
-        {
-            if (txtSearchService1.Text == "")
-            {
-                this.loadData();
-            }
-            else
-            {
+        {        
                 string Key = txtSearchService1.Text.Trim();
                 if (Key == null || Key == string.Empty || Key.Length == 0)
                 {
@@ -470,7 +468,6 @@ namespace QuanLyHotel
                     List<ServiceDTO> listTimKiem = srvBUS.search(Key);
                     this.loadData(listTimKiem);
                 }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -487,17 +484,31 @@ namespace QuanLyHotel
             else
             {
                 string Key = txtSearchRoomService.Text.Trim();
-                if (Key == null || Key == string.Empty || Key.Length == 0)
-                {
-                    List<RoomServiceDTO> listTimKiem = rsrvBus.select();
-                    this.loadDataRoomService(listTimKiem);
-                }
-                else
-                {
-                    List<RoomServiceDTO> listTimKiem = rsrvBus.search(Key);
-                    this.loadDataRoomService(listTimKiem);
-                }
+                List<RoomServiceDTO> listTimKiem = rsrvBus.search(Key);
+                this.loadDataRoomService(listTimKiem);                
             }
+        }
+
+
+        private void ServiceWindow_Load(object sender, EventArgs e)
+        {
+            srvBUS = new ServiceBUS();
+            List<ServiceDTO> listKind = srvBUS.selectKind();
+            if (listKind == null)
+            {
+                MessageBox.Show("Có lỗi khi lấy thông tin từ table Kind");
+                return;
+            }
+            txtKindService.DataSource = listKind;
+        }
+
+        private void dtgvService_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int t = dtgvService.CurrentCell.RowIndex;
+            txtNameService.Text = dtgvService.Rows[t].Cells[0].Value.ToString();
+            txtKindService.Text = dtgvService.Rows[t].Cells[1].Value.ToString();
+            txtCostService.Text = dtgvService.Rows[t].Cells[2].Value.ToString();
+            
         }
     }
 }

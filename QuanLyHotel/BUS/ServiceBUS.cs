@@ -49,12 +49,16 @@ namespace serviceBUS
         {
             return sDao.selectCost(sKeyword);
         }
+        public List<ServiceDTO> selectKind()
+        {
+            return sDao.selectKind();
+        }
         #region Sum
         public int GetSumService()
         {
             return sDao.GetSumService();
         }
- 
+
         #endregion
     }
 }
