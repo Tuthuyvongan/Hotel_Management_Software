@@ -240,11 +240,7 @@ namespace roomServiceDAO
             query += "SELECT [idr], [ids], [number], [cost], [time], [idrs]";
             query += "FROM [room_service]";
             query += " WHERE ([idr] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([ids] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([number] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([time] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([idrs] LIKE CONCAT('%',@Keyword,'%'))";
+          
 
             List<RoomServiceDTO> lsTimKiem = new List<RoomServiceDTO>();
 

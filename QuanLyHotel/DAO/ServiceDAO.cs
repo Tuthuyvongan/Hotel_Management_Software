@@ -232,12 +232,12 @@ namespace serviceDAO
         public List<ServiceDTO> search(string Keyword)
         {
             string query = string.Empty;
-            query += "SELECT [name], [kind], [cost], [idr]";
+            query += "SELECT [name], [kind], [cost], [ids]";
             query += "FROM [service]";
             query += " WHERE ([name] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([kind] LIKE CONCAT('%',@Keyword,'%'))";
             query += " OR ([cost] LIKE CONCAT('%',@Keyword,'%'))";
-            query += " OR ([idr] LIKE CONCAT('%',@Keyword,'%'))";
+
 
             List<ServiceDTO> lsTimKiem = new List<ServiceDTO>();
 
@@ -326,6 +326,52 @@ namespace serviceDAO
                 }
             }
             return lsCost;
+        }
+        public List<ServiceDTO> selectKind()
+        {
+            string query = string.Empty;
+            query += "SELECT [kind]";
+            query += "FROM [service]";
+           
+
+            List<ServiceDTO> lsKind = new List<ServiceDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ServiceDTO srv = new ServiceDTO();
+                                srv.KIND = reader["kind"].ToString();
+                                lsKind.Add(srv);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+            }
+            return lsKind;
         }
         #endregion
         //
